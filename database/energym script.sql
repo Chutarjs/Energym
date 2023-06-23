@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `energym`.`actividadgrupal` (
   `HoraFinal` TIME NOT NULL,
   `Cupo` INT(11) NOT NULL,
   PRIMARY KEY (`idActividadGrupal`, `idServicio`),
-  INDEX `FK_ActGrupales-Servicio_idx` (`idServicio` ASC) VISIBLE,
+  INDEX `FK_ActGrupales-Servicio_idx` (`idServicio` ASC),
   CONSTRAINT `FK_ActGrupales-Servicio`
     FOREIGN KEY (`idServicio`)
     REFERENCES `energym`.`servicio` (`idservicio`)
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `energym`.`usuario` (
   `IdTipoUsuario` INT(11) NOT NULL,
   `FechaInscripcion` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  INDEX `FK_Usuario-TipoUsuario` (`IdTipoUsuario` ASC) VISIBLE,
+  INDEX `FK_Usuario-TipoUsuario` (`IdTipoUsuario` ASC),
   CONSTRAINT `FK_Usuario-TipoUsuario`
     FOREIGN KEY (`IdTipoUsuario`)
     REFERENCES `energym`.`tipousuario` (`idTipoUsuario`)
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `energym`.`actgrupalusuario` (
   `Estado` TINYINT(4) NOT NULL,
   `Descripcion` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`idActGrupal`, `idUsuario`),
-  INDEX `FK_ActGrupalUsuario-Usuario_idx` (`idUsuario` ASC) VISIBLE,
+  INDEX `FK_ActGrupalUsuario-Usuario_idx` (`idUsuario` ASC),
   CONSTRAINT `FK_ActGrupalUsuario-ActGrupal`
     FOREIGN KEY (`idActGrupal`)
     REFERENCES `energym`.`actividadgrupal` (`idActividadGrupal`)
@@ -154,8 +154,8 @@ CREATE TABLE IF NOT EXISTS `energym`.`historialplan` (
   `FechaVigencia` DATETIME NOT NULL,
   `Descripcion` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`idHistorial`, `idPlan`, `idCliente`),
-  INDEX `FK_HistorialPlanPlan_idx` (`idPlan` ASC) VISIBLE,
-  INDEX `FK_HistorialPlan-Usuario_idx` (`idCliente` ASC) VISIBLE,
+  INDEX `FK_HistorialPlanPlan_idx` (`idPlan` ASC),
+  INDEX `FK_HistorialPlan-Usuario_idx` (`idCliente` ASC),
   CONSTRAINT `FK_HistorialPlan-Usuario`
     FOREIGN KEY (`idCliente`)
     REFERENCES `energym`.`usuario` (`id`)
@@ -180,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `energym`.`rutina` (
   `idServicio` INT(11) NOT NULL,
   `Descripcion` VARCHAR(70) NULL DEFAULT NULL,
   PRIMARY KEY (`idrutina`),
-  INDEX `FK_RutinaServicio_idx` (`idServicio` ASC) VISIBLE,
+  INDEX `FK_RutinaServicio_idx` (`idServicio` ASC),
   CONSTRAINT `FK_RutinaServicio`
     FOREIGN KEY (`idServicio`)
     REFERENCES `energym`.`servicio` (`idservicio`)
@@ -199,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `energym`.`historialrutina` (
   `FechaVigencia` DATETIME NOT NULL,
   `Decripcion` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`idRutina`, `idCliente`),
-  INDEX `FK_HistorialRutina-Cliente_idx` (`idCliente` ASC) VISIBLE,
+  INDEX `FK_HistorialRutina-Cliente_idx` (`idCliente` ASC),
   CONSTRAINT `FK_HistorialRutina-Cliente`
     FOREIGN KEY (`idCliente`)
     REFERENCES `energym`.`usuario` (`id`)
@@ -223,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `energym`.`imagenejercicio` (
   `Descripcion` VARCHAR(45) NULL DEFAULT NULL,
   `idEjercicio` INT(11) NOT NULL,
   PRIMARY KEY (`idImagenEjercicio`, `idEjercicio`),
-  INDEX `FK_ImagenEjercicio-Ejercicio_idx` (`idEjercicio` ASC) VISIBLE,
+  INDEX `FK_ImagenEjercicio-Ejercicio_idx` (`idEjercicio` ASC),
   CONSTRAINT `FK_ImagenEjercicio-Ejercicio`
     FOREIGN KEY (`idImagenEjercicio`)
     REFERENCES `energym`.`ejercicio` (`idEjercicio`)
@@ -246,8 +246,8 @@ CREATE TABLE IF NOT EXISTS `energym`.`pago` (
   `Extras` DOUBLE NOT NULL DEFAULT 0,
   `Fecha` DATETIME NOT NULL,
   PRIMARY KEY (`idPago`),
-  INDEX `FK_PagoCliente_idx` (`idCliente` ASC) VISIBLE,
-  INDEX `FK_PagoPlan_idx` (`idPlan` ASC) VISIBLE,
+  INDEX `FK_PagoCliente_idx` (`idCliente` ASC),
+  INDEX `FK_PagoPlan_idx` (`idPlan` ASC),
   CONSTRAINT `FK_PagoCliente`
     FOREIGN KEY (`idCliente`)
     REFERENCES `energym`.`usuario` (`id`)
@@ -270,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `energym`.`planservicio` (
   `idPlan` INT(11) NOT NULL,
   `idServicio` INT(11) NOT NULL,
   PRIMARY KEY (`idPlan`, `idServicio`),
-  INDEX `FK_PlanServicioServicio_idx` (`idServicio` ASC) VISIBLE,
+  INDEX `FK_PlanServicioServicio_idx` (`idServicio` ASC),
   CONSTRAINT `FK_PlanServicioPlan`
     FOREIGN KEY (`idPlan`)
     REFERENCES `energym`.`plan` (`idPlan`)
@@ -294,7 +294,7 @@ CREATE TABLE IF NOT EXISTS `energym`.`rutinaejercicio` (
   `Repeticiones` INT(11) NOT NULL,
   `Series` INT(11) NOT NULL,
   PRIMARY KEY (`IdRutina`, `IdEjercicio`),
-  INDEX `FK_RutinaEjercicio-Ejercicio` (`IdEjercicio` ASC) VISIBLE,
+  INDEX `FK_RutinaEjercicio-Ejercicio` (`IdEjercicio` ASC),
   CONSTRAINT `FK_RutinaEjercicio-Ejercicio`
     FOREIGN KEY (`IdEjercicio`)
     REFERENCES `energym`.`ejercicio` (`idEjercicio`)
