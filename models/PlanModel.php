@@ -10,7 +10,7 @@ class PlanModel
     public function all(){
         try {
             //Consulta sql
-			$vSql = "SELECT * FROM plan where id > 0;";
+			$vSql = "SELECT * FROM plan where idPlan > 0;";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ($vSql);
