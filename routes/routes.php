@@ -8,7 +8,7 @@ print_r($routesArray);
 //Sin solicitud al API
 if(count($routesArray)==1){
     $json=array(
-        'status'=>40,
+        'status'=>404,
         'result'=>'Not found'
     );
     echo json_encode($json,

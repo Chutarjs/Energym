@@ -1,0 +1,79 @@
+[23-Jun-2023 03:29:55 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: array + string in C:\xampp\htdocs\Energym\Api\routes\routes.php:4
+Stack trace:
+#0 C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php(4): include()
+#1 C:\xampp\htdocs\Energym\Api\index.php(28): RoutesController->index()
+#2 {main}
+  thrown in C:\xampp\htdocs\Energym\Api\routes\routes.php on line 4
+[23-Jun-2023 03:30:41 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + string in C:\xampp\htdocs\Energym\Api\routes\routes.php:2
+Stack trace:
+#0 C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php(4): include()
+#1 C:\xampp\htdocs\Energym\Api\index.php(28): RoutesController->index()
+#2 {main}
+  thrown in C:\xampp\htdocs\Energym\Api\routes\routes.php on line 2
+[23-Jun-2023 03:30:56 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: explode(): Argument #3 ($limit) must be of type int, string given in C:\xampp\htdocs\Energym\Api\routes\routes.php:2
+Stack trace:
+#0 C:\xampp\htdocs\Energym\Api\routes\routes.php(2): explode('/', '/Energym/api/', '/Api')
+#1 C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php(4): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Energym\Api\index.php(28): RoutesController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\Energym\Api\routes\routes.php on line 2
+[23-Jun-2023 03:31:34 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: array + string in C:\xampp\htdocs\Energym\Api\routes\routes.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php(4): include()
+#1 C:\xampp\htdocs\Energym\Api\index.php(28): RoutesController->index()
+#2 {main}
+  thrown in C:\xampp\htdocs\Energym\Api\routes\routes.php on line 3
+[23-Jun-2023 03:38:44 Europe/Berlin] PHP Warning:  include(Api/routes/routes.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php on line 4
+[23-Jun-2023 03:38:44 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:38:44 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:38:44 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\Api\index.php:28
+[23-Jun-2023 03:38:44 Europe/Berlin] PHP Warning:  include(): Failed opening 'Api/routes/routes.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php on line 4
+[23-Jun-2023 03:38:44 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:38:44 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:38:44 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\Api\index.php:28
+[23-Jun-2023 03:43:18 Europe/Berlin] PHP Warning:  include(Api/routes/routes.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php on line 4
+[23-Jun-2023 03:43:18 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:43:18 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:43:18 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\Api\index.php:31
+[23-Jun-2023 03:43:18 Europe/Berlin] PHP Warning:  include(): Failed opening 'Api/routes/routes.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php on line 4
+[23-Jun-2023 03:43:18 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:43:18 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:43:18 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\Api\index.php:31
+[23-Jun-2023 03:43:25 Europe/Berlin] PHP Warning:  include(/Api/routes/routes.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php on line 4
+[23-Jun-2023 03:43:25 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:43:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:43:25 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\Api\index.php:31
+[23-Jun-2023 03:43:25 Europe/Berlin] PHP Warning:  include(): Failed opening '/Api/routes/routes.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php on line 4
+[23-Jun-2023 03:43:25 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:43:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:43:25 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\Api\index.php:31
+[23-Jun-2023 03:43:57 Europe/Berlin] PHP Warning:  include(ppi/routes/routes.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php on line 4
+[23-Jun-2023 03:43:57 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:43:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:43:57 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\Api\index.php:31
+[23-Jun-2023 03:43:57 Europe/Berlin] PHP Warning:  include(): Failed opening 'ppi/routes/routes.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php on line 4
+[23-Jun-2023 03:43:57 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:43:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:43:57 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\Api\index.php:31
+[23-Jun-2023 03:44:38 Europe/Berlin] PHP Warning:  include(Api/routes/routes.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php on line 4
+[23-Jun-2023 03:44:38 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:44:38 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:44:38 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\Api\index.php:31
+[23-Jun-2023 03:44:38 Europe/Berlin] PHP Warning:  include(): Failed opening 'Api/routes/routes.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\Api\controllers\RoutesController.php on line 4
+[23-Jun-2023 03:44:38 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:44:38 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:44:38 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\Api\index.php:31
+[23-Jun-2023 03:46:00 Europe/Berlin] PHP Warning:  require_once(Api/controllers/RoutesController.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\Api\index.php on line 29
+[23-Jun-2023 03:46:00 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:46:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:46:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Api/controllers/RoutesController.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\Api\index.php:29
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Energym\Api\index.php on line 29
+[23-Jun-2023 03:46:33 Europe/Berlin] PHP Warning:  require_once(Api/models/MySqlConnect.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\Api\index.php on line 14
+[23-Jun-2023 03:46:33 Europe/Berlin] PHP Stack trace:
+[23-Jun-2023 03:46:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\Api\index.php:0
+[23-Jun-2023 03:46:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Api/models/MySqlConnect.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\Api\index.php:14
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Energym\Api\index.php on line 14

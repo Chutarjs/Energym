@@ -1,7 +1,7 @@
 <?php
 class RoutesController{
     public function index(){
-        include "routes/routes.php";
+        include "Api/routes/routes.php";
         /* 
         includa once
         require

@@ -1,5 +1,4 @@
 import './App.css' 
-import { Layout } from './components/Layout' 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom' 
 const router=createBrowserRouter([
    { 
