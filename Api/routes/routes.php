@@ -8,7 +8,7 @@ print_r($routesArray);
 //Sin solicitud al API
 if(count($routesArray)==1){
     $json=array(
-        'status'=>404,
+        'status'=>40,
         'result'=>'Not found'
     );
     echo json_encode($json,
@@ -17,7 +17,7 @@ if(count($routesArray)==1){
 }
 
 //Solicitud al API
-//http://localhost:81/nombreProyecto/controlador/accion/parametro
+//http://localhost:81/nombreProyecto/Api/controlador/accion/parametro
 if(count($routesArray)>1 && isset($_SERVER['REQUEST_METHOD'])){
     $controller=$routesArray[2];
     $action="index";
