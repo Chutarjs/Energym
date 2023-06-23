@@ -26,7 +26,7 @@ class PlanModel
     {
         try {
             //Consulta sql
-			$vSql = "SELECT * FROM plan where id=$id";
+			$vSql = "SELECT * FROM plan where idPlan=$id";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
@@ -36,7 +36,7 @@ class PlanModel
 			die ( $e->getMessage () );
 		}
     }
-    /*Obtener los actores de una pelicula */
+    /*Obtener los servicios de un plan */
     public function getServicioPlan($idPlan)
     {
         try {

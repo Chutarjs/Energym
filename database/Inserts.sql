@@ -119,3 +119,7 @@ insert into PlanServicio values(1, 1);
 Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220221, 1, now()); 
 select * from pago;
 select * from historialplan;
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------...*/
+/*Rutina asignada*/
+insert into historialrutina values(1, 202220222, DATE(DATE_ADD(now(), INTERVAL 1 MONTH)), "Rutina Asignada a Joel");

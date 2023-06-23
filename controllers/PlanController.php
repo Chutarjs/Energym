@@ -1,5 +1,5 @@
 <?php
-//class Actor
+//class Plan
 class plan{
     //Listar en el API
     public function index(){
