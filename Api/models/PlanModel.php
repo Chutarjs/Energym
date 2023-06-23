@@ -10,7 +10,7 @@ class PlanModel
     public function all(){
         try {
             //Consulta sql
-			$vSql = "SELECT * FROM ;";
+			$vSql = "SELECT * FROM plan where id > 0;";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ($vSql);
@@ -26,7 +26,7 @@ class PlanModel
     {
         try {
             //Consulta sql
-			$vSql = "SELECT * FROM actor where id=$id";
+			$vSql = "SELECT * FROM plan where id=$id";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
@@ -37,13 +37,12 @@ class PlanModel
 		}
     }
     /*Obtener los actores de una pelicula */
-    public function getActorMovie($idMovie)
+    public function getServicioPlan($idPlan)
     {
         try {
             //Consulta SQL
-            $vSQL = "SELECT g.id, g.fname, g.lname".
-            " FROM actor g, movie_cast mg".
-            " where g.id=mg.actor_id and mg.movie_id=$idMovie;";
+            $vSQL = "Select * from Servicio
+            where Servicio.idServicio = $idPlan";
             //Establecer conexión
             
             //Ejecutar la consulta
@@ -54,22 +53,4 @@ class PlanModel
             die($e->getMessage());
         }
     }
-    public function getActorMovieForm($idMovie)
-    {
-        try {
-            //Consulta SQL
-            $vSQL = "SELECT mg.actor_id,mg.role".
-            " FROM actor g, movie_cast mg".
-            " where g.id=mg.actor_id and mg.movie_id=$idMovie;";
-            //Establecer conexión
-            
-            //Ejecutar la consulta
-            $vResultado = $this->enlace->executeSQL($vSQL);
-            //Retornar el resultado
-            return $vResultado;
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
-    
 }
