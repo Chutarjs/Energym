@@ -71,12 +71,27 @@ Insert into Ejercicio values (20, "Uppercut", "Golpe muy espectacular que va des
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Actividades Grupales*/
-Insert into actividadgrupal values (1, 5, "Yoga", "Es una práctica que conecta el cuerpo, la respiración y la mente. Esta práctica utiliza posturas físicas, ejercicios de respiración y meditación para mejorar la salud general.", '2023-09-29', '09:00:00', '10:00:00', 30);
-Insert into actividadgrupal values (2, 5, "Zumba", "Es una disciplina deportiva que se imparte en clases dirigidas en la que se realizan ejercicios aeróbicos al ritmo de música latina (merengue, samba, reggaeton, cumbia y salsa) con la finalidad de perder peso de forma divertida y mejorar el estado de ánimo de los deportistas.", '2023-09-16', '13:00:00', '14:00:00', 31);
-Insert into actividadgrupal values (3, 5, "Defensa Personal", "Consiste en desarrollar habilidades que nos ayuden a protegernos ante una agresión inminente. En ellas, no se depende únicamente de la fuerza, sino que cobran protagonismo la velocidad, la agilidad en los movimientos y la capacidad para anticiparse a las acciones del agresor.", '2023-09-17', '08:00:00', '09:00:00', 15);
-Insert into actividadgrupal values (4, 5, "Caminata", "Caminar, y en general, la práctica habitual de ejercicio físico puede ayudar a prevenir la osteoporosis, el riesgo de parada cardíaca y determinados cánceres. Otras ventajas son obvias e inmediatas. Mejorará tu capacidad de concentración. Disminuirán los efectos del estrés.", '2023-09-18', '08:30:00', '09:30:00', 50);
+Insert into actividadgrupal values (1, 5, "Yoga", "Es una práctica que conecta el cuerpo, la respiración y la mente. Esta práctica utiliza posturas físicas, ejercicios de respiración y meditación para mejorar la salud general.", '2023-09-29', '09:00:00', '10:00:00', 5);
+Insert into actividadgrupal values (2, 5, "Zumba", "Es una disciplina deportiva que se imparte en clases dirigidas en la que se realizan ejercicios aeróbicos al ritmo de música latina (merengue, samba, reggaeton, cumbia y salsa) con la finalidad de perder peso de forma divertida y mejorar el estado de ánimo de los deportistas.", '2023-09-16', '13:00:00', '14:00:00', 3);
+Insert into actividadgrupal values (3, 5, "Defensa Personal", "Consiste en desarrollar habilidades que nos ayuden a protegernos ante una agresión inminente. En ellas, no se depende únicamente de la fuerza, sino que cobran protagonismo la velocidad, la agilidad en los movimientos y la capacidad para anticiparse a las acciones del agresor.", '2023-09-17', '08:00:00', '09:00:00', 5);
+Insert into actividadgrupal values (4, 5, "Caminata", "Caminar, y en general, la práctica habitual de ejercicio físico puede ayudar a prevenir la osteoporosis, el riesgo de parada cardíaca y determinados cánceres. Otras ventajas son obvias e inmediatas. Mejorará tu capacidad de concentración. Disminuirán los efectos del estrés.", '2023-09-18', '08:30:00', '09:30:00', 7);
 Insert into actividadgrupal values (5, 5, "Gimnasia Embarazadas", "Se busca fortalecer los musculos de cara al parto, ademas de ser relajante", '2023-09-23', '10:00:00', '11:00:00', 10);
 /*Select * from actividadgrupal;*/
+
+/*Actividad Grupal Usuario*/
+Insert into actgrupalusuario values (1, 202220221,1,"Inscrito el 25/06/2023");
+Insert into actgrupalusuario values (1, 202220222,1,"Inscrito el 25/06/2023");
+Insert into actgrupalusuario values (1, 202220223,1,"Inscrito el 25/06/2023");
+Insert into actgrupalusuario values (1, 202220224,1,"Inscrito el 25/06/2023");
+Insert into actgrupalusuario values (1, 202220225,1,"Inscrito el 25/06/2023");
+/*Este da error por que no hay cupo disponible*/
+Insert into actgrupalusuario values (1, 202220226,1,"Inscrito el 25/06/2023");
+
+/*Select * from actividadgrupal;*/
+/*Select * from actgrupalusuario;*/
+/*Asi se obtiene el cupo disponible*/
+/*SELECT a.cupo-count(au.idUsuario) FROM actgrupalusuario au, actividadgrupal a WHERE au.idActGrupal = 1 and a.idActividadGrupal=au.idActGrupal;*/
+/*Asi se obtiene el cupo original*/
 /*SELECT COUNT(au.idActGrupal) FROM actgrupalusuario au, actividadgrupal a WHERE au.idActGrupal = 1;*/
 /*Delete from actividadgrupal where idActividadGrupal > 0;*/
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
