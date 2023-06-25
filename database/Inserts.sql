@@ -111,15 +111,37 @@ Insert into RutinaEjercicio values (4, 20, 40, 3);
 Select r.idRutina, e.Nombre, re.Repeticiones, re.Series, r.idServicio from rutina r, rutinaejercicio re, ejercicio e where e.idEjercicio=re.idEjercicio and re.IdRutina=r.IdRutina;
 
 /*Planes*/
-Insert into Plan values(1, "Plan de GYM", "Solo gimnasio", 10000);
+Insert into Plan values(1, "Plan de GYM", "Solo gimnasio", 1);
 insert into PlanServicio values(1, 1);
+
+Insert into Plan values(2, "Plan de Natacion", "Solo natacion", 1);
+insert into PlanServicio values(2, 2);
+
+Insert into Plan values(3, "Plan de Atletismo", "Solo atletismo", 1);
+insert into PlanServicio values(3, 3);
+
+Insert into Plan values(4, "Plan de Boxeo", "Solo Boxeo", 1);
+insert into PlanServicio values(4, 4);
+
+Insert into Plan values(5, "Natacion y Gym", "Natacion y Gym", 1);
+insert into PlanServicio values(5, 1);
+insert into PlanServicio values(5, 2);
+
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Plan Cliente*/
 /*Hay un trigger que hace que cada vez que el cliente paga un plan se le asigna automaticamente en la tabla historial plan*/
 Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220221, 1, now()); 
 select * from pago;
 select * from historialplan;
+select * from plan;
+select * from Planservicio;
 
-/*-----------------------------------------------------------------------------------------------------------------------------------------...*/
-/*Rutina asignada*/
-insert into historialrutina values(1, 202220222, DATE(DATE_ADD(now(), INTERVAL 1 MONTH)), "Rutina Asignada a Joel");
+/*Rutina cliente*/
+Insert into historialrutina values (2,202220221,now(),"Rutina de Joel");
+
+/*Todos los select*/
+select * from actgrupalusuario;
+select * from actividadgrupal;
+select * from ejercicio;
+select * from historialplan;
+select * from historialrutina;
