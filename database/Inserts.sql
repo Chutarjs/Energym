@@ -28,7 +28,7 @@ insert into Usuario values (301220222, "Mario", "Acosta", "marito@gmail.com", "1
 
 /*Insert Administrador*/
 insert into Usuario values (301110111, "Joseph", "Joseph", "presi@gmail.com", "123456", 1, '1970-01-01', 38634031, 0, 1, 2, '2020-01-01');
-Select * from Usuario where id > 0 order by IdTipoUsuario asc;
+/*Select * from Usuario where id > 0 order by IdTipoUsuario asc;*/
 /*Delete from Usuario where id > 0;*/
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -38,7 +38,7 @@ Insert into Servicio(idservicio, Nombre, Descripcion, Tipo, Precio) values (2, "
 Insert into Servicio(idservicio, Nombre, Descripcion, Tipo, Precio) values (3, "Atletismo", "Ejercicios de atletismo", "Individual", 8000);
 Insert into Servicio(idservicio, Nombre, Descripcion, Tipo, Precio) values (4, "Boxeo", "Ejercicios de boxing", "Individual", 12000);
 Insert into Servicio(idservicio, Nombre, Descripcion, Tipo, Precio) values (5, "Grupales", "Ejercicios grupales", "Grupal", 3000);
-Select * from Servicio where idservicio > 0;
+/*Select * from Servicio where idservicio > 0;*/
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Ejercicios*/
@@ -67,7 +67,7 @@ Insert into Ejercicio values (18, "Jab", "Es el golpe directo, seco. El más com
 Insert into Ejercicio values (19, "Cross", "Igual que el jab, pero el golpe parte de atrás", "Guantes y saco");
 Insert into Ejercicio values (20, "Uppercut", "Golpe muy espectacular que va desde abajo a la mandíbula del contrario.", "Guantes y saco(opcional)");
 /*delete from ejercicio where idEjercicio>0;*/
-Select * from Ejercicio;
+/*Select * from Ejercicio;*/
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Actividades Grupales*/
@@ -76,8 +76,8 @@ Insert into actividadgrupal values (2, 5, "Zumba", "Es una disciplina deportiva 
 Insert into actividadgrupal values (3, 5, "Defensa Personal", "Consiste en desarrollar habilidades que nos ayuden a protegernos ante una agresión inminente. En ellas, no se depende únicamente de la fuerza, sino que cobran protagonismo la velocidad, la agilidad en los movimientos y la capacidad para anticiparse a las acciones del agresor.", '2023-09-17', '08:00:00', '09:00:00', 15);
 Insert into actividadgrupal values (4, 5, "Caminata", "Caminar, y en general, la práctica habitual de ejercicio físico puede ayudar a prevenir la osteoporosis, el riesgo de parada cardíaca y determinados cánceres. Otras ventajas son obvias e inmediatas. Mejorará tu capacidad de concentración. Disminuirán los efectos del estrés.", '2023-09-18', '08:30:00', '09:30:00', 50);
 Insert into actividadgrupal values (5, 5, "Gimnasia Embarazadas", "Se busca fortalecer los musculos de cara al parto, ademas de ser relajante", '2023-09-23', '10:00:00', '11:00:00', 10);
-Select * from actividadgrupal;
-SELECT COUNT(au.idActGrupal) FROM actgrupalusuario au, actividadgrupal a WHERE au.idActGrupal = 1;
+/*Select * from actividadgrupal;*/
+/*SELECT COUNT(au.idActGrupal) FROM actgrupalusuario au, actividadgrupal a WHERE au.idActGrupal = 1;*/
 /*Delete from actividadgrupal where idActividadGrupal > 0;*/
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Rutina*/
@@ -108,7 +108,7 @@ Insert into RutinaEjercicio values (4, 17, 100, 3);
 Insert into RutinaEjercicio values (4, 18, 40, 3);
 Insert into RutinaEjercicio values (4, 19, 40, 3);
 Insert into RutinaEjercicio values (4, 20, 40, 3);
-Select r.idRutina, e.Nombre, re.Repeticiones, re.Series, r.idServicio from rutina r, rutinaejercicio re, ejercicio e where e.idEjercicio=re.idEjercicio and re.IdRutina=r.IdRutina;
+/*Select r.idRutina, e.Nombre, re.Repeticiones, re.Series, r.idServicio from rutina r, rutinaejercicio re, ejercicio e where e.idEjercicio=re.idEjercicio and re.IdRutina=r.IdRutina;*/
 
 /*Planes*/
 Insert into Plan values(1, "Plan de GYM", "Solo gimnasio", 1);
