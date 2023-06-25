@@ -6,7 +6,7 @@ class PlanModel
     {
         $this->enlace = new MySqlConnect();
     }
-    /*Listar */
+    /*Listar*/
     /*http://localhost:81/Energym/Plan*/
     public function all(){
         try {

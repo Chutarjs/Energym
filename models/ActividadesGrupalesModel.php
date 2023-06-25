@@ -7,6 +7,7 @@ class ActividadesGrupalesModel
         $this->enlace = new MySqlConnect();
     }
     /*Listar */
+    /*http://localhost:81/Energym/ActividadesGrupales */
     public function all(){
         try {
             //Consulta sql
@@ -22,6 +23,7 @@ class ActividadesGrupalesModel
 		}
     }
     /*Obtener por id*/
+    /*http://localhost:81/Energym/ActividadesGrupales/# */
     public function get($id)
     {
         try {
@@ -37,6 +39,7 @@ class ActividadesGrupalesModel
 		}
     }
     /*Obtener las actividades que tengan cupo disponible */
+    /*http://localhost:81/Energym/ActividadesGrupales/getActividadesConCupo */
     public function getActividadesConCupo()
     {
         try {

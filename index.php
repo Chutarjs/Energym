@@ -23,7 +23,7 @@ require_once "models/UsuariosModel.php";
 require_once "controllers/PlanController.php";
 require_once "controllers/RutinasController.php";
 require_once "controllers/UsuariosController.php";
-
+require_once "controllers/ActividadesGrupalesController.php";
 //Enrutador
 //RoutesController.php
 require_once "controllers/RoutesController.php";

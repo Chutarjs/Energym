@@ -2,7 +2,7 @@
 $routesArray=explode("/",$_SERVER['REQUEST_URI']);
 // Dejar solo los que tienen valores
 $routesArray=array_filter($routesArray);
-print_r($routesArray);
+var_dump($routesArray);
 //http://localhost:81/Energym/
 
 //Sin solicitud al API
