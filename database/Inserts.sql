@@ -69,6 +69,49 @@ Insert into Ejercicio values (20, "Uppercut", "Golpe muy espectacular que va des
 /*delete from ejercicio where idEjercicio>0;*/
 /*Select * from Ejercicio;*/
 
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Planes*/
+Insert into Plan values(1, "Plan de GYM", "Solo gimnasio", 1);
+insert into PlanServicio values(1, 1);
+
+Insert into Plan values(2, "Plan de Natacion", "Solo natacion", 1);
+insert into PlanServicio values(2, 2);
+
+Insert into Plan values(3, "Plan de Atletismo", "Solo atletismo", 1);
+insert into PlanServicio values(3, 3);
+
+Insert into Plan values(4, "Plan de Boxeo", "Solo Boxeo", 1);
+insert into PlanServicio values(4, 4);
+
+Insert into Plan values(5, "Natacion y Gym", "Natacion y Gym", 1);
+insert into PlanServicio values(5, 1);
+insert into PlanServicio values(5, 2);
+
+Insert into Plan values(6, "Gym y Grupales", "Gym y Grupales", 1);
+insert into PlanServicio values(6, 1);
+insert into PlanServicio values(6, 5);
+
+Insert into Plan values(7, "Todo", "Todos los servicios", 1);
+insert into PlanServicio values(7, 1);
+insert into PlanServicio values(7, 2);
+insert into PlanServicio values(7, 3);
+insert into PlanServicio values(7, 4);
+insert into PlanServicio values(7, 5);
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Plan Cliente*/
+/*Hay un trigger que hace que cada vez que el cliente paga un plan se le asigna automaticamente en la tabla historial plan*/
+Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220221, 1, now()); 
+Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220222, 6, now()); 
+Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220223, 6, now()); 
+Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220224, 6, now()); 
+Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220225, 6, now()); 
+Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220226, 6, now()); 
+Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220227, 6, now()); 
+Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220228, 6, now()); 
+Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220229, 6, now()); 
+Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 301110111, 7, now()); 
+
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Actividades Grupales*/
 Insert into actividadgrupal values (1, 5, "Yoga", "Es una práctica que conecta el cuerpo, la respiración y la mente. Esta práctica utiliza posturas físicas, ejercicios de respiración y meditación para mejorar la salud general.", '2023-09-29', '09:00:00', '10:00:00', 5);
@@ -76,24 +119,16 @@ Insert into actividadgrupal values (2, 5, "Zumba", "Es una disciplina deportiva 
 Insert into actividadgrupal values (3, 5, "Defensa Personal", "Consiste en desarrollar habilidades que nos ayuden a protegernos ante una agresión inminente. En ellas, no se depende únicamente de la fuerza, sino que cobran protagonismo la velocidad, la agilidad en los movimientos y la capacidad para anticiparse a las acciones del agresor.", '2023-09-17', '08:00:00', '09:00:00', 5);
 Insert into actividadgrupal values (4, 5, "Caminata", "Caminar, y en general, la práctica habitual de ejercicio físico puede ayudar a prevenir la osteoporosis, el riesgo de parada cardíaca y determinados cánceres. Otras ventajas son obvias e inmediatas. Mejorará tu capacidad de concentración. Disminuirán los efectos del estrés.", '2023-09-18', '08:30:00', '09:30:00', 7);
 Insert into actividadgrupal values (5, 5, "Gimnasia Embarazadas", "Se busca fortalecer los musculos de cara al parto, ademas de ser relajante", '2023-09-23', '10:00:00', '11:00:00', 10);
-/*Select * from actividadgrupal;*/
 
 /*Actividad Grupal Usuario*/
-Insert into actgrupalusuario values (1, 202220221,1,"Inscrito el 25/06/2023");
 Insert into actgrupalusuario values (1, 202220222,1,"Inscrito el 25/06/2023");
 Insert into actgrupalusuario values (1, 202220223,1,"Inscrito el 25/06/2023");
 Insert into actgrupalusuario values (1, 202220224,1,"Inscrito el 25/06/2023");
 Insert into actgrupalusuario values (1, 202220225,1,"Inscrito el 25/06/2023");
-/*Este da error por que no hay cupo disponible*/
-Insert into actgrupalusuario values (1, 202220226,1,"Inscrito el 25/06/2023");
-
-/*Select * from actividadgrupal;*/
-/*Select * from actgrupalusuario;*/
-/*Asi se obtiene el cupo disponible*/
-/*SELECT a.cupo-count(au.idUsuario) FROM actgrupalusuario au, actividadgrupal a WHERE au.idActGrupal = 1 and a.idActividadGrupal=au.idActGrupal;*/
-/*Asi se obtiene el cupo original*/
-/*SELECT COUNT(au.idActGrupal) FROM actgrupalusuario au, actividadgrupal a WHERE au.idActGrupal = 1;*/
-/*Delete from actividadgrupal where idActividadGrupal > 0;*/
+/*Este da error por que no paga el plan que incluye actividades grupales*/
+/*Insert into actgrupalusuario values (2, 202220221,1,"Inscrito el 25/06/2023");*/
+/*Da error por que no queda cupo*/
+/*Insert into actgrupalusuario values (1, 202220226,1,"Inscrito el 25/06/2023");*/
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Rutina*/
 Insert into Rutina values (1, "Rutina de Gimnasio 1", 1, "Rutina con equipamiento del gym");
@@ -123,40 +158,7 @@ Insert into RutinaEjercicio values (4, 17, 100, 3);
 Insert into RutinaEjercicio values (4, 18, 40, 3);
 Insert into RutinaEjercicio values (4, 19, 40, 3);
 Insert into RutinaEjercicio values (4, 20, 40, 3);
-/*Select r.idRutina, e.Nombre, re.Repeticiones, re.Series, r.idServicio from rutina r, rutinaejercicio re, ejercicio e where e.idEjercicio=re.idEjercicio and re.IdRutina=r.IdRutina;*/
-
-/*Planes*/
-Insert into Plan values(1, "Plan de GYM", "Solo gimnasio", 1);
-insert into PlanServicio values(1, 1);
-
-Insert into Plan values(2, "Plan de Natacion", "Solo natacion", 1);
-insert into PlanServicio values(2, 2);
-
-Insert into Plan values(3, "Plan de Atletismo", "Solo atletismo", 1);
-insert into PlanServicio values(3, 3);
-
-Insert into Plan values(4, "Plan de Boxeo", "Solo Boxeo", 1);
-insert into PlanServicio values(4, 4);
-
-Insert into Plan values(5, "Natacion y Gym", "Natacion y Gym", 1);
-insert into PlanServicio values(5, 1);
-insert into PlanServicio values(5, 2);
-
-/*--------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Plan Cliente*/
-/*Hay un trigger que hace que cada vez que el cliente paga un plan se le asigna automaticamente en la tabla historial plan*/
-Insert into pago(idPago, idCliente, idPlan, Fecha) values (default, 202220221, 1, now()); 
-select * from pago;
-select * from historialplan;
-select * from plan;
-select * from Planservicio;
 
 /*Rutina cliente*/
+/*Tiene un trigger que verifica que el cliente pague el servicio*/
 Insert into historialrutina values (2,202220221,now(),"Rutina de Joel");
-
-/*Todos los select*/
-select * from actgrupalusuario;
-select * from actividadgrupal;
-select * from ejercicio;
-select * from historialplan;
-select * from historialrutina;

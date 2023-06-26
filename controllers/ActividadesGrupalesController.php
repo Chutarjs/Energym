@@ -23,6 +23,7 @@ class ActividadesGrupales{
                 http_response_code($json["status"])
             );
     }
+    /*Obtiene una*/ 
     public function get($param){
         
         $genero=new ActividadesGrupalesModel();
@@ -48,9 +49,52 @@ class ActividadesGrupales{
             );
         
     }
-    public function getActividadesConCupo($id){
-        $genero=new PlanModel();
-        $response=$genero->getServicioPlan($id);
+     /*Obtiene una detallada*/ 
+    public function getDetalle($id){
+        $genero=new ActividadesGrupalesModel();
+        $response=$genero->getDetalle($id);
+        //Si hay respuesta
+        if(isset($response) && !empty($response)){
+            //Armar el json
+            $json=array(
+                'status'=>200,
+                'results'=>$response
+            );
+        }else{
+            $json=array(
+                'status'=>400,
+                'results'=>"No hay registros"
+            );
+        }
+        echo json_encode($json,
+                http_response_code($json["status"])
+            );
+    }   
+     /*Obtiene matriculados en una*/ 
+    public function getMatriculados($id){
+        $genero=new ActividadesGrupalesModel();
+        $response=$genero->getMatriculados($id);
+        //Si hay respuesta
+        if(isset($response) && !empty($response)){
+            //Armar el json
+            $json=array(
+                'status'=>200,
+                'results'=>$response
+            );
+        }else{
+            $json=array(
+                'status'=>400,
+                'results'=>"No hay registros"
+            );
+        }
+        echo json_encode($json,
+                http_response_code($json["status"])
+            );
+    }   
+     /*Obtiene las que estan con cupo*/ 
+    public function getActividadesConCupo(){
+        $genero=new ActividadesGrupalesModel();
+        $response=$genero->getActividadesConCupo();
         //Si hay respuesta
         if(isset($response) && !empty($response)){
             //Armar el json
