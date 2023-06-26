@@ -21,7 +21,7 @@ class RutinaModel
 			die ( $e->getMessage () );
 		}
     }
-    /*Obtener */
+    /*Obtener rutina en especifico*/
     public function get($id)
     {
         try {
@@ -36,13 +36,36 @@ class RutinaModel
 			die ( $e->getMessage () );
 		}
     }
+
+    /*Obtener detalle de una rutina */
+    public function getRutinaDetalle($id)
+    {
+        try {
+            //Consulta SQL
+            $vSQL = "SELECT e.Nombre AS Ejercicio, re.Repeticiones, re.Series
+            FROM rutinaejercicio re
+            INNER JOIN ejercicio e ON re.IdEjercicio = e.idEjercicio
+            WHERE re.IdRutina = $id;";
+            //Establecer conexión
+            
+            //Ejecutar la consulta
+            $vResultado = $this->enlace->executeSQL($vSQL);
+            //Retornar el resultado
+            return $vResultado;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
     /*Obtener las rutinas de un usuario */
     public function getRutinaUsuario($idUsuario)
     {
         try {
             //Consulta SQL
-            $vSQL = "Select r.idrutina, r.nombre, u.nombre, h.FechaVigencia from rutina r, historialrutina h, usuario u
-            where r.idRutina = h.idRutina and u.id = h.idCliente";
+            $vSQL = "SELECT r.Nombre AS NombreRutina, r.Descripcion AS DescripcionRutina
+            FROM rutina r
+            INNER JOIN historialrutina hr ON r.idrutina = hr.idRutina
+            WHERE hr.idCliente = $idUsuario;";
             //Establecer conexión
             
             //Ejecutar la consulta
