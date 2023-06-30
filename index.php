@@ -18,12 +18,14 @@ require_once "models/ActividadesGrupalesModel.php";
 require_once "models/PlanModel.php";
 require_once "models/RutinasModel.php";
 require_once "models/UsuariosModel.php";
+require_once "models/EjercicioModel.php";
 
 /***--- Agregar todos los controladores*/
 require_once "controllers/PlanController.php";
 require_once "controllers/RutinasController.php";
 require_once "controllers/UsuariosController.php";
 require_once "controllers/ActividadesGrupalesController.php";
+require_once "controllers/EjercicioController.php";
 //Enrutador
 //RoutesController.php
 require_once "controllers/RoutesController.php";
