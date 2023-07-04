@@ -14,10 +14,7 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 // eslint-disable-next-line no-unused-vars
 import { useNavigate, useParams } from 'react-router-dom';
-import GenreService from '../../services/UsuarioService';
-import { SelectGenres } from './SelectGenres';
-import ActorService from '../../services/PlanService';
-import { ActorsForm } from './ActorsForm';
+
 
 export function FormMovie() {
   //const useNavigate = useNavigate()
