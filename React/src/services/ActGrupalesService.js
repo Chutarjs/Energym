@@ -1,16 +1,17 @@
 import axios from 'axios';
-const BASE_URL=import.meta.env.VITE_BASE_URL+"movie"
+const BASE_URL=import.meta.env.VITE_BASE_URL+"actividadesgrupales"
 
-class MovieService{
+class ActGrupalesService{
     //Definición para Llamar al API y obtener el listado de peliculas
-    //localhost:81/api/movie
-    getMovies(){
+    //localhost:81/Energym/actividadesgrupales
+    getActividades(){
         return axios.get(BASE_URL);
     }
-    //localhost:81/api/movie/1
-    getMovieById(MovieId){
-        return axios.get(BASE_URL + '/' + MovieId);
+    //localhost:81/Energym/actividadesgrupales/1
+    getActividadById(Id){
+        return axios.get(BASE_URL + '/' + Id);
     }
+    //aun por hacer
     createMovie(Movie){
         return axios.post(BASE_URL, Movie);
     }
@@ -24,4 +25,4 @@ class MovieService{
     }
 }
 
-export default new MovieService()
+export default new ActGrupalesService()
