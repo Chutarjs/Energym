@@ -6,17 +6,16 @@ import CardActions from '@mui/material/CardActions'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton';
-import AccessTime from '@mui/icons-material/AccessTime'
-import Language from '@mui/icons-material/Language'
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import { Link } from "react-router-dom";
 import { Info } from '@mui/icons-material'
-import MovieService from '../../services/EjercicioService'
+import PlanService from '../../services/PlanService'
 export function ListPlanes () {
   const [data, setData]=useState(null);
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);
   useEffect(()=>{
-    MovieService.getMovies()
+    PlanService.getPlanes()
     .then( response=>{
         console.log(response)
         setData(response.data.results)
@@ -34,7 +33,7 @@ export function ListPlanes () {
     <Grid container sx={{ p: 2 }} spacing={3}>
       {!loaded && <div>Cargando...</div>}
       {data && data.map((item)=>( 
-          <Grid item xs={4} key={item.id}  >
+          <Grid item xs={3} key={item.idPlan}  >
             <Card>
               <CardHeader
                 sx={{
@@ -43,15 +42,14 @@ export function ListPlanes () {
                   color: (theme) => theme.palette.common.white
                 }}
                 style={{ textAlign: 'center' }}
-                title={item.title}
-                subheader={item.year}
+                title={item.Nombre}
               />
               <CardContent>
-                <Typography variant='body2' color='text.secondary'>
-                  <AccessTime /> {item.time}   minutos
+                <Typography variant='body1' color='text.secondary' textAlign='center'>
+                  {item.Descripcion}
                 </Typography>
-                <Typography variant='body2' color='text.secondary'>
-                  <Language /> {item.lang}
+                <Typography variant='body2' color='text.secondary' textAlign='center'>
+                  <LocalOfferIcon/>  ₡{item.Precio} 
                 </Typography>
               </CardContent>
               <CardActions
@@ -61,8 +59,11 @@ export function ListPlanes () {
                   color: (theme) => theme.palette.common.white
                 }}
               >
-                <IconButton component={Link} to={`/movie/${item.id}`} aria-label='Detalle' sx={{ ml: 'auto' }}>
-                  <Info/>
+                <IconButton component={Link} to={`/planes/${item.idPlan}`} aria-label='Detalle'>
+                  <Info/> 
+                  <Typography variant='body2' color='text.secondary' textAlign='center' ml={1}>
+                     Detalles 
+                  </Typography>
                 </IconButton>
               </CardActions>
             </Card>

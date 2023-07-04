@@ -1,9 +1,10 @@
 import axios from 'axios';
-const BASE_URL = import.meta.env.VITE_BASE_URL+"plan"
+const BASE_URL = "http://localhost:81/Energym/Plan"
 
 class PlanService {
     //obtiene todos los planes
     getPlanes(){
+        console.log(BASE_URL);
         return axios.get(BASE_URL);
     }
     //obtiene los detalles de un plan
@@ -17,4 +18,3 @@ class PlanService {
 }
 
 export default new PlanService()
-

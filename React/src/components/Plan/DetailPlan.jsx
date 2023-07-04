@@ -5,7 +5,7 @@ import List from '@mui/material/List'
 import ListItemText from '@mui/material/ListItemText'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import MovieService from '../../services/EjercicioService'
+import PlanService from '../../services/PlanService';
 import StarIcon from '@mui/icons-material/Star';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -19,7 +19,7 @@ export function DetailMovie () {
   const routeParams=useParams();
 
   useEffect(()=>{
-    MovieService.getMovieById(routeParams.id)
+    PlanService.getPlanById(routeParams.id)
     .then( response=>{
       console.log(response)
       setData(response.data.results)

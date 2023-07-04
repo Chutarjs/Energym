@@ -4,7 +4,7 @@ import './App.css'
 import { Layout } from './components/Layout/Layout'
 import { Home } from './components/Home/Home'
 import { ListPlanes } from './components/Plan/ListPlanes'
-import { DetailMovie } from './components/Plan/DetailMovie'
+import { DetailMovie } from './components/Plan/DetailPlan'
 import TableMovies from './components/Plan/TableMovies'
 import { FormMovie } from './components/Plan/FormMovie'
 const router=createBrowserRouter([

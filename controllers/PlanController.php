@@ -20,8 +20,7 @@ class plan{
             );
         }
         echo json_encode($json,
-                http_response_code($json["status"])
-            );
+        http_response_code($json["status"]));
     }
     public function get($param){
         
