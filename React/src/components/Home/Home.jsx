@@ -41,7 +41,7 @@ export const Home = () => {
     {
       id: 7,
       image: 'https://i.ytimg.com/vi/kv998kahL4k/sddefault.jpg',
-      caption: 'http://localhost:81/Energym/Plan/7',
+      caption: 'Todos los anteriores',
     },
   ];
 

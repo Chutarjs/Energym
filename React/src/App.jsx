@@ -3,18 +3,18 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.css'
 import { Layout } from './components/Layout/Layout'
 import { Home } from './components/Home/Home'
-import { ListMovies } from './components/Movie/ListMovies'
-import { DetailMovie } from './components/Movie/DetailMovie'
-import TableMovies from './components/Movie/TableMovies'
-import { FormMovie } from './components/Movie/FormMovie'
+import { ListPlanes } from './components/Plan/ListPlanes'
+import { DetailMovie } from './components/Plan/DetailMovie'
+import TableMovies from './components/Plan/TableMovies'
+import { FormMovie } from './components/Plan/FormMovie'
 const router=createBrowserRouter([
   {
     path:'/',
     element: <Home />
   },
   {
-    path:'/movie/',
-    element: <ListMovies />
+    path:'/planes/',
+    element: <ListPlanes/>
   },
   {
     path:'/movie-table',

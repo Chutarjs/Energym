@@ -11,7 +11,7 @@ import Language from '@mui/icons-material/Language'
 import { Link } from "react-router-dom";
 import { Info } from '@mui/icons-material'
 import MovieService from '../../services/EjercicioService'
-export function ListMovies () {
+export function ListPlanes () {
   const [data, setData]=useState(null);
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);

@@ -16,22 +16,14 @@ import SportsGymnasticsIcon from "@mui/icons-material/SportsGymnastics";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Header() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorElMant, setAnchorElMant] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
   const handleOpenMantMenu = (event) => {
     setAnchorElMant(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -69,14 +61,15 @@ function Header() {
           >
             Energym
           </Typography>
+          
           <Typography
             variant="p"
             noWrap
             component="a"
-            href="/plan/"
+            href="/planes/"
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: "none", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 500,
@@ -87,36 +80,7 @@ function Header() {
           >
             Planes
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            ></Menu>
-          </Box>
+
           <SportsGymnasticsIcon
             sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
           />
@@ -140,6 +104,25 @@ function Header() {
             Energym
           </Typography>
 
+          <Typography
+            variant="p"
+            noWrap
+            component="a"
+            href="/planes/"
+            sx={{
+              mr: 2,
+              display: { xs: "flex", mr: "1"},
+              flexGrow: 1,
+              fontFamily: "monospace",
+              fontWeight: 500,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            Planes
+          </Typography>
+          
           {/* Menu Mantenimientos */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Informacion">
@@ -177,6 +160,7 @@ function Header() {
             </Menu>
           </Box>
           {/* Menu Mantenimientos */}
+          
           {/* Menu Usuarios */}
           <Box sx={{ flexGrow: 0, marginLeft: "auto" }}>
             <Tooltip title="Usuario">
