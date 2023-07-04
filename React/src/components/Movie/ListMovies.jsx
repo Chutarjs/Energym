@@ -10,7 +10,7 @@ import AccessTime from '@mui/icons-material/AccessTime'
 import Language from '@mui/icons-material/Language'
 import { Link } from "react-router-dom";
 import { Info } from '@mui/icons-material'
-import MovieService from '../../services/MovieService'
+import MovieService from '../../services/EjercicioService'
 export function ListMovies () {
   const [data, setData]=useState(null);
   const [error, setError] =useState('');

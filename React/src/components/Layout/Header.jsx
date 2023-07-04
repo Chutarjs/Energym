@@ -9,11 +9,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+// eslint-disable-next-line no-unused-vars
 import { Button, MenuList } from '@mui/material';
-import TableViewIcon from '@mui/icons-material/TableView';
-import PersonIcon from '@mui/icons-material/Person';
-
+import SportsGymnasticsIcon from '@mui/icons-material/SportsGymnastics';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -33,7 +33,6 @@ function Header() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
@@ -47,7 +46,7 @@ function Header() {
     }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <LocalMoviesIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <SportsGymnasticsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -117,7 +116,7 @@ function Header() {
                 </MenuItem>
             </Menu>
           </Box>
-          <LocalMoviesIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <SportsGymnasticsIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           
           <Typography
             variant="p"
@@ -137,35 +136,12 @@ function Header() {
           >
             Energym
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              <Button
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-               <Typography
-            variant="p"
-            noWrap
-            component="a"
-            href="/movie/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', ms: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              textDecoration: 'none',
-            }}
-          >
-            Planes
-          </Typography>
-              </Button>
-          </Box>
-          
+
 {/* Menu Mantenimientos */}
 <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Mantenimientos">
+            <Tooltip title="Informacion">
               <IconButton onClick={handleOpenMantMenu} sx={{ p: 1 }}>
-                <TableViewIcon style={{ fill:'white'}} />
+                <FitnessCenterIcon style={{ fill:'white'}} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -186,45 +162,52 @@ function Header() {
             >
               <MenuList>
                 <MenuItem component='a' href='/movie-table/'>
-                  <Typography textAlign="center">Mantenimiento AppPeliculas</Typography>
+                  <Typography textAlign="center">Planes</Typography>
+                </MenuItem>
+                <MenuItem component='a' href='/movie-table/'>
+                  <Typography textAlign="center">Rutinas</Typography>
+                </MenuItem>
+                <MenuItem component='a' href='/movie-table/'>
+                  <Typography textAlign="center">Ejercicios</Typography>
                 </MenuItem>
               </MenuList>
             </Menu>
           </Box>
-{/* Menu Mantenimientos */}
+    {/* Menu Mantenimientos */}
  {/* Menu Usuarios */}
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Usuario">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <PersonIcon style={{ fill:'white'}} />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              <MenuList>
-                <MenuItem component='a' href='/user/login'>
-                  <Typography textAlign="center">Login</Typography>
-                </MenuItem>
-                <MenuItem component='a' href='/user/create'>
-                  <Typography textAlign="center">Registrarse</Typography>
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Box>
+ <Box sx={{ flexGrow: 0, marginLeft: 'auto' }}>
+  <Tooltip title="Usuario">
+    <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+      <AccountCircleIcon style={{ fill:'white'}} />
+    </IconButton>
+  </Tooltip>
+  <Menu
+    sx={{ mt: '45px' }}
+    id="menu-appbar"
+    anchorEl={anchorElUser}
+    anchorOrigin={{
+      vertical: 'top',
+      horizontal: 'right',
+    }}
+    keepMounted
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'right',
+    }}
+    open={Boolean(anchorElUser)}
+    onClose={handleCloseUserMenu}
+  >
+    <MenuList>
+      <MenuItem component='a' href='/user/login'>
+        <Typography textAlign="center">Iniciar Sesion</Typography>
+      </MenuItem>
+      <MenuItem component='a' href='/user/create'>
+        <Typography textAlign="center">Registrarse</Typography>
+      </MenuItem>
+    </MenuList>
+  </Menu>
+</Box>
+
 {/* Menu Usuarios */}
         </Toolbar>
       </Container>
