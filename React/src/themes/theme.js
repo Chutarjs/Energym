@@ -1,12 +1,12 @@
 import { createTheme } from '@mui/material/styles' 
 export const appTheme = createTheme({
      palette: { 
-        mode: 'dark',
+        mode: 'light',
         primary: { 
-            main: '#404bb0', 
+            main: '#0A4D68', 
         }, 
         secondary: { 
-            main: '#1eb0c3', 
+            main: '#088395', 
         }, 
     },
 })

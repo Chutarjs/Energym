@@ -24,6 +24,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.0",
     "react-hot-toast": "^2.4.1",
+    "react-material-ui-carousel": "^3.4.2",
     "styled-components": "^5.3.11",
     "yup": "^1.2.0"
   },
