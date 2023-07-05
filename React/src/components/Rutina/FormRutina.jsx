@@ -16,7 +16,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate, useParams } from 'react-router-dom';
 
 
-export function FormMovie() {
+export function FormRutina() {
   //const useNavigate = useNavigate()
   const routeParams = useParams();
   // Id de la pelicula a actualizar

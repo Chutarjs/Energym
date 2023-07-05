@@ -5,8 +5,13 @@ import { Layout } from './components/Layout/Layout'
 import { Home } from './components/Home/Home'
 import { ListPlanes } from './components/Plan/ListPlanes'
 import { DetailMovie } from './components/Plan/DetailPlan'
-import TableMovies from './components/Plan/TableMovies'
-import { FormMovie } from './components/Plan/FormMovie'
+import TablePlan from './components/Plan/TablePlan'
+import { FormPlan } from './components/Plan/FormPlan'
+import { ListRutinas } from './components/Rutina/ListRutinas'
+import {DetailRutina} from './components/Rutina/DetailRutina'
+import {TableRutina} from './components/Rutina/TableRutina'
+import {FormRutina} from './components/Rutina/FormRutina'
+
 const router=createBrowserRouter([
   {
     path:'/',
@@ -18,11 +23,11 @@ const router=createBrowserRouter([
   },
   {
     path:'/planes-table',
-    element: <TableMovies />
+    element: <TablePlan />
   },
   {
     path: 'planes/create/',
-    element: <FormMovie/>
+    element: <FormPlan/>
   },
   {
     path:'/planes/:id',
@@ -30,7 +35,27 @@ const router=createBrowserRouter([
   },
   {
     path: 'planes/update/:id',
-    element: <FormMovie/>
+    element: <FormPlan/>
+  },
+  {
+    path:'/rutinas/',
+    element: <ListRutinas/>
+  },
+  {
+    path:'/rutinas-table',
+    element: <TableRutina />
+  },
+  {
+    path: 'rutinas/create/',
+    element: <FormRutina/>
+  },
+  {
+    path:'/rutinas/:id',
+    element: <DetailRutina />
+  },
+  {
+    path: 'rutinas/update/:id',
+    element: <FormRutina/>
   },
 ])
 

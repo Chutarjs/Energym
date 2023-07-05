@@ -14,6 +14,7 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import { Button, MenuList } from "@mui/material";
 import SportsGymnasticsIcon from "@mui/icons-material/SportsGymnastics";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { BorderAllOutlined } from "@mui/icons-material";
 
 function Header() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -50,7 +51,7 @@ function Header() {
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: 5,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
@@ -62,25 +63,6 @@ function Header() {
             Energym
           </Typography>
           
-          <Typography
-            variant="p"
-            noWrap
-            component="a"
-            href="/planes/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 500,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Planes
-          </Typography>
-
           <SportsGymnasticsIcon
             sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
           />
@@ -91,7 +73,7 @@ function Header() {
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: 5,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
@@ -110,9 +92,8 @@ function Header() {
             component="a"
             href="/planes/"
             sx={{
-              mr: 2,
-              display: { xs: "flex", mr: "1"},
-              flexGrow: 1,
+              mr: 5,
+              display: { xs: "flex"},
               fontFamily: "monospace",
               fontWeight: 500,
               letterSpacing: ".3rem",
@@ -121,6 +102,41 @@ function Header() {
             }}
           >
             Planes
+          </Typography>
+          <Typography
+            variant="p"
+            noWrap
+            component="a"
+            href="/rutinas/"
+            sx={{
+              mr: 5,
+              display: { xs: "flex"},
+              fontFamily: "monospace",
+              fontWeight: 500,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            Rutinas
+          </Typography>
+          <Typography
+            variant="p"
+            noWrap
+            component="a"
+            href="/rutinas/"
+            sx={{
+              mr: 0,
+              display: { xs: "flex"},
+              flexGrow: 1,
+              fontFamily: "monospace",
+              fontWeight: 500,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            Act. Grupales
           </Typography>
           
           {/* Menu Mantenimientos */}
