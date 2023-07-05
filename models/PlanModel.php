@@ -27,33 +27,25 @@ class PlanModel
     public function get($id)
     {
         try {
+            $servicioModel = new ServicioModel();
             //Consulta sql
-			$vSql = "SELECT * FROM plan p where idPlan=$id";
+			$vSql = "SELECT * FROM plan where idPlan=$id";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
+            if(!empty($vResultado)){
+                //Obtener objeto
+                $vResultado = $vResultado[0];
+
+                //---Servicios 
+                $listadoServicios = $servicioModel->getServicioPlan($id);
+                //Asignar servicios al objeto
+                $vResultado->servicios = $listadoServicios;
+            }
 			// Retornar el objeto
 			return $vResultado;
 		} catch ( Exception $e ) {
 			die ( $e->getMessage () );
 		}
-    }
-    /*Obtener los servicios de un plan */
-    /*http://localhost:81/Energym/Plan/getServicioPlan/5*/ 
-    public function getServicioPlan($idPlan)
-    {
-        try {
-            //Consulta SQL
-            $vSQL = "Select s.idServicio, s.Nombre, s.Descripcion, s.tipo, s.precio from Servicio s, PlanServicio ps, Plan p
-            where p.idPlan = $idPlan and ps.idPlan = p.idPlan and ps.idServicio = s.idServicio;";
-            //Establecer conexión
-            
-            //Ejecutar la consulta
-            $vResultado = $this->enlace->executeSQL($vSQL);
-            //Retornar el resultado
-            return $vResultado;
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
     }
 }

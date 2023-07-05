@@ -6,13 +6,13 @@ import ListItemText from '@mui/material/ListItemText'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import PlanService from '../../services/PlanService';
-import StarIcon from '@mui/icons-material/Star';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemButton from '@mui/material/ListItemButton';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 export function DetailMovie () {
   const [data, setData]=useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);
 
@@ -41,43 +41,26 @@ export function DetailMovie () {
         <div>
           <Container component='main' sx={{ mt: 8, mb: 2 }} maxWidth='sm'>
             <Typography variant='h4' component='h1' gutterBottom>
-              {data.title}
+              {"Plan: " + data.Nombre}
             </Typography>
             <Typography variant='subtitle1' component='h1' gutterBottom>
-              {data.year}
+              {"Descripcion: "+data.Descripcion}
             </Typography>
             <Typography variant='body1'>
-              <Box fontWeight='bold' display='inline'>Tiempo:</Box> {data.time}  minutos
+              <Box fontWeight='bold' display='inline'>Precio:</Box>  ₡{data.Precio}
             </Typography>
             <Typography variant='body1'>
-              <Box fontWeight='bold' display='inline'>Idioma:</Box> {data.lang}  
-            </Typography>
-            <Typography variant='body1'>
-              <Box fontWeight='bold'>Generos:</Box>
+              
+              <Box fontWeight='bold'>Servicios:</Box>
               <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                {data.genres.map((item)=>(  
-                  <ListItemButton key={item.id}>
+                {data.servicios.map((item)=>(  
+                  <ListItemButton key={item.idServicio}>
                   <ListItemIcon>
                     <ArrowRightIcon />
                   </ListItemIcon> 
-                  <ListItemText primary={item.title} />
+                  <ListItemText primary={item.Nombre} />
                 </ListItemButton>
                 ))}
-              </List>
-            </Typography>
-            <Typography variant='body1'>
-              <Box fontWeight='bold'>Actores:</Box>
-              <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                
-              {data.actors.map((item)=>( 
-                <ListItemButton key={item.id}>
-                  <ListItemIcon>
-                    <StarIcon />
-                  </ListItemIcon> 
-                  <ListItemText primary={item.fname+" "+item.lname} />
-                </ListItemButton>
-                ))}
-
               </List>
             </Typography>
           </Container>

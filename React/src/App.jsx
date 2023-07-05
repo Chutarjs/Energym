@@ -17,19 +17,19 @@ const router=createBrowserRouter([
     element: <ListPlanes/>
   },
   {
-    path:'/movie-table',
+    path:'/planes-table',
     element: <TableMovies />
   },
   {
-    path: 'movie/create/',
+    path: 'planes/create/',
     element: <FormMovie/>
   },
   {
-    path:'/movie/:id',
+    path:'/planes/:id',
     element: <DetailMovie />
   },
   {
-    path: 'movie/update/:id',
+    path: 'planes/update/:id',
     element: <FormMovie/>
   },
 ])

@@ -11,10 +11,6 @@ class PlanService {
     getPlanById(Id){
         return axios.get(BASE_URL + '/' + Id);
     }
-    //obtiene los servicios del plan
-    getServicioPlan(Id){
-        return axios.get(BASE_URL + '/getServicioPlan/' + Id);
-    }
 }
 
 export default new PlanService()
