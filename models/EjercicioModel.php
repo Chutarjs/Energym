@@ -8,19 +8,20 @@ class EjercicioModel
     }
     /*Listar*/
     /*http://localhost:81/Energym/Ejercicio*/
-    public function all(){
+    public function all()
+    {
         try {
             //Consulta sql
-			$vSql = "SELECT * FROM ejercicio where idEjercicio>0;";
-			
+            $vSql = "SELECT * FROM ejercicio where idEjercicio>0;";
+
             //Ejecutar la consulta
-			$vResultado = $this->enlace->ExecuteSQL ($vSql);
-				
-			// Retornar el objeto
-			return $vResultado;
-		} catch ( Exception $e ) {
-			die ( $e->getMessage () );
-		}
+            $vResultado = $this->enlace->ExecuteSQL($vSql);
+
+            // Retornar el objeto
+            return $vResultado;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
     /*Obtener */
     /*http://localhost:81/Energym/Ejercicio/#*/
@@ -28,26 +29,56 @@ class EjercicioModel
     {
         try {
             //Consulta sql
-			$vSql = "SELECT * FROM Ejercicio e where idEjercicio=$id";
-			
+            $vSql = "SELECT * FROM Ejercicio e where idEjercicio=$id";
+
             //Ejecutar la consulta
-			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
-			// Retornar el objeto
-			return $vResultado;
-		} catch ( Exception $e ) {
-			die ( $e->getMessage () );
-		}
+            $vResultado = $this->enlace->ExecuteSQL($vSql);
+            // Retornar el objeto
+            return $vResultado;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
-    /*Obtener los servicios de un plan */
-    /*http://localhost:81/Energym/Ejercicio/getImagenesEjercicio/# */ 
+
+    // Obtiene los ejercicios de una rutina
+    public function getEjerciciosRutina($id)
+    {
+        try {
+            // Consulta SQL
+            $vSql = "SELECT e.IdEjercicio, e.Nombre AS Ejercicio, e.Descripcion, re.Repeticiones, re.Series
+            FROM rutinaejercicio re
+            INNER JOIN ejercicio e ON re.IdEjercicio = e.idEjercicio 
+            WHERE re.IdRutina = $id";
+
+            // Ejecutar la consulta
+            $vResultado = $this->enlace->ExecuteSQL($vSql);
+
+            // Recorrer los resultados y agregar las imágenes a cada ejercicio
+            foreach ($vResultado as $ejercicio) {
+                $idEjercicio = $ejercicio->IdEjercicio;
+                $ejercicio->imagenes = $this->getImagenesEjercicio($idEjercicio);
+            }
+
+            // Retornar el objeto
+            return $vResultado;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    /*Obtener las imagenes de los ejercicios de una rutina */
+    /*http://localhost:81/Energym/Ejercicio/getImagenesEjercicio/# */
     public function getImagenesEjercicio($idEjercicio)
     {
         try {
             //Consulta SQL
-            $vSQL = "Select ei.imagen from imagenejercicio ei
-            where ei.idEjercicio = $idEjercicio;";
+            $vSQL = "SELECT ei.Imagen AS Imagen
+            FROM rutinaejercicio re
+            INNER JOIN ejercicio e ON re.IdEjercicio = e.idEjercicio 
+            INNER JOIN imagenEjercicio ei ON e.idEjercicio = ei.idEjercicio
+            WHERE re.IdEjercicio = $idEjercicio;";
             //Establecer conexión
-            
+
             //Ejecutar la consulta
             $vResultado = $this->enlace->executeSQL($vSQL);
             //Retornar el resultado

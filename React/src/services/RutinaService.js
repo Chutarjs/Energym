@@ -10,6 +10,10 @@ class RutinaService {
     //obtiene los detalles de un plan
     getRutinaById(Id){
         return axios.get(BASE_URL + '/' + Id);
+    }    
+    
+    getRutinaDetalle(Id){
+        return axios.get(BASE_URL + '/getRutinaDetalle/' + Id);
     }
 }
 

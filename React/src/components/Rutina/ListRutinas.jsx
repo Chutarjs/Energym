@@ -48,10 +48,10 @@ export function ListRutinas () {
               />
               <CardContent>
                 <Typography variant='body1' color='text.secondary' textAlign='center'>
-                  {item.Descripcion}
+                  {"Id de la Rutina: "+item.idrutina}
                 </Typography>
                 <Typography variant='body1' color='text.secondary' textAlign='center'>
-                  {item.cantPersonas}
+                  {item.Descripcion}
                 </Typography>
               </CardContent>
               <CardActions

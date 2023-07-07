@@ -30,6 +30,14 @@ class RutinaModel
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
+            if(!empty($vResultado)){
+                //Obtener objeto
+                $vResultado = $vResultado[0];
+                //---Personas
+                $cantPersonas = $this->getCantPersonasRutina($id);
+                //Asignar servicios al objeto
+                $vResultado->cantPersonas = $cantPersonas;
+            }
 			// Retornar el objeto
 			return $vResultado;
 		} catch ( Exception $e ) {
@@ -41,20 +49,26 @@ class RutinaModel
     public function getRutinaDetalle($id)
     {
         try {
-            //Consulta SQL
-            $vSQL = "SELECT e.Nombre AS Ejercicio, re.Repeticiones, re.Series
-            FROM rutinaejercicio re
-            INNER JOIN ejercicio e ON re.IdEjercicio = e.idEjercicio
-            WHERE re.IdRutina = $id;";
-            //Establecer conexión
-            
+            $EjercicioModel = new EjercicioModel();
+            //Consulta sql
+			$vSql = "SELECT * FROM rutina where idRutina=$id";
             //Ejecutar la consulta
-            $vResultado = $this->enlace->executeSQL($vSQL);
-            //Retornar el resultado
-            return $vResultado;
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
+			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
+            if(!empty($vResultado)){
+                //Obtener objeto
+                $vResultado = $vResultado[0];
+                //---Personas
+                $ejercicios = $EjercicioModel->getEjerciciosRutina($id); 
+                $cantPersonas = $this->getCantPersonasRutina($id);
+                //Asignar servicios al objeto
+                $vResultado->cantPersonas = $cantPersonas;
+                $vResultado->ejercicios = $ejercicios; 
+            }
+			// Retornar el objeto
+			return $vResultado;
+		} catch ( Exception $e ) {
+			die ( $e->getMessage () );
+		}
     }
     
     /*Obtener las rutinas de un usuario */
@@ -79,6 +93,19 @@ class RutinaModel
 
     //
     public function getCantPersonasRutina($idRutina){
-
+        try {
+            //Consulta SQL
+            $vSQL = "SELECT COUNT(DISTINCT idCliente) AS CantidadPersonas
+            FROM historialrutina
+            WHERE FechaVigencia >= NOW() and idRutina = $idRutina;";
+            //Establecer conexión
+            
+            //Ejecutar la consulta
+            $vResultado = $this->enlace->executeSQL($vSQL);
+            //Retornar el resultado
+            return $vResultado;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 }
