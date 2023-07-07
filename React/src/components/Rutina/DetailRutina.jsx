@@ -83,8 +83,13 @@ export function DetailRutina() {
                   <ListItemText
                     primary={item.Ejercicio}
                     secondary={
-                      "Descripcion: " + item.Descripcion + "\n" +
-                      "Repeticiones: " + item.Repeticiones + "x" + item.Series
+                      <div>
+                        Descripcion: {item.Descripcion}
+                        <br /><br />
+                        Repeticiones: {item.Repeticiones}x{item.Series}
+                        <br /><br />
+                        Equipamiento: {item.Equipamiento}
+                      </div>
                     }
                   />
                   {renderExerciseImages(item.imagenes)}
