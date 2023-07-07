@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React,{ useEffect, useState } from 'react'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
@@ -6,7 +7,6 @@ import CardActions from '@mui/material/CardActions'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import { Link } from "react-router-dom";
 import { Info } from '@mui/icons-material'
 import RutinaService from '../../services/RutinaService'
@@ -15,6 +15,7 @@ export function ListRutinas () {
   const [data, setData]=useState(null);
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);
+
   useEffect(()=>{
     RutinaService.getRutinas()
     .then( response=>{
@@ -34,7 +35,7 @@ export function ListRutinas () {
     <Grid container sx={{ p: 2 }} spacing={3}>
       {!loaded && <div>Cargando...</div>}
       {data && data.map((item)=>( 
-          <Grid item xs={3} key={item.idRutina}  >
+          <Grid item xs={3} key={item.idrutina}  >
             <Card>
               <CardHeader
                 sx={{
@@ -49,6 +50,9 @@ export function ListRutinas () {
                 <Typography variant='body1' color='text.secondary' textAlign='center'>
                   {item.Descripcion}
                 </Typography>
+                <Typography variant='body1' color='text.secondary' textAlign='center'>
+                  {item.cantPersonas}
+                </Typography>
               </CardContent>
               <CardActions
                 disableSpacing
@@ -57,7 +61,7 @@ export function ListRutinas () {
                   color: (theme) => theme.palette.common.white
                 }}
               >
-                <IconButton component={Link} to={`/rutinas/${item.idPlan}`} aria-label='Detalle'>
+                <IconButton component={Link} to={`/rutinas/${item.idrutina}`} aria-label='Detalle'>
                   <Info/> 
                   <Typography variant='body2' color='text.secondary' textAlign='center' ml={1}>
                      Detalles 

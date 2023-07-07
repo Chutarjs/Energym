@@ -5,10 +5,10 @@ import List from '@mui/material/List'
 import ListItemText from '@mui/material/ListItemText'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import PlanService from '../../services/PlanService';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemButton from '@mui/material/ListItemButton';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import RutinaService from '../../services/RutinaService'
 
 export function DetailRutina () {
   const [data, setData]=useState(null);
@@ -19,7 +19,7 @@ export function DetailRutina () {
   const routeParams=useParams();
 
   useEffect(()=>{
-    PlanService.getPlanById(routeParams.id)
+    RutinaService.getRutinaById(routeParams.id)
     .then( response=>{
       console.log(response)
       setData(response.data.results)
@@ -41,20 +41,20 @@ export function DetailRutina () {
         <div>
           <Container component='main' sx={{ mt: 8, mb: 2 }} maxWidth='sm'>
             <Typography variant='h4' component='h1' gutterBottom>
-              {"Plan: " + data.Nombre}
+              {"Rutina: " + data.Nombre}
             </Typography>
             <Typography variant='subtitle1' component='h1' gutterBottom>
               {"Descripcion: "+data.Descripcion}
             </Typography>
-            <Typography variant='body1'>
-              <Box fontWeight='bold' display='inline'>Precio:</Box>  ₡{data.Precio}
+            <Typography variant='subtitle1' component='h1' gutterBottom>
+              {"Cantidad de personas inscritas: "+data.cantPersonas}
             </Typography>
             <Typography variant='body1'>
               
               <Box fontWeight='bold'>Servicios:</Box>
               <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                 {data.servicios.map((item)=>(  
-                  <ListItemButton key={item.idServicio}>
+                  <ListItemButton key={item.idRutina}>
                   <ListItemIcon>
                     <ArrowRightIcon />
                   </ListItemIcon> 

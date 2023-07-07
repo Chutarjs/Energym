@@ -76,4 +76,9 @@ class RutinaModel
             die($e->getMessage());
         }
     }
+
+    //
+    public function getCantPersonasRutina($idRutina){
+
+    }
 }
