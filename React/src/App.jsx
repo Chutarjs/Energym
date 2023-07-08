@@ -11,6 +11,10 @@ import { ListRutinas } from './components/Rutina/ListRutinas'
 import {DetailRutina} from './components/Rutina/DetailRutina'
 import {TableRutina} from './components/Rutina/TableRutina'
 import {FormRutina} from './components/Rutina/FormRutina'
+import { ListActividades } from './components/ActGrupales/ListActividades'
+import {DetailActividad} from './components/ActGrupales/DetailActividad'
+import {TableActividad} from './components/ActGrupales/TableActividad'
+import {FormActividad} from './components/ActGrupales/FormActividad'
 
 const router=createBrowserRouter([
   {
@@ -56,6 +60,25 @@ const router=createBrowserRouter([
   {
     path: 'rutinas/update/:id',
     element: <FormRutina/>
+  },{
+    path:'/actividades/',
+    element: <ListActividades/>
+  },
+  {
+    path:'/actividades-table',
+    element: <TableActividad />
+  },
+  {
+    path: 'actividades/create/',
+    element: <FormActividad/>
+  },
+  {
+    path:'/actividades/:id',
+    element: <DetailActividad />
+  },
+  {
+    path: 'actividades/update/:id',
+    element: <FormActividad/>
   },
 ])
 

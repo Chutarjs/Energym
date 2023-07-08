@@ -86,7 +86,7 @@ class ActividadesGrupalesModel
     {
         try {
             //Consulta SQL
-            $vSQL = "SELECT ag.idActividadGrupal, ag.Nombre AS NombreActividad, ag.Cupo - COUNT(agu.idUsuario) AS CupoDisponible
+            $vSQL = "SELECT ag.idActividadGrupal, ag.Nombre AS NombreActividad, ag.Cupo - COUNT(agu.idUsuario) AS CupoDisponible, ag.HoraInicio, ag.HoraFinal
             FROM energym.actividadgrupal ag
             LEFT JOIN energym.actgrupalusuario agu ON ag.idActividadGrupal = agu.idActGrupal
             WHERE CONCAT(ag.Fecha, ' ', ag.HoraInicio) >= NOW()
