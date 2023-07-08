@@ -1,74 +1,95 @@
-import React,{ useEffect, useState } from 'react'
-import Card from '@mui/material/Card'
-import CardHeader from '@mui/material/CardHeader'
-import CardContent from '@mui/material/CardContent'
-import CardActions from '@mui/material/CardActions'
-import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
-import IconButton from '@mui/material/IconButton';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import React, { useEffect, useState } from "react";
+import Card from "@mui/material/Card";
+import CardHeader from "@mui/material/CardHeader";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import { Link } from "react-router-dom";
-import { Info } from '@mui/icons-material'
-import PlanService from '../../services/PlanService'
-export function ListPlanes () {
-  const [data, setData]=useState(null);
-  const [error, setError] =useState('');
-  const [loaded, setLoaded] =useState(false);
-  useEffect(()=>{
+import { Info } from "@mui/icons-material";
+import PlanService from "../../services/PlanService";
+
+export function ListPlanes() {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState("");
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
     PlanService.getPlanes()
-    .then( response=>{
-        console.log(response)
-        setData(response.data.results)
-        setError(response.error)
-        setLoaded(true)
-    })
-    .catch(error=>{
-      if(error instanceof SyntaxError){
-        console.log(error)
-        throw new Error("Respuesta no válida del servidor")
-      }
-    });
-  },[]);
+      .then((response) => {
+        console.log(response);
+        setData(response.data.results);
+        setError(response.error);
+        setLoaded(true);
+      })
+      .catch((error) => {
+        if (error instanceof SyntaxError) {
+          console.log(error);
+          throw new Error("Respuesta no válida del servidor");
+        }
+      });
+  }, []);
+
   return (
     <Grid container sx={{ p: 2 }} spacing={3}>
       {!loaded && <div>Cargando...</div>}
-      {data && data.map((item)=>( 
-          <Grid item xs={3} key={item.idPlan}  >
+      {data &&
+        data.map((item) => (
+          <Grid item xs={3} key={item.idPlan}>
             <Card>
               <CardHeader
                 sx={{
                   p: 0,
                   backgroundColor: (theme) => theme.palette.secondary.main,
-                  color: (theme) => theme.palette.common.white
+                  color: (theme) => theme.palette.common.white,
                 }}
-                style={{ textAlign: 'center' }}
+                style={{ textAlign: "center" }}
                 title={item.Nombre}
               />
               <CardContent>
-                <Typography variant='body1' color='text.secondary' textAlign='center'>
+                <Typography
+                  variant="body1"
+                  color="text.secondary"
+                  textAlign="center"
+                >
                   {item.Descripcion}
                 </Typography>
-                <Typography variant='body2' color='text.secondary' textAlign='center'>
-                  <LocalOfferIcon/>  ₡{item.Precio} 
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  textAlign="center"
+                >
+                  <LocalOfferIcon /> ₡{item.Precio}
                 </Typography>
               </CardContent>
               <CardActions
                 disableSpacing
                 sx={{
                   backgroundColor: (theme) => theme.palette.action.focus,
-                  color: (theme) => theme.palette.common.white
+                  color: (theme) => theme.palette.common.white,
                 }}
               >
-                <IconButton component={Link} to={`/planes/${item.idPlan}`} aria-label='Detalle'>
-                  <Info/> 
-                  <Typography variant='body2' color='text.secondary' textAlign='center' ml={1}>
-                     Detalles 
+                <IconButton
+                  component={Link}
+                  to={`/planes/${item.idPlan}`}
+                  aria-label="Detalle"
+                >
+                  <Info />
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    textAlign="center"
+                    ml={1}
+                  >
+                    Detalles
                   </Typography>
                 </IconButton>
               </CardActions>
             </Card>
           </Grid>
-      ))}   
+        ))}
     </Grid>
-  )
+  );
 }

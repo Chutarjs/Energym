@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL=import.meta.env.VITE_BASE_URL+"actividadesgrupales"
+const BASE_URL= "http://localhost:81/Energym/ActividadesGrupales"
 
 class ActGrupalesService{
     //Definición para Llamar al API y obtener el listado de peliculas
@@ -11,6 +11,7 @@ class ActGrupalesService{
     getActividadById(Id){
         return axios.get(BASE_URL + '/' + Id);
     }
+    
     //aun por hacer
     createMovie(Movie){
         return axios.post(BASE_URL, Movie);

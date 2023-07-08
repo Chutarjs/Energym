@@ -124,7 +124,7 @@ function Header() {
             variant="p"
             noWrap
             component="a"
-            href="/actGrupales/"
+            href="/actividades/"
             sx={{
               mr: 0,
               display: { xs: "flex"},
