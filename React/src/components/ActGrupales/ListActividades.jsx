@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -6,18 +7,26 @@ import CardActions from "@mui/material/CardActions";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import EventIcon from "@mui/icons-material/Event";
 import { Link } from "react-router-dom";
 import { Info } from "@mui/icons-material";
 import ActGrupalesService from "../../services/ActGrupalesService";
+import HourglassTopIcon from "@mui/icons-material/HourglassTop";
+import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
+import PeopleIcon from "@mui/icons-material/People";
+import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
+import Button from "@mui/material/Button";
+import CheckIcon from "@mui/icons-material/Check";
 
 export function ListActividades() {
   const [data, setData] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState("");
   const [loaded, setLoaded] = useState(false);
+  const [showAvailable, setShowAvailable] = useState(false); // Estado para mostrar solo actividades con cupo disponible
 
   useEffect(() => {
-    ActGrupalesService.getActividades()
+    ActGrupalesService.getDetalle()
       .then((response) => {
         console.log(response);
         setData(response.data.results);
@@ -32,64 +41,138 @@ export function ListActividades() {
       });
   }, []);
 
+  const handleToggleAvailable = () => {
+    setShowAvailable(!showAvailable);
+  };
+
+  // Obtener la fecha actual en formato yyyy-mm-dd
+  const currentDate = new Date().toISOString().split("T")[0];
+
   return (
     <Grid container sx={{ p: 2 }} spacing={3}>
       {!loaded && <div>Cargando...</div>}
       {data &&
-        data.map((item) => (
-          <Grid item xs={3} key={item.idActividadGrupal}>
-            <Card>
-              <CardHeader
-                sx={{
-                  p: 0,
-                  backgroundColor: (theme) => theme.palette.secondary.main,
-                  color: (theme) => theme.palette.common.white,
-                }}
-                style={{ textAlign: "center" }}
-                title={item.Nombre}
-              />
-              <CardContent>
-                <Typography
-                  variant="body1"
-                  color="text.secondary"
-                  textAlign="center"
-                >
-                  {item.Descripcion}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  textAlign="center"
-                >
-                  <LocalOfferIcon /> ₡{item.Precio}
-                </Typography>
-              </CardContent>
-              <CardActions
-                disableSpacing
-                sx={{
-                  backgroundColor: (theme) => theme.palette.action.focus,
-                  color: (theme) => theme.palette.common.white,
-                }}
-              >
-                <IconButton
-                  component={Link}
-                  to={`/planes/${item.idPlan}`}
-                  aria-label="Detalle"
-                >
-                  <Info />
+        data
+          .filter(
+            (item) =>
+              !showAvailable ||
+              (item.Cupo > item.cantidad_matriculados &&
+                item.Fecha >= currentDate)
+          ) // Filtrar los datos según el estado showAvailable y la fecha de inicio
+          .map((item) => (
+            <Grid item xs={4} key={item.idActividadGrupal}>
+              <Card>
+                <CardHeader
+                  sx={{
+                    p: 0,
+                    backgroundColor: (theme) => theme.palette.secondary.main,
+                    color: (theme) => theme.palette.common.white,
+                  }}
+                  style={{ textAlign: "center" }}
+                  title={item.Nombre}
+                />
+                <CardContent>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    {item.Descripcion}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    <EventIcon />
+                    {item.Fecha}
+                  </Typography>
                   <Typography
                     variant="body2"
                     color="text.secondary"
                     textAlign="center"
-                    ml={1}
                   >
-                    Detalles
+                    <HourglassTopIcon /> {item.HoraInicio}
+                    <HourglassBottomIcon /> {item.HoraFinal}
                   </Typography>
-                </IconButton>
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    <PeopleIcon />
+                    {" Cupo : " + item.Cupo}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    <EmojiPeopleIcon />
+                    {" Matriculados : " + item.cantidad_matriculados}
+                  </Typography>
+                </CardContent>
+                <CardActions
+                  disableSpacing
+                  sx={{
+                    backgroundColor: (theme) => theme.palette.action.focus,
+                    color: (theme) => theme.palette.common.white,
+                  }}
+                >
+                  <IconButton
+                    component={Link}
+                    to={`/actividades/${item.idActividadGrupal}`}
+                    aria-label="Detalle"
+                  >
+                    <Info />
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      textAlign="center"
+                      ml={1}
+                    >
+                      Detalles
+                    </Typography>
+                  </IconButton>
+
+                  <IconButton
+                    component={Link}
+                    to={`/actividades/${item.idPlan}`}
+                    aria-label="Matricular"
+                  >
+                    <CheckIcon />
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      textAlign="center"
+                      ml={1}
+                    >
+                      Matricular
+                    </Typography>
+                  </IconButton>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          margin: "20px",
+          maxHeight: "100px",
+          width: "100%",
+        }}
+      >
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={handleToggleAvailable}
+        >
+          {showAvailable
+            ? "Mostrar todas las actividades"
+            : "Mostrar solo actividades con cupo disponible"}
+        </Button>
+      </div>
     </Grid>
   );
 }

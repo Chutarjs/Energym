@@ -49,10 +49,33 @@ class ActividadesGrupales{
             );
         
     }
-     /*Obtiene una detallada*/ 
-    public function getDetalle($id){
+
+     /*Obtiene todas detalladas*/ 
+    public function getDetalle(){
         $genero=new ActividadesGrupalesModel();
-        $response=$genero->getDetalle($id);
+        $response=$genero->getDetalle();
+        //Si hay respuesta
+        if(isset($response) && !empty($response)){
+            //Armar el json
+            $json=array(
+                'status'=>200,
+                'results'=>$response
+            );
+        }else{
+            $json=array(
+                'status'=>400,
+                'results'=>"No hay registros"
+            );
+        }
+        echo json_encode($json,
+                http_response_code($json["status"])
+            );
+    }   
+
+     /*Obtiene una detallada*/ 
+    public function getDetalleById($id){
+        $genero=new ActividadesGrupalesModel();
+        $response=$genero->getDetalleById($id);
         //Si hay respuesta
         if(isset($response) && !empty($response)){
             //Armar el json

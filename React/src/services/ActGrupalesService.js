@@ -11,6 +11,14 @@ class ActGrupalesService{
     getActividadById(Id){
         return axios.get(BASE_URL + '/' + Id);
     }
+
+    getDetalle(){
+        return axios.get(BASE_URL + '/getDetalle/1');
+    }
+
+    getDetalleByID(Id){
+        return axios.get(BASE_URL + '/getDetalleById/' + Id);
+    }
     
     //aun por hacer
     createMovie(Movie){
