@@ -25,6 +25,7 @@ import { visuallyHidden } from '@mui/utils'
 import EditIcon from '@mui/icons-material/Edit'
 import { useNavigate, Link } from 'react-router-dom'
 import PlanService from '../../services/PlanService'
+import { Info } from "@mui/icons-material";
 
 function descendingComparator (a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -154,6 +155,9 @@ function TablePlanesToolbar (props) {
   const update = () => {
     return navigate(`/plan/update/${idSelected}`)
   }
+  const detail = () => {
+    return navigate(`/planes/${idSelected}`)
+  }
   return (
     <Toolbar
       sx={{
@@ -192,6 +196,11 @@ function TablePlanesToolbar (props) {
 
       {numSelected > 0
         ? (<>
+          <Tooltip title='Info'>
+            <IconButton onClick={detail}>
+              <Info />
+            </IconButton>
+          </Tooltip>
           <Tooltip title='Borrar'>
             <IconButton>
               <DeleteIcon />
