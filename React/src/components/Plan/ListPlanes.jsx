@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -13,6 +14,7 @@ import PlanService from "../../services/PlanService";
 
 export function ListPlanes() {
   const [data, setData] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState("");
   const [loaded, setLoaded] = useState(false);
 
