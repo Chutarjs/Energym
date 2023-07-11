@@ -24,7 +24,7 @@ import FilterListIcon from '@mui/icons-material/FilterList'
 import { visuallyHidden } from '@mui/utils'
 import EditIcon from '@mui/icons-material/Edit'
 import { useNavigate, Link } from 'react-router-dom'
-import MovieService from '../../services/EjercicioService'
+import PlanService from '../../services/PlanService'
 
 function descendingComparator (a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -60,26 +60,32 @@ function stableSort (array, comparator) {
 //--- Encabezados de la tabla ---
 const headCells = [
   {
-    id: 'title',
+    id: 'idPlan',
+    numeric: false,
+    disablePadding: false,
+    label: 'Id'
+  },
+  {
+    id: 'nombre',
     numeric: false,
     disablePadding: true,
-    label: 'Título'
+    label: 'Nombre'
   },
   {
-    id: 'year',
+    id: 'descripcion',
     numeric: false,
-    disablePadding: false,
-    label: 'Año'
+    disablePadding: true,
+    label: 'Descripcion'
   },
   {
-    id: 'time',
+    id: 'precio',
     numeric: false,
     disablePadding: false,
-    label: 'Minutos'
+    label: 'Precio'
   }
 ]
 //Construcción del Header de la tabla con sus propiedades
-function TableMoviesHead (props) {
+function TablePlanesHead (props) {
   const {
     // onSelectAllClick,
     order,
@@ -97,7 +103,7 @@ function TableMoviesHead (props) {
       <TableRow>
         <TableCell padding='checkbox'>
           <Tooltip title='Nuevo'>
-            <IconButton component={Link} to='/movie/create'>
+            <IconButton component={Link} to='/plan/create'>
               <AddIcon />
             </IconButton>
           </Tooltip>
@@ -130,7 +136,7 @@ function TableMoviesHead (props) {
   )
 }
 // PropTypes es un verificador de tipos
-TableMoviesHead.propTypes = {
+TablePlanesHead.propTypes = {
   numSelected: PropTypes.number.isRequired,
   onRequestSort: PropTypes.func.isRequired,
   /*  onSelectAllClick: PropTypes.func.isRequired, */
@@ -140,12 +146,13 @@ TableMoviesHead.propTypes = {
 }
 
 //Menú de opciones que aparecer al seleccionar una fila
-function TableMoviesToolbar (props) {
+function TablePlanesToolbar (props) {
   const navigate = useNavigate()
   const { numSelected } = props
   const { idSelected } = props
+
   const update = () => {
-    return navigate(`/movie/update/${idSelected}`)
+    return navigate(`/plan/update/${idSelected}`)
   }
   return (
     <Toolbar
@@ -179,7 +186,7 @@ function TableMoviesToolbar (props) {
             id='tableTitle'
             component='div'
           >
-            Peliculas
+            Planes
           </Typography>
           )}
 
@@ -207,19 +214,19 @@ function TableMoviesToolbar (props) {
   )
 }
 //Propiedades del Menú de opciones
-TableMoviesToolbar.propTypes = {
+TablePlanesToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
   idSelected: PropTypes.number.isRequired
 }
 
-export default function TableMovies () {
+export default function TablePlan () {
   //Datos a cargar en la tabla
   const [data, setData]=useState(null);
   // eslint-disable-next-line no-unused-vars
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);
   useEffect(()=>{
-    MovieService.getMovies()
+    PlanService.getPlanes()
     .then( response=>{
         console.log(response)
         setData(response.data.results)
@@ -240,8 +247,8 @@ export default function TableMovies () {
   const [selected, setSelected] = React.useState([])
   const [page, setPage] = React.useState(0)
   const [dense, setDense] = React.useState(false)
-  //Cantidad de registros por p{agina}
-  const [rowsPerPage, setRowsPerPage] = React.useState(3)
+  //Cantidad de registros por pagina
+  const [rowsPerPage, setRowsPerPage] = React.useState(12)
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc'
@@ -249,12 +256,14 @@ export default function TableMovies () {
     setOrderBy(property)
   }
 
-  const handleClick = (event, id) => {
-    const selectedIndex = selected.indexOf(id)
+  const handleClick = (event, idPlan) => {
+    const selectedIndex = selected.indexOf(idPlan)
     let newSelected = []
 
+    console.log(idPlan);
+
     if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, id)
+      newSelected = newSelected.concat(selected, idPlan)
     } else if (selectedIndex === 0) {
       newSelected = newSelected.concat(selected.slice(1))
     } else if (selectedIndex === selected.length - 1) {
@@ -293,14 +302,14 @@ export default function TableMovies () {
       {data && data.length > 0 &&
         <Box sx={{ width: '100%' }}>
           <Paper sx={{ width: '100%', mb: 2 }}>
-            <TableMoviesToolbar numSelected={selected.length} idSelected={Number(selected[0]) || 0} />
+            <TablePlanesToolbar numSelected={selected.length} idSelected={Number(selected[0]) || 0} />
             <TableContainer>
               <Table
                 sx={{ minWidth: 750 }}
                 aria-labelledby='tableTitle'
                 size={dense ? 'small' : 'medium'}
               >
-                <TableMoviesHead
+                <TablePlanesHead
                   numSelected={selected.length}
                   order={order}
                   orderBy={orderBy}
@@ -311,17 +320,17 @@ export default function TableMovies () {
                   {stableSort(data, getComparator(order, orderBy))
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row, index) => {
-                      const isItemSelected = isSelected(row.id)
+                      const isItemSelected = isSelected(row.idPlan)
                       const labelId = `enhanced-table-checkbox-${index}`
 
                       return (
                         <TableRow
                           hover
-                          onClick={(event) => handleClick(event, row.id)}
+                          onClick={(event) => handleClick(event, row.idPlan)}
                           role='checkbox'
                           aria-checked={isItemSelected}
                           tabIndex={-1}
-                          key={row.id}
+                          key={row.idPlan}
                           selected={isItemSelected}
                         >
                           <TableCell padding='checkbox'>
@@ -339,10 +348,11 @@ export default function TableMovies () {
                             scope='row'
                             padding='none'
                           >
-                            {row.title}
+                            {row.idPlan}
                           </TableCell>
-                          <TableCell align='left'>{row.year}</TableCell>
-                          <TableCell align='left'>{row.time}</TableCell>
+                          <TableCell align='left'>{row.Nombre}</TableCell>
+                          <TableCell align='left'>{row.Descripcion}</TableCell>
+                          <TableCell align='left'>{row.Precio}</TableCell>
                         </TableRow>
                       )
                     })}

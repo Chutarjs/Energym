@@ -5,7 +5,6 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
@@ -14,7 +13,6 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import { Button, MenuList } from "@mui/material";
 import SportsGymnasticsIcon from "@mui/icons-material/SportsGymnastics";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { BorderAllOutlined } from "@mui/icons-material";
 
 function Header() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -168,6 +166,9 @@ function Header() {
                 </MenuItem>
                 <MenuItem component="a" href="/rutina-table/">
                   <Typography textAlign="center">Rutinas</Typography>
+                </MenuItem>
+                <MenuItem component="a" href="/actividad-table/">
+                  <Typography textAlign="center">Actividades Grupales</Typography>
                 </MenuItem>
                 <MenuItem component="a" href="/ejercicio-table/">
                   <Typography textAlign="center">Ejercicios</Typography>

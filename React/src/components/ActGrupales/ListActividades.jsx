@@ -9,7 +9,6 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import EventIcon from "@mui/icons-material/Event";
 import { Link } from "react-router-dom";
-import { Info } from "@mui/icons-material";
 import ActGrupalesService from "../../services/ActGrupalesService";
 import HourglassTopIcon from "@mui/icons-material/HourglassTop";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
@@ -119,21 +118,6 @@ export function ListActividades() {
                     color: (theme) => theme.palette.common.white,
                   }}
                 >
-                  <IconButton
-                    component={Link}
-                    to={`/actividades/${item.idActividadGrupal}`}
-                    aria-label="Detalle"
-                  >
-                    <Info />
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      textAlign="center"
-                      ml={1}
-                    >
-                      Detalles
-                    </Typography>
-                  </IconButton>
 
                   <IconButton
                     component={Link}

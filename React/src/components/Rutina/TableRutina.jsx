@@ -24,7 +24,8 @@ import FilterListIcon from '@mui/icons-material/FilterList'
 import { visuallyHidden } from '@mui/utils'
 import EditIcon from '@mui/icons-material/Edit'
 import { useNavigate, Link } from 'react-router-dom'
-import MovieService from '../../services/EjercicioService'
+import { Info } from "@mui/icons-material";
+import RutinaService from '../../services/RutinaService'
 
 function descendingComparator (a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -60,26 +61,26 @@ function stableSort (array, comparator) {
 //--- Encabezados de la tabla ---
 const headCells = [
   {
-    id: 'title',
+    id: 'idRutina',
     numeric: false,
     disablePadding: true,
-    label: 'Título'
+    label: 'Id'
   },
   {
-    id: 'year',
+    id: 'nombre',
     numeric: false,
     disablePadding: false,
-    label: 'Año'
+    label: 'Nombre'
   },
   {
-    id: 'time',
+    id: 'descripcion',
     numeric: false,
     disablePadding: false,
-    label: 'Minutos'
-  }
+    label: 'Descripcion'
+  },
 ]
 //Construcción del Header de la tabla con sus propiedades
-function TableMoviesHead (props) {
+function TableRutinaHead (props) {
   const {
     // onSelectAllClick,
     order,
@@ -97,7 +98,7 @@ function TableMoviesHead (props) {
       <TableRow>
         <TableCell padding='checkbox'>
           <Tooltip title='Nuevo'>
-            <IconButton component={Link} to='/movie/create'>
+            <IconButton component={Link} to='/rutina/create'>
               <AddIcon />
             </IconButton>
           </Tooltip>
@@ -130,7 +131,7 @@ function TableMoviesHead (props) {
   )
 }
 // PropTypes es un verificador de tipos
-TableMoviesHead.propTypes = {
+TableRutinaHead.propTypes = {
   numSelected: PropTypes.number.isRequired,
   onRequestSort: PropTypes.func.isRequired,
   /*  onSelectAllClick: PropTypes.func.isRequired, */
@@ -140,12 +141,15 @@ TableMoviesHead.propTypes = {
 }
 
 //Menú de opciones que aparecer al seleccionar una fila
-function TableMoviesToolbar (props) {
+function TableRutinasToolbar (props) {
   const navigate = useNavigate()
   const { numSelected } = props
   const { idSelected } = props
   const update = () => {
-    return navigate(`/movie/update/${idSelected}`)
+    return navigate(`/rutina/update/${idSelected}`)
+  }
+  const detail = () => {
+    return navigate(`/rutina/${idSelected}`)
   }
   return (
     <Toolbar
@@ -179,17 +183,24 @@ function TableMoviesToolbar (props) {
             id='tableTitle'
             component='div'
           >
-            Peliculas
+            Rutinas
           </Typography>
           )}
 
       {numSelected > 0
         ? (<>
+          <Tooltip title='Info'>
+            <IconButton onClick={detail}>
+              <Info />
+            </IconButton>
+          </Tooltip>
+
           <Tooltip title='Borrar'>
             <IconButton>
               <DeleteIcon />
             </IconButton>
           </Tooltip>
+          
           <Tooltip title='Actualizar'>
             <IconButton onClick={update}>
               <EditIcon key={idSelected} />
@@ -207,7 +218,7 @@ function TableMoviesToolbar (props) {
   )
 }
 //Propiedades del Menú de opciones
-TableMoviesToolbar.propTypes = {
+TableRutinasToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
   idSelected: PropTypes.number.isRequired
 }
@@ -219,7 +230,7 @@ export function TableRutina () {
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);
   useEffect(()=>{
-    MovieService.getMovies()
+    RutinaService.getRutinas()
     .then( response=>{
         console.log(response)
         setData(response.data.results)
@@ -241,7 +252,7 @@ export function TableRutina () {
   const [page, setPage] = React.useState(0)
   const [dense, setDense] = React.useState(false)
   //Cantidad de registros por p{agina}
-  const [rowsPerPage, setRowsPerPage] = React.useState(3)
+  const [rowsPerPage, setRowsPerPage] = React.useState(12)
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc'
@@ -293,14 +304,14 @@ export function TableRutina () {
       {data && data.length > 0 &&
         <Box sx={{ width: '100%' }}>
           <Paper sx={{ width: '100%', mb: 2 }}>
-            <TableMoviesToolbar numSelected={selected.length} idSelected={Number(selected[0]) || 0} />
+            <TableRutinasToolbar numSelected={selected.length} idSelected={Number(selected[0]) || 0} />
             <TableContainer>
               <Table
                 sx={{ minWidth: 750 }}
                 aria-labelledby='tableTitle'
                 size={dense ? 'small' : 'medium'}
               >
-                <TableMoviesHead
+                <TableRutinaHead
                   numSelected={selected.length}
                   order={order}
                   orderBy={orderBy}
@@ -311,17 +322,17 @@ export function TableRutina () {
                   {stableSort(data, getComparator(order, orderBy))
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row, index) => {
-                      const isItemSelected = isSelected(row.id)
+                      const isItemSelected = isSelected(row.idrutina)
                       const labelId = `enhanced-table-checkbox-${index}`
 
                       return (
                         <TableRow
                           hover
-                          onClick={(event) => handleClick(event, row.id)}
+                          onClick={(event) => handleClick(event, row.idrutina)}
                           role='checkbox'
                           aria-checked={isItemSelected}
                           tabIndex={-1}
-                          key={row.id}
+                          key={row.idrutina}
                           selected={isItemSelected}
                         >
                           <TableCell padding='checkbox'>
@@ -339,10 +350,10 @@ export function TableRutina () {
                             scope='row'
                             padding='none'
                           >
-                            {row.title}
+                            {row.idrutina}
                           </TableCell>
-                          <TableCell align='left'>{row.year}</TableCell>
-                          <TableCell align='left'>{row.time}</TableCell>
+                          <TableCell align='left'>{row.Nombre}</TableCell>
+                          <TableCell align='left'>{row.Descripcion}</TableCell>
                         </TableRow>
                       )
                     })}

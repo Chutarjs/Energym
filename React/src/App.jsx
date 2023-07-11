@@ -26,7 +26,7 @@ const router=createBrowserRouter([
     element: <ListPlanes/>
   },
   {
-    path:'/planes-table',
+    path:'/plan-table',
     element: <TablePlan />
   },
   {
@@ -46,30 +46,30 @@ const router=createBrowserRouter([
     element: <ListRutinas/>
   },
   {
-    path:'/rutinas-table',
+    path:'/rutina-table',
     element: <TableRutina />
   },
   {
-    path: 'rutinas/create/',
+    path: 'rutina/create/',
     element: <FormRutina/>
   },
   {
-    path:'/rutinas/:id',
+    path:'/rutina/:id',
     element: <DetailRutina />
   },
   {
-    path: 'rutinas/update/:id',
+    path: 'rutina/update/:id',
     element: <FormRutina/>
   },{
     path:'/actividades/',
     element: <ListActividades/>
   },
   {
-    path:'/actividades-table',
+    path:'/actividad-table',
     element: <TableActividad />
   },
   {
-    path: 'actividades/create/',
+    path: 'actividad/create/',
     element: <FormActividad/>
   },
   {
@@ -77,7 +77,7 @@ const router=createBrowserRouter([
     element: <DetailActividad />
   },
   {
-    path: 'actividades/update/:id',
+    path: 'actividad/update/:id',
     element: <FormActividad/>
   },
 ])

@@ -24,7 +24,8 @@ import FilterListIcon from '@mui/icons-material/FilterList'
 import { visuallyHidden } from '@mui/utils'
 import EditIcon from '@mui/icons-material/Edit'
 import { useNavigate, Link } from 'react-router-dom'
-import MovieService from '../../services/EjercicioService'
+import { Info } from "@mui/icons-material";
+import ActGrupalesService from '../../services/ActGrupalesService'
 
 function descendingComparator (a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -60,22 +61,46 @@ function stableSort (array, comparator) {
 //--- Encabezados de la tabla ---
 const headCells = [
   {
-    id: 'title',
+    id: 'idActividad',
     numeric: false,
     disablePadding: true,
-    label: 'Título'
+    label: 'Id'
   },
   {
-    id: 'year',
+    id: 'nombre',
     numeric: false,
     disablePadding: false,
-    label: 'Año'
+    label: 'Nombre'
   },
   {
-    id: 'time',
+    id: 'fecha',
     numeric: false,
     disablePadding: false,
-    label: 'Minutos'
+    label: 'Fecha'
+  },
+  {
+    id: 'inicio',
+    numeric: false,
+    disablePadding: false,
+    label: 'Hora Inicio'
+  },
+  {
+    id: 'fin',
+    numeric: false,
+    disablePadding: false,
+    label: 'Hora Fin'
+  },
+  {
+    id: 'cupo',
+    numeric: false,
+    disablePadding: false,
+    label: 'Cupo'
+  },
+  {
+    id: 'matriculadas',
+    numeric: false,
+    disablePadding: false,
+    label: 'Matriculadas'
   }
 ]
 //Construcción del Header de la tabla con sus propiedades
@@ -97,7 +122,7 @@ function TableMoviesHead (props) {
       <TableRow>
         <TableCell padding='checkbox'>
           <Tooltip title='Nuevo'>
-            <IconButton component={Link} to='/movie/create'>
+            <IconButton component={Link} to='/actividad/create'>
               <AddIcon />
             </IconButton>
           </Tooltip>
@@ -140,12 +165,15 @@ TableMoviesHead.propTypes = {
 }
 
 //Menú de opciones que aparecer al seleccionar una fila
-function TableMoviesToolbar (props) {
+function TableActividadesToolbar (props) {
   const navigate = useNavigate()
   const { numSelected } = props
   const { idSelected } = props
   const update = () => {
-    return navigate(`/movie/update/${idSelected}`)
+    return navigate(`/actividad/update/${idSelected}`)
+  }
+  const detail = () => {
+    return navigate(`/actividades/${idSelected}`)
   }
   return (
     <Toolbar
@@ -179,17 +207,24 @@ function TableMoviesToolbar (props) {
             id='tableTitle'
             component='div'
           >
-            Peliculas
+            Actividades Grupales
           </Typography>
           )}
 
       {numSelected > 0
         ? (<>
+          <Tooltip title='Info'>
+            <IconButton onClick={detail}>
+              <Info />
+            </IconButton>
+          </Tooltip>
+
           <Tooltip title='Borrar'>
             <IconButton>
               <DeleteIcon />
             </IconButton>
           </Tooltip>
+          
           <Tooltip title='Actualizar'>
             <IconButton onClick={update}>
               <EditIcon key={idSelected} />
@@ -207,7 +242,7 @@ function TableMoviesToolbar (props) {
   )
 }
 //Propiedades del Menú de opciones
-TableMoviesToolbar.propTypes = {
+TableActividadesToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
   idSelected: PropTypes.number.isRequired
 }
@@ -219,7 +254,7 @@ export function TableActividad () {
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);
   useEffect(()=>{
-    MovieService.getMovies()
+    ActGrupalesService.getDetalle()
     .then( response=>{
         console.log(response)
         setData(response.data.results)
@@ -241,7 +276,7 @@ export function TableActividad () {
   const [page, setPage] = React.useState(0)
   const [dense, setDense] = React.useState(false)
   //Cantidad de registros por p{agina}
-  const [rowsPerPage, setRowsPerPage] = React.useState(3)
+  const [rowsPerPage, setRowsPerPage] = React.useState(12)
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc'
@@ -293,7 +328,7 @@ export function TableActividad () {
       {data && data.length > 0 &&
         <Box sx={{ width: '100%' }}>
           <Paper sx={{ width: '100%', mb: 2 }}>
-            <TableMoviesToolbar numSelected={selected.length} idSelected={Number(selected[0]) || 0} />
+            <TableActividadesToolbar numSelected={selected.length} idSelected={Number(selected[0]) || 0} />
             <TableContainer>
               <Table
                 sx={{ minWidth: 750 }}
@@ -311,17 +346,17 @@ export function TableActividad () {
                   {stableSort(data, getComparator(order, orderBy))
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row, index) => {
-                      const isItemSelected = isSelected(row.id)
+                      const isItemSelected = isSelected(row.idActividadGrupal)
                       const labelId = `enhanced-table-checkbox-${index}`
 
                       return (
                         <TableRow
                           hover
-                          onClick={(event) => handleClick(event, row.id)}
+                          onClick={(event) => handleClick(event, row.idActividadGrupal)}
                           role='checkbox'
                           aria-checked={isItemSelected}
                           tabIndex={-1}
-                          key={row.id}
+                          key={row.idActividadGrupal}
                           selected={isItemSelected}
                         >
                           <TableCell padding='checkbox'>
@@ -339,10 +374,14 @@ export function TableActividad () {
                             scope='row'
                             padding='none'
                           >
-                            {row.title}
+                            {row.idActividadGrupal}
                           </TableCell>
-                          <TableCell align='left'>{row.year}</TableCell>
-                          <TableCell align='left'>{row.time}</TableCell>
+                          <TableCell align='left'>{row.Nombre}</TableCell>
+                          <TableCell align='left'>{row.Fecha}</TableCell>
+                          <TableCell align='left'>{row.HoraInicio}</TableCell>
+                          <TableCell align='left'>{row.HoraFinal}</TableCell>
+                          <TableCell align='left'>{row.Cupo}</TableCell>
+                          <TableCell align='left'>{row.cantidad_matriculados}</TableCell>
                         </TableRow>
                       )
                     })}
