@@ -447,3 +447,213 @@
 [07-Jul-2023 07:33:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
 [07-Jul-2023 07:33:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
 [07-Jul-2023 07:33:45 Europe/Berlin] PHP   4. Rutinas->getRutinaDetalle($id = '2') C:\xampp\htdocs\Energym\routes\routes.php:69
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$imagen in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 13
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 13
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$imagen in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 13
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 13
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$imagen in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 13
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 13
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$imagen in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 13
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 13
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$imagen in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 13
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 13
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:05:56 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$imagen in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$imagen in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$imagen in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$imagen in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$imagen in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:29 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:06:37 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:07:45 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\controllers\ServicioController.php on line 14
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP Stack trace:
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[21-Jul-2023 01:07:46 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62

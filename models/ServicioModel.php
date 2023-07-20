@@ -6,12 +6,13 @@ class ServicioModel
     {
         $this->enlace = new MySqlConnect();
     }
+    
     /*Listar*/
     /*http://localhost:81/Energym/servicio*/
     public function all(){
         try {
             //Consulta sql
-			$vSql = "SELECT * FROM servicio where idServicio > 0;";
+			$vSql = "SELECT * from Servicio where idservicio > 0;";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ($vSql);
