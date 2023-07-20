@@ -39,7 +39,7 @@ export function DetailActividad() {
         <div>
           <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
             <Typography variant="h4" component="h1" gutterBottom>
-              {"Plan: " + data.Nombre}
+              {"Actividad Grupal: " + data.Nombre}
             </Typography>
             <Typography variant="subtitle1" component="h1" gutterBottom>
               {"Descripcion: " + data.Descripcion}

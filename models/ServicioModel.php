@@ -28,7 +28,7 @@ class ServicioModel
     {
         try {
             //Consulta sql
-			$vSql = "SELECT * FROM servicio where idservicio>0";
+			$vSql = "SELECT * FROM servicio where idservicio=$id";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ( $vSql);

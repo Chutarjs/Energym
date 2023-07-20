@@ -3,27 +3,27 @@ import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import PropTypes from 'prop-types';
 
-SelectGenres.propTypes = {
+SelectServices.propTypes = {
   data: PropTypes.array,
   field: PropTypes.object,
 };
-export function SelectGenres({ field, data }) {
+export function SelectServices({ field, data }) {
   return (
     <>
       <>
-        <InputLabel id='genre'>Genero</InputLabel>
+        <InputLabel id='servicio'>Servicio</InputLabel>
         <Select
           {...field}
-          labelId='genre'
-          label='genre'
+          labelId='servicio'
+          label='Servicio'
            multiple
           defaultValue={[]}
           value={field.value}
         >
           {data &&
-            data.map((genre) => (
-              <MenuItem key={genre.id} value={genre.id}>
-                {genre.title}
+            data.map((servicio) => (
+              <MenuItem key={servicio.idServicio} value={servicio.idServicio}>
+                {servicio.nombre}
               </MenuItem>
             ))}
         </Select>

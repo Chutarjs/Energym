@@ -26,11 +26,7 @@ class servicio{
         
         $genero=new ServicioModel();
         $response=$genero->get($param);
-        $json=array(
-            'status'=>200,
-            'total'=>count($response),
-            'results'=>$response
-        );
+
         if(isset($response) && !empty($response)){
             $json=array(
                 'status'=>200,
@@ -39,7 +35,7 @@ class servicio{
         }else{
             $json=array(
                 'status'=>400,
-                'results'=>"No existe el actor"
+                'results'=>"No existe el servicio"
             );
         }
         echo json_encode($json,
