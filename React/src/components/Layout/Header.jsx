@@ -173,6 +173,9 @@ function Header() {
                 <MenuItem component="a" href="/ejercicio-table/">
                   <Typography textAlign="center">Ejercicios</Typography>
                 </MenuItem>
+                <MenuItem component="a" href="/servicio-table/">
+                  <Typography textAlign="center">Servicios</Typography>
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>

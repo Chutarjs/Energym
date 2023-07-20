@@ -61,7 +61,7 @@ export function ListRutinas () {
                   color: (theme) => theme.palette.common.white
                 }}
               >
-                <IconButton component={Link} to={`/rutinas/${item.idrutina}`} aria-label='Detalle'>
+                <IconButton component={Link} to={`/rutina/${item.idrutina}`} aria-label='Detalle'>
                   <Info/> 
                   <Typography variant='body2' color='text.secondary' textAlign='center' ml={1}>
                      Detalles 
