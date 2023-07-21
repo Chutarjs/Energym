@@ -104,7 +104,7 @@ function TablePlanesHead (props) {
       <TableRow>
         <TableCell padding='checkbox'>
           <Tooltip title='Nuevo'>
-            <IconButton component={Link} to='/plan/create'>
+            <IconButton component={Link} to='/planes/create'>
               <AddIcon />
             </IconButton>
           </Tooltip>
@@ -153,7 +153,7 @@ function TablePlanesToolbar (props) {
   const { idSelected } = props
 
   const update = () => {
-    return navigate(`/plan/update/${idSelected}`)
+    return navigate(`/planes/update/${idSelected}`)
   }
   const detail = () => {
     return navigate(`/planes/${idSelected}`)
@@ -199,11 +199,6 @@ function TablePlanesToolbar (props) {
           <Tooltip title='Info'>
             <IconButton onClick={detail}>
               <Info />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title='Borrar'>
-            <IconButton>
-              <DeleteIcon />
             </IconButton>
           </Tooltip>
           <Tooltip title='Actualizar'>

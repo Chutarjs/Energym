@@ -17,4 +17,4 @@ class ServicioService {
     }
 }
 
-export default new ServicioService()
+export default new ServicioService();

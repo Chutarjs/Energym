@@ -4,21 +4,21 @@ import FormControl from "@mui/material/FormControl";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { FormHelperText } from "@mui/material";
+// eslint-disable-next-line no-unused-vars
 import { useForm, Controller, useFieldArray } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import AddIcon from "@mui/icons-material/Add";
-import Tooltip from "@mui/material/Tooltip";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 // eslint-disable-next-line no-unused-vars
 import { useNavigate, useParams } from "react-router-dom";
+import ServicioService from '../../services/ServicioService';
+import SelectServicios from "./SelectServicios";
 
 export function FormPlan() {
   //const useNavigate = useNavigate()
   const routeParams = useParams();
-  // Id de la pelicula a actualizar
+  // Id del plan a actualizar
   const id = routeParams.id || null;
   const esCrear = !id;
   // Valores a precarga al actualizar
@@ -91,11 +91,11 @@ export function FormPlan() {
   const [dataServicios, setDataServicios] = useState({});
   const [loadedServicios, setLoadedServicios] = useState(false);
   useEffect(() => {
-    ServicioService.get()
+    ServicioService.getServicios()
       .then((response) => {
-        console.log(response);
-        setDataGenres(response.data.results);
-        setLoadedGenres(true);
+        console.log(response.data);
+        setDataServicios(response.data);
+        setLoadedServicios(true);
       })
       .catch((error) => {
         if (error instanceof SyntaxError) {
@@ -104,23 +104,7 @@ export function FormPlan() {
         }
       });
   }, [esCrear]);
-  //Lista de actores
-  const [dataActors, setDataActors] = useState({});
-  const [loadedActors, setLoadedActors] = useState(false);
-  useEffect(() => {
-    ActorService.getActors()
-      .then((response) => {
-        console.log(response);
-        setDataActors(response.data.results);
-        setLoadedActors(true);
-      })
-      .catch((error) => {
-        if (error instanceof SyntaxError) {
-          console.log(error);
-          throw new Error("Respuesta no válida del servidor");
-        }
-      });
-  }, [esCrear]);
+
   //Respuesta del API al crear o actualizar
 
   // Si es modificar establece los valores a precargar en el formulario
@@ -131,21 +115,21 @@ export function FormPlan() {
         <Grid container spacing={1}>
           <Grid item xs={12} sm={12}>
             <Typography variant="h5" gutterBottom>
-              {esCrear ? "Crear" : "Modificar"} Pelicula
+              {esCrear ? "Crear" : "Modificar"} Plan
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
             {/* ['filled','outlined','standard']. */}
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="title"
+                name="Nombre"
                 control={control}
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    id="title"
-                    label="Título"
-                    error={Boolean(errors.title)}
+                    id="nombre"
+                    label="Nombre"
+                    error={Boolean(errors.nombre)}
                     helperText={errors.title ? errors.title.message : " "}
                   />
                 )}
@@ -155,50 +139,15 @@ export function FormPlan() {
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="year"
+                name="Descripcion"
                 control={control}
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    id="year"
-                    label="Año"
-                    error={Boolean(errors.year)}
+                    id="descripcion"
+                    label="Descripcion"
+                    error={Boolean(errors.descripcion)}
                     helperText={errors.year ? errors.year.message : " "}
-                  />
-                )}
-              />
-            </FormControl>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            {/* ['filled','outlined','standard']. */}
-            <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              <Controller
-                name="time"
-                control={control}
-                render={({ field }) => (
-                  <TextField
-                    {...field}
-                    id="time"
-                    label="Minutos"
-                    error={Boolean(errors.time)}
-                    helperText={errors.time ? errors.time.message : " "}
-                  />
-                )}
-              />
-            </FormControl>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              <Controller
-                name="lang"
-                control={control}
-                render={({ field }) => (
-                  <TextField
-                    {...field}
-                    id="lang"
-                    label="Idioma"
-                    error={Boolean(errors.lang)}
-                    helperText={errors.lang ? errors.lang.message : " "}
                   />
                 )}
               />
@@ -207,52 +156,21 @@ export function FormPlan() {
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               {/* Lista de generos */}
-              {loadedGenres && (
+              {loadedServicios && (
                 <Controller
-                  name="genres"
+                  name="servicios"
                   control={control}
                   render={({ field }) => (
-                    <SelectGenres
+                    <SelectServicios
                       field={field}
-                      data={dataGenres}
-                      error={Boolean(errors.genres)}
+                      data={dataServicios}
+                      error={Boolean(errors.servicios)}
                     />
                   )}
                 />
               )}
               <FormHelperText sx={{ color: "#d32f2f" }}>
-                {errors.genres ? errors.genres.message : " "}
-              </FormHelperText>
-            </FormControl>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              <Typography variant="h6" gutterBottom>
-                Actores
-                <Tooltip title="Agregar Actor">
-                  <span>
-                    <IconButton color="secondary" onClick={addNewActor}>
-                      <AddIcon />
-                    </IconButton>
-                  </span>
-                </Tooltip>
-              </Typography>
-              {/* Array de controles de actor */}
-              {loadedActors &&
-                dataActors &&
-                fields.map((field, index) => (
-                  <ActorsForm
-                    field={field}
-                    data={dataActors}
-                    key={index}
-                    index={index}
-                    onRemove={removeActor}
-                    control={control}
-                    disableRemoveButton={fields.length === 1}
-                  />
-                ))}
-              <FormHelperText sx={{ color: "#d32f2f" }}>
-                {errors.actors ? errors.actors.message : " "}
+                {errors.servicios ? errors.servicios.message : " "}
               </FormHelperText>
             </FormControl>
           </Grid>
