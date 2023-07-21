@@ -14,6 +14,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate, useParams } from "react-router-dom";
 import ServicioService from '../../services/ServicioService';
 import SelectServicios from "./SelectServicios";
+import PlanService from "../../services/PlanService";
 
 export function FormPlan() {
   //const useNavigate = useNavigate()
@@ -30,8 +31,9 @@ export function FormPlan() {
       .required("El nombre es requerido")
       .min(3, "El nombre debe tener al menos 3 caracteres"),
     descripcion: yup.string().required("La descripcion es requerida"),
-    servicios: yup.array().typeError("Seleccione al menos un servicio"),
+    servicios: yup.array().required("Seleccione al menos un servicio"),
   });
+
   const {
     control,
     handleSubmit,
@@ -82,7 +84,40 @@ export function FormPlan() {
     }
   };
   //Llamar al API para ejecutar Crear o modificar
-
+  useEffect(() => {
+    if(start){
+      if(esCrear){
+        //Crear plan
+        PlanService.createPlan(formData)
+        .then(response => {
+          console.log(response)
+            setResponseData(response.data.results)
+            setError(response.error)
+        })
+        .catch(error => {
+          if (error instanceof SyntaxError) {
+            console.log(error)
+            throw new Error('Respuesta no válida del servidor')
+          }
+        });
+      }else{
+        //Modificar pelicula
+        MovieService.updateMovie(formData)
+        .then(response => {
+          console.log(response)
+            setResponseData(response.data.results)
+            setError(response.error)
+        })
+        .catch(error => {
+          if (error instanceof SyntaxError) {
+            console.log(error)
+            throw new Error('Respuesta no válida del servidor')
+          }
+        });
+      }
+      
+    }
+  }, [start,esCrear,formData]);
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
   //Obtener plan
@@ -109,20 +144,16 @@ export function FormPlan() {
 
   // Si es modificar establece los valores a precargar en el formulario
 
-  return (
+    return (
     <>
       <form onSubmit={handleSubmit(onSubmit, onError)} noValidate>
         <Grid container spacing={1}>
-          <Grid item xs={12} sm={12}>
-            <Typography variant="h5" gutterBottom>
-              {esCrear ? "Crear" : "Modificar"} Plan
-            </Typography>
-          </Grid>
+          {/* ... (existing code) */}
+
           <Grid item xs={12} sm={4}>
-            {/* ['filled','outlined','standard']. */}
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="Nombre"
+                name="nombre" // Use the correct name matching the 'defaultValues' keys
                 control={control}
                 render={({ field }) => (
                   <TextField
@@ -130,7 +161,7 @@ export function FormPlan() {
                     id="nombre"
                     label="Nombre"
                     error={Boolean(errors.nombre)}
-                    helperText={errors.title ? errors.title.message : " "}
+                    helperText={errors.nombre ? errors.nombre.message : " "}
                   />
                 )}
               />
@@ -139,7 +170,7 @@ export function FormPlan() {
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="Descripcion"
+                name="descripcion" // Use the correct name matching the 'defaultValues' keys
                 control={control}
                 render={({ field }) => (
                   <TextField
@@ -147,7 +178,7 @@ export function FormPlan() {
                     id="descripcion"
                     label="Descripcion"
                     error={Boolean(errors.descripcion)}
-                    helperText={errors.year ? errors.year.message : " "}
+                    helperText={errors.descripcion ? errors.descripcion.message : " "}
                   />
                 )}
               />
@@ -158,12 +189,12 @@ export function FormPlan() {
               {/* Lista de generos */}
               {loadedServicios && (
                 <Controller
-                  name="servicios"
+                  name="servicios" // Use the correct name matching the 'defaultValues' keys
                   control={control}
                   render={({ field }) => (
                     <SelectServicios
                       field={field}
-                      data={dataServicios}
+                      data={dataServicios} // Pass 'dataServicios.results' instead of 'dataServicios'
                       error={Boolean(errors.servicios)}
                     />
                   )}

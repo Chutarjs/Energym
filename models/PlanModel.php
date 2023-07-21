@@ -134,32 +134,12 @@ class PlanModel
                 array(1,7),
                 array(1,8)
                 ); */
-                
                 foreach($dataGenres as $row){
                     
                     $valores=implode(',', $row);
                     $sql = "INSERT INTO movie_genre(movie_id,genre_id) VALUES(".$valores.");";
                     $vResultado = $this->enlace->executeSQL_DML($sql);
                 }
-            //--- Actores ---
-            //Crear elementos a insertar en actores
-            //--- Actores ---
-            //Crear elementos a insertar en actores
-            //Opcion 1
-            foreach ($objeto->actors as $row) {
-                $dataActores[] = array($idMovie, $row->actor_id, $row->role);
-            }
-
-            foreach ($dataActores as $row) {
-                $sql = "INSERT INTO movie_cast(movie_id,actor_id,role) VALUES($row[0], $row[1], '$row[2]')";
-                $vResultado = $this->enlace->executeSQL_DML($sql);
-            }
-
-            //Opcion 2
-            /*  foreach ($objeto->actors as $row) {
-                $sql = "INSERT INTO movie_cast(movie_id,actor_id,role) VALUES(($idMovie, $row->actor_id,$row->role)";
-                $vResultado = $this->enlace->executeSQL_DML($sql);
-            } */
             //Retornar pelicula
             return $this->get($idMovie);
 		} catch ( Exception $e ) {
