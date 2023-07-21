@@ -2,7 +2,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import FormControl from "@mui/material/FormControl";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import { FormHelperText } from "@mui/material";
 // eslint-disable-next-line no-unused-vars
 import { useForm, Controller, useFieldArray } from "react-hook-form";
@@ -11,13 +10,14 @@ import Button from "@mui/material/Button";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 // eslint-disable-next-line no-unused-vars
-import { useNavigate, useParams } from "react-router-dom";
-import ServicioService from '../../services/ServicioService';
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import ServicioService from "../../services/ServicioService";
 import SelectServicios from "./SelectServicios";
 import PlanService from "../../services/PlanService";
+import { toast } from "react-hot-toast";
 
 export function FormPlan() {
-  //const useNavigate = useNavigate()
+  const navigate = useNavigate();
   const routeParams = useParams();
   // Id del plan a actualizar
   const id = routeParams.id || null;
@@ -47,7 +47,7 @@ export function FormPlan() {
       servicios: [],
     },
     // valores a precargar
-
+    values,
     // Asignación de validaciones
     resolver: yupResolver(planSchema),
   });
@@ -81,47 +81,62 @@ export function FormPlan() {
       }
     } catch (e) {
       //Capturar error
+      console.log(e);
     }
   };
   //Llamar al API para ejecutar Crear o modificar
   useEffect(() => {
-    if(start){
-      if(esCrear){
+    if (start) {
+      if (esCrear) {
         //Crear plan
         PlanService.createPlan(formData)
-        .then(response => {
-          console.log(response)
-            setResponseData(response.data.results)
-            setError(response.error)
-        })
-        .catch(error => {
-          if (error instanceof SyntaxError) {
-            console.log(error)
-            throw new Error('Respuesta no válida del servidor')
-          }
-        });
-      }else{
-        //Modificar pelicula
-        MovieService.updateMovie(formData)
-        .then(response => {
-          console.log(response)
-            setResponseData(response.data.results)
-            setError(response.error)
-        })
-        .catch(error => {
-          if (error instanceof SyntaxError) {
-            console.log(error)
-            throw new Error('Respuesta no válida del servidor')
-          }
-        });
+          .then((response) => {
+            console.log(response);
+            setResponseData(response.data.results);
+            setError(response.error);
+          })
+          .catch((error) => {
+            if (error instanceof SyntaxError) {
+              console.log(error);
+              throw new Error("Respuesta no válida del servidor");
+            }
+          });
+      } else {
+        //Modificar plan
+        PlanService.updatePlan(formData)
+          .then((response) => {
+            console.log(response);
+            setResponseData(response.data.results);
+            setError(response.error);
+          })
+          .catch((error) => {
+            if (error instanceof SyntaxError) {
+              console.log(error);
+              throw new Error("Respuesta no válida del servidor");
+            }
+          });
       }
-      
     }
-  }, [start,esCrear,formData]);
+  }, [start, esCrear, formData]);
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
   //Obtener plan
-
+  useEffect(() => {
+    if (id != undefined && !isNaN(Number(id))) {
+      PlanService.getPlanFormById(id)
+        .then((response) => {
+          console.log(response);
+          setData(response.data.results);
+          setError(response.error);
+        })
+        .catch((error) => {
+          if (error instanceof SyntaxError) {
+            console.log(error);
+            throw new Error("Respuesta no válida del servidor");
+          }
+        });
+    }
+  }, [id]);
   //Lista de servicios
   const [dataServicios, setDataServicios] = useState({});
   const [loadedServicios, setLoadedServicios] = useState(false);
@@ -141,15 +156,29 @@ export function FormPlan() {
   }, [esCrear]);
 
   //Respuesta del API al crear o actualizar
-
+  useEffect(() => {
+    if (responseData != null) {
+      toast.success(responseData, {
+        duration: 4000,
+        position: "top-center",
+      });
+      // Si hay respuesta se creo o modifico lo redirecciona
+      return navigate("/plan-table");
+    }
+  }, [responseData]);
   // Si es modificar establece los valores a precargar en el formulario
+  useEffect(() => {
+    if (!esCrear && data) {
+      // Si es modificar establece los valores a precargar en el formulario
+      setValues(data);
+      console.log(data);
+    }
+  }, [data, esCrear, action]);
 
-    return (
+  return (
     <>
       <form onSubmit={handleSubmit(onSubmit, onError)} noValidate>
         <Grid container spacing={1}>
-          {/* ... (existing code) */}
-
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
@@ -178,7 +207,9 @@ export function FormPlan() {
                     id="descripcion"
                     label="Descripcion"
                     error={Boolean(errors.descripcion)}
-                    helperText={errors.descripcion ? errors.descripcion.message : " "}
+                    helperText={
+                      errors.descripcion ? errors.descripcion.message : " "
+                    }
                   />
                 )}
               />
@@ -186,7 +217,7 @@ export function FormPlan() {
           </Grid>
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              {/* Lista de generos */}
+              {/* Lista de servicios */}
               {loadedServicios && (
                 <Controller
                   name="servicios" // Use the correct name matching the 'defaultValues' keys
@@ -195,6 +226,11 @@ export function FormPlan() {
                     <SelectServicios
                       field={field}
                       data={dataServicios} // Pass 'dataServicios.results' instead of 'dataServicios'
+                      onChange={(e) =>
+                        setValue("servicios", e.target.value, {
+                          shouldValidate: true,
+                        })
+                      }
                       error={Boolean(errors.servicios)}
                     />
                   )}

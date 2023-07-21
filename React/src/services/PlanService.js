@@ -11,6 +11,18 @@ class PlanService {
     getPlanById(Id){
         return axios.get(BASE_URL + '/' + Id);
     }
+    //crear plan
+    createPlan(Plan){
+        return axios.post(BASE_URL, Plan);
+    }
+    //modificar plan
+    updatePlan(Plan){
+        return axios.put(BASE_URL, Plan);
+    }
+
+    getPlanFormById(PlanId){
+        return axios.get(BASE_URL + '/getForm/' + PlanId);
+    }
 }
 
 export default new PlanService()

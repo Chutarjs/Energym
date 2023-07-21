@@ -119,8 +119,8 @@ class PlanModel
             //Consulta sql
             //Identificador autoincrementable
             
-			$sql = "Insert into Plan (idPlan, Nombre, Descripcion)". 
-                     "Values ('$objeto->idPlan','$objeto->Nombre','$objeto->Descripcion')";
+			$sql = "Insert into Plan (Nombre, Descripcion)". 
+                     "Values ('$objeto->nombre','$objeto->descripcion')";
 			
             //Ejecutar la consulta
             //Obtener ultimo insert
@@ -130,31 +130,29 @@ class PlanModel
             foreach( $objeto->servicios as $servicio){
                 $dataServicios[]=array($idPlan,$servicio);
             }
-            /* $dataServicios=array(
-                array(1,7),
-                array(1,8)
-                ); */
-                foreach($dataGenres as $row){
+                foreach($dataServicios as $row){
                     
                     $valores=implode(',', $row);
-                    $sql = "INSERT INTO movie_genre(movie_id,genre_id) VALUES(".$valores.");";
+                    var_dump($valores);
+                    $sql = "INSERT INTO planservicio VALUES(".$valores.");";
                     $vResultado = $this->enlace->executeSQL_DML($sql);
                 }
             //Retornar pelicula
-            return $this->get($idMovie);
+            return $this->get($idPlan);
 		} catch ( Exception $e ) {
 			die ( $e->getMessage () );
 		}
     }
     public function update($objeto) {
         try {
+            var_dump($objeto);
             //Consulta sql
 			$vSql = "Update Plan SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion' Where idPlan=$objeto->idPlan";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML( $vSql);
 			// Retornar el objeto actualizado
-            return $this->get($objeto->id);
+            return $this->get($objeto->idPlan);
 		} catch ( Exception $e ) {
 			die ( $e->getMessage () );
 		}
