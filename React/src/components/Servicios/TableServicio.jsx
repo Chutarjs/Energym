@@ -22,8 +22,8 @@ import AddIcon from '@mui/icons-material/Add'
 import { visuallyHidden } from '@mui/utils'
 import EditIcon from '@mui/icons-material/Edit'
 import { useNavigate, Link } from 'react-router-dom'
-import PlanService from '../../services/PlanService'
 import { Info } from "@mui/icons-material";
+import ServicioService from '../../services/ServicioService'
 
 function descendingComparator (a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -59,7 +59,7 @@ function stableSort (array, comparator) {
 //--- Encabezados de la tabla ---
 const headCells = [
   {
-    id: 'idPlan',
+    id: 'idservicio',
     numeric: false,
     disablePadding: false,
     label: 'Id'
@@ -77,6 +77,12 @@ const headCells = [
     label: 'Descripcion'
   },
   {
+    id: 'tipo',
+    numeric: false,
+    disablePadding: true,
+    label: 'Tipo'
+  },
+  {
     id: 'precio',
     numeric: false,
     disablePadding: false,
@@ -84,7 +90,7 @@ const headCells = [
   }
 ]
 //Construcción del Header de la tabla con sus propiedades
-function TablePlanesHead (props) {
+function TableServiciosHead (props) {
   const {
     // onSelectAllClick,
     order,
@@ -102,7 +108,7 @@ function TablePlanesHead (props) {
       <TableRow>
         <TableCell padding='checkbox'>
           <Tooltip title='Nuevo'>
-            <IconButton component={Link} to='/planes/create'>
+            <IconButton component={Link} to='/servicio/create'>
               <AddIcon />
             </IconButton>
           </Tooltip>
@@ -135,7 +141,7 @@ function TablePlanesHead (props) {
   )
 }
 // PropTypes es un verificador de tipos
-TablePlanesHead.propTypes = {
+TableServiciosHead.propTypes = {
   numSelected: PropTypes.number.isRequired,
   onRequestSort: PropTypes.func.isRequired,
   /*  onSelectAllClick: PropTypes.func.isRequired, */
@@ -145,16 +151,16 @@ TablePlanesHead.propTypes = {
 }
 
 //Menú de opciones que aparecer al seleccionar una fila
-function TablePlanesToolbar (props) {
+function TableServiciosToolbar (props) {
   const navigate = useNavigate()
   const { numSelected } = props
   const { idSelected } = props
 
   const update = () => {
-    return navigate(`/planes/update/${idSelected}`)
+    return navigate(`/servicio/update/${idSelected}`)
   }
   const detail = () => {
-    return navigate(`/planes/${idSelected}`)
+    return navigate(`/servicio/${idSelected}`)
   }
   return (
     <Toolbar
@@ -178,7 +184,7 @@ function TablePlanesToolbar (props) {
             variant='subtitle1'
             component='div'
           >
-            {numSelected} seleccionada
+            {numSelected} seleccionado
           </Typography>
           )
         : (
@@ -188,7 +194,7 @@ function TablePlanesToolbar (props) {
             id='tableTitle'
             component='div'
           >
-            Planes
+            Servicios
           </Typography>
           )}
 
@@ -216,19 +222,19 @@ function TablePlanesToolbar (props) {
   )
 }
 //Propiedades del Menú de opciones
-TablePlanesToolbar.propTypes = {
+TableServiciosToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
   idSelected: PropTypes.number.isRequired
 }
 
-export default function TablePlan () {
+export function TableServicio() {
   //Datos a cargar en la tabla
   const [data, setData]=useState(null);
   // eslint-disable-next-line no-unused-vars
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);
   useEffect(()=>{
-    PlanService.getPlanes()
+    ServicioService.getServicios()
     .then( response=>{
         console.log(response)
         setData(response.data.results)
@@ -258,14 +264,12 @@ export default function TablePlan () {
     setOrderBy(property)
   }
 
-  const handleClick = (event, idPlan) => {
-    const selectedIndex = selected.indexOf(idPlan)
+  const handleClick = (event, idservicio) => {
+    const selectedIndex = selected.indexOf(idservicio)
     let newSelected = []
 
-    console.log(idPlan);
-
     if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, idPlan)
+      newSelected = newSelected.concat(selected, idservicio)
     } else if (selectedIndex === 0) {
       newSelected = newSelected.concat(selected.slice(1))
     } else if (selectedIndex === selected.length - 1) {
@@ -304,14 +308,14 @@ export default function TablePlan () {
       {data && data.length > 0 &&
         <Box sx={{ width: '100%' }}>
           <Paper sx={{ width: '100%', mb: 2 }}>
-            <TablePlanesToolbar numSelected={selected.length} idSelected={Number(selected[0]) || 0} />
+            <TableServiciosToolbar numSelected={selected.length} idSelected={Number(selected[0]) || 0} />
             <TableContainer>
               <Table
                 sx={{ minWidth: 750 }}
                 aria-labelledby='tableTitle'
                 size={dense ? 'small' : 'medium'}
               >
-                <TablePlanesHead
+                <TableServiciosHead
                   numSelected={selected.length}
                   order={order}
                   orderBy={orderBy}
@@ -322,17 +326,17 @@ export default function TablePlan () {
                   {stableSort(data, getComparator(order, orderBy))
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row, index) => {
-                      const isItemSelected = isSelected(row.idPlan)
+                      const isItemSelected = isSelected(row.idservicio)
                       const labelId = `enhanced-table-checkbox-${index}`
 
                       return (
                         <TableRow
                           hover
-                          onClick={(event) => handleClick(event, row.idPlan)}
+                          onClick={(event) => handleClick(event, row.idservicio)}
                           role='checkbox'
                           aria-checked={isItemSelected}
                           tabIndex={-1}
-                          key={row.idPlan}
+                          key={row.idservicio}
                           selected={isItemSelected}
                         >
                           <TableCell padding='checkbox'>
@@ -350,10 +354,11 @@ export default function TablePlan () {
                             scope='row'
                             padding='none'
                           >
-                            {row.idPlan}
+                            {row.idservicio}
                           </TableCell>
                           <TableCell align='left'>{row.Nombre}</TableCell>
                           <TableCell align='left'>{row.Descripcion}</TableCell>
+                          <TableCell align='left'>{row.Tipo}</TableCell>
                           <TableCell align='left'>{row.Precio}</TableCell>
                         </TableRow>
                       )

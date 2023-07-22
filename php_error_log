@@ -1294,3 +1294,73 @@
 [22-Jul-2023 05:21:49 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
 [22-Jul-2023 05:21:49 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
 [22-Jul-2023 05:21:49 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfd'; public $Descripcion = 'sdsa'; public $Precio = '20000'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP Warning:  Undefined variable $dataServicios in C:\xampp\htdocs\Energym\models\PlanModel.php on line 158
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP Stack trace:
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfdhjhjkgh'; public $Descripcion = 'sdsa'; public $Precio = '20000'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\PlanModel.php on line 158
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP Stack trace:
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[22-Jul-2023 07:23:36 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfdhjhjkgh'; public $Descripcion = 'sdsa'; public $Precio = '20000'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP Warning:  Undefined variable $dataServicios in C:\xampp\htdocs\Energym\models\PlanModel.php on line 158
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP Stack trace:
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfdhjhjkgh'; public $Descripcion = 'sdsa'; public $Precio = '0'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\PlanModel.php on line 158
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP Stack trace:
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[22-Jul-2023 07:24:24 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfdhjhjkgh'; public $Descripcion = 'sdsa'; public $Precio = '0'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP Warning:  Undefined variable $dataServicios in C:\xampp\htdocs\Energym\models\PlanModel.php on line 158
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP Stack trace:
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfdhjhjkgh'; public $Descripcion = 'sdsa'; public $Precio = '0'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\PlanModel.php on line 158
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP Stack trace:
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[22-Jul-2023 07:24:39 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfdhjhjkgh'; public $Descripcion = 'sdsa'; public $Precio = '0'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP Warning:  Undefined variable $dataServicios in C:\xampp\htdocs\Energym\models\PlanModel.php on line 158
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP Stack trace:
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfdhjhjkghfda'; public $Descripcion = 'sdsa'; public $Precio = '35000'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\PlanModel.php on line 158
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP Stack trace:
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[22-Jul-2023 07:35:12 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfdhjhjkghfda'; public $Descripcion = 'sdsa'; public $Precio = '35000'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP Warning:  Undefined variable $dataServicios in C:\xampp\htdocs\Energym\models\PlanModel.php on line 158
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP Stack trace:
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfdhjhjkghfda'; public $Descripcion = 'sdsa'; public $Precio = '35000'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\PlanModel.php on line 158
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP Stack trace:
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[22-Jul-2023 07:35:36 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $idPlan = '42'; public $Nombre = 'Yeinnerfdhjhjkghfda'; public $Descripcion = 'sdsa'; public $Precio = '35000'; public $servicios = [] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:103

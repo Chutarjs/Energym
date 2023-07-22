@@ -15,6 +15,9 @@ import { ListActividades } from './components/ActGrupales/ListActividades'
 import {DetailActividad} from './components/ActGrupales/DetailActividad'
 import {TableActividad} from './components/ActGrupales/TableActividad'
 import {FormActividad} from './components/ActGrupales/FormActividad'
+import {FormServicio} from './components/Servicios/FormServicio'
+import {TableServicio} from './components/Servicios/TableServicio'
+import {DetailServicio} from './components/Servicios/DetailServicio'
 
 const router=createBrowserRouter([
   {
@@ -79,6 +82,22 @@ const router=createBrowserRouter([
   {
     path: 'actividad/update/:id',
     element: <FormActividad/>
+  },
+  {
+    path:'/servicio-table',
+    element: <TableServicio/>
+  },
+  {
+    path: 'servicio/create/',
+    element: <FormServicio/>
+  },
+  {
+    path: 'servicio/update/:id',
+    element: <FormServicio/>
+  },
+  {
+    path:'/servicio/:id',
+    element: <DetailServicio />
   },
 ])
 

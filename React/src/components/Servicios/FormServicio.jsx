@@ -13,10 +13,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import ServicioService from "../../services/ServicioService";
 import PlanService from "../../services/PlanService";
-import { SelectServicios } from "./SelectServicios";
-import { toast } from "react-hot-toast";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-export function FormPlan() {
+export function FormServicio() {
   const navigate = useNavigate();
   const routeParams = useParams();
   // Id de la pelicula a actualizar
@@ -54,7 +54,6 @@ export function FormPlan() {
   // Valores de formulario que llena el usuario
   const [formData, setFormData] = useState(null);
   //Respuesta de crear o modificar
-  // eslint-disable-next-line no-unused-vars
   const [responseData, setResponseData] = useState(null);
   // Accion: post, put
   const [action, setAction] = useState("POST");
@@ -87,15 +86,11 @@ export function FormPlan() {
   useEffect(() => {
     if (start) {
       if (esCrear) {
-        // Crear plan
+        //Crear pelicula
         PlanService.createPlan(formData)
           .then((response) => {
             setResponseData(response.data.results);
             setError(response.error);
-
-            //con exito
-            toast.success("El plan se creó correctamente");
-            navigate("/plan-table");
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
@@ -104,15 +99,12 @@ export function FormPlan() {
             }
           });
       } else {
-        // Modificar plan
+        //Modificar pelicula
         PlanService.updatePlan(formData)
           .then((response) => {
             setResponseData(response.data.results);
             setError(response.error);
-
-            //con exito
-            toast.success("El plan se actualizó correctamente");
-            navigate("/plan-table");
+            
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
@@ -123,7 +115,6 @@ export function FormPlan() {
       }
     }
   }, [start, esCrear, formData]);
-
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
 
@@ -145,24 +136,17 @@ export function FormPlan() {
     }
   }, [id]);
 
-  //Lista de servicios
-  const [dataServicios, setDataServicios] = useState({});
-  const [loadedServicios, setLoadedServicios] = useState(false);
+  //Respuesta del API al crear o actualizar
   useEffect(() => {
-    ServicioService.getServicios()
-      .then((response) => {
-        console.log(response);
-        setDataServicios(response.data.results);
-        setLoadedServicios(true);
-      })
-      .catch((error) => {
-        if (error instanceof SyntaxError) {
-          console.log(error);
-          throw new Error("Respuesta no válida del servidor");
-        }
+    if (responseData != null) {
+      toast.success(responseData, {
+        duration: 4000,
+        position: "top-center",
       });
-  }, [esCrear]);
-
+      // Si hay respuesta se creo o modifico lo redirecciona
+      return navigate("/plan-table");
+    }
+  }, [navigate, responseData]);
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
@@ -213,33 +197,6 @@ export function FormPlan() {
                   />
                 )}
               />
-            </FormControl>
-          </Grid>
-
-          <Grid item xs={12} sm={4}>
-            <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              {/* Lista de servicios */}
-              {loadedServicios && (
-                <Controller
-                  name="servicios"
-                  control={control}
-                  render={({ field }) => (
-                    <SelectServicios
-                      field={field}
-                      data={dataServicios}
-                      onChange={(e) =>
-                        setValue("servicios", e.target.value, {
-                          shouldValidate: true,
-                        })
-                      }
-                      error={Boolean(errors.genres)}
-                    />
-                  )}
-                />
-              )}
-              <FormHelperText sx={{ color: "#d32f2f" }}>
-                {errors.servicios ? errors.servicios.message : " "}
-              </FormHelperText>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={12}>
