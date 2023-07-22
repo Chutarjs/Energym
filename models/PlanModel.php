@@ -118,9 +118,8 @@ class PlanModel
         try {
             //Consulta sql
             //Identificador autoincrementable
-            
 			$sql = "Insert into Plan (Nombre, Descripcion)". 
-                     "Values ('$objeto->nombre','$objeto->descripcion')";
+                     "Values ('$objeto->Nombre','$objeto->Descripcion')";
 			
             //Ejecutar la consulta
             //Obtener ultimo insert
@@ -133,7 +132,6 @@ class PlanModel
                 foreach($dataServicios as $row){
                     
                     $valores=implode(',', $row);
-                    var_dump($valores);
                     $sql = "INSERT INTO planservicio VALUES(".$valores.");";
                     $vResultado = $this->enlace->executeSQL_DML($sql);
                 }
@@ -146,12 +144,24 @@ class PlanModel
     public function update($objeto) {
         try {
             var_dump($objeto);
-            //Consulta sql
-			$vSql = "Update Plan SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion' Where idPlan=$objeto->idPlan";
-			
+            $vSql = "DELETE from planservicio where idplan = $objeto->idPlan;";
             //Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML( $vSql);
-			// Retornar el objeto actualizado
+            //Consulta sql
+			$vSql = "UPDATE plan SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion', Precio = 0 Where idPlan=$objeto->idPlan";
+            //Ejecutar la consulta
+			$vResultado = $this->enlace->executeSQL_DML( $vSql);
+            
+            foreach( $objeto->servicios as $servicio){
+                $dataServicios[]=array($objeto->idPlan,$servicio);
+            }
+                foreach($dataServicios as $row){
+                    $valores=implode(',', $row);
+                    $sql = "INSERT INTO planservicio VALUES(".$valores.");";
+                    $vResultado = $this->enlace->executeSQL_DML($sql);
+                }
+
+            // Retornar el objeto actualizado
             return $this->get($objeto->idPlan);
 		} catch ( Exception $e ) {
 			die ( $e->getMessage () );

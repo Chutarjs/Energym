@@ -2,9 +2,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import FormControl from "@mui/material/FormControl";
 import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import { FormHelperText } from "@mui/material";
-// eslint-disable-next-line no-unused-vars
-import { useForm, Controller, useFieldArray } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import * as yup from "yup";
@@ -12,28 +12,27 @@ import { yupResolver } from "@hookform/resolvers/yup";
 // eslint-disable-next-line no-unused-vars
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import ServicioService from "../../services/ServicioService";
-import SelectServicios from "./SelectServicios";
 import PlanService from "../../services/PlanService";
+import { SelectServicios } from "./SelectServicios";
 import { toast } from "react-hot-toast";
 
 export function FormPlan() {
   const navigate = useNavigate();
   const routeParams = useParams();
-  // Id del plan a actualizar
+  // Id de la pelicula a actualizar
   const id = routeParams.id || null;
   const esCrear = !id;
   // Valores a precarga al actualizar
   const [values, setValues] = useState(null);
   // Esquema de validación
   const planSchema = yup.object({
-    nombre: yup
+    Nombre: yup
       .string()
-      .required("El nombre es requerido")
-      .min(3, "El nombre debe tener al menos 3 caracteres"),
-    descripcion: yup.string().required("La descripcion es requerida"),
-    servicios: yup.array().required("Seleccione al menos un servicio"),
+      .required("El Nombre es requerido")
+      .min(3, "El Nombre debe tener 3 caracteres"),
+    Descripcion: yup.string().required("La descripcion es requerida"),
+    servicios: yup.array().typeError("Seleccione al menos un servicio"),
   });
-
   const {
     control,
     handleSubmit,
@@ -42,9 +41,9 @@ export function FormPlan() {
   } = useForm({
     // Valores iniciales
     defaultValues: {
-      nombre: "",
-      descripcion: "",
-      servicios: [],
+      Nombre: "",
+      Descripcion: "",
+      servicios: [], //''
     },
     // valores a precargar
     values,
@@ -60,7 +59,7 @@ export function FormPlan() {
   const [action, setAction] = useState("POST");
   // Booleano para establecer si se envió la informacion al API
   const [start, setStart] = useState(false);
-  // Obtener la informacion del plan a actualizar
+  // Obtener la informacion de la pelicula a actualizar
   const [data, setData] = useState(null);
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState("");
@@ -81,17 +80,15 @@ export function FormPlan() {
       }
     } catch (e) {
       //Capturar error
-      console.log(e);
     }
   };
   //Llamar al API para ejecutar Crear o modificar
   useEffect(() => {
     if (start) {
       if (esCrear) {
-        //Crear plan
+        //Crear pelicula
         PlanService.createPlan(formData)
           .then((response) => {
-            console.log(response);
             setResponseData(response.data.results);
             setError(response.error);
           })
@@ -102,12 +99,12 @@ export function FormPlan() {
             }
           });
       } else {
-        //Modificar plan
+        //Modificar pelicula
         PlanService.updatePlan(formData)
           .then((response) => {
-            console.log(response);
             setResponseData(response.data.results);
             setError(response.error);
+            
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
@@ -120,7 +117,8 @@ export function FormPlan() {
   }, [start, esCrear, formData]);
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
-  //Obtener plan
+
+  //Obtener Plan
   useEffect(() => {
     if (id != undefined && !isNaN(Number(id))) {
       PlanService.getPlanFormById(id)
@@ -143,8 +141,8 @@ export function FormPlan() {
   useEffect(() => {
     ServicioService.getServicios()
       .then((response) => {
-        console.log(response.data);
-        setDataServicios(response.data);
+        console.log(response);
+        setDataServicios(response.data.results);
         setLoadedServicios(true);
       })
       .catch((error) => {
@@ -165,7 +163,7 @@ export function FormPlan() {
       // Si hay respuesta se creo o modifico lo redirecciona
       return navigate("/plan-table");
     }
-  }, [responseData]);
+  }, [navigate, responseData]);
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
@@ -174,23 +172,28 @@ export function FormPlan() {
       console.log(data);
     }
   }, [data, esCrear, action]);
-
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit, onError)} noValidate>
         <Grid container spacing={1}>
+          <Grid item xs={12} sm={12}>
+            <Typography variant="h5" gutterBottom>
+              {esCrear ? "Crear" : "Modificar"} Plan
+            </Typography>
+          </Grid>
           <Grid item xs={12} sm={4}>
+            {/* ['filled','outlined','standard']. */}
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="nombre" // Use the correct name matching the 'defaultValues' keys
+                name="Nombre"
                 control={control}
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    id="nombre"
+                    id="Nombre"
                     label="Nombre"
-                    error={Boolean(errors.nombre)}
-                    helperText={errors.nombre ? errors.nombre.message : " "}
+                    error={Boolean(errors.Nombre)} // Change this to errors.nombre
+                    helperText={errors.Nombre ? errors.Nombre.message : " "} // Change this to errors.Nombre.message
                   />
                 )}
               />
@@ -199,39 +202,38 @@ export function FormPlan() {
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="descripcion" // Use the correct name matching the 'defaultValues' keys
+                name="Descripcion"
                 control={control}
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    id="descripcion"
+                    id="Descripcion"
                     label="Descripcion"
-                    error={Boolean(errors.descripcion)}
-                    helperText={
-                      errors.descripcion ? errors.descripcion.message : " "
-                    }
+                    error={Boolean(errors.year)}
+                    helperText={errors.year ? errors.year.message : " "}
                   />
                 )}
               />
             </FormControl>
           </Grid>
+
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               {/* Lista de servicios */}
               {loadedServicios && (
                 <Controller
-                  name="servicios" // Use the correct name matching the 'defaultValues' keys
+                  name="servicios"
                   control={control}
                   render={({ field }) => (
                     <SelectServicios
                       field={field}
-                      data={dataServicios} // Pass 'dataServicios.results' instead of 'dataServicios'
+                      data={dataServicios}
                       onChange={(e) =>
                         setValue("servicios", e.target.value, {
                           shouldValidate: true,
                         })
                       }
-                      error={Boolean(errors.servicios)}
+                      error={Boolean(errors.genres)}
                     />
                   )}
                 />

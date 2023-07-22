@@ -4,7 +4,6 @@ const BASE_URL = "http://localhost:81/Energym/Plan"
 class PlanService {
     //obtiene todos los planes
     getPlanes(){
-        console.log(BASE_URL);
         return axios.get(BASE_URL);
     }
     //obtiene los detalles de un plan
@@ -17,7 +16,7 @@ class PlanService {
     }
     //modificar plan
     updatePlan(Plan){
-        return axios.put(BASE_URL, Plan);
+        return axios.put(BASE_URL, Plan);   
     }
 
     getPlanFormById(PlanId){

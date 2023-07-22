@@ -84,13 +84,11 @@ class plan{
         if(isset($response) && !empty($response)){
             $json=array(
                 'status'=>200,
-                'total'=>count($response),
-                'results'=>$response[0]
+                'results'=>"Plan Creado Correctamente!"
             );
         }else{
             $json=array(
                 'status'=>400,
-                'total'=>0,
                 'results'=>"No hay registros"
             );
         }
@@ -106,13 +104,11 @@ class plan{
         if(isset($response) && !empty($response)){
             $json=array(
                 'status'=>200,
-                'total'=>count($response),
-                'results'=>$response[0]
+                'results'=>"Plan Actualizado Correctamente!"
             );
         }else{
             $json=array(
                 'status'=>400,
-                'total'=>0,
                 'results'=>"No hay registros"
             );
         }
