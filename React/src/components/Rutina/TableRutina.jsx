@@ -18,9 +18,7 @@ import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Switch from '@mui/material/Switch'
-import DeleteIcon from '@mui/icons-material/Delete'
 import AddIcon from '@mui/icons-material/Add'
-import FilterListIcon from '@mui/icons-material/FilterList'
 import { visuallyHidden } from '@mui/utils'
 import EditIcon from '@mui/icons-material/Edit'
 import { useNavigate, Link } from 'react-router-dom'
@@ -194,12 +192,6 @@ function TableRutinasToolbar (props) {
               <Info />
             </IconButton>
           </Tooltip>
-
-          <Tooltip title='Borrar'>
-            <IconButton>
-              <DeleteIcon />
-            </IconButton>
-          </Tooltip>
           
           <Tooltip title='Actualizar'>
             <IconButton onClick={update}>
@@ -210,7 +202,7 @@ function TableRutinasToolbar (props) {
         : (
           <Tooltip title='Filtrar'>
             <IconButton>
-              <FilterListIcon />
+              
             </IconButton>
           </Tooltip>
           )}

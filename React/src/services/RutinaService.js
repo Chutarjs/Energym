@@ -4,7 +4,6 @@ const BASE_URL = "http://localhost:81/Energym/Rutinas"
 class RutinaService {
     //obtiene todos los planes
     getRutinas(){
-        console.log(BASE_URL);
         return axios.get(BASE_URL);
     }
     //obtiene los detalles de un plan

@@ -1,27 +1,27 @@
 import axios from 'axios';
-const BASE_URL=import.meta.env.VITE_BASE_URL+"movie"
+const BASE_URL="http://localhost:81/Energym/Ejercicio"
 
-class MovieService{
+class EjercicioService{
     //Definición para Llamar al API y obtener el listado de peliculas
-    //localhost:81/api/movie
-    getMovies(){
+    //localhost:81/api/Ejercicio
+    getEjercicios(){
         return axios.get(BASE_URL);
     }
     //localhost:81/api/movie/1
-    getMovieById(MovieId){
-        return axios.get(BASE_URL + '/' + MovieId);
+    getEjercicioById(EjercicioId){
+        return axios.get(BASE_URL + '/' + EjercicioId);
     }
-    createMovie(Movie){
-        return axios.post(BASE_URL, Movie);
-    }
-
-    getMovieFormById(MovieId){
-        return axios.get(BASE_URL + '/getForm/' + MovieId);
+    createEjercicio(Ejercicio){
+        return axios.post(BASE_URL, Ejercicio);
     }
 
-    updateMovie(Movie){
-        return axios.put(BASE_URL, Movie);
+    getEjercicioFormById(EjercicioId){
+        return axios.get(BASE_URL + '/getForm/' + EjercicioId);
+    }
+
+    updateEjercicio(Ejercicio){
+        return axios.put(BASE_URL, Ejercicio);
     }
 }
 
-export default new MovieService()
+export default new EjercicioService()

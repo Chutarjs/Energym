@@ -23,7 +23,7 @@ import { visuallyHidden } from '@mui/utils'
 import EditIcon from '@mui/icons-material/Edit'
 import { useNavigate, Link } from 'react-router-dom'
 import { Info } from "@mui/icons-material";
-import ActGrupalesService from '../../services/ActGrupalesService'
+import EjercicioService from '../../services/EjercicioService'
 
 function descendingComparator (a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -59,7 +59,7 @@ function stableSort (array, comparator) {
 //--- Encabezados de la tabla ---
 const headCells = [
   {
-    id: 'idActividad',
+    id: 'idEjercicio',
     numeric: false,
     disablePadding: true,
     label: 'Id'
@@ -71,38 +71,20 @@ const headCells = [
     label: 'Nombre'
   },
   {
-    id: 'fecha',
+    id: 'descripcion',
     numeric: false,
     disablePadding: false,
-    label: 'Fecha'
+    label: 'Descripcion'
   },
   {
-    id: 'inicio',
+    id: 'equipamiento',
     numeric: false,
     disablePadding: false,
-    label: 'Hora Inicio'
+    label: 'Equipamiento'
   },
-  {
-    id: 'fin',
-    numeric: false,
-    disablePadding: false,
-    label: 'Hora Fin'
-  },
-  {
-    id: 'cupo',
-    numeric: false,
-    disablePadding: false,
-    label: 'Cupo'
-  },
-  {
-    id: 'matriculadas',
-    numeric: false,
-    disablePadding: false,
-    label: 'Matriculadas'
-  }
 ]
 //Construcción del Header de la tabla con sus propiedades
-function TableMoviesHead (props) {
+function TableEjercicioHead (props) {
   const {
     // onSelectAllClick,
     order,
@@ -120,7 +102,7 @@ function TableMoviesHead (props) {
       <TableRow>
         <TableCell padding='checkbox'>
           <Tooltip title='Nuevo'>
-            <IconButton component={Link} to='/actividad/create'>
+            <IconButton component={Link} to='/ejercicio/create'>
               <AddIcon />
             </IconButton>
           </Tooltip>
@@ -153,7 +135,7 @@ function TableMoviesHead (props) {
   )
 }
 // PropTypes es un verificador de tipos
-TableMoviesHead.propTypes = {
+TableEjercicioHead.propTypes = {
   numSelected: PropTypes.number.isRequired,
   onRequestSort: PropTypes.func.isRequired,
   /*  onSelectAllClick: PropTypes.func.isRequired, */
@@ -163,15 +145,15 @@ TableMoviesHead.propTypes = {
 }
 
 //Menú de opciones que aparecer al seleccionar una fila
-function TableActividadesToolbar (props) {
+function TableEjercicioToolbar (props) {
   const navigate = useNavigate()
   const { numSelected } = props
   const { idSelected } = props
   const update = () => {
-    return navigate(`/actividad/update/${idSelected}`)
+    return navigate(`/ejercicio/update/${idSelected}`)
   }
   const detail = () => {
-    return navigate(`/actividades/${idSelected}`)
+    return navigate(`/ejercicio/${idSelected}`)
   }
   return (
     <Toolbar
@@ -205,7 +187,7 @@ function TableActividadesToolbar (props) {
             id='tableTitle'
             component='div'
           >
-            Actividades Grupales
+            Ejercicios
           </Typography>
           )}
 
@@ -215,7 +197,8 @@ function TableActividadesToolbar (props) {
             <IconButton onClick={detail}>
               <Info />
             </IconButton>
-          </Tooltip>  
+          </Tooltip>
+          
           <Tooltip title='Actualizar'>
             <IconButton onClick={update}>
               <EditIcon key={idSelected} />
@@ -225,7 +208,6 @@ function TableActividadesToolbar (props) {
         : (
           <Tooltip title='Filtrar'>
             <IconButton>
-            
             </IconButton>
           </Tooltip>
           )}
@@ -233,19 +215,19 @@ function TableActividadesToolbar (props) {
   )
 }
 //Propiedades del Menú de opciones
-TableActividadesToolbar.propTypes = {
+TableEjercicioToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
   idSelected: PropTypes.number.isRequired
 }
 
-export function TableActividad () {
+export function TableEjercicio () {
   //Datos a cargar en la tabla
   const [data, setData]=useState(null);
   // eslint-disable-next-line no-unused-vars
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);
   useEffect(()=>{
-    ActGrupalesService.getDetalle()
+    EjercicioService.getEjercicios()
     .then( response=>{
         console.log(response)
         setData(response.data.results)
@@ -319,14 +301,14 @@ export function TableActividad () {
       {data && data.length > 0 &&
         <Box sx={{ width: '100%' }}>
           <Paper sx={{ width: '100%', mb: 2 }}>
-            <TableActividadesToolbar numSelected={selected.length} idSelected={Number(selected[0]) || 0} />
+            <TableEjercicioToolbar numSelected={selected.length} idSelected={Number(selected[0]) || 0} />
             <TableContainer>
               <Table
                 sx={{ minWidth: 750 }}
                 aria-labelledby='tableTitle'
                 size={dense ? 'small' : 'medium'}
               >
-                <TableMoviesHead
+                <TableEjercicioHead
                   numSelected={selected.length}
                   order={order}
                   orderBy={orderBy}
@@ -337,17 +319,17 @@ export function TableActividad () {
                   {stableSort(data, getComparator(order, orderBy))
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row, index) => {
-                      const isItemSelected = isSelected(row.idActividadGrupal)
+                      const isItemSelected = isSelected(row.idEjercicio)
                       const labelId = `enhanced-table-checkbox-${index}`
 
                       return (
                         <TableRow
                           hover
-                          onClick={(event) => handleClick(event, row.idActividadGrupal)}
+                          onClick={(event) => handleClick(event, row.idEjercicio)}
                           role='checkbox'
                           aria-checked={isItemSelected}
                           tabIndex={-1}
-                          key={row.idActividadGrupal}
+                          key={row.idEjercicio}
                           selected={isItemSelected}
                         >
                           <TableCell padding='checkbox'>
@@ -365,14 +347,11 @@ export function TableActividad () {
                             scope='row'
                             padding='none'
                           >
-                            {row.idActividadGrupal}
+                            {row.idEjercicio}
                           </TableCell>
                           <TableCell align='left'>{row.Nombre}</TableCell>
-                          <TableCell align='left'>{row.Fecha}</TableCell>
-                          <TableCell align='left'>{row.HoraInicio}</TableCell>
-                          <TableCell align='left'>{row.HoraFinal}</TableCell>
-                          <TableCell align='left'>{row.Cupo}</TableCell>
-                          <TableCell align='left'>{row.cantidad_matriculados}</TableCell>
+                          <TableCell align='left'>{row.Descripcion}</TableCell>
+                          <TableCell align='left'>{row.Equipamiento}</TableCell>
                         </TableRow>
                       )
                     })}

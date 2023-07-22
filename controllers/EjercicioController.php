@@ -48,46 +48,6 @@ class ejercicio
             http_response_code($json["status"])
         );
     }
-    public function getImagenesRutina($id)
-    {
-        $genero = new EjercicioModel();
-        $response = $genero->getImagenesRutina($id);
-
-        // Si hay respuesta
-        if (isset($response) && !empty($response)) {
-            // Crear un array para almacenar las imágenes en base64
-            $images = array();
-
-            foreach ($response as $row) {
-                // Obtener los datos de la imagen BLOB
-                $imageData = $row->Imagen;
-
-                // Convertir los datos BLOB a base64
-                $base64Image = base64_encode($imageData);
-
-                // Agregar la imagen codificada al array
-                $images[] = $base64Image;
-            }
-
-            // Armar el JSON con las imágenes codificadas en base64
-            $json = array(
-                'status' => 200,
-                'results' => $images
-            );
-        } else {
-            $json = array(
-                'status' => 400,
-                'results' => "No hay registros"
-            );
-        }
-
-
-        if (isset($json['results'])) {
-            foreach ($json['results'] as $image) {
-                echo '<img height="80" width="80" src="data:image/jpeg;base64,' . $image . '"/>';
-            }
-        }
-    }
     public function getEjerciciosRutina($param)
     {
 

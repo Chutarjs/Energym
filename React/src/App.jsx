@@ -18,6 +18,9 @@ import {FormActividad} from './components/ActGrupales/FormActividad'
 import {FormServicio} from './components/Servicios/FormServicio'
 import {TableServicio} from './components/Servicios/TableServicio'
 import {DetailServicio} from './components/Servicios/DetailServicio'
+import { TableEjercicio } from './components/Ejercicio/TableEjercicio'
+import { FormEjercicio } from './components/Ejercicio/FormEjercicio'
+import { DetailEjercicio } from './components/Ejercicio/DetailEjercicio'
 
 const router=createBrowserRouter([
   {
@@ -98,6 +101,22 @@ const router=createBrowserRouter([
   {
     path:'/servicio/:id',
     element: <DetailServicio />
+  },
+  {
+    path:'/ejercicio-table',
+    element: <TableEjercicio/>
+  },
+  {
+    path: 'ejercicio/create/',
+    element: <FormEjercicio/>
+  },
+  {
+    path: 'ejercicio/update/:id',
+    element: <FormEjercicio/>
+  },
+  {
+    path:'/ejercicio/:id',
+    element: <DetailEjercicio/>
   },
 ])
 
