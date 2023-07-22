@@ -29,12 +29,21 @@ class EjercicioModel
     {
         try {
             //Consulta sql
-            $vSql = "SELECT * FROM Ejercicio e where idEjercicio=$id";
+            $vSql = "SELECT * FROM Ejercicio where idEjercicio=$id";
 
             //Ejecutar la consulta
             $vResultado = $this->enlace->ExecuteSQL($vSql);
-            // Retornar el objeto
+            // Recorrer el resultado y agregar las imágenes al ejercicio
+            if(!empty($vResultado)){
+                //Obtener objeto
+                $vResultado = $vResultado[0];
+                //---imagenes
+                $imagenes = $this->getImagenesEjercicio($id);
+                //Asignar servicios al objeto
+                $vResultado->imagenes = $imagenes; 
+            }
             return $vResultado;
+
         } catch (Exception $e) {
             die($e->getMessage());
         }

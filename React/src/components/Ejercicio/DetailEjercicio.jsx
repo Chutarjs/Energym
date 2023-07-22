@@ -5,10 +5,7 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemButton from "@mui/material/ListItemButton";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import EjercicioService from "../../services/EjercicioService";
 
 export function DetailEjercicio() {
@@ -22,7 +19,7 @@ export function DetailEjercicio() {
   useEffect(() => {
     EjercicioService.getEjercicioById(routeParams.id)
       .then((response) => {
-        console.log(response.data);
+        console.log(response.data.results);
         setData(response.data.results);
         setError(response.error);
         setLoaded(true);
@@ -36,14 +33,18 @@ export function DetailEjercicio() {
   }, [routeParams.id]);
 
   const renderExerciseImages = (imagenes) => {
-    return imagenes.map((imagen, index) => (
+    return (
       <img
-        key={index}
-        src={`data:image/png;base64, ${imagen.Imagen}`}
+        src={`data:image/png;base64, ${imagenes.Imagen}`}
         alt="Exercise Image"
-        style={{ width: "100%", maxWidth: "150px" }}
+        style={{
+          width: "100%",
+          maxWidth: "150px",
+          display: "block",
+          margin: "0 auto",
+        }}
       />
-    ));
+    );
   };
 
   return (
@@ -56,43 +57,26 @@ export function DetailEjercicio() {
           maxWidth="lg"
         >
           <Typography variant="h4" component="h1" gutterBottom>
-            {"Rutina: " + data.Nombre}
+            {"Ejercicio: " + data.Nombre}
           </Typography>
           <Typography variant="subtitle1" component="h1" gutterBottom>
             {"Descripcion: " + data.Descripcion}
           </Typography>
           <Typography variant="subtitle1" component="h1" gutterBottom>
-            {"Cantidad de personas inscritas: " +
-              data.cantPersonas[0].CantidadPersonas}
+            {"Equipamiento: " + data.Equipamiento}
           </Typography>
           <Typography variant="body1">
-            <Box fontWeight="bold">Ejercicios: </Box>
+            <Box fontWeight="bold">Imagenes: </Box>
             <List
               sx={{
-                width: "100%",
-                maxWidth: "700px",
+                width: "50%",
                 bgcolor: "background.paper",
                 margin: "0 auto",
               }}
             >
-              {data.ejercicios.map((item) => (
-                <ListItemButton key={item.IdEjercicio}>
-                  <ListItemIcon>
-                    <ArrowRightIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={item.Ejercicio}
-                    secondary={
-                      <div>
-                        Descripcion: {item.Descripcion}
-                        <br /><br />
-                        Repeticiones: {item.Repeticiones}x{item.Series}
-                        <br /><br />
-                        Equipamiento: {item.Equipamiento}
-                      </div>
-                    }
-                  />
-                  {renderExerciseImages(item.imagenes)}
+              {data.imagenes.map((item) => (
+                <ListItemButton key={data.idEjercicio}>
+                  {renderExerciseImages(item)}
                 </ListItemButton>
               ))}
             </List>

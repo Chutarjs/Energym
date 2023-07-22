@@ -26,28 +26,34 @@ class ejercicio
             http_response_code($json["status"])
         );
     }
+
     public function get($param)
     {
-
         $genero = new EjercicioModel();
-        $response = $genero->get($param);
 
+        $response = $genero->get($param);
         if (isset($response) && !empty($response)) {
+            // Codificar las imágenes en Base64
+            foreach ($response->imagenes as $imagen) {
+                $imagen->Imagen = base64_encode($imagen->Imagen);
+            }
+
             $json = array(
                 'status' => 200,
                 'results' => $response
             );
+
         } else {
             $json = array(
                 'status' => 400,
-                'results' => "No existe el actor"
+                'results' => "No hay registros"
             );
         }
-        echo json_encode(
-            $json,
-            http_response_code($json["status"])
-        );
+
+        http_response_code($json["status"]);
+        echo json_encode($json);
     }
+
     public function getEjerciciosRutina($param)
     {
 
