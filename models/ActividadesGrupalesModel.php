@@ -135,4 +135,67 @@ class ActividadesGrupalesModel
             die($e->getMessage());
         }
     }
+    /**
+     * Obtener ejercicio para mostrar información en Formulario
+     * @param $idActividad de la actividad
+     * @returns $vresultado - Objeto actividad
+     */
+    //
+    public function getForm($idActividad)
+    {
+        try {
+
+            //Consulta sql
+            $vSql = "SELECT * FROM ActividadGrupal where idActividadGrupal=$idActividad";
+
+            //Ejecutar la consulta
+            $vResultado = $this->enlace->ExecuteSQL($vSql);
+
+            // Retornar el objeto
+            return $vResultado;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    /**
+     * Crear actividad
+     * @param $objeto actividad a insertar
+     * @returns $this->get($idActividad) - Objeto actividad
+     */
+    //
+    public function create($objeto)
+    {
+        try {
+            //Consulta sql
+            //Identificador autoincrementable
+            $sql = "INSERT INTO actividadgrupal (idServicio, Nombre, Descripcion, Fecha, HoraInicio, HoraFinal, Cupo) " .
+                "VALUES ('5', '$objeto->Nombre','$objeto->Descripcion', '$objeto->Fecha', '$objeto->HoraInicio', '$objeto->HoraFinal', '$objeto->Cupo')";
+
+            //Ejecutar la consulta
+            //Obtener el último insert
+            $idActividad = $this->enlace->executeSQL_DML_last($sql);
+
+            //Retornar el ejercicio
+            return $this->get($idActividad);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    public function update($objeto)
+    {
+        try {
+            //Consulta sql
+            $vSql = "UPDATE actividadgrupal SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion', 
+                    Fecha = '$objeto->Fecha', HoraInicio = '$objeto->HoraInicio', HoraFinal = '$objeto->HoraFinal', 
+                    Cupo = '$objeto->Cupo' Where idActividadGrupal=$objeto->idActividadGrupal";
+            
+            //Ejecutar la consulta
+            $vResultado = $this->enlace->executeSQL_DML($vSql);
+
+            // Retornar el objeto actualizado
+            return $this->get($objeto->idActividadGrupal);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

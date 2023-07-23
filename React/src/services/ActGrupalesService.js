@@ -20,17 +20,16 @@ class ActGrupalesService{
         return axios.get(BASE_URL + '/getDetalleById/' + Id);
     }
     
-    //aun por hacer
-    createMovie(Movie){
-        return axios.post(BASE_URL, Movie);
+    createActividad(Actividad){
+        return axios.post(BASE_URL, Actividad);
     }
 
-    getMovieFormById(MovieId){
-        return axios.get(BASE_URL + '/getForm/' + MovieId);
+    getActividadFormById(ActividadId){
+        return axios.get(BASE_URL + '/getForm/' + ActividadId);
     }
 
-    updateMovie(Movie){
-        return axios.put(BASE_URL, Movie);
+    updateActividad(Actividad){
+        return axios.put(BASE_URL, Actividad);
     }
 }
 
