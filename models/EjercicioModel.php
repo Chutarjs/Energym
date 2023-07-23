@@ -96,4 +96,64 @@ class EjercicioModel
             die($e->getMessage());
         }
     }
+
+    /**
+	 * Crear ejercicio
+	 * @param $objeto plan a insertar
+	 * @returns $this->get($idEjercicio) - Objeto ejercicio
+	 */
+	//
+    public function create($objeto) {
+        try {
+            //Consulta sql
+            //Identificador autoincrementable
+			$sql = "Insert into Plan (Nombre, Descripcion)". 
+                     "Values ('$objeto->Nombre','$objeto->Descripcion')";
+			
+            //Ejecutar la consulta
+            //Obtener ultimo insert
+			$idPlan = $this->enlace->executeSQL_DML_last($sql);
+            //--- Servicios ---
+            //Crear elementos a insertar en servicios
+            foreach( $objeto->servicios as $servicio){
+                $dataServicios[]=array($idPlan,$servicio);
+            }
+                foreach($dataServicios as $row){
+                    
+                    $valores=implode(',', $row);
+                    $sql = "INSERT INTO planservicio VALUES(".$valores.");";
+                    $vResultado = $this->enlace->executeSQL_DML($sql);
+                }
+            //Retornar pelicula
+            return $this->get($idPlan);
+		} catch ( Exception $e ) {
+			die ( $e->getMessage () );
+		}
+    }
+    public function update($objeto) {
+        try {
+            var_dump($objeto);
+            $vSql = "DELETE from planservicio where idplan = $objeto->idPlan;";
+            //Ejecutar la consulta
+			$vResultado = $this->enlace->executeSQL_DML( $vSql);
+            //Consulta sql
+			$vSql = "UPDATE plan SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion', Precio = 0 Where idPlan=$objeto->idPlan";
+            //Ejecutar la consulta
+			$vResultado = $this->enlace->executeSQL_DML( $vSql);
+            
+            foreach( $objeto->servicios as $servicio){
+                $dataServicios[]=array($objeto->idPlan,$servicio);
+            }
+                foreach($dataServicios as $row){
+                    $valores=implode(',', $row);
+                    $sql = "INSERT INTO planservicio VALUES(".$valores.");";
+                    $vResultado = $this->enlace->executeSQL_DML($sql);
+                }
+
+            // Retornar el objeto actualizado
+            return $this->get($objeto->idPlan);
+		} catch ( Exception $e ) {
+			die ( $e->getMessage () );
+		}
+    }
 }

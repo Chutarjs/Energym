@@ -1,20 +1,19 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState, useContext } from 'react';
-import FormControl from '@mui/material/FormControl';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import { FormHelperText } from '@mui/material';
-import { useForm, Controller, useFieldArray } from 'react-hook-form';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import AddIcon from '@mui/icons-material/Add';
-import Tooltip from '@mui/material/Tooltip';
-import * as yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup';
+import React, { useEffect, useState, useContext } from "react";
+import FormControl from "@mui/material/FormControl";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import { FormHelperText } from "@mui/material";
+import { useForm, Controller, useFieldArray } from "react-hook-form";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import AddIcon from "@mui/icons-material/Add";
+import Tooltip from "@mui/material/Tooltip";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 // eslint-disable-next-line no-unused-vars
-import { useNavigate, useParams } from 'react-router-dom';
-
+import { useNavigate, useParams } from "react-router-dom";
 
 export function FormRutina() {
   //const useNavigate = useNavigate()
@@ -28,20 +27,20 @@ export function FormRutina() {
   const movieSchema = yup.object({
     title: yup
       .string()
-      .required('El título es requerido')
-      .min(3, 'El título debe tener 3 caracteres'),
-    time: yup.string().required('Los minutos son requerido'),
+      .required("El título es requerido")
+      .min(3, "El título debe tener 3 caracteres"),
+    time: yup.string().required("Los minutos son requerido"),
     year: yup
       .number()
-      .typeError('Solo acepta números')
-      .required('El año es requerido')
-      .positive('Solo acepta números positivos'),
+      .typeError("Solo acepta números")
+      .required("El año es requerido")
+      .positive("Solo acepta números positivos"),
     lang: yup
       .string()
-      .required('El idioma es requerido')
-      .min(3, 'El idioma debe tener 3 caracteres'),
-    genres: yup.array().typeError('Seleccione un genero'),
-    actors: yup.array().typeError('Seleccione un actor'),
+      .required("El idioma es requerido")
+      .min(3, "El idioma debe tener 3 caracteres"),
+    genres: yup.array().typeError("Seleccione un genero"),
+    actors: yup.array().typeError("Seleccione un actor"),
   });
   const {
     control,
@@ -51,15 +50,15 @@ export function FormRutina() {
   } = useForm({
     // Valores iniciales
     defaultValues: {
-      title: '',
-      year: '',
-      lang: '',
-      time: '',
-      genres: [],//''
+      title: "",
+      year: "",
+      lang: "",
+      time: "",
+      genres: [], //''
       actors: [
         {
-          actor_id: '',
-          role: '',
+          actor_id: "",
+          role: "",
         },
       ],
     },
@@ -71,50 +70,52 @@ export function FormRutina() {
   // useFieldArray:
   // relaciones de muchos a muchos, con más campos además
   // de las llaves primaras
-const {fields, append, prepend, remove,swap, move,insert}=useFieldArray({
-control, //controls proviene de useForm
-name:'actors' //nombre único para el campo Array
-})
+  const { fields, append, prepend, remove, swap, move, insert } = useFieldArray(
+    {
+      control, //controls proviene de useForm
+      name: "actors", //nombre único para el campo Array
+    }
+  );
   // Eliminar actor de listado
   const removeActor = (index) => {
-    if(fields.length===1){
-      return
+    if (fields.length === 1) {
+      return;
     }
-    remove(index)
+    remove(index);
   };
   // Agregar un nuevo actor
   const addNewActor = () => {
     append({
-      actor_id:'',
-      role: ''
-    })
+      actor_id: "",
+      role: "",
+    });
   };
   // Valores de formulario que llena el usuario
   const [formData, setFormData] = useState(null);
   //Respuesta de crear o modificar
   const [responseData, setResponseData] = useState(null);
   // Accion: post, put
-  const [action, setAction] = useState('POST');
+  const [action, setAction] = useState("POST");
   // Booleano para establecer si se envió la informacion al API
   const [start, setStart] = useState(false);
   // Obtener la informacion de la pelicula a actualizar
   const [data, setData] = useState(null);
   // eslint-disable-next-line no-unused-vars
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   // Accion submit
   const onSubmit = (DataForm) => {
     try {
       // Establecer valores del formulario
-console.log(DataForm)
-setFormData(DataForm)
+      console.log(DataForm);
+      setFormData(DataForm);
       // Indicar que se puede realizar la solicitud al API
-setStart(true)
+      setStart(true);
       // Establecer el tipo de métod HTTP
       if (esCrear) {
-        setAction('POST');
+        setAction("POST");
       } else {
-        setAction('PUT');
+        setAction("PUT");
       }
     } catch (e) {
       //Capturar error
@@ -139,7 +140,7 @@ setStart(true)
       .catch((error) => {
         if (error instanceof SyntaxError) {
           console.log(error);
-          throw new Error('Respuesta no válida del servidor');
+          throw new Error("Respuesta no válida del servidor");
         }
       });
   }, [esCrear]);
@@ -156,7 +157,7 @@ setStart(true)
       .catch((error) => {
         if (error instanceof SyntaxError) {
           console.log(error);
-          throw new Error('Respuesta no válida del servidor');
+          throw new Error("Respuesta no válida del servidor");
         }
       });
   }, [esCrear]);
@@ -170,7 +171,7 @@ setStart(true)
         <Grid container spacing={1}>
           <Grid item xs={12} sm={12}>
             <Typography variant="h5" gutterBottom>
-              {esCrear ? 'Crear' : 'Modificar'} Pelicula
+              {esCrear ? "Crear" : "Modificar"} Pelicula
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
@@ -185,7 +186,7 @@ setStart(true)
                     id="title"
                     label="Título"
                     error={Boolean(errors.title)}
-                    helperText={errors.title ? errors.title.message : ' '}
+                    helperText={errors.title ? errors.title.message : " "}
                   />
                 )}
               />
@@ -202,7 +203,7 @@ setStart(true)
                     id="year"
                     label="Año"
                     error={Boolean(errors.year)}
-                    helperText={errors.year ? errors.year.message : ' '}
+                    helperText={errors.year ? errors.year.message : " "}
                   />
                 )}
               />
@@ -220,7 +221,7 @@ setStart(true)
                     id="time"
                     label="Minutos"
                     error={Boolean(errors.time)}
-                    helperText={errors.time ? errors.time.message : ' '}
+                    helperText={errors.time ? errors.time.message : " "}
                   />
                 )}
               />
@@ -237,7 +238,7 @@ setStart(true)
                     id="lang"
                     label="Idioma"
                     error={Boolean(errors.lang)}
-                    helperText={errors.lang ? errors.lang.message : ' '}
+                    helperText={errors.lang ? errors.lang.message : " "}
                   />
                 )}
               />
@@ -259,8 +260,8 @@ setStart(true)
                   )}
                 />
               )}
-              <FormHelperText sx={{ color: '#d32f2f' }}>
-                {errors.genres ? errors.genres.message : ' '}
+              <FormHelperText sx={{ color: "#d32f2f" }}>
+                {errors.genres ? errors.genres.message : " "}
               </FormHelperText>
             </FormControl>
           </Grid>
@@ -277,19 +278,21 @@ setStart(true)
                 </Tooltip>
               </Typography>
               {/* Array de controles de actor */}
-{loadedActors && dataActors && fields.map((field,index)=>(
-<ActorsForm 
-field={field}
-data={dataActors}
-key={index}
-index={index}
-onRemove={removeActor}
-control={control}
-disableRemoveButton={fields.length===1}
-/>
-))}
-              <FormHelperText sx={{ color: '#d32f2f' }}>
-                {errors.actors ? errors.actors.message : ' '}
+              {loadedActors &&
+                dataActors &&
+                fields.map((field, index) => (
+                  <ActorsForm
+                    field={field}
+                    data={dataActors}
+                    key={index}
+                    index={index}
+                    onRemove={removeActor}
+                    control={control}
+                    disableRemoveButton={fields.length === 1}
+                  />
+                ))}
+              <FormHelperText sx={{ color: "#d32f2f" }}>
+                {errors.actors ? errors.actors.message : " "}
               </FormHelperText>
             </FormControl>
           </Grid>

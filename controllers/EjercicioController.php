@@ -76,4 +76,44 @@ class ejercicio
             http_response_code($json["status"])
         );
     }
+    public function create( ){
+        $inputJSON=file_get_contents('php://input');
+        $object = json_decode($inputJSON); 
+        $genero=new EjercicioModel();
+        $response=$genero->create($object);
+        if(isset($response) && !empty($response)){
+            $json=array(
+                'status'=>200,
+                'results'=>"Plan Creado Correctamente!"
+            );
+        }else{
+            $json=array(
+                'status'=>400,
+                'results'=>"No hay registros"
+            );
+        }
+        echo json_encode($json,
+        http_response_code($json["status"]));
+        
+    }
+    public function update(){
+        $inputJSON=file_get_contents('php://input');
+        $object = json_decode($inputJSON); 
+        $genero=new EjercicioModel();
+        $response=$genero->update($object);
+        if(isset($response) && !empty($response)){
+            $json=array(
+                'status'=>200,
+                'results'=>"Plan Actualizado Correctamente!"
+            );
+        }else{
+            $json=array(
+                'status'=>400,
+                'results'=>"No hay registros"
+            );
+        }
+        echo json_encode($json,
+        http_response_code($json["status"]));
+        
+    }
 }

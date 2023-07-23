@@ -98,6 +98,7 @@ export function FormPlan() {
             navigate("/plan-table");
           })
           .catch((error) => {
+            toast.error("Oh no! Algo salio mal!  :" + error.message);
             if (error instanceof SyntaxError) {
               console.log(error);
               throw new Error("Respuesta no válida del servidor");
@@ -115,6 +116,7 @@ export function FormPlan() {
             navigate("/plan-table");
           })
           .catch((error) => {
+            toast.error("Oh no! Algo salio mal!  :" + error.message);
             if (error instanceof SyntaxError) {
               console.log(error);
               throw new Error("Respuesta no válida del servidor");
@@ -122,7 +124,7 @@ export function FormPlan() {
           });
       }
     }
-  }, [start, esCrear, formData]);
+  }, [start, esCrear, formData, navigate]);
 
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
@@ -166,11 +168,11 @@ export function FormPlan() {
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
-      // Si es modificar establece los valores a precargar en el formulario
       setValues(data);
       console.log(data);
     }
   }, [data, esCrear, action]);
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit, onError)} noValidate>
@@ -191,8 +193,8 @@ export function FormPlan() {
                     {...field}
                     id="Nombre"
                     label="Nombre"
-                    error={Boolean(errors.Nombre)} // Change this to errors.nombre
-                    helperText={errors.Nombre ? errors.Nombre.message : " "} // Change this to errors.Nombre.message
+                    error={Boolean(errors.Nombre)} 
+                    helperText={errors.Nombre ? errors.Nombre.message : " "} 
                   />
                 )}
               />
