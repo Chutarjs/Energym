@@ -32,7 +32,9 @@ export function FormEjercicio() {
     Equipamiento: yup
       .string()
       .required("El equipamiento es necesario, si no se usa equipo poner nada"),
-    imagenes: yup.array().of(yup.string().required("Seleccione al menos una imagen")),
+    imagenes: yup
+      .array()
+      .of(yup.string().required("Seleccione al menos una imagen")),
   });
   const {
     control,
@@ -158,8 +160,6 @@ export function FormEjercicio() {
     }
   }, [data, esCrear, action]);
 
-
-
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit, onError)} noValidate>
@@ -227,28 +227,53 @@ export function FormEjercicio() {
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={12}>
-            <input
-              type="file"
-              accept="image/*"
-              multiple
-              onChange={(e) => {
-                const files = e.target.files;
-                if (files && files.length > 0) {
-                  const imageArray = [];
-                  for (let i = 0; i < files.length; i++) {
-                    const reader = new FileReader();
-                    reader.onloadend = () => {
-                      imageArray.push(reader.result);
-                      if (imageArray.length === files.length) {
-                        // Set the array of base64 images to the form
-                        setValue("imagenes", imageArray);
-                      }
-                    };
-                    reader.readAsDataURL(files[i]);
+            <label htmlFor="upload-button">
+              <input
+                type="file"
+                accept="image/*"
+                multiple
+                id="upload-button"
+                style={{ display: "none" }} // Hide the default input element
+                onChange={(e) => {
+                  const files = e.target.files;
+                  if (files && files.length > 0) {
+                    const imageArray = [];
+                    for (let i = 0; i < files.length; i++) {
+                      const reader = new FileReader();
+                      reader.onloadend = () => {
+                        imageArray.push(reader.result);
+                        if (imageArray.length === files.length) {
+                          // Set the array of base64 images to the form
+                          setValue("imagenes", imageArray);
+                        }
+                      };
+                      reader.readAsDataURL(files[i]);
+                    }
                   }
-                } 
-              }}
-            />
+                }}
+              />
+              <Button
+                variant="outlined"
+                color="secondary"
+                component="span"
+                sx={{
+                  mt: 2,
+                  mb: 1,
+                  ml: 1,
+                  px: 3,
+                  py: 2,
+                  textTransform: "none",
+                  fontWeight: "bold",
+                  border: "2px solid primary",
+                  "&:hover": {
+                    backgroundColor: "primary",
+                    color: "#fff",
+                  },
+                }}
+              >
+                Seleccionar Imágenes
+              </Button>
+            </label>
             <FormHelperText>
               {errors.imagenes ? errors.imagenes.message : " "}
             </FormHelperText>
