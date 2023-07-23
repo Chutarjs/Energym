@@ -1833,3 +1833,92 @@
 [22-Jul-2023 09:55:10 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
 [22-Jul-2023 09:55:10 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
 [22-Jul-2023 09:55:10 Europe/Berlin] PHP   4. ejercicio->get($param = '1') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 06:57:19 Europe/Berlin] PHP Warning:  Attempt to read property "idPlan" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 136
+[23-Jul-2023 06:57:19 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 06:57:19 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 06:57:19 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 06:57:19 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 06:57:19 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 06:57:19 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:103
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP Warning:  Attempt to read property "Nombre" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 111
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP Warning:  Attempt to read property "Descripcion" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 111
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP Warning:  Attempt to read property "Equipamiento" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 111
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP Warning:  Attempt to read property "imagenes" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 117
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 117
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:04:57 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83
+[23-Jul-2023 07:05:00 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:05:00 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:05:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:05:00 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:05:00 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:05:00 Europe/Berlin] PHP   4. ejercicio->get($param = '21') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:05:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:05:01 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:05:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:05:01 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:05:01 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:05:01 Europe/Berlin] PHP   4. ejercicio->get($param = '21') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP Warning:  Attempt to read property "Nombre" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 112
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP Warning:  Attempt to read property "Descripcion" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 112
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP Warning:  Attempt to read property "Equipamiento" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 112
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP Warning:  Attempt to read property "imagenes" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 118
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 118
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:06:45 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83

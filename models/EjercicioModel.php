@@ -105,27 +105,23 @@ class EjercicioModel
 	//
     public function create($objeto) {
         try {
+            var_dump($objeto);
             //Consulta sql
             //Identificador autoincrementable
-			$sql = "Insert into Plan (Nombre, Descripcion)". 
-                     "Values ('$objeto->Nombre','$objeto->Descripcion')";
+			$sql = "Insert into Ejercicio (Nombre, Descripcion, Equipamiento)". 
+                     "Values ('$objeto->Nombre','$objeto->Descripcion', '$objeto->Equipamiento')";
 			
             //Ejecutar la consulta
             //Obtener ultimo insert
-			$idPlan = $this->enlace->executeSQL_DML_last($sql);
-            //--- Servicios ---
-            //Crear elementos a insertar en servicios
-            foreach( $objeto->servicios as $servicio){
-                $dataServicios[]=array($idPlan,$servicio);
+			$idEjercicio = $this->enlace->executeSQL_DML_last($sql);
+            //--- Imagenes ---
+            foreach ($objeto->imagenes as $imagen) {
+                $sql = "INSERT INTO imagenejercicio (idEjercicio, Imagen) VALUES ('$idEjercicio', '$imagen');";
+                $vResultado = $this->enlace->executeSQL_DML($sql);
             }
-                foreach($dataServicios as $row){
-                    
-                    $valores=implode(',', $row);
-                    $sql = "INSERT INTO planservicio VALUES(".$valores.");";
-                    $vResultado = $this->enlace->executeSQL_DML($sql);
-                }
+
             //Retornar pelicula
-            return $this->get($idPlan);
+            return $this->get($idEjercicio);
 		} catch ( Exception $e ) {
 			die ( $e->getMessage () );
 		}
@@ -133,22 +129,19 @@ class EjercicioModel
     public function update($objeto) {
         try {
             var_dump($objeto);
-            $vSql = "DELETE from planservicio where idplan = $objeto->idPlan;";
+            $vSql = "DELETE from imagenejercicio where idEjercicio = $objeto->idEjercicio;";
             //Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML( $vSql);
             //Consulta sql
-			$vSql = "UPDATE plan SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion', Precio = 0 Where idPlan=$objeto->idPlan";
+			$vSql = "UPDATE Ejercicio SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion', Equipamiento = '$objeto->Equipamiento' Where idEjercicio=$objeto->idEjercicio";
             //Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML( $vSql);
             
-            foreach( $objeto->servicios as $servicio){
-                $dataServicios[]=array($objeto->idPlan,$servicio);
+            //--- Imagenes ---
+            foreach ($objeto->imagenes as $imagen) {
+                $sql = "INSERT INTO imagenejercicio (idEjercicio, Imagen) VALUES ('$objeto->idEjercicio', '$imagen');";
+                $vResultado = $this->enlace->executeSQL_DML($sql);
             }
-                foreach($dataServicios as $row){
-                    $valores=implode(',', $row);
-                    $sql = "INSERT INTO planservicio VALUES(".$valores.");";
-                    $vResultado = $this->enlace->executeSQL_DML($sql);
-                }
 
             // Retornar el objeto actualizado
             return $this->get($objeto->idPlan);

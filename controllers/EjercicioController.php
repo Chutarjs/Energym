@@ -84,7 +84,7 @@ class ejercicio
         if(isset($response) && !empty($response)){
             $json=array(
                 'status'=>200,
-                'results'=>"Plan Creado Correctamente!"
+                'results'=>"Ejercicio Creado Correctamente!"
             );
         }else{
             $json=array(
@@ -94,7 +94,6 @@ class ejercicio
         }
         echo json_encode($json,
         http_response_code($json["status"]));
-        
     }
     public function update(){
         $inputJSON=file_get_contents('php://input');
@@ -104,7 +103,7 @@ class ejercicio
         if(isset($response) && !empty($response)){
             $json=array(
                 'status'=>200,
-                'results'=>"Plan Actualizado Correctamente!"
+                'results'=>"Ejercicio Actualizado Correctamente!"
             );
         }else{
             $json=array(
@@ -114,6 +113,5 @@ class ejercicio
         }
         echo json_encode($json,
         http_response_code($json["status"]));
-        
     }
 }
