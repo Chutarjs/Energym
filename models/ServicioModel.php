@@ -7,7 +7,7 @@ class ServicioModel
         $this->enlace = new MySqlConnect();
     }
 
-    /*Listar*/
+    /*Listar todos*/
     /*http://localhost:81/Energym/servicio*/
     public function all()
     {
@@ -24,7 +24,7 @@ class ServicioModel
             die($e->getMessage());
         }
     }
-    /*Obtener */
+    /*Obtener servicio por id*/
     /*http://localhost:81/Energym/servicio/#*/
     public function get($id)
     {
@@ -41,7 +41,7 @@ class ServicioModel
         }
     }
 
-    /*Obtener los servicios de un plan */
+    /*Obtener los servicios de un plan*/
     /*http://localhost:81/Energym/Servicio/getServicioPlan/5*/
     public function getServicioPlan($idPlan)
     {
@@ -79,6 +79,7 @@ class ServicioModel
             die($e->getMessage());
         }
     }
+
     /**
      * Crear servicio
      * @param $objeto servicio a insertar
@@ -109,6 +110,10 @@ class ServicioModel
             die($e->getMessage());
         }
     }
+
+    /**
+     *Actualizar Servicio
+     */
     public function update($objeto)
     {
         try {

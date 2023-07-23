@@ -94,7 +94,7 @@ export function FormServicio() {
       if (esCrear) {
         // Crear ejercicio
         console.log(formData);
-        ServicioService.create(formData)
+        ServicioService.createServicio(formData)
           .then((response) => {
             setResponseData(response.data);
             setError(response.error);
