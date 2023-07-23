@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import FormControl from "@mui/material/FormControl";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { FormHelperText } from "@mui/material";
+import { FormHelperText, MenuItem } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -31,11 +31,10 @@ export function FormServicio() {
     Descripcion: yup.string().required("La descripcion es requerida"),
     Tipo: yup
       .string()
-      .required("El equipamiento es necesario, si no se usa equipo poner nada"),
+      .required("El equipamiento es necesario, si no se usa equipo poner nada")
+      .oneOf(["individual", "grupal"], "Tipo debe ser 'individual' o 'grupal'"),
     Precio: yup.number().min(3, "El numero debe ser de al menos 3 digitos"),
-    imagen: yup
-      .array()
-      .of(yup.string().required("Seleccione una imagen")),
+    imagen: yup.array().of(yup.string().required("Seleccione una imagen")),
   });
   const {
     control,
@@ -219,11 +218,13 @@ export function FormServicio() {
                     {...field}
                     id="Tipo"
                     label="Tipo"
+                    select
                     error={Boolean(errors.Tipo)}
-                    helperText={
-                      errors.Tipo ? errors.Tipo.message : " "
-                    }
-                  />
+                    helperText={errors.Tipo ? errors.Tipo.message : " "}
+                  >
+                    <MenuItem value="individual">Individual</MenuItem>
+                    <MenuItem value="grupal">Grupal</MenuItem>
+                  </TextField>
                 )}
               />
             </FormControl>
