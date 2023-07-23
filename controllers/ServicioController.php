@@ -1,5 +1,5 @@
 <?php
-//class Plan
+//class Servicio
 class servicio
 {
     //Listar en el API
@@ -77,5 +77,79 @@ class servicio
             $json,
             http_response_code($json["status"])
         );
+    }
+
+    //GET Obtener con formato para formulario
+    public function getForm($idServicio){   
+        //Instancia del modelo     
+        $servicio=new ServicioModel();
+        $json=array(
+            'status'=>400,
+            'results'=>"Solicitud sin identificador"
+        );
+        //Verificar párametro
+        if(isset($idServicio) && !empty($idServicio) && $idServicio!=='undefined' && $idServicio!=='null'){
+            //Acción del modelo a ejecutar
+            $response=$servicio->getForm($idServicio);
+            //Verificar respuesta
+            if(isset($response) && !empty($response)){
+                //Armar el json
+                $json=array(
+                    'status'=>200,
+                    'results'=>$response
+                );
+            }else{
+                $json=array(
+                    'status'=>400,
+                    'results'=>"No existe el recurso solicitado"
+                );
+            }
+           
+        }
+        //Escribir respuesta JSON con código de estado HTTP
+        echo json_encode($json,
+            http_response_code($json["status"])
+        ); 
+    }
+     
+    public function create( ){
+        $inputJSON=file_get_contents('php://input');
+        $object = json_decode($inputJSON); 
+        $genero=new ServicioModel();
+        $response=$genero->create($object);
+        if(isset($response) && !empty($response)){
+            $json=array(
+                'status'=>200,
+                'results'=>"Servicio Creado Correctamente!"
+            );
+        }else{
+            $json=array(
+                'status'=>400,
+                'results'=>"No hay registros"
+            );
+        }
+        echo json_encode($json,
+        http_response_code($json["status"]));
+        
+    }
+    public function update(){
+        $inputJSON=file_get_contents('php://input');
+        $object = json_decode($inputJSON); 
+        $genero=new ServicioModel();
+        $response=$genero->update($object);
+        if(isset($response) && !empty($response)){
+            $json=array(
+                'status'=>200,
+                'results'=>"Servicio Actualizado Correctamente!"
+            );
+        }else{
+            $json=array(
+                'status'=>400,
+                'results'=>"No hay registros"
+            );
+        }
+        echo json_encode($json,
+        http_response_code($json["status"]));
+        
     }
 }

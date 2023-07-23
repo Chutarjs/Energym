@@ -32,7 +32,7 @@ export function FormServicio() {
     Tipo: yup
       .string()
       .required("El equipamiento es necesario, si no se usa equipo poner nada"),
-    Precio: yup.number.length(3, "El numero debe ser de al menos 3 digitos"),
+    Precio: yup.number().min(3, "El numero debe ser de al menos 3 digitos"),
     imagen: yup
       .array()
       .of(yup.string().required("Seleccione una imagen")),
@@ -101,8 +101,8 @@ export function FormServicio() {
             setError(response.error);
 
             //con exito
-            toast.success("El ejercicio se creó correctamente");
-            navigate("/ejercicio-table");
+            toast.success("El servicio se creó correctamente");
+            navigate("/servicio-table");
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
@@ -114,14 +114,14 @@ export function FormServicio() {
       } else {
         // Modificar ejercicio
         console.log(formData);
-        EjercicioService.updateEjercicio(formData)
+        ServicioService.updateServicio(formData)
           .then((response) => {
             setResponseData(response.data.results);
             setError(response.error);
 
             //con exito
-            toast.success("El ejercicio se actualizó correctamente");
-            navigate("/ejercicio-table");
+            toast.success("El servicio se actualizó correctamente");
+            navigate("/servicio-table");
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
@@ -136,12 +136,13 @@ export function FormServicio() {
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
 
-  //Obtener ejercicio
+  //Obtener servicio form
   useEffect(() => {
     if (id != undefined && !isNaN(Number(id))) {
-      EjercicioService.getEjercicioFormById(id)
+      ServicioService.getServicioById(id)
         .then((response) => {
-          setData(response.data.results);
+          console.log(response);
+          setData(response.data.results[0]);
           setError(response.error);
         })
         .catch((error) => {
@@ -157,7 +158,7 @@ export function FormServicio() {
   useEffect(() => {
     if (!esCrear && data) {
       // Si es modificar establece los valores a precargar en el formulario
-      setValues(data[0]);
+      setValues(data);
     }
   }, [data, esCrear, action]);
 
@@ -167,7 +168,7 @@ export function FormServicio() {
         <Grid container spacing={1}>
           <Grid item xs={12} sm={12}>
             <Typography variant="h5" gutterBottom>
-              {esCrear ? "Crear" : "Modificar"} Ejercicio
+              {esCrear ? "Crear" : "Modificar"} Servicio
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
@@ -211,28 +212,47 @@ export function FormServicio() {
             {/* ['filled','outlined','standard']. */}
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="Equipamiento"
+                name="Tipo"
                 control={control}
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    id="Equipamiento"
-                    label="Equipamiento"
-                    error={Boolean(errors.Equipamiento)}
+                    id="Tipo"
+                    label="Tipo"
+                    error={Boolean(errors.Tipo)}
                     helperText={
-                      errors.Equipamiento ? errors.Equipamiento.message : " "
+                      errors.Tipo ? errors.Tipo.message : " "
                     }
                   />
                 )}
               />
             </FormControl>
           </Grid>
-          <Grid item xs={12} sm={12}>
+
+          <Grid item xs={12} sm={4}>
+            {/* ['filled','outlined','standard']. */}
+            <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
+              <Controller
+                name="Precio"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    id="Precio"
+                    label="Precio"
+                    error={Boolean(errors.Precio)}
+                    helperText={errors.Precio ? errors.Precio.message : " "}
+                  />
+                )}
+              />
+            </FormControl>
+          </Grid>
+
+          <Grid item xs={12} sm={4}>
             <label htmlFor="upload-button">
               <input
                 type="file"
                 accept="image/*"
-                multiple
                 id="upload-button"
                 style={{ display: "none" }} // Hide the default input element
                 onChange={(e) => {
@@ -245,7 +265,7 @@ export function FormServicio() {
                         imageArray.push(reader.result);
                         if (imageArray.length === files.length) {
                           // Set the array of base64 images to the form
-                          setValue("imagenes", imageArray);
+                          setValue("imagen", imageArray);
                         }
                       };
                       reader.readAsDataURL(files[i]);
@@ -256,12 +276,12 @@ export function FormServicio() {
               <Button
                 variant="outlined"
                 color="secondary"
+                fullWidth
                 component="span"
                 sx={{
-                  mt: 2,
+                  mt: 1,
                   mb: 1,
                   ml: 1,
-                  px: 3,
                   py: 2,
                   textTransform: "none",
                   fontWeight: "bold",
@@ -272,11 +292,11 @@ export function FormServicio() {
                   },
                 }}
               >
-                Seleccionar Imágenes
+                Seleccionar Imágen
               </Button>
             </label>
             <FormHelperText>
-              {errors.imagenes ? errors.imagenes.message : " "}
+              {errors.imagen ? errors.imagen.message : " "}
             </FormHelperText>
           </Grid>
 
