@@ -10,11 +10,9 @@ import Button from "@mui/material/Button";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 // eslint-disable-next-line no-unused-vars
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-hot-toast";
 import ServicioService from "../../services/ServicioService";
-import PlanService from "../../services/PlanService";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 export function FormServicio() {
   const navigate = useNavigate();
@@ -25,13 +23,19 @@ export function FormServicio() {
   // Valores a precarga al actualizar
   const [values, setValues] = useState(null);
   // Esquema de validación
-  const planSchema = yup.object({
+  const servicioSchema = yup.object({
     Nombre: yup
       .string()
-      .required("El Nombre es requerido")
-      .min(3, "El Nombre debe tener 3 caracteres"),
+      .required("El nombre es requerido")
+      .min(3, "El nombre debe tener al menos 3 caracteres"),
     Descripcion: yup.string().required("La descripcion es requerida"),
-    servicios: yup.array().typeError("Seleccione al menos un servicio"),
+    Tipo: yup
+      .string()
+      .required("El equipamiento es necesario, si no se usa equipo poner nada"),
+    Precio: yup.number.length(3, "El numero debe ser de al menos 3 digitos"),
+    imagen: yup
+      .array()
+      .of(yup.string().required("Seleccione una imagen")),
   });
   const {
     control,
@@ -43,17 +47,20 @@ export function FormServicio() {
     defaultValues: {
       Nombre: "",
       Descripcion: "",
-      servicios: [], //''
+      Tipo: "",
+      Precio: 0,
+      imagen: [],
     },
     // valores a precargar
     values,
     // Asignación de validaciones
-    resolver: yupResolver(planSchema),
+    resolver: yupResolver(servicioSchema),
   });
 
   // Valores de formulario que llena el usuario
   const [formData, setFormData] = useState(null);
   //Respuesta de crear o modificar
+  // eslint-disable-next-line no-unused-vars
   const [responseData, setResponseData] = useState(null);
   // Accion: post, put
   const [action, setAction] = useState("POST");
@@ -68,7 +75,6 @@ export function FormServicio() {
   const onSubmit = (DataForm) => {
     try {
       // Establecer valores del formulario
-      console.log(DataForm);
       setFormData(DataForm);
       // Indicar que se puede realizar la solicitud al API
       setStart(true);
@@ -82,48 +88,59 @@ export function FormServicio() {
       //Capturar error
     }
   };
+
   //Llamar al API para ejecutar Crear o modificar
   useEffect(() => {
     if (start) {
       if (esCrear) {
-        //Crear pelicula
-        PlanService.createPlan(formData)
+        // Crear ejercicio
+        console.log(formData);
+        ServicioService.create(formData)
           .then((response) => {
-            setResponseData(response.data.results);
+            setResponseData(response.data);
             setError(response.error);
+
+            //con exito
+            toast.success("El ejercicio se creó correctamente");
+            navigate("/ejercicio-table");
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
               console.log(error);
+              toast.error("Oh no! Algo salio mal!  :" + error.message);
               throw new Error("Respuesta no válida del servidor");
             }
           });
       } else {
-        //Modificar pelicula
-        PlanService.updatePlan(formData)
+        // Modificar ejercicio
+        console.log(formData);
+        EjercicioService.updateEjercicio(formData)
           .then((response) => {
             setResponseData(response.data.results);
             setError(response.error);
-            
+
+            //con exito
+            toast.success("El ejercicio se actualizó correctamente");
+            navigate("/ejercicio-table");
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
               console.log(error);
+              toast.error("Oh no! Algo salio mal!  :" + error.message);
               throw new Error("Respuesta no válida del servidor");
             }
           });
       }
     }
-  }, [start, esCrear, formData]);
+  }, [start, esCrear, formData, navigate]);
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
 
-  //Obtener Plan
+  //Obtener ejercicio
   useEffect(() => {
     if (id != undefined && !isNaN(Number(id))) {
-      PlanService.getPlanFormById(id)
+      EjercicioService.getEjercicioFormById(id)
         .then((response) => {
-          console.log(response);
           setData(response.data.results);
           setError(response.error);
         })
@@ -136,32 +153,21 @@ export function FormServicio() {
     }
   }, [id]);
 
-  //Respuesta del API al crear o actualizar
-  useEffect(() => {
-    if (responseData != null) {
-      toast.success(responseData, {
-        duration: 4000,
-        position: "top-center",
-      });
-      // Si hay respuesta se creo o modifico lo redirecciona
-      return navigate("/plan-table");
-    }
-  }, [navigate, responseData]);
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
       // Si es modificar establece los valores a precargar en el formulario
-      setValues(data);
-      console.log(data);
+      setValues(data[0]);
     }
   }, [data, esCrear, action]);
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit, onError)} noValidate>
         <Grid container spacing={1}>
           <Grid item xs={12} sm={12}>
             <Typography variant="h5" gutterBottom>
-              {esCrear ? "Crear" : "Modificar"} Plan
+              {esCrear ? "Crear" : "Modificar"} Ejercicio
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
@@ -175,8 +181,8 @@ export function FormServicio() {
                     {...field}
                     id="Nombre"
                     label="Nombre"
-                    error={Boolean(errors.Nombre)} // Change this to errors.nombre
-                    helperText={errors.Nombre ? errors.Nombre.message : " "} // Change this to errors.Nombre.message
+                    error={Boolean(errors.Nombre)}
+                    helperText={errors.Nombre ? errors.Nombre.message : " "}
                   />
                 )}
               />
@@ -192,13 +198,88 @@ export function FormServicio() {
                     {...field}
                     id="Descripcion"
                     label="Descripcion"
-                    error={Boolean(errors.year)}
-                    helperText={errors.year ? errors.year.message : " "}
+                    error={Boolean(errors.Descripcion)}
+                    helperText={
+                      errors.Descripcion ? errors.Descripcion.message : " "
+                    }
                   />
                 )}
               />
             </FormControl>
           </Grid>
+          <Grid item xs={12} sm={4}>
+            {/* ['filled','outlined','standard']. */}
+            <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
+              <Controller
+                name="Equipamiento"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    id="Equipamiento"
+                    label="Equipamiento"
+                    error={Boolean(errors.Equipamiento)}
+                    helperText={
+                      errors.Equipamiento ? errors.Equipamiento.message : " "
+                    }
+                  />
+                )}
+              />
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={12}>
+            <label htmlFor="upload-button">
+              <input
+                type="file"
+                accept="image/*"
+                multiple
+                id="upload-button"
+                style={{ display: "none" }} // Hide the default input element
+                onChange={(e) => {
+                  const files = e.target.files;
+                  if (files && files.length > 0) {
+                    const imageArray = [];
+                    for (let i = 0; i < files.length; i++) {
+                      const reader = new FileReader();
+                      reader.onloadend = () => {
+                        imageArray.push(reader.result);
+                        if (imageArray.length === files.length) {
+                          // Set the array of base64 images to the form
+                          setValue("imagenes", imageArray);
+                        }
+                      };
+                      reader.readAsDataURL(files[i]);
+                    }
+                  }
+                }}
+              />
+              <Button
+                variant="outlined"
+                color="secondary"
+                component="span"
+                sx={{
+                  mt: 2,
+                  mb: 1,
+                  ml: 1,
+                  px: 3,
+                  py: 2,
+                  textTransform: "none",
+                  fontWeight: "bold",
+                  border: "2px solid primary",
+                  "&:hover": {
+                    backgroundColor: "primary",
+                    color: "#fff",
+                  },
+                }}
+              >
+                Seleccionar Imágenes
+              </Button>
+            </label>
+            <FormHelperText>
+              {errors.imagenes ? errors.imagenes.message : " "}
+            </FormHelperText>
+          </Grid>
+
           <Grid item xs={12} sm={12}>
             <Button
               type="submit"
