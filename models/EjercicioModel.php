@@ -34,16 +34,15 @@ class EjercicioModel
             //Ejecutar la consulta
             $vResultado = $this->enlace->ExecuteSQL($vSql);
             // Recorrer el resultado y agregar las imágenes al ejercicio
-            if(!empty($vResultado)){
+            if (!empty($vResultado)) {
                 //Obtener objeto
                 $vResultado = $vResultado[0];
                 //---imagenes
                 $imagenes = $this->getImagenesEjercicio($id);
                 //Asignar servicios al objeto
-                $vResultado->imagenes = $imagenes; 
+                $vResultado->imagenes = $imagenes;
             }
             return $vResultado;
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -82,10 +81,7 @@ class EjercicioModel
         try {
             //Consulta SQL
             $vSQL = "SELECT ei.Imagen AS Imagen
-            FROM rutinaejercicio re
-            INNER JOIN ejercicio e ON re.IdEjercicio = e.idEjercicio 
-            INNER JOIN imagenEjercicio ei ON e.idEjercicio = ei.idEjercicio
-            WHERE re.IdEjercicio = $idEjercicio;";
+            FROM imagenejercicio ei where ei.idEjercicio=$idEjercicio";
             //Establecer conexión
 
             //Ejecutar la consulta
@@ -96,57 +92,92 @@ class EjercicioModel
             die($e->getMessage());
         }
     }
-
     /**
-	 * Crear ejercicio
-	 * @param $objeto plan a insertar
-	 * @returns $this->get($idEjercicio) - Objeto ejercicio
-	 */
-	//
-    public function create($objeto) {
+     * Obtener ejercicio para mostrar información en Formulario
+     * @param $idEjercicio del ejercicio
+     * @returns $vresultado - Objeto ejercicio
+     */
+    //
+    public function getForm($idEjercicio)
+    {
         try {
-            var_dump($objeto);
+
+            //Consulta sql
+            $vSql = "SELECT * FROM Ejercicio where idEjercicio=$idEjercicio";
+
+            //Ejecutar la consulta
+            $vResultado = $this->enlace->ExecuteSQL($vSql);
+
+            // Retornar el objeto
+            return $vResultado;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    /**
+     * Crear ejercicio
+     * @param $objeto plan a insertar
+     * @returns $this->get($idEjercicio) - Objeto ejercicio
+     */
+    //
+    public function create($objeto)
+    {
+        try {
             //Consulta sql
             //Identificador autoincrementable
-			$sql = "Insert into Ejercicio (Nombre, Descripcion, Equipamiento)". 
-                     "Values ('$objeto->Nombre','$objeto->Descripcion', '$objeto->Equipamiento')";
-			
+            $sql = "INSERT INTO Ejercicio (Nombre, Descripcion, Equipamiento) " .
+                "VALUES ('$objeto->Nombre','$objeto->Descripcion', '$objeto->Equipamiento')";
+
             //Ejecutar la consulta
-            //Obtener ultimo insert
-			$idEjercicio = $this->enlace->executeSQL_DML_last($sql);
-            //--- Imagenes ---
+            //Obtener el último insert
+            $idEjercicio = $this->enlace->executeSQL_DML_last($sql);
+
+            //--- Imágenes ---
             foreach ($objeto->imagenes as $imagen) {
-                $sql = "INSERT INTO imagenejercicio (idEjercicio, Imagen) VALUES ('$idEjercicio', '$imagen');";
+                // Read the image in binary format
+                $imagenBinaria = file_get_contents($imagen);
+
+                // Escape special characters in the binary image
+                $imagenBinaria = $this->enlace->escapeString($imagenBinaria);
+
+                // Insert the image into the database as a BLOB
+                $sql = "INSERT INTO imagenejercicio (idEjercicio, Imagen) VALUES ('$idEjercicio', '$imagenBinaria')";
                 $vResultado = $this->enlace->executeSQL_DML($sql);
             }
 
-            //Retornar pelicula
+            //Retornar el ejercicio
             return $this->get($idEjercicio);
-		} catch ( Exception $e ) {
-			die ( $e->getMessage () );
-		}
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
-    public function update($objeto) {
+    public function update($objeto)
+    {
         try {
-            var_dump($objeto);
             $vSql = "DELETE from imagenejercicio where idEjercicio = $objeto->idEjercicio;";
             //Ejecutar la consulta
-			$vResultado = $this->enlace->executeSQL_DML( $vSql);
+            $vResultado = $this->enlace->executeSQL_DML($vSql);
             //Consulta sql
-			$vSql = "UPDATE Ejercicio SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion', Equipamiento = '$objeto->Equipamiento' Where idEjercicio=$objeto->idEjercicio";
+            $vSql = "UPDATE Ejercicio SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion', Equipamiento = '$objeto->Equipamiento' Where idEjercicio=$objeto->idEjercicio";
             //Ejecutar la consulta
-			$vResultado = $this->enlace->executeSQL_DML( $vSql);
-            
+            $vResultado = $this->enlace->executeSQL_DML($vSql);
+
             //--- Imagenes ---
             foreach ($objeto->imagenes as $imagen) {
-                $sql = "INSERT INTO imagenejercicio (idEjercicio, Imagen) VALUES ('$objeto->idEjercicio', '$imagen');";
-                $vResultado = $this->enlace->executeSQL_DML($sql);
+                // Read the image in binary format
+                $imagenBinaria = file_get_contents($imagen);
+
+                // Escape special characters in the binary image
+                $imagenBinaria = $this->enlace->escapeString($imagenBinaria);
+
+                $sql = "INSERT INTO imagenejercicio (idEjercicio, Imagen) VALUES ('$objeto->idEjercicio', '$imagenBinaria');";
+                $vResultado = $this->enlace->executeSQL_DML_last($sql);
             }
 
             // Retornar el objeto actualizado
             return $this->get($objeto->idPlan);
-		} catch ( Exception $e ) {
-			die ( $e->getMessage () );
-		}
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 }

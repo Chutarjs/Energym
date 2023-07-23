@@ -19,7 +19,7 @@ export function DetailEjercicio() {
   useEffect(() => {
     EjercicioService.getEjercicioById(routeParams.id)
       .then((response) => {
-        console.log(response.data.results);
+        console.log(response.data);
         setData(response.data.results);
         setError(response.error);
         setLoaded(true);

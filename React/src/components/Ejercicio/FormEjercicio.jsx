@@ -70,15 +70,9 @@ export function FormEjercicio() {
   // Accion submit
   const onSubmit = (DataForm) => {
     try {
-      // Create a new FormData object to include image files along with other form data
-      const formData = new FormData();
-      formData.append("Nombre", DataForm.Nombre);
-      formData.append("Descripcion", DataForm.Descripcion);
-      formData.append("Equipamiento", DataForm.Equipamiento);
-
       // Establecer valores del formulario
+      setFormData(DataForm);
       console.log(DataForm);
-      setFormData(formData);
       // Indicar que se puede realizar la solicitud al API
       setStart(true);
       // Establecer el tipo de métod HTTP
@@ -97,9 +91,10 @@ export function FormEjercicio() {
     if (start) {
       if (esCrear) {
         // Crear ejercicio
+        console.log(formData);
         EjercicioService.createEjercicio(formData)
           .then((response) => {
-            setResponseData(response.data.results);
+            setResponseData(response.data);
             setError(response.error);
 
             //con exito
@@ -115,6 +110,7 @@ export function FormEjercicio() {
           });
       } else {
         // Modificar ejercicio
+        console.log(formData);
         EjercicioService.updateEjercicio(formData)
           .then((response) => {
             setResponseData(response.data.results);
@@ -140,9 +136,8 @@ export function FormEjercicio() {
   //Obtener ejercicio
   useEffect(() => {
     if (id != undefined && !isNaN(Number(id))) {
-      EjercicioService.getEjercicioById(id)
+      EjercicioService.getEjercicioFormById(id)
         .then((response) => {
-          console.log(response);
           setData(response.data.results);
           setError(response.error);
         })
@@ -155,13 +150,11 @@ export function FormEjercicio() {
     }
   }, [id]);
 
-  //Respuesta del API al crear o actualizar
-
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
       // Si es modificar establece los valores a precargar en el formulario
-      setValues(data);
+      setValues(data[0]);
     }
   }, [data, esCrear, action]);
 
@@ -253,16 +246,14 @@ export function FormEjercicio() {
                     };
                     reader.readAsDataURL(files[i]);
                   }
-                } else {
-                  // If no images selected, clear the existing images
-                  setValue("imagenes", []);
-                }
+                } 
               }}
             />
             <FormHelperText>
               {errors.imagenes ? errors.imagenes.message : " "}
             </FormHelperText>
           </Grid>
+
           <Grid item xs={12} sm={12}>
             <Button
               type="submit"

@@ -1922,3 +1922,1261 @@
 [23-Jul-2023 07:06:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
 [23-Jul-2023 07:06:45 Europe/Berlin] PHP   4. ejercicio->create() C:\xampp\htdocs\Energym\routes\routes.php:62
 [23-Jul-2023 07:06:45 Europe/Berlin] PHP   5. EjercicioModel->create($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:83
+[23-Jul-2023 07:09:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:09:49 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:09:49 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:09:49 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:09:49 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:09:49 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:09:50 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:09:50 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:09:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:09:50 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:09:50 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:09:50 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:10:35 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:10:47 Europe/Berlin] PHP Warning:  Attempt to read property "idEjercicio" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 132
+[23-Jul-2023 07:10:47 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:10:47 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:10:47 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:10:47 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:10:47 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:10:47 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:102
+[23-Jul-2023 07:10:57 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:10:57 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:10:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:10:57 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:10:57 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:10:57 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:10:58 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:10:58 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:10:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:10:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:10:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:10:58 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:11:25 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:11:25 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:11:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:11:25 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:11:25 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:11:25 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:11:34 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:11:34 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:11:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:11:34 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:11:34 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:11:34 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:11:51 Europe/Berlin] PHP Warning:  Attempt to read property "idEjercicio" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 132
+[23-Jul-2023 07:11:51 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:11:51 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:11:51 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:11:51 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:11:51 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:11:51 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:102
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:13:33 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:13:34 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:13:34 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:13:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:13:34 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:13:34 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:13:34 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:13:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:13:35 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:13:35 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:13:35 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:13:35 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:13:35 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:13:44 Europe/Berlin] PHP Warning:  Attempt to read property "idEjercicio" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 132
+[23-Jul-2023 07:13:44 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:13:44 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:13:44 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:13:44 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:13:44 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:13:44 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:102
+[23-Jul-2023 07:14:54 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:14:54 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:14:54 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:14:54 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:14:54 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:14:54 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:14:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:14:55 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:14:55 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:14:55 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:14:55 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:14:55 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:15:06 Europe/Berlin] PHP Warning:  Attempt to read property "idEjercicio" on null in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 132
+[23-Jul-2023 07:15:06 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:15:06 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:15:06 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:15:06 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:15:06 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:15:06 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = NULL) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:102
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:16:16 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:16:24 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idEjercicio in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 132
+[23-Jul-2023 07:16:24 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:16:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:16:24 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:16:24 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:16:24 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:16:24 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'Prueba Creacion'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAADOCAMAAADR0rQ5AAAB+FBMVEX////85OQAAADwlUzmIw/AvPn/5+f/6ur85OP6+vqcUhX/5+b/6ery8vL39/f/5+g0JP/q6urk5OS4uLjg4ODGwv/Nzc3BwcHsIw/a2tr/7+/T09Pc3NzGxsaampqysrKnp6eCgoJGRkaJiYnn0dApKSl0dHSgoKBnZ2ccAACDg4ORkZE2NjYsHtkuIeswIvQAAFRZWVnaxcXGs7OAcnMAABkbGxujlJMPAADtlU2Mf3+3pqZRAADv19dra2vmyS2/qieZlcOXhR5SUlJ/fKGtqd2RTBQ9PT1EBwCWFgouAABwAACno9QyMULPHw1JU1OycDwAAA9SUmkSEhJoAACtHA7AIBAbHAAAADclHMAAACggFKAiGLEoG8oqHdMvMDAZGyN/e159bhuCeUVoWQOrlB0/NwAbFQZMTDzMtiiZhx1jWihMJ'..., 1 => 'data:image/jpeg;base64,R0lGODlhCAf5BPfaAEFBQkdHSEtLTEhHSE9PUE9QUVNTVFdXWFtbXFpVVlROTmVaWXJfXXJhX15fYGhdaV9gYWJjZGZnaG1ibWprbGhnaHdlaG5vcG9kcHFmcXRqdXprdW9wcXNzdHZ3eHxyfHt7fHd4edJHJ9VJJ9tMJ9pZOeRRJ+1WJ+1XKO1aK+5eMeBPJ+5iNe9lOu9pPoNtc4pyd5h5eIpvbKJ9ee5rQvBtQ/F0TPBwRu54V/F6VPJ8WO5yTetCeOxLe+1TfuxYf+5/YK2DffKBXe6FafOMbPOGZPWWefGPdX5/gIR6hO5cge1Vg+9khO9qhe5kjfBsh/BuiO13iPFzifJ8jPB5mO9tk3+AgYODhYaHiI2DjIuLjYeIiY6PkJSLk4+QkZKTlJaXmJyUm5ubnJeWmZWGi6iCgbeKhayWlJ6foKSco5+goaOjpKanqKqrrKqlqq6vsLOts6+wsbOztLu7vbi2ubGpr'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:102
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:16:51 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:16:53 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:17:01 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idEjercicio in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 132
+[23-Jul-2023 07:17:01 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:17:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:17:01 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:17:01 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:17:01 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:17:01 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'Prueba Creacion'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBcVFBUXGBcaGxoaGxobGhoXGhsXGhsaGhsaIBsbIiwkGx0pHhoaJTYlKS4wMzMzGyI5PjkyPSwyMzABCwsLEA4QGhIRFzAiISAwMDA9NTAyMDAyNTQwMDIwMDgwMzAyND0zNTAyMDIwNDAyOzI0NTIyMjAwMjIyMDIyO//AABEIAL4BCgMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAIFBgEAB//EAEgQAAIBAgQCBgYIAwYEBgMAAAECEQADBBIhMQVBEyJRYXGRBjKBobHRFCNCUlOSwfAVYtIWM0NyouGCk7LxB3PCw9PiJURU/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EACMRAQACAQQCAQUAAAAAAAAAAAABEQIDEiExUWFBEyJxgaH/2gAMAwEAAhEDEQA/AMGtu4xudHbLBFzOcwAVT'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:102
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:17:27 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:17:40 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:17:40 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:17:40 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:17:40 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:17:40 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:17:40 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:17:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:17:41 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:17:41 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:17:41 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:17:41 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:17:41 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:23:08 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idEjercicio in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 130
+[23-Jul-2023 07:23:08 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:23:08 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:23:08 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:23:08 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:23:08 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:23:08 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $Nombre = 'Uppercutt'; public $Descripcion = 'sdsa'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIUExYQExQWFBQYGRIQFxYYGBMXFhYSGRYXGRcWGBcaIikhGxsoHxkWIjIiJissLy8wGCI1RjUtOSkuLywBCgoKDg0OHBAQHC4mISYvLjEuMC43Li4uMC4uLi4wMDAuLi4uLjAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAMEBBgMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABAEAACAQIDAwkECAQGAwAAAAAAAQIDEQQSIQUxQQYTFiJRVGFxkwcUgZEjMkJSobHB0XKS4fAkM2JzgqIVQ1P/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAwQFBgEC/8QALhEAAgECAwcDBAIDAAAAAAAAAAECAxEEITESE0FRYaHwBXGRIoGx0cHhFCTx/9oADAMBAAIRAxEAPwC8QAAAAAAAA'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:102
+[23-Jul-2023 07:25:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:25:31 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:25:31 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:25:31 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:25:31 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:25:31 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:25:32 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:25:32 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:25:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:25:32 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:25:32 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:25:32 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:25:41 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idEjercicio in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 130
+[23-Jul-2023 07:25:41 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:25:41 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:25:41 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:25:41 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:25:41 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:25:41 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'Prueba Creacion'; public $Equipamiento = 'Muchas cisas'; public $imagenes = [0 => 'data:image/jpeg;base64,UklGRhwyAABXRUJQVlA4IBAyAADQngCdASqGARgBPjEYikOiIaESKqzQIAMEs7dwu7CP/G6o8V/039n9Cfjvqq9+/afN1zBdL+VJz3/2fu7+X3+n/Yj3Pfof2CP2D/3/pqerHzEftN+43u2/7f9ovdn/cP9P+QHyB/03/S9aP+7/sMftf6cX7kfC1/bv+X+6ntlf//2AP//7bXTP9Yv532Wf0rwJ/GPk37h/bP2q/xHuAYY+sH/b9Av499nvy39+/dD+++4f/W8E/hv/KeoL+Rfz3/DfmJ/gvis+w7PG3PoF+231X/Sf4T91P8X+13uSf6P5R+7f2G/6PuBfzn+jf5v84/8D83f8DxCfyP+p/ZT4BP6T/bf9d/fP89/0v979OP9p/3v89+8X/L9w36V/lP+z/oP83/6v9h9g/8u/qX+t/u/+Z/6v+T////m+8z2K/tp/2PdJ/XT/nD0SLN9SgXCfV3d3d3d3d3d3d3dAW'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:102
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:26:24 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:26:34 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:26:34 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:26:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:26:34 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:26:34 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:26:34 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:27:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:27:01 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:27:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:27:01 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:27:01 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:27:01 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:27:03 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:27:18 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:27:47 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:27:47 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:27:47 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:27:47 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:27:47 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:27:47 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:28:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:28:49 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:28:49 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:28:49 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:28:49 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:28:49 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:28:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:28:51 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:28:51 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:28:51 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:28:51 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:28:51 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:34:42 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 166
+[23-Jul-2023 07:34:42 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:34:42 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:34:42 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:34:42 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:34:42 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:34:42 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '23'; public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'Prueba Creacion'; public $Equipamiento = 'Muchas cisas'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIUExYQExQWFBQYGRIQFxYYGBMXFhYSGRYXGRcWGBcaIikhGxsoHxkWIjIiJissLy8wGCI1RjUtOSkuLywBCgoKDg0OHBAQHC4mISYvLjEuMC43Li4uMC4uLi4wMDAuLi4uLjAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAMEBBgMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABAEAACAQIDAwkECAQGAwAAAAAAAQIDEQQSIQUxQQYTFiJRVGFxkwcUgZEjMkJSobHB0XKS4fAkM2JzgqIVQ1P/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAwQFBgEC/8QALhEAAgECAwcDBAIDAAAAAAAAAAECAxEEITESE0FRYaHwBXGRIoGx0cHhFCTx/9oADAMBAAIRAxEAPwC8QAAAAAAAA'..., 1 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUEhgVFRYZGBgaGB4cHRgcGRwYGhgcHBwaHBgZGhocIS4lHR4tIRgZJjgmKy8xNzU1HiQ9QDszPy40NTEBDAwMEA8QHxISHz0rJSsxNTE2NzQ0PT00NDE0NTQ0MTY3Njc0NTQ0PzE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ2NDQxNP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUDAgj/xAA7EAACAQIEBAQEBAUEAQUAAAABAgADEQQSITEFBkFRImFxgRORobEHMkJSYsHR4fAjgpLxFCQzQ3Ky/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACgRAAICAgICAQQCAwEAAAAAAAABAhEDIRIxQVEEIjJhoRPxI3GBFP/aAAwDAQACEQMRAD8AuSIiAIiIAiIgCIgwBERAEREAR'..., 2 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBcVFBUXGBcaGxoaGxobGhoXGhsXGhsaGhsaIBsbIiwkGx0pHhoaJTYlKS4wMzMzGyI5PjkyPSwyMzABCwsLEA4QGhIRFzAiISAwMDA9NTAyMDAyNTQwMDIwMDgwMzAyND0zNTAyMDIwNDAyOzI0NTIyMjAwMjIyMDIyO//AABEIAL4BCgMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAIFBgEAB//EAEgQAAIBAgQCBgYIAwYEBgMAAAECEQADBBIhMQVBEyJRYXGRBjKBobHRFCNCUlOSwfAVYtIWM0NyouGCk7LxB3PCw9PiJURU/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EACMRAQACAQQCAQUAAAAAAAAAAAABEQIDEiExUWFBEyJxgaH/2gAMAwEAAhEDEQA/AMGtu4xudHbLBFzOcwAVT'..., 3 => 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAADOCAMAAADR0rQ5AAAB+FBMVEX////85OQAAADwlUzmIw/AvPn/5+f/6ur85OP6+vqcUhX/5+b/6ery8vL39/f/5+g0JP/q6urk5OS4uLjg4ODGwv/Nzc3BwcHsIw/a2tr/7+/T09Pc3NzGxsaampqysrKnp6eCgoJGRkaJiYnn0dApKSl0dHSgoKBnZ2ccAACDg4ORkZE2NjYsHtkuIeswIvQAAFRZWVnaxcXGs7OAcnMAABkbGxujlJMPAADtlU2Mf3+3pqZRAADv19dra2vmyS2/qieZlcOXhR5SUlJ/fKGtqd2RTBQ9PT1EBwCWFgouAABwAACno9QyMULPHw1JU1OycDwAAA9SUmkSEhJoAACtHA7AIBAbHAAAADclHMAAACggFKAiGLEoG8oqHdMvMDAZGyN/e159bhuCeUVoWQOrlB0/NwAbFQZMTDzMtiiZhx1jWihMJ'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:134
+[23-Jul-2023 07:36:00 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 166
+[23-Jul-2023 07:36:00 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:36:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:36:00 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:36:00 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:36:00 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 07:36:00 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '22'; public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'sdsa'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIUExYQExQWFBQYGRIQFxYYGBMXFhYSGRYXGRcWGBcaIikhGxsoHxkWIjIiJissLy8wGCI1RjUtOSkuLywBCgoKDg0OHBAQHC4mISYvLjEuMC43Li4uMC4uLi4wMDAuLi4uLjAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAMEBBgMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABAEAACAQIDAwkECAQGAwAAAAAAAQIDEQQSIQUxQQYTFiJRVGFxkwcUgZEjMkJSobHB0XKS4fAkM2JzgqIVQ1P/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAwQFBgEC/8QALhEAAgECAwcDBAIDAAAAAAAAAAECAxEEITESE0FRYaHwBXGRIoGx0cHhFCTx/9oADAMBAAIRAxEAPwC8QAAAAAAAA'..., 1 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUEhgVFRYZGBgaGB4cHRgcGRwYGhgcHBwaHBgZGhocIS4lHR4tIRgZJjgmKy8xNzU1HiQ9QDszPy40NTEBDAwMEA8QHxISHz0rJSsxNTE2NzQ0PT00NDE0NTQ0MTY3Njc0NTQ0PzE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ2NDQxNP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUDAgj/xAA7EAACAQIEBAQEBAUEAQUAAAABAgADEQQSITEFBkFRImFxgRORobEHMkJSYsHR4fAjgpLxFCQzQ3Ky/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACgRAAICAgICAQQCAwEAAAAAAAABAhEDIRIxQVEEIjJhoRPxI3GBFP/aAAwDAQACEQMRAD8AuSIiAIiIAiIgCIgwBERAEREAR'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:134
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:36:34 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:36:43 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:36:43 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:36:43 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:36:43 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:36:43 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:36:43 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:36:44 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:36:44 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:36:44 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:36:44 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:36:44 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:36:44 Europe/Berlin] PHP   4. ejercicio->get($param = '22') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:36:50 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:36:52 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:36:52 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:36:52 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:36:52 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:36:52 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:36:52 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:36:53 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:36:53 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:36:53 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:36:53 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:36:53 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:36:53 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:37:38 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:37:38 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:37:38 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:37:38 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:37:38 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:37:38 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:37:39 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:37:39 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:37:39 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:37:39 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:37:39 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:37:39 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:37:41 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:37:46 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:37:59 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:37:59 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:37:59 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:37:59 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:37:59 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:37:59 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:38:05 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:38:05 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:38:05 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:38:05 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:38:05 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:38:05 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 07:38:07 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 07:38:07 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 07:38:07 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 07:38:07 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 07:38:07 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 07:38:07 Europe/Berlin] PHP   4. ejercicio->get($param = '23') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:14:03 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:14:03 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:14:03 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:14:03 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:14:03 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:14:03 Europe/Berlin] PHP   4. ejercicio->get($param = '24') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:14:04 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:14:04 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:14:04 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:14:04 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:14:04 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:14:04 Europe/Berlin] PHP   4. ejercicio->get($param = '24') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP   4. ejercicio->get($param = '24') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:14:46 Europe/Berlin] PHP   4. ejercicio->get($param = '24') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP   4. ejercicio->get($param = '24') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:17:05 Europe/Berlin] PHP   4. ejercicio->get($param = '24') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:17:18 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:17:18 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:17:18 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:17:18 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:17:18 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:17:18 Europe/Berlin] PHP   4. ejercicio->get($param = '24') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:17:19 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:17:19 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:17:19 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:17:19 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:17:19 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:17:19 Europe/Berlin] PHP   4. ejercicio->get($param = '24') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:17:33 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:17:33 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:17:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:17:33 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:17:33 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:17:33 Europe/Berlin] PHP   4. ejercicio->get($param = '24') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:17:34 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:17:34 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:17:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:17:34 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:17:34 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:17:34 Europe/Berlin] PHP   4. ejercicio->get($param = '24') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:19:16 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:19:16 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:19:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:19:16 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:19:16 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:19:16 Europe/Berlin] PHP   4. ejercicio->get($param = '25') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:19:17 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:19:17 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:19:17 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:19:17 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:19:17 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:19:17 Europe/Berlin] PHP   4. ejercicio->get($param = '25') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP   4. ejercicio->get($param = '25') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:19:37 Europe/Berlin] PHP   4. ejercicio->get($param = '25') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP   4. ejercicio->get($param = '25') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:19:41 Europe/Berlin] PHP   4. ejercicio->get($param = '25') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP Warning:  Undefined variable $imagenBlob in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 158
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '25'; public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'Prueba Creacion'; public $Equipamiento = 'Muchas cisas'; public $imagenes = [0 => 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAADOCAMAAADR0rQ5AAAB+FBMVEX////85OQAAADwlUzmIw/AvPn/5+f/6ur85OP6+vqcUhX/5+b/6ery8vL39/f/5+g0JP/q6urk5OS4uLjg4ODGwv/Nzc3BwcHsIw/a2tr/7+/T09Pc3NzGxsaampqysrKnp6eCgoJGRkaJiYnn0dApKSl0dHSgoKBnZ2ccAACDg4ORkZE2NjYsHtkuIeswIvQAAFRZWVnaxcXGs7OAcnMAABkbGxujlJMPAADtlU2Mf3+3pqZRAADv19dra2vmyS2/qieZlcOXhR5SUlJ/fKGtqd2RTBQ9PT1EBwCWFgouAABwAACno9QyMULPHw1JU1OycDwAAA9SUmkSEhJoAACtHA7AIBAbHAAAADclHMAAACggFKAiGLEoG8oqHdMvMDAZGyN/e159bhuCeUVoWQOrlB0/NwAbFQZMTDzMtiiZhx1jWihMJ'..., 1 => 'data:image/jpeg;base64,UklGRhwyAABXRUJQVlA4IBAyAADQngCdASqGARgBPjEYikOiIaESKqzQIAMEs7dwu7CP/G6o8V/039n9Cfjvqq9+/afN1zBdL+VJz3/2fu7+X3+n/Yj3Pfof2CP2D/3/pqerHzEftN+43u2/7f9ovdn/cP9P+QHyB/03/S9aP+7/sMftf6cX7kfC1/bv+X+6ntlf//2AP//7bXTP9Yv532Wf0rwJ/GPk37h/bP2q/xHuAYY+sH/b9Av499nvy39+/dD+++4f/W8E/hv/KeoL+Rfz3/DfmJ/gvis+w7PG3PoF+231X/Sf4T91P8X+13uSf6P5R+7f2G/6PuBfzn+jf5v84/8D83f8DxCfyP+p/ZT4BP6T/bf9d/fP89/0v979OP9p/3v89+8X/L9w36V/lP+z/oP83/6v9h9g/8u/qX+t/u/+Z/6v+T////m+8z2K/tp/2PdJ/XT/nD0SLN9SgXCfV3d3d3d3d3d3d3dAW'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:134
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP Warning:  Undefined variable $imagenBlob in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 158
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '25'; public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'Prueba Creacion'; public $Equipamiento = 'Muchas cisas'; public $imagenes = [0 => 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAADOCAMAAADR0rQ5AAAB+FBMVEX////85OQAAADwlUzmIw/AvPn/5+f/6ur85OP6+vqcUhX/5+b/6ery8vL39/f/5+g0JP/q6urk5OS4uLjg4ODGwv/Nzc3BwcHsIw/a2tr/7+/T09Pc3NzGxsaampqysrKnp6eCgoJGRkaJiYnn0dApKSl0dHSgoKBnZ2ccAACDg4ORkZE2NjYsHtkuIeswIvQAAFRZWVnaxcXGs7OAcnMAABkbGxujlJMPAADtlU2Mf3+3pqZRAADv19dra2vmyS2/qieZlcOXhR5SUlJ/fKGtqd2RTBQ9PT1EBwCWFgouAABwAACno9QyMULPHw1JU1OycDwAAA9SUmkSEhJoAACtHA7AIBAbHAAAADclHMAAACggFKAiGLEoG8oqHdMvMDAZGyN/e159bhuCeUVoWQOrlB0/NwAbFQZMTDzMtiiZhx1jWihMJ'..., 1 => 'data:image/jpeg;base64,UklGRhwyAABXRUJQVlA4IBAyAADQngCdASqGARgBPjEYikOiIaESKqzQIAMEs7dwu7CP/G6o8V/039n9Cfjvqq9+/afN1zBdL+VJz3/2fu7+X3+n/Yj3Pfof2CP2D/3/pqerHzEftN+43u2/7f9ovdn/cP9P+QHyB/03/S9aP+7/sMftf6cX7kfC1/bv+X+6ntlf//2AP//7bXTP9Yv532Wf0rwJ/GPk37h/bP2q/xHuAYY+sH/b9Av499nvy39+/dD+++4f/W8E/hv/KeoL+Rfz3/DfmJ/gvis+w7PG3PoF+231X/Sf4T91P8X+13uSf6P5R+7f2G/6PuBfzn+jf5v84/8D83f8DxCfyP+p/ZT4BP6T/bf9d/fP89/0v979OP9p/3v89+8X/L9w36V/lP+z/oP83/6v9h9g/8u/qX+t/u/+Z/6v+T////m+8z2K/tp/2PdJ/XT/nD0SLN9SgXCfV3d3d3d3d3d3d3dAW'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:134
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 163
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 08:19:53 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '25'; public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'Prueba Creacion'; public $Equipamiento = 'Muchas cisas'; public $imagenes = [0 => 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAADOCAMAAADR0rQ5AAAB+FBMVEX////85OQAAADwlUzmIw/AvPn/5+f/6ur85OP6+vqcUhX/5+b/6ery8vL39/f/5+g0JP/q6urk5OS4uLjg4ODGwv/Nzc3BwcHsIw/a2tr/7+/T09Pc3NzGxsaampqysrKnp6eCgoJGRkaJiYnn0dApKSl0dHSgoKBnZ2ccAACDg4ORkZE2NjYsHtkuIeswIvQAAFRZWVnaxcXGs7OAcnMAABkbGxujlJMPAADtlU2Mf3+3pqZRAADv19dra2vmyS2/qieZlcOXhR5SUlJ/fKGtqd2RTBQ9PT1EBwCWFgouAABwAACno9QyMULPHw1JU1OycDwAAA9SUmkSEhJoAACtHA7AIBAbHAAAADclHMAAACggFKAiGLEoG8oqHdMvMDAZGyN/e159bhuCeUVoWQOrlB0/NwAbFQZMTDzMtiiZhx1jWihMJ'..., 1 => 'data:image/jpeg;base64,UklGRhwyAABXRUJQVlA4IBAyAADQngCdASqGARgBPjEYikOiIaESKqzQIAMEs7dwu7CP/G6o8V/039n9Cfjvqq9+/afN1zBdL+VJz3/2fu7+X3+n/Yj3Pfof2CP2D/3/pqerHzEftN+43u2/7f9ovdn/cP9P+QHyB/03/S9aP+7/sMftf6cX7kfC1/bv+X+6ntlf//2AP//7bXTP9Yv532Wf0rwJ/GPk37h/bP2q/xHuAYY+sH/b9Av499nvy39+/dD+++4f/W8E/hv/KeoL+Rfz3/DfmJ/gvis+w7PG3PoF+231X/Sf4T91P8X+13uSf6P5R+7f2G/6PuBfzn+jf5v84/8D83f8DxCfyP+p/ZT4BP6T/bf9d/fP89/0v979OP9p/3v89+8X/L9w36V/lP+z/oP83/6v9h9g/8u/qX+t/u/+Z/6v+T////m+8z2K/tp/2PdJ/XT/nD0SLN9SgXCfV3d3d3d3d3d3d3dAW'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:134
+[23-Jul-2023 08:20:35 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 163
+[23-Jul-2023 08:20:35 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:20:35 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:20:35 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:20:35 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:20:35 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 08:20:35 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '25'; public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'Prueba Creacion'; public $Equipamiento = 'Muchas cisas'; public $imagenes = [0 => 'data:image/jpeg;base64,R0lGODlhCAf5BPfaAEFBQkdHSEtLTEhHSE9PUE9QUVNTVFdXWFtbXFpVVlROTmVaWXJfXXJhX15fYGhdaV9gYWJjZGZnaG1ibWprbGhnaHdlaG5vcG9kcHFmcXRqdXprdW9wcXNzdHZ3eHxyfHt7fHd4edJHJ9VJJ9tMJ9pZOeRRJ+1WJ+1XKO1aK+5eMeBPJ+5iNe9lOu9pPoNtc4pyd5h5eIpvbKJ9ee5rQvBtQ/F0TPBwRu54V/F6VPJ8WO5yTetCeOxLe+1TfuxYf+5/YK2DffKBXe6FafOMbPOGZPWWefGPdX5/gIR6hO5cge1Vg+9khO9qhe5kjfBsh/BuiO13iPFzifJ8jPB5mO9tk3+AgYODhYaHiI2DjIuLjYeIiY6PkJSLk4+QkZKTlJaXmJyUm5ubnJeWmZWGi6iCgbeKhayWlJ6foKSco5+goaOjpKanqKqrrKqlqq6vsLOts6+wsbOztLu7vbi2ubGpr'..., 1 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUIFBcVFRUXFRcZGhoeGRoZHCIZIB0hIBocHSMcHiEhISwkGh0qHhkYJTYkKS01NDMzGiM4PjgyPSwyMy8BCwsLDw4PHhISHjopIykyNzI6NDIyMjI1MjoyMjIyMjIyLzIyMjIvMjIyNDIyMjIyMjI0MjI0MjIyMi8yMjIyMv/AABEIAIgBcwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBBAcDAgj/xABAEAACAQIFAQUFBAgFBAMAAAABAgADEQQFEiExQQYiUWFxBxMygZEUcqHBI0JSYoKx0fAVkqKy8RYzQ8Ikc4P/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAgMEAQX/xAAnEQADAAICAgEDBAMAAAAAAAAAAQIDERIhBDFBE1FhFCIygQWR8f/aAAwDAQACEQMRAD8A7NERAEREAREQBERAEREAR'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:134
+[23-Jul-2023 08:26:15 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:26:15 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:26:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:26:15 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:26:15 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:26:15 Europe/Berlin] PHP   4. ejercicio->get($param = '26') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:26:16 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:26:16 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:26:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:26:16 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:26:16 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:26:16 Europe/Berlin] PHP   4. ejercicio->get($param = '26') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:26:23 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:26:23 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:26:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:26:23 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:26:23 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:26:23 Europe/Berlin] PHP   4. ejercicio->get($param = '26') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:26:30 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:26:30 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:26:30 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:26:30 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:26:30 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:26:30 Europe/Berlin] PHP   4. ejercicio->get($param = '26') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:27:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:27:49 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:27:49 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:27:49 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:27:49 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:27:49 Europe/Berlin] PHP   4. ejercicio->get($param = '26') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP   4. ejercicio->get($param = '26') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:27:54 Europe/Berlin] PHP   4. ejercicio->get($param = '26') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP   4. ejercicio->get($param = '27') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:29:01 Europe/Berlin] PHP   4. ejercicio->get($param = '27') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:29:58 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:29:58 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:29:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:29:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:29:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:29:58 Europe/Berlin] PHP   4. ejercicio->get($param = '27') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP   4. ejercicio->get($param = '29') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:35:40 Europe/Berlin] PHP   4. ejercicio->get($param = '29') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP   4. ejercicio->get($param = '29') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:41:28 Europe/Berlin] PHP   4. ejercicio->get($param = '29') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP   4. ejercicio->get($param = '29') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:41:44 Europe/Berlin] PHP   4. ejercicio->get($param = '29') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP   4. ejercicio->get($param = '28') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:42:00 Europe/Berlin] PHP   4. ejercicio->get($param = '28') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP   4. ejercicio->get($param = '31') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:42:31 Europe/Berlin] PHP   4. ejercicio->get($param = '31') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP   4. ejercicio->get($param = '31') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:43:07 Europe/Berlin] PHP   4. ejercicio->get($param = '31') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP   4. ejercicio->get($param = '32') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:43:32 Europe/Berlin] PHP   4. ejercicio->get($param = '32') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP   4. ejercicio->get($param = '32') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:43:38 Europe/Berlin] PHP   4. ejercicio->get($param = '32') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP   4. ejercicio->get($param = '32') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:44:09 Europe/Berlin] PHP   4. ejercicio->get($param = '32') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP   4. ejercicio->get($param = '32') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:44:26 Europe/Berlin] PHP   4. ejercicio->get($param = '32') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:44:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:44:49 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:44:49 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:44:49 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:44:49 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:44:49 Europe/Berlin] PHP   4. ejercicio->get($param = '33') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:44:50 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:44:50 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:44:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:44:50 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:44:50 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:44:50 Europe/Berlin] PHP   4. ejercicio->get($param = '33') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:45:25 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:45:25 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:45:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:45:25 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:45:25 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:45:25 Europe/Berlin] PHP   4. ejercicio->get($param = '33') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:45:26 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:45:26 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:45:26 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:45:26 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:45:26 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:45:26 Europe/Berlin] PHP   4. ejercicio->get($param = '33') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP   4. ejercicio->get($param = '34') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:46:14 Europe/Berlin] PHP   4. ejercicio->get($param = '34') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP   4. ejercicio->get($param = '34') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:46:58 Europe/Berlin] PHP   4. ejercicio->get($param = '34') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:47:11 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:47:11 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:47:11 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:47:11 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:47:11 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:47:11 Europe/Berlin] PHP   4. ejercicio->get($param = '34') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:47:12 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:47:12 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:47:12 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:47:12 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:47:12 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:47:12 Europe/Berlin] PHP   4. ejercicio->get($param = '34') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP   4. ejercicio->get($param = '34') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:47:33 Europe/Berlin] PHP   4. ejercicio->get($param = '34') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:50:28 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:50:28 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:50:28 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:50:28 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:50:28 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:50:28 Europe/Berlin] PHP   4. ejercicio->get($param = '35') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:50:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:50:29 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:50:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:50:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:50:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:50:29 Europe/Berlin] PHP   4. ejercicio->get($param = '35') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP   4. ejercicio->get($param = '35') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:50:36 Europe/Berlin] PHP   4. ejercicio->get($param = '35') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP   4. ejercicio->get($param = '35') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:51:13 Europe/Berlin] PHP   4. ejercicio->get($param = '35') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP   4. ejercicio->get($param = '36') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:51:55 Europe/Berlin] PHP   4. ejercicio->get($param = '36') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP   4. ejercicio->get($param = '36') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:52:32 Europe/Berlin] PHP   4. ejercicio->get($param = '36') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:52:52 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:52:52 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:52:52 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:52:52 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:52:52 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:52:52 Europe/Berlin] PHP   4. ejercicio->get($param = '36') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:52:53 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:52:53 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:52:53 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:52:53 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:52:53 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:52:53 Europe/Berlin] PHP   4. ejercicio->get($param = '36') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:52:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:52:55 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:52:55 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:52:55 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:52:55 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:52:55 Europe/Berlin] PHP   4. ejercicio->get($param = '35') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:52:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:52:56 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:52:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:52:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:52:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:52:56 Europe/Berlin] PHP   4. ejercicio->get($param = '35') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP   4. ejercicio->get($param = '36') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 08:55:29 Europe/Berlin] PHP   4. ejercicio->get($param = '36') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP   4. ejercicio->get($param = '38') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:00:05 Europe/Berlin] PHP   4. ejercicio->get($param = '38') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:01:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:01:55 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:01:55 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:01:55 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:01:55 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:01:55 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:01:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:01:56 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:01:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:01:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:01:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:01:56 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:02:01 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:02:27 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:02:40 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:02:40 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:02:40 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:02:40 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:02:40 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:02:40 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:02:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:02:41 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:02:41 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:02:41 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:02:41 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:02:41 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:02:45 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:02:45 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:02:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:02:45 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:02:45 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:02:45 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:02:48 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:03:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 38
+[23-Jul-2023 09:03:55 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:03:55 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:03:55 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:03:55 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:03:55 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:03:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 38
+[23-Jul-2023 09:03:56 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:03:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:03:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:03:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:03:56 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 38
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 38
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:04:03 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:07:19 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:08:58 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:08:58 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:08:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:08:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:08:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:08:58 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:10:15 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:10:42 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:11:53 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:11:53 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:11:53 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:11:53 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:11:53 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:11:53 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:11:58 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:11:58 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:11:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:11:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:11:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:11:58 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:11:59 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:11:59 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:11:59 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:11:59 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:11:59 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:11:59 Europe/Berlin] PHP   4. ejercicio->get($param = '39') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:14:48 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:14:48 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:14:48 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:14:48 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:14:48 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:14:48 Europe/Berlin] PHP   4. ejercicio->get($param = '40') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:14:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:14:49 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:14:49 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:14:49 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:14:49 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:14:49 Europe/Berlin] PHP   4. ejercicio->get($param = '40') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP   4. ejercicio->get($param = '40') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:18:37 Europe/Berlin] PHP   4. ejercicio->get($param = '40') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:20:16 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:21:56 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:28:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:28:29 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:28:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:28:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:28:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:28:29 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:28:30 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:28:30 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:28:30 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:28:30 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:28:30 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:28:30 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:28:39 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:28:39 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:28:39 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:28:39 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:28:39 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:28:39 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:28:40 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:28:40 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:28:40 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:28:40 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:28:40 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:28:40 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:29:33 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 166
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQXFxYXGRwcGRkYGBkZGBcYFhkcGRkfGRgZHyoiGRwnHRkZIzQjJysuMTExGCE2OzYwOiowMS4BCwsLDw4PHBERHTAoIigwLjgwMjAwMDAwLjIwMDEwMDAwMDAwMDAwMDIwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMP/AABEIAKEBOQMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xABDEAACAQMDAQYEAwUFBwMFAAABAgMAESEEEjEFBhMiQVFhBzJxgUKRoRQjgrHBUmJykvAIFTODorLRJFPxFiU0k+H/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBQQG/8QALBEAAgIBBAEDAwMFAQAAAAAAAAECEQMEEiExQRMiYQVRgTJxwSORobHhFP/aAAwDAQACEQMRAD8A0j/6h0gl7'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 178
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:30:40 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQXFxYXGRwcGRkYGBkZGBcYFhkcGRkfGRgZHyoiGRwnHRkZIzQjJysuMTExGCE2OzYwOiowMS4BCwsLDw4PHBERHTAoIigwLjgwMjAwMDAwLjIwMDEwMDAwMDAwMDAwMDIwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMP/AABEIAKEBOQMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xABDEAACAQMDAQYEAwUFBwMFAAABAgMAESEEEjEFBhMiQVFhBzJxgUKRoRQjgrHBUmJykvAIFTODorLRJFPxFiU0k+H/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBQQG/8QALBEAAgIBBAEDAwMFAQAAAAAAAAECEQMEEiExQRMiYQVRgTJxwSORobHhFP/aAAwDAQACEQMRAD8A0j/6h0gl7'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:30:47 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:30:47 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:30:47 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:30:47 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:30:47 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:30:47 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:30:48 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:30:48 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:30:48 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:30:48 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:30:48 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:30:48 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 166
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAADOCAMAAADR0rQ5AAAB+FBMVEX////85OQAAADwlUzmIw/AvPn/5+f/6ur85OP6+vqcUhX/5+b/6ery8vL39/f/5+g0JP/q6urk5OS4uLjg4ODGwv/Nzc3BwcHsIw/a2tr/7+/T09Pc3NzGxsaampqysrKnp6eCgoJGRkaJiYnn0dApKSl0dHSgoKBnZ2ccAACDg4ORkZE2NjYsHtkuIeswIvQAAFRZWVnaxcXGs7OAcnMAABkbGxujlJMPAADtlU2Mf3+3pqZRAADv19dra2vmyS2/qieZlcOXhR5SUlJ/fKGtqd2RTBQ9PT1EBwCWFgouAABwAACno9QyMULPHw1JU1OycDwAAA9SUmkSEhJoAACtHA7AIBAbHAAAADclHMAAACggFKAiGLEoG8oqHdMvMDAZGyN/e159bhuCeUVoWQOrlB0/NwAbFQZMTDzMtiiZhx1jWihMJ'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 178
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:31:29 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAADOCAMAAADR0rQ5AAAB+FBMVEX////85OQAAADwlUzmIw/AvPn/5+f/6ur85OP6+vqcUhX/5+b/6ery8vL39/f/5+g0JP/q6urk5OS4uLjg4ODGwv/Nzc3BwcHsIw/a2tr/7+/T09Pc3NzGxsaampqysrKnp6eCgoJGRkaJiYnn0dApKSl0dHSgoKBnZ2ccAACDg4ORkZE2NjYsHtkuIeswIvQAAFRZWVnaxcXGs7OAcnMAABkbGxujlJMPAADtlU2Mf3+3pqZRAADv19dra2vmyS2/qieZlcOXhR5SUlJ/fKGtqd2RTBQ9PT1EBwCWFgouAABwAACno9QyMULPHw1JU1OycDwAAA9SUmkSEhJoAACtHA7AIBAbHAAAADclHMAAACggFKAiGLEoG8oqHdMvMDAZGyN/e159bhuCeUVoWQOrlB0/NwAbFQZMTDzMtiiZhx1jWihMJ'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:31:35 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 166
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,UklGRhwyAABXRUJQVlA4IBAyAADQngCdASqGARgBPjEYikOiIaESKqzQIAMEs7dwu7CP/G6o8V/039n9Cfjvqq9+/afN1zBdL+VJz3/2fu7+X3+n/Yj3Pfof2CP2D/3/pqerHzEftN+43u2/7f9ovdn/cP9P+QHyB/03/S9aP+7/sMftf6cX7kfC1/bv+X+6ntlf//2AP//7bXTP9Yv532Wf0rwJ/GPk37h/bP2q/xHuAYY+sH/b9Av499nvy39+/dD+++4f/W8E/hv/KeoL+Rfz3/DfmJ/gvis+w7PG3PoF+231X/Sf4T91P8X+13uSf6P5R+7f2G/6PuBfzn+jf5v84/8D83f8DxCfyP+p/ZT4BP6T/bf9d/fP89/0v979OP9p/3v89+8X/L9w36V/lP+z/oP83/6v9h9g/8u/qX+t/u/+Z/6v+T////m+8z2K/tp/2PdJ/XT/nD0SLN9SgXCfV3d3d3d3d3d3d3dAW'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 178
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:34:09 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,UklGRhwyAABXRUJQVlA4IBAyAADQngCdASqGARgBPjEYikOiIaESKqzQIAMEs7dwu7CP/G6o8V/039n9Cfjvqq9+/afN1zBdL+VJz3/2fu7+X3+n/Yj3Pfof2CP2D/3/pqerHzEftN+43u2/7f9ovdn/cP9P+QHyB/03/S9aP+7/sMftf6cX7kfC1/bv+X+6ntlf//2AP//7bXTP9Yv532Wf0rwJ/GPk37h/bP2q/xHuAYY+sH/b9Av499nvy39+/dD+++4f/W8E/hv/KeoL+Rfz3/DfmJ/gvis+w7PG3PoF+231X/Sf4T91P8X+13uSf6P5R+7f2G/6PuBfzn+jf5v84/8D83f8DxCfyP+p/ZT4BP6T/bf9d/fP89/0v979OP9p/3v89+8X/L9w36V/lP+z/oP83/6v9h9g/8u/qX+t/u/+Z/6v+T////m+8z2K/tp/2PdJ/XT/nD0SLN9SgXCfV3d3d3d3d3d3d3dAW'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:34:12 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:34:12 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:34:12 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:34:12 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:34:12 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:34:12 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:34:13 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:34:13 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:34:13 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:34:13 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:34:13 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:34:13 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 166
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,R0lGODlhCAf5BPfaAEFBQkdHSEtLTEhHSE9PUE9QUVNTVFdXWFtbXFpVVlROTmVaWXJfXXJhX15fYGhdaV9gYWJjZGZnaG1ibWprbGhnaHdlaG5vcG9kcHFmcXRqdXprdW9wcXNzdHZ3eHxyfHt7fHd4edJHJ9VJJ9tMJ9pZOeRRJ+1WJ+1XKO1aK+5eMeBPJ+5iNe9lOu9pPoNtc4pyd5h5eIpvbKJ9ee5rQvBtQ/F0TPBwRu54V/F6VPJ8WO5yTetCeOxLe+1TfuxYf+5/YK2DffKBXe6FafOMbPOGZPWWefGPdX5/gIR6hO5cge1Vg+9khO9qhe5kjfBsh/BuiO13iPFzifJ8jPB5mO9tk3+AgYODhYaHiI2DjIuLjYeIiY6PkJSLk4+QkZKTlJaXmJyUm5ubnJeWmZWGi6iCgbeKhayWlJ6foKSco5+goaOjpKanqKqrrKqlqq6vsLOts6+wsbOztLu7vbi2ubGpr'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 178
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:34:25 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,R0lGODlhCAf5BPfaAEFBQkdHSEtLTEhHSE9PUE9QUVNTVFdXWFtbXFpVVlROTmVaWXJfXXJhX15fYGhdaV9gYWJjZGZnaG1ibWprbGhnaHdlaG5vcG9kcHFmcXRqdXprdW9wcXNzdHZ3eHxyfHt7fHd4edJHJ9VJJ9tMJ9pZOeRRJ+1WJ+1XKO1aK+5eMeBPJ+5iNe9lOu9pPoNtc4pyd5h5eIpvbKJ9ee5rQvBtQ/F0TPBwRu54V/F6VPJ8WO5yTetCeOxLe+1TfuxYf+5/YK2DffKBXe6FafOMbPOGZPWWefGPdX5/gIR6hO5cge1Vg+9khO9qhe5kjfBsh/BuiO13iPFzifJ8jPB5mO9tk3+AgYODhYaHiI2DjIuLjYeIiY6PkJSLk4+QkZKTlJaXmJyUm5ubnJeWmZWGi6iCgbeKhayWlJ6foKSco5+goaOjpKanqKqrrKqlqq6vsLOts6+wsbOztLu7vbi2ubGpr'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:35:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 166
+[23-Jul-2023 09:35:46 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:35:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:35:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:35:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:35:46 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:35:46 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,UklGRlAjAABXRUJQVlA4IEQjAAAwqQCdASrCAcIBPlEokUYjoqGhIrHpSHAKCWdu/E4wAxIfC3rxo8UhEb+eX79a+rn1/909Kmuv3b+3fsj2Vfpt2t9Pedb5N+1/9D+5/kJ8wf9N6nP1Z/4P7d8AX61/87/HdY7zBf1H/Uftv7qn+p/db3Rftz+MfyH/sh/5ewd9Dj90vVZ/437mfDj+1P/q/13uaf4P/8/8LXJpkHov8d/xPFXzvevvcH+4/PR+hZL+0XU1+W/dr9Z/bPd12d+rj1F/bH+h/MD5I30DgLuh/wv7n64H3v/W9H/tX7Af6u/8f2J8LHzn2Dv6f/ff/B/a/Y2/6v9t6YPp7/t/5n2fv+j/ffbT9nH7q+zh+5AseO71lTJsQCdkBOyAnZATsgJ2QE7ICdkBOyAnZATsgJ2QE7ICdkBOyAnZATsgJ2QE7ICdkBOyAnY+Wfwyt0bcks+sCieDjvBx3g47wcd3A'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:35:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 178
+[23-Jul-2023 09:35:56 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:35:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:35:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:35:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:35:56 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:35:56 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,UklGRlAjAABXRUJQVlA4IEQjAAAwqQCdASrCAcIBPlEokUYjoqGhIrHpSHAKCWdu/E4wAxIfC3rxo8UhEb+eX79a+rn1/909Kmuv3b+3fsj2Vfpt2t9Pedb5N+1/9D+5/kJ8wf9N6nP1Z/4P7d8AX61/87/HdY7zBf1H/Uftv7qn+p/db3Rftz+MfyH/sh/5ewd9Dj90vVZ/437mfDj+1P/q/13uaf4P/8/8LXJpkHov8d/xPFXzvevvcH+4/PR+hZL+0XU1+W/dr9Z/bPd12d+rj1F/bH+h/MD5I30DgLuh/wv7n64H3v/W9H/tX7Af6u/8f2J8LHzn2Dv6f/ff/B/a/Y2/6v9t6YPp7/t/5n2fv+j/ffbT9nH7q+zh+5AseO71lTJsQCdkBOyAnZATsgJ2QE7ICdkBOyAnZATsgJ2QE7ICdkBOyAnZATsgJ2QE7ICdkBOyAnY+Wfwyt0bcks+sCieDjvBx3g47wcd3A'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:41:21 Europe/Berlin] PHP   4. ejercicio->get($param = '41') C:\xampp\htdocs\Energym\routes\routes.php:48
+[23-Jul-2023 09:43:39 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 178
+[23-Jul-2023 09:43:39 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:43:39 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:43:39 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:43:39 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:43:39 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:43:39 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUEhgVFRYZGBgaGB4cHRgcGRwYGhgcHBwaHBgZGhocIS4lHR4tIRgZJjgmKy8xNzU1HiQ9QDszPy40NTEBDAwMEA8QHxISHz0rJSsxNTE2NzQ0PT00NDE0NTQ0MTY3Njc0NTQ0PzE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ2NDQxNP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUDAgj/xAA7EAACAQIEBAQEBAUEAQUAAAABAgADEQQSITEFBkFRImFxgRORobEHMkJSYsHR4fAjgpLxFCQzQ3Ky/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACgRAAICAgICAQQCAwEAAAAAAAABAhEDIRIxQVEEIjJhoRPxI3GBFP/aAAwDAQACEQMRAD8AuSIiAIiIAiIgCIgwBERAEREAR'..., 1 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQXFxYXGRwcGRkYGBkZGBcYFhkcGRkfGRgZHyoiGRwnHRkZIzQjJysuMTExGCE2OzYwOiowMS4BCwsLDw4PHBERHTAoIigwLjgwMjAwMDAwLjIwMDEwMDAwMDAwMDAwMDIwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMP/AABEIAKEBOQMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xABDEAACAQMDAQYEAwUFBwMFAAABAgMAESEEEjEFBhMiQVFhBzJxgUKRoRQjgrHBUmJykvAIFTODorLRJFPxFiU0k+H/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBQQG/8QALBEAAgIBBAEDAwMFAQAAAAAAAAECEQMEEiExQRMiYQVRgTJxwSORobHhFP/aAAwDAQACEQMRAD8A0j/6h0gl7'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:44:03 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 178
+[23-Jul-2023 09:44:03 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:44:03 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:44:03 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:44:03 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:44:03 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:44:03 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUEhgVFRYZGBgaGB4cHRgcGRwYGhgcHBwaHBgZGhocIS4lHR4tIRgZJjgmKy8xNzU1HiQ9QDszPy40NTEBDAwMEA8QHxISHz0rJSsxNTE2NzQ0PT00NDE0NTQ0MTY3Njc0NTQ0PzE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ2NDQxNP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUDAgj/xAA7EAACAQIEBAQEBAUEAQUAAAABAgADEQQSITEFBkFRImFxgRORobEHMkJSYsHR4fAjgpLxFCQzQ3Ky/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACgRAAICAgICAQQCAwEAAAAAAAABAhEDIRIxQVEEIjJhoRPxI3GBFP/aAAwDAQACEQMRAD8AuSIiAIiIAiIgCIgwBERAEREAR'..., 1 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQXFxYXGRwcGRkYGBkZGBcYFhkcGRkfGRgZHyoiGRwnHRkZIzQjJysuMTExGCE2OzYwOiowMS4BCwsLDw4PHBERHTAoIigwLjgwMjAwMDAwLjIwMDEwMDAwMDAwMDAwMDIwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMP/AABEIAKEBOQMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xABDEAACAQMDAQYEAwUFBwMFAAABAgMAESEEEjEFBhMiQVFhBzJxgUKRoRQjgrHBUmJykvAIFTODorLRJFPxFiU0k+H/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBQQG/8QALBEAAgIBBAEDAwMFAQAAAAAAAAECEQMEEiExQRMiYQVRgTJxwSORobHhFP/aAAwDAQACEQMRAD8A0j/6h0gl7'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:44:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 178
+[23-Jul-2023 09:44:32 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:44:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:44:32 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:44:32 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:44:32 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:44:32 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '41'; public $Nombre = 'Uppercuttrrg'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBcVFBUXGBcaGxoaGxobGhoXGhsXGhsaGhsaIBsbIiwkGx0pHhoaJTYlKS4wMzMzGyI5PjkyPSwyMzABCwsLEA4QGhIRFzAiISAwMDA9NTAyMDAyNTQwMDIwMDgwMzAyND0zNTAyMDIwNDAyOzI0NTIyMjAwMjIyMDIyO//AABEIAL4BCgMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAIFBgEAB//EAEgQAAIBAgQCBgYIAwYEBgMAAAECEQADBBIhMQVBEyJRYXGRBjKBobHRFCNCUlOSwfAVYtIWM0NyouGCk7LxB3PCw9PiJURU/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EACMRAQACAQQCAQUAAAAAAAAAAAABEQIDEiExUWFBEyJxgaH/2gAMAwEAAhEDEQA/AMGtu4xudHbLBFzOcwAVT'..., 1 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQXFxYXGRwcGRkYGBkZGBcYFhkcGRkfGRgZHyoiGRwnHRkZIzQjJysuMTExGCE2OzYwOiowMS4BCwsLDw4PHBERHTAoIigwLjgwMjAwMDAwLjIwMDEwMDAwMDAwMDAwMDIwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMP/AABEIAKEBOQMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xABDEAACAQMDAQYEAwUFBwMFAAABAgMAESEEEjEFBhMiQVFhBzJxgUKRoRQjgrHBUmJykvAIFTODorLRJFPxFiU0k+H/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBQQG/8QALBEAAgIBBAEDAwMFAQAAAAAAAAECEQMEEiExQRMiYQVRgTJxwSORobHhFP/aAAwDAQACEQMRAD8A0j/6h0gl7'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
+[23-Jul-2023 09:47:59 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 178
+[23-Jul-2023 09:47:59 Europe/Berlin] PHP Stack trace:
+[23-Jul-2023 09:47:59 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[23-Jul-2023 09:47:59 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[23-Jul-2023 09:47:59 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[23-Jul-2023 09:47:59 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[23-Jul-2023 09:47:59 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '42'; public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'sdsa'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBcVFBUXGBcaGxoaGxobGhoXGhsXGhsaGhsaIBsbIiwkGx0pHhoaJTYlKS4wMzMzGyI5PjkyPSwyMzABCwsLEA4QGhIRFzAiISAwMDA9NTAyMDAyNTQwMDIwMDgwMzAyND0zNTAyMDIwNDAyOzI0NTIyMjAwMjIyMDIyO//AABEIAL4BCgMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAIFBgEAB//EAEgQAAIBAgQCBgYIAwYEBgMAAAECEQADBBIhMQVBEyJRYXGRBjKBobHRFCNCUlOSwfAVYtIWM0NyouGCk7LxB3PCw9PiJURU/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EACMRAQACAQQCAQUAAAAAAAAAAAABEQIDEiExUWFBEyJxgaH/2gAMAwEAAhEDEQA/AMGtu4xudHbLBFzOcwAVT'..., 1 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUEhgVFRYZGBgaGB4cHRgcGRwYGhgcHBwaHBgZGhocIS4lHR4tIRgZJjgmKy8xNzU1HiQ9QDszPy40NTEBDAwMEA8QHxISHz0rJSsxNTE2NzQ0PT00NDE0NTQ0MTY3Njc0NTQ0PzE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ2NDQxNP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUDAgj/xAA7EAACAQIEBAQEBAUEAQUAAAABAgADEQQSITEFBkFRImFxgRORobEHMkJSYsHR4fAjgpLxFCQzQ3Ky/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACgRAAICAgICAQQCAwEAAAAAAAABAhEDIRIxQVEEIjJhoRPxI3GBFP/aAAwDAQACEQMRAD8AuSIiAIiIAiIgCIgwBERAEREAR'..., 2 => 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAADOCAMAAADR0rQ5AAAB+FBMVEX////85OQAAADwlUzmIw/AvPn/5+f/6ur85OP6+vqcUhX/5+b/6ery8vL39/f/5+g0JP/q6urk5OS4uLjg4ODGwv/Nzc3BwcHsIw/a2tr/7+/T09Pc3NzGxsaampqysrKnp6eCgoJGRkaJiYnn0dApKSl0dHSgoKBnZ2ccAACDg4ORkZE2NjYsHtkuIeswIvQAAFRZWVnaxcXGs7OAcnMAABkbGxujlJMPAADtlU2Mf3+3pqZRAADv19dra2vmyS2/qieZlcOXhR5SUlJ/fKGtqd2RTBQ9PT1EBwCWFgouAABwAACno9QyMULPHw1JU1OycDwAAA9SUmkSEhJoAACtHA7AIBAbHAAAADclHMAAACggFKAiGLEoG8oqHdMvMDAZGyN/e159bhuCeUVoWQOrlB0/NwAbFQZMTDzMtiiZhx1jWihMJ'..., 3 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUFBQXFxYXGRwcGRkYGBkZGBcYFhkcGRkfGRgZHyoiGRwnHRkZIzQjJysuMTExGCE2OzYwOiowMS4BCwsLDw4PHBERHTAoIigwLjgwMjAwMDAwLjIwMDEwMDAwMDAwMDAwMDIwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMP/AABEIAKEBOQMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xABDEAACAQMDAQYEAwUFBwMFAAABAgMAESEEEjEFBhMiQVFhBzJxgUKRoRQjgrHBUmJykvAIFTODorLRJFPxFiU0k+H/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBQQG/8QALBEAAgIBBAEDAwMFAQAAAAAAAAECEQMEEiExQRMiYQVRgTJxwSORobHhFP/aAAwDAQACEQMRAD8A0j/6h0gl7'..., 4 => 'data:image/jpeg;base64,UklGRhwyAABXRUJQVlA4IBAyAADQngCdASqGARgBPjEYikOiIaESKqzQIAMEs7dwu7CP/G6o8V/039n9Cfjvqq9+/afN1zBdL+VJz3/2fu7+X3+n/Yj3Pfof2CP2D/3/pqerHzEftN+43u2/7f9ovdn/cP9P+QHyB/03/S9aP+7/sMftf6cX7kfC1/bv+X+6ntlf//2AP//7bXTP9Yv532Wf0rwJ/GPk37h/bP2q/xHuAYY+sH/b9Av499nvy39+/dD+++4f/W8E/hv/KeoL+Rfz3/DfmJ/gvis+w7PG3PoF+231X/Sf4T91P8X+13uSf6P5R+7f2G/6PuBfzn+jf5v84/8D83f8DxCfyP+p/ZT4BP6T/bf9d/fP89/0v979OP9p/3v89+8X/L9w36V/lP+z/oP83/6v9h9g/8u/qX+t/u/+Z/6v+T////m+8z2K/tp/2PdJ/XT/nD0SLN9SgXCfV3d3d3d3d3d3d3dAW'..., 5 => 'data:image/jpeg;base64,UklGRlAjAABXRUJQVlA4IEQjAAAwqQCdASrCAcIBPlEokUYjoqGhIrHpSHAKCWdu/E4wAxIfC3rxo8UhEb+eX79a+rn1/909Kmuv3b+3fsj2Vfpt2t9Pedb5N+1/9D+5/kJ8wf9N6nP1Z/4P7d8AX61/87/HdY7zBf1H/Uftv7qn+p/db3Rftz+MfyH/sh/5ewd9Dj90vVZ/437mfDj+1P/q/13uaf4P/8/8LXJpkHov8d/xPFXzvevvcH+4/PR+hZL+0XU1+W/dr9Z/bPd12d+rj1F/bH+h/MD5I30DgLuh/wv7n64H3v/W9H/tX7Af6u/8f2J8LHzn2Dv6f/ff/B/a/Y2/6v9t6YPp7/t/5n2fv+j/ffbT9nH7q+zh+5AseO71lTJsQCdkBOyAnZATsgJ2QE7ICdkBOyAnZATsgJ2QE7ICdkBOyAnZATsgJ2QE7ICdkBOyAnY+Wfwyt0bcks+sCieDjvBx3g47wcd3A'..., 6 => 'data:image/jpeg;base64,R0lGODlhCAf5BPfaAEFBQkdHSEtLTEhHSE9PUE9QUVNTVFdXWFtbXFpVVlROTmVaWXJfXXJhX15fYGhdaV9gYWJjZGZnaG1ibWprbGhnaHdlaG5vcG9kcHFmcXRqdXprdW9wcXNzdHZ3eHxyfHt7fHd4edJHJ9VJJ9tMJ9pZOeRRJ+1WJ+1XKO1aK+5eMeBPJ+5iNe9lOu9pPoNtc4pyd5h5eIpvbKJ9ee5rQvBtQ/F0TPBwRu54V/F6VPJ8WO5yTetCeOxLe+1TfuxYf+5/YK2DffKBXe6FafOMbPOGZPWWefGPdX5/gIR6hO5cge1Vg+9khO9qhe5kjfBsh/BuiO13iPFzifJ8jPB5mO9tk3+AgYODhYaHiI2DjIuLjYeIiY6PkJSLk4+QkZKTlJaXmJyUm5ubnJeWmZWGi6iCgbeKhayWlJ6foKSco5+goaOjpKanqKqrrKqlqq6vsLOts6+wsbOztLu7vbi2ubGpr'..., 7 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUIFBcVFRUXFRcZGhoeGRoZHCIZIB0hIBocHSMcHiEhISwkGh0qHhkYJTYkKS01NDMzGiM4PjgyPSwyMy8BCwsLDw4PHhISHjopIykyNzI6NDIyMjI1MjoyMjIyMjIyLzIyMjIvMjIyNDIyMjIyMjI0MjI0MjIyMi8yMjIyMv/AABEIAIgBcwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBBAcDAgj/xABAEAACAQIFAQUFBAgFBAMAAAABAgADEQQFEiExQQYiUWFxBxMygZEUcqHBI0JSYoKx0fAVkqKy8RYzQ8Ikc4P/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAgMEAQX/xAAnEQADAAICAgEDBAMAAAAAAAAAAQIDERIhBDFBE1FhFCIygQWR8f/aAAwDAQACEQMRAD8A7NERAEREAREQBERAEREAR'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:135
