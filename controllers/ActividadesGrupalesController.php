@@ -26,7 +26,7 @@ class ActividadesGrupales
             http_response_code($json["status"])
         );
     }
-    /*Obtiene una*/
+    /*Obtiene una actividad*/
     public function get($param)
     {
 
@@ -180,7 +180,7 @@ class ActividadesGrupales
             http_response_code($json["status"])
         );
     }
-
+    /*Crea una actividad*/ 
     public function create()
     {
         $inputJSON = file_get_contents('php://input');
@@ -203,6 +203,7 @@ class ActividadesGrupales
             http_response_code($json["status"])
         );
     }
+    /*Actualiza una actividada*/
     public function update()
     {
         $inputJSON = file_get_contents('php://input');

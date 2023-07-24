@@ -26,7 +26,7 @@ class ejercicio
             http_response_code($json["status"])
         );
     }
-
+    /*Obtiene un ejercicio*/ 
     public function get($param)
     {
         $genero = new EjercicioModel();
@@ -53,7 +53,7 @@ class ejercicio
         http_response_code($json["status"]);
         echo json_encode($json);
     }
-
+    /*Obtiene los ejercicios de una rutina */
     public function getEjerciciosRutina($param)
     {
 
@@ -108,6 +108,7 @@ class ejercicio
             http_response_code($json["status"])
         ); 
     }
+    /* Crea un ejercicio */
     public function create( ){
         $inputJSON=file_get_contents('php://input');
         $object = json_decode($inputJSON); 
@@ -127,7 +128,7 @@ class ejercicio
         echo json_encode($json,
         http_response_code($json["status"]));
     }
-    
+    /* Actualiza un ejercicio */
     public function update(){
         $inputJSON=file_get_contents('php://input');
         $object = json_decode($inputJSON); 

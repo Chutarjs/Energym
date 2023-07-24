@@ -28,6 +28,7 @@ class Rutinas
             http_response_code($json["status"])
         );
     }
+    /* Se obtiene una rutina por id */
     public function get($param)
     {
 
@@ -50,6 +51,8 @@ class Rutinas
             http_response_code($json["status"])
         );
     }
+
+    /* Se obtiene una rutina detallada */
     public function getRutinaDetalle($id)
     {
         $genero = new RutinaModel();
@@ -76,7 +79,7 @@ class Rutinas
         echo json_encode($json);
     }
     
-
+    /* Se obtiene la rutina asignada a un usuario */
     public function getRutinaUsuario($id)
     {
         $genero = new RutinaModel();
@@ -131,7 +134,7 @@ class Rutinas
             http_response_code($json["status"])
         ); 
     }
-     
+    /* Se crea una rutina */
     public function create( ){
         $inputJSON=file_get_contents('php://input');
         $object = json_decode($inputJSON); 
@@ -152,6 +155,7 @@ class Rutinas
         http_response_code($json["status"]));
         
     }
+    /* Se actualiza una rutina */
     public function update(){
         $inputJSON=file_get_contents('php://input');
         $object = json_decode($inputJSON); 

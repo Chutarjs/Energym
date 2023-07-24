@@ -30,6 +30,7 @@ class servicio
             http_response_code($json["status"])
         );
     }
+    /* Se obtiene un servicio */
     public function get($param)
     {
 
@@ -56,6 +57,7 @@ class servicio
             http_response_code($json["status"])
         );
     }
+    /* Se obtienen los servicios de un plan */
     public function getServicioPlan($id)
     {
         $genero = new ServicioModel();
@@ -111,7 +113,8 @@ class servicio
             http_response_code($json["status"])
         ); 
     }
-     
+    
+    /* Se crea un servicio */
     public function create( ){
         $inputJSON=file_get_contents('php://input');
         $object = json_decode($inputJSON); 
@@ -132,6 +135,8 @@ class servicio
         http_response_code($json["status"]));
         
     }
+
+    /* Se actualiza el servicio */
     public function update(){
         $inputJSON=file_get_contents('php://input');
         $object = json_decode($inputJSON); 

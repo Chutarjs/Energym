@@ -22,6 +22,7 @@ class plan{
         echo json_encode($json,
         http_response_code($json["status"]));
     }
+    /* Obtiene un plan */
     public function get($param){
         
         $genero=new PlanModel();
@@ -75,7 +76,7 @@ class plan{
             http_response_code($json["status"])
         ); 
     }
-     
+    /*Crea un plan */
     public function create( ){
         $inputJSON=file_get_contents('php://input');
         $object = json_decode($inputJSON); 
@@ -96,6 +97,7 @@ class plan{
         http_response_code($json["status"]));
         
     }
+    /*Actualiza un plan */
     public function update(){
         $inputJSON=file_get_contents('php://input');
         $object = json_decode($inputJSON); 
