@@ -121,8 +121,8 @@ export function FormRutina() {
   useEffect(() => {
     if (start) {
       if (esCrear) {
-        //Crear pelicula
-        RutinaService.createMovie(formData)
+        //Crear rutina
+        RutinaService.createRutina(formData)
           .then((response) => {
             console.log(response);
             setResponseData(response.data.results);
@@ -135,8 +135,8 @@ export function FormRutina() {
             }
           });
       } else {
-        //Modificar pelicula
-        MovieService.updateMovie(formData)
+        //Modificar rutina
+        RutinaService.updateRutina(formData)
           .then((response) => {
             console.log(response);
             setResponseData(response.data.results);
@@ -153,11 +153,11 @@ export function FormRutina() {
   }, [start, esCrear, formData]);
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
-  //Obtener Pelicula
-  //Obtener Pelicula
+
+  //Obtener rutina
   useEffect(() => {
     if (id != undefined && !isNaN(Number(id))) {
-      MovieService.getMovieFormById(id)
+      RutinaService.getRutinaFormById(id)
         .then((response) => {
           console.log(response);
           setData(response.data.results);
@@ -171,32 +171,16 @@ export function FormRutina() {
         });
     }
   }, [id]);
-  //Lista de Generos
-  const [dataGenres, setDataGenres] = useState({});
-  const [loadedGenres, setLoadedGenres] = useState(false);
+
+  //Lista de ejercicios
+  const [dataEjercicios, setDataEjercicios] = useState({});
+  const [loadedEjercicios, setLoadedEjercicios] = useState(false);
   useEffect(() => {
-    GenreService.getGenres()
+    EjercicioService.getEjercicios()
       .then((response) => {
         console.log(response);
-        setDataGenres(response.data.results);
-        setLoadedGenres(true);
-      })
-      .catch((error) => {
-        if (error instanceof SyntaxError) {
-          console.log(error);
-          throw new Error("Respuesta no válida del servidor");
-        }
-      });
-  }, [esCrear]);
-  //Lista de actores
-  const [dataActors, setDataActors] = useState({});
-  const [loadedActors, setLoadedActors] = useState(false);
-  useEffect(() => {
-    ActorService.getActors()
-      .then((response) => {
-        console.log(response);
-        setDataActors(response.data.results);
-        setLoadedActors(true);
+        setDataEjercicios(response.data.results);
+        setLoadedEjercicios(true);
       })
       .catch((error) => {
         if (error instanceof SyntaxError) {
@@ -213,9 +197,10 @@ export function FormRutina() {
         position: "top-center",
       });
       // Si hay respuesta se creo o modifico lo redirecciona
-      return navigate("/movie-table");
+      return navigate("/rutina-table");
     }
-  }, [responseData]);
+  }, [navigate, responseData]);
+
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
@@ -224,145 +209,69 @@ export function FormRutina() {
       console.log(data);
     }
   }, [data, esCrear, action]);
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit, onError)} noValidate>
         <Grid container spacing={1}>
           <Grid item xs={12} sm={12}>
             <Typography variant="h5" gutterBottom>
-              {esCrear ? "Crear" : "Modificar"} Pelicula
+              {esCrear ? "Crear" : "Modificar"} Rutina
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
-            {/* ['filled','outlined','standard']. */}
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="title"
+                name="nombre" // Updated name attribute
                 control={control}
+                defaultValue={values.nombre} // Set the default value
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    id="title"
-                    label="Título"
-                    error={Boolean(errors.title)}
-                    helperText={errors.title ? errors.title.message : " "}
+                    id="nombre"
+                    label="Nombre"
+                    error={Boolean(errors.nombre)}
+                    helperText={errors.nombre ? errors.nombre.message : " "}
                   />
                 )}
               />
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              <Controller
-                name="year"
-                control={control}
-                render={({ field }) => (
-                  <TextField
-                    {...field}
-                    id="year"
-                    label="Año"
-                    error={Boolean(errors.year)}
-                    helperText={errors.year ? errors.year.message : " "}
-                  />
-                )}
-              />
-            </FormControl>
+            {/* Other form controls... */}
           </Grid>
           <Grid item xs={12} sm={4}>
-            {/* ['filled','outlined','standard']. */}
-            <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              <Controller
-                name="time"
-                control={control}
-                render={({ field }) => (
-                  <TextField
-                    {...field}
-                    id="time"
-                    label="Minutos"
-                    error={Boolean(errors.time)}
-                    helperText={errors.time ? errors.time.message : " "}
-                  />
-                )}
-              />
-            </FormControl>
+            {/* Other form controls... */}
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            {/* Other form controls... */}
           </Grid>
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              <Controller
-                name="lang"
-                control={control}
-                render={({ field }) => (
-                  <TextField
-                    {...field}
-                    id="lang"
-                    label="Idioma"
-                    error={Boolean(errors.lang)}
-                    helperText={errors.lang ? errors.lang.message : " "}
-                  />
-                )}
-              />
-            </FormControl>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              {/* Lista de generos */}
-              {loadedGenres && (
+              {loadedEjercicios && ( // Correct the variable name here
                 <Controller
-                  name="genres"
+                  name="ejercicios" // Updated name attribute
                   control={control}
+                  defaultValue={values.ejercicios} // Set the default value
                   render={({ field }) => (
-                    <SelectGenres
+                    <EjerciciosForm // Make sure to pass the correct data and props here
                       field={field}
-                      data={dataGenres}
-                      onChange={(e) =>
-                        setValue("genres", e.target.value, {
-                          shouldValidate: true,
-                        })
-                      }
-                      error={Boolean(errors.genres)}
+                      data={dataEjercicios}
+                      onRemove={removeEjercicio}
+                      onAdd={addNewEjercicio}
+                      control={control}
                     />
                   )}
                 />
               )}
               <FormHelperText sx={{ color: "#d32f2f" }}>
-                {errors.genres ? errors.genres.message : " "}
+                {errors.ejercicios ? errors.ejercicios.message : " "}
               </FormHelperText>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              <Typography variant="h6" gutterBottom>
-                Actores
-                <Tooltip title="Agregar Actor">
-                  <span>
-                    <IconButton color="secondary" onClick={addNewActor}>
-                      <AddIcon />
-                    </IconButton>
-                  </span>
-                </Tooltip>
-              </Typography>
-              {/* Array de controles de actor */}
-              {loadedActors &&
-                dataActors &&
-                fields.map((field, index) => (
-                  <ActorsForm
-                    field={field}
-                    data={dataActors}
-                    key={index}
-                    index={index}
-                    onRemove={removeActor}
-                    control={control}
-                    onChange={(e) =>
-                      setValue("actors", e.target.value, {
-                        shouldValidate: true,
-                      })
-                    }
-                    disableRemoveButton={fields.length === 1}
-                  />
-                ))}
-              <FormHelperText sx={{ color: "#d32f2f" }}>
-                {errors.actors ? errors.actors.message : " "}
-              </FormHelperText>
+              {/* Other form controls... */}
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={12}>
