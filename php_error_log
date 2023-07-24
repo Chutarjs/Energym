@@ -3216,3 +3216,205 @@
 [23-Jul-2023 22:28:52 Europe/Berlin] PHP   4. servicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
 [23-Jul-2023 22:28:52 Europe/Berlin] PHP   5. ServicioModel->update($objeto = class stdClass { public $Precio = 5000; public $Tipo = 'individual'; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba 2ssdfg'; public $idservicio = '6'; public $Imagen = 'R0lGODlhCAf5BPfaAEFBQkdHSEtLTEhHSE9PUE9QUVNTVFdXWFtbXFpVVlROTmVaWXJfXXJhX15fYGhdaV9gYWJjZGZnaG1ibWprbGhnaHdlaG5vcG9kcHFmcXRqdXprdW9wcXNzdHZ3eHxyfHt7fHd4edJHJ9VJJ9tMJ9pZOeRRJ+1WJ+1XKO1aK+5eMeBPJ+5iNe9lOu9pPoNtc4pyd5h5eIpvbKJ9ee5rQvBtQ/F0TPBwRu54V/F6VPJ8WO5yTetCeOxLe+1TfuxYf+5/YK2DffKBXe6FafOMbPOGZPWWefGPdX5/gIR6hO5cge1Vg+9khO9qhe5kjfBsh/BuiO13iPFzifJ8jPB5mO9tk3+AgYODhYaHiI2DjIuLjYeIiY6PkJSLk4+QkZKTlJaXmJyUm5ubnJeWmZWGi6iCgbeKhayWlJ6foKSco5+goaOjpKanqKqrrKqlqq6vsLOts6+wsbOztLu7vbi2ubGpr8mUi9ick9CVjO6HjfKCj++Z'... }) C:\xampp\htdocs\Energym\controllers\ServicioController.php:139
 [23-Jul-2023 22:28:52 Europe/Berlin] PHP   6. file_get_contents($filename = NULL) C:\xampp\htdocs\Energym\models\ServicioModel.php:121
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$reps in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 165
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP   4. Rutinas->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP   5. RutinaModel->create($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }]; public $idServicio = 6; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Uppercut' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:139
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$series in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 165
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP   4. Rutinas->create() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:42:22 Europe/Berlin] PHP   5. RutinaModel->create($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }]; public $idServicio = 6; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Uppercut' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:139
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 65
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP   4. Rutinas->getRutinaDetalle($id = '5') C:\xampp\htdocs\Energym\routes\routes.php:69
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP   5. RutinaModel->getRutinaDetalle($id = '5') C:\xampp\htdocs\Energym\controllers\RutinasController.php:56
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP   6. EjercicioModel->getEjerciciosRutina($id = '5') C:\xampp\htdocs\Energym\models\RutinasModel.php:61
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\RutinasController.php on line 59
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:46:57 Europe/Berlin] PHP   4. Rutinas->getRutinaDetalle($id = '5') C:\xampp\htdocs\Energym\routes\routes.php:69
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 65
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP   4. Rutinas->getRutinaDetalle($id = '5') C:\xampp\htdocs\Energym\routes\routes.php:69
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP   5. RutinaModel->getRutinaDetalle($id = '5') C:\xampp\htdocs\Energym\controllers\RutinasController.php:56
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP   6. EjercicioModel->getEjerciciosRutina($id = '5') C:\xampp\htdocs\Energym\models\RutinasModel.php:61
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\RutinasController.php on line 59
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:46:58 Europe/Berlin] PHP   4. Rutinas->getRutinaDetalle($id = '5') C:\xampp\htdocs\Energym\routes\routes.php:69
+[24-Jul-2023 06:48:32 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 65
+[24-Jul-2023 06:48:32 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:48:32 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:48:32 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:48:32 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:48:32 Europe/Berlin] PHP   4. Rutinas->getForm($idRutina = '5') C:\xampp\htdocs\Energym\routes\routes.php:69
+[24-Jul-2023 06:48:32 Europe/Berlin] PHP   5. RutinaModel->getForm($idRutina = '5') C:\xampp\htdocs\Energym\controllers\RutinasController.php:113
+[24-Jul-2023 06:48:32 Europe/Berlin] PHP   6. EjercicioModel->getEjerciciosRutina($id = '5') C:\xampp\htdocs\Energym\models\RutinasModel.php:131
+[24-Jul-2023 06:48:33 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 65
+[24-Jul-2023 06:48:33 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:48:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:48:33 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:48:33 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:48:33 Europe/Berlin] PHP   4. Rutinas->getForm($idRutina = '5') C:\xampp\htdocs\Energym\routes\routes.php:69
+[24-Jul-2023 06:48:33 Europe/Berlin] PHP   5. RutinaModel->getForm($idRutina = '5') C:\xampp\htdocs\Energym\controllers\RutinasController.php:113
+[24-Jul-2023 06:48:33 Europe/Berlin] PHP   6. EjercicioModel->getEjerciciosRutina($id = '5') C:\xampp\htdocs\Energym\models\RutinasModel.php:131
+[24-Jul-2023 06:48:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idRutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:48:58 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:48:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:48:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:48:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:48:58 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:48:58 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }, 1 => class stdClass { ... }, 2 => class stdClass { ... }]; public $idServicio = 3; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Nombre = 'Jesus Rojas Alfaro' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 06:49:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idRutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:49:25 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:49:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:49:25 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:49:25 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:49:25 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:49:25 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }, 1 => class stdClass { ... }, 2 => class stdClass { ... }]; public $idServicio = 3; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Nombre = 'Jesus Rojas Alfaro' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 06:49:27 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idRutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:49:27 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:49:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:49:27 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:49:27 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:49:27 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:49:27 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }, 1 => class stdClass { ... }, 2 => class stdClass { ... }]; public $idServicio = 3; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Nombre = 'Jesus Rojas Alfaro' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 06:50:06 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idRutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:50:06 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:50:06 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:50:06 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:50:06 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:50:06 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:50:06 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }, 1 => class stdClass { ... }, 2 => class stdClass { ... }]; public $idServicio = 3; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Nombre = 'Jesus Rojas Alfaro' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 06:53:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 65
+[24-Jul-2023 06:53:55 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:53:55 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:53:55 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:53:55 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:53:55 Europe/Berlin] PHP   4. Rutinas->getForm($idRutina = '5') C:\xampp\htdocs\Energym\routes\routes.php:69
+[24-Jul-2023 06:53:55 Europe/Berlin] PHP   5. RutinaModel->getForm($idRutina = '5') C:\xampp\htdocs\Energym\controllers\RutinasController.php:113
+[24-Jul-2023 06:53:55 Europe/Berlin] PHP   6. EjercicioModel->getEjerciciosRutina($id = '5') C:\xampp\htdocs\Energym\models\RutinasModel.php:131
+[24-Jul-2023 06:53:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 65
+[24-Jul-2023 06:53:56 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:53:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:53:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:53:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:53:56 Europe/Berlin] PHP   4. Rutinas->getForm($idRutina = '5') C:\xampp\htdocs\Energym\routes\routes.php:69
+[24-Jul-2023 06:53:56 Europe/Berlin] PHP   5. RutinaModel->getForm($idRutina = '5') C:\xampp\htdocs\Energym\controllers\RutinasController.php:113
+[24-Jul-2023 06:53:56 Europe/Berlin] PHP   6. EjercicioModel->getEjerciciosRutina($id = '5') C:\xampp\htdocs\Energym\models\RutinasModel.php:131
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 65
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   4. Rutinas->getForm($idRutina = '5') C:\xampp\htdocs\Energym\routes\routes.php:69
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   5. RutinaModel->getForm($idRutina = '5') C:\xampp\htdocs\Energym\controllers\RutinasController.php:113
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   6. EjercicioModel->getEjerciciosRutina($id = '5') C:\xampp\htdocs\Energym\models\RutinasModel.php:131
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 65
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   4. Rutinas->getForm($idRutina = '5') C:\xampp\htdocs\Energym\routes\routes.php:69
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   5. RutinaModel->getForm($idRutina = '5') C:\xampp\htdocs\Energym\controllers\RutinasController.php:113
+[24-Jul-2023 06:54:04 Europe/Berlin] PHP   6. EjercicioModel->getEjerciciosRutina($id = '5') C:\xampp\htdocs\Energym\models\RutinasModel.php:131
+[24-Jul-2023 06:56:27 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idrutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:56:27 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:56:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:56:27 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:56:27 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:56:27 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:56:27 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }]; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 06:57:51 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idrutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:57:51 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:57:51 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:57:51 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:57:51 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:57:51 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:57:51 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = []; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 06:59:33 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idrutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:59:33 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:59:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:59:33 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:59:33 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:59:33 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:59:33 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = []; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 06:59:36 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idrutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:59:36 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:59:36 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:59:36 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:59:36 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:59:36 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:59:36 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = []; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 06:59:46 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idrutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:59:46 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:59:46 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:59:46 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:59:46 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:59:46 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:59:46 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = []; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 06:59:48 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idrutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:59:48 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:59:48 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:59:48 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:59:48 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:59:48 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:59:48 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = []; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 06:59:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idrutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 06:59:56 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 06:59:56 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 06:59:56 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 06:59:56 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 06:59:56 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 06:59:56 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }]; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 07:05:50 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idRutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 199
+[24-Jul-2023 07:05:50 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 07:05:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 07:05:50 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 07:05:50 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 07:05:50 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 07:05:50 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }]; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba'; public $idrutina = '7' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 07:06:00 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idRutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 199
+[24-Jul-2023 07:06:00 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 07:06:00 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 07:06:00 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 07:06:00 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 07:06:00 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 07:06:00 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }]; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba'; public $idrutina = '7' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 07:06:06 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idrutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 07:06:06 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 07:06:06 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 07:06:06 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 07:06:06 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 07:06:06 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 07:06:06 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }]; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba'; public $idRutina = '7' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 07:06:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idrutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 180
+[24-Jul-2023 07:06:13 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 07:06:13 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 07:06:13 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 07:06:13 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 07:06:13 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 07:06:13 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }]; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba'; public $idRutina = '7' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[24-Jul-2023 07:12:38 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idRutina in C:\xampp\htdocs\Energym\models\RutinasModel.php on line 199
+[24-Jul-2023 07:12:38 Europe/Berlin] PHP Stack trace:
+[24-Jul-2023 07:12:38 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[24-Jul-2023 07:12:38 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:39
+[24-Jul-2023 07:12:38 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[24-Jul-2023 07:12:38 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[24-Jul-2023 07:12:38 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }]; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba'; public $idrutina = '7' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159

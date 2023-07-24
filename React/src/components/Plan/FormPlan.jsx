@@ -153,7 +153,6 @@ export function FormPlan() {
   useEffect(() => {
     ServicioService.getServicios()
       .then((response) => {
-        console.log(response);
         setDataServicios(response.data.results);
         setLoadedServicios(true);
       })

@@ -53,7 +53,7 @@ class EjercicioModel
     {
         try {
             // Consulta SQL
-            $vSql = "SELECT e.IdEjercicio, e.Nombre AS Ejercicio, e.Descripcion, e.Equipamiento, re.Repeticiones, re.Series
+            $vSql = "SELECT e.IdEjercicio, e.Nombre, e.Descripcion, e.Equipamiento, re.Repeticiones, re.Series
             FROM rutinaejercicio re
             INNER JOIN ejercicio e ON re.IdEjercicio = e.idEjercicio 
             WHERE re.IdRutina = $id";

@@ -143,7 +143,6 @@ class PlanModel
     }
     public function update($objeto) {
         try {
-            var_dump($objeto);
             $vSql = "DELETE from planservicio where idplan = $objeto->idPlan;";
             //Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML( $vSql);

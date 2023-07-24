@@ -7,14 +7,17 @@ import { FormHelperText } from "@mui/material";
 import { useForm, Controller, useFieldArray } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import AddIcon from "@mui/icons-material/Add";
+import Tooltip from "@mui/material/Tooltip";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 // eslint-disable-next-line no-unused-vars
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { SelectServicios } from "./SelectServicios";
 import EjercicioService from "../../services/EjercicioService";
 import { EjerciciosForm } from "./EjerciciosForm";
 import RutinaService from "../../services/RutinaService";
-import { SelectServicios } from "./SelectServicios";
 import ServicioService from "../../services/ServicioService";
 import { toast } from "react-hot-toast";
 
@@ -25,33 +28,34 @@ export function FormRutina() {
   const id = routeParams.id || null;
   const esCrear = !id;
   // Valores a precarga al actualizar
-  const [values, setValues] = useState(null);
+  const [values] = useState(null);
   // Esquema de validación
   const rutinaSchema = yup.object({
     Nombre: yup
       .string()
       .required("El nombre es requerido")
-      .min(3, "El nombre debe tener al menos 3 caracteres"),
-    servicio: yup.string().required("El servicio es requerido"),
-    Descripcion: yup.string().required("La descripcion es requerida"),
+      .min(3, "El nombre debe tener 3 caracteres"),
+    Descripcion: yup.string().required("Los minutos son requerido"),
+    idServicio: yup.number().required("Seleccione un servicio"),
     ejercicios: yup.array().typeError("Seleccione al menos un ejercicio"),
   });
 
   const {
     control,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     // Valores iniciales
     defaultValues: {
       Nombre: "",
-      servicio: "",
       Descripcion: "",
+      idServicio: "",
       ejercicios: [
         {
-          idEjercicio: 0,
-          reps: 0,
-          series: 0,
+          Nombre: "",
+          Repeticiones: "",
+          Series: "",
         },
       ],
     },
@@ -68,7 +72,7 @@ export function FormRutina() {
     control, //controls proviene de useForm
     name: "ejercicios", //nombre único para el campo Array
   });
-  // Eliminar ejercicio de listado
+  // Eliminar actor de listado
   const removeEjercicio = (index) => {
     if (fields.length === 1) {
       return;
@@ -78,16 +82,18 @@ export function FormRutina() {
   // Agregar un nuevo actor
   const addNewEjercicio = () => {
     append({
-      idEjercicio: 0,
-      reps: 0,
-      series: 0,
+      Nombre: "",
+      Repeticiones: "",
+      Series: "",
     });
   };
   // Valores de formulario que llena el usuario
   const [formData, setFormData] = useState(null);
   //Respuesta de crear o modificar
+  // eslint-disable-next-line no-unused-vars
   const [responseData, setResponseData] = useState(null);
   // Accion: post, put
+  // eslint-disable-next-line no-unused-vars
   const [action, setAction] = useState("POST");
   // Booleano para establecer si se envió la informacion al API
   const [start, setStart] = useState(false);
@@ -114,6 +120,7 @@ export function FormRutina() {
       //Capturar error
     }
   };
+
   //Llamar al API para ejecutar Crear o modificar
   useEffect(() => {
     if (start) {
@@ -121,9 +128,12 @@ export function FormRutina() {
         //Crear rutina
         RutinaService.createRutina(formData)
           .then((response) => {
-            console.log(response);
             setResponseData(response.data.results);
             setError(response.error);
+
+            //con exito
+            toast.success("La rutina se creó correctamente");
+            navigate("/rutina-table");
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
@@ -135,9 +145,12 @@ export function FormRutina() {
         //Modificar rutina
         RutinaService.updateRutina(formData)
           .then((response) => {
-            console.log(response);
             setResponseData(response.data.results);
             setError(response.error);
+
+            //con exito
+            toast.success("La rutina se actualizó correctamente");
+            navigate("/rutina-table");
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
@@ -147,11 +160,11 @@ export function FormRutina() {
           });
       }
     }
-  }, [start, esCrear, formData]);
+  }, [start, esCrear, formData, navigate]);
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
 
-  //Obtener rutina
+  //Obtener Rutina
   useEffect(() => {
     if (id != undefined && !isNaN(Number(id))) {
       RutinaService.getRutinaFormById(id)
@@ -175,7 +188,6 @@ export function FormRutina() {
   useEffect(() => {
     ServicioService.getServicios()
       .then((response) => {
-        console.log(response);
         setDataServicios(response.data.results);
         setLoadedServicios(true);
       })
@@ -205,26 +217,18 @@ export function FormRutina() {
       });
   }, [esCrear]);
 
-  //Respuesta del API al crear o actualizar
-  useEffect(() => {
-    if (responseData != null) {
-      toast.success(responseData, {
-        duration: 4000,
-        position: "top-center",
-      });
-      // Si hay respuesta se creo o modifico lo redirecciona
-      return navigate("/rutina-table");
-    }
-  }, [navigate, responseData]);
-
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
-      // Si es modificar establece los valores a precargar en el formulario
-      setValues(data);
-      console.log(data);
+      // Set the main form values
+      setValue("Nombre", data.Nombre || "");
+      setValue("Descripcion", data.Descripcion || "");
+      setValue("idServicio", data.idServicio || "");
+      // Set the ejercicios array values
+      setValue("ejercicios", data.ejercicios || []);
+      setValue("idrutina", data.idrutina || "");
     }
-  }, [data, esCrear, action]);
+  }, [data, esCrear, setValue]);
 
   return (
     <>
@@ -236,11 +240,11 @@ export function FormRutina() {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
+            {/* ['filled','outlined','standard']. */}
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="Nombre" // Updated name attribute
+                name="Nombre"
                 control={control}
-                defaultValue={values.Nombre} // Set the default value
                 render={({ field }) => (
                   <TextField
                     {...field}
@@ -253,12 +257,12 @@ export function FormRutina() {
               />
             </FormControl>
           </Grid>
+
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="Descripcion" // Updated name attribute
+                name="Descripcion"
                 control={control}
-                defaultValue={values.Descripcion} // Set the default value
                 render={({ field }) => (
                   <TextField
                     {...field}
@@ -276,44 +280,65 @@ export function FormRutina() {
 
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              {loadedEjercicios && ( // Correct the variable name here
+              {/* Lista de servicios */}
+              {loadedServicios && (
                 <Controller
-                  name="ejercicios" // Updated name attribute
+                  name="idServicio"
                   control={control}
-                  defaultValue={values.ejercicios} // Set the default value
                   render={({ field }) => (
-                    <EjerciciosForm // Make sure to pass the correct data and props here
+                    <SelectServicios
                       field={field}
-                      data={dataEjercicios}
-                      onRemove={removeEjercicio}
-                      onAdd={addNewEjercicio}
-                      control={control}
+                      data={dataServicios}
+                      onChange={(e) =>
+                        setValue("idServicio", e.target.value, {
+                          shouldValidate: true,
+                        })
+                      }
+                      value={field.value}
+                      error={Boolean(errors.idServicio)}
                     />
                   )}
                 />
               )}
               <FormHelperText sx={{ color: "#d32f2f" }}>
-                {errors.ejercicios ? errors.ejercicios.message : " "}
+                {errors.idServicio ? errors.idServicio.message : " "}
               </FormHelperText>
             </FormControl>
           </Grid>
-          <Grid item xs={12} sm={6}>
+
+          <Grid item sm={12}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              {loadedServicios && (
-              <Controller
-                name="servicio" // Updated name attribute
-                control={control}
-                defaultValue={values.servicio} // Set the default value
-                render={({ field }) => (
-                  <SelectServicios // Pass the appropriate data prop
+              <Typography variant="h6" gutterBottom>
+                Ejercicios
+                <Tooltip title="Agregar Ejercicio">
+                  <span>
+                    <IconButton color="secondary" onClick={addNewEjercicio}>
+                      <AddIcon />
+                    </IconButton>
+                  </span>
+                </Tooltip>
+              </Typography>
+              {/* Array de controles de actor */}
+              {loadedEjercicios &&
+                dataEjercicios &&
+                fields.map((field, index) => (
+                  <EjerciciosForm
                     field={field}
-                    data={dataServicios} // Use the correct data for services
+                    data={dataEjercicios}
+                    key={index}
+                    index={index}
+                    onRemove={removeEjercicio}
+                    control={control}
+                    onChange={(e) =>
+                      setValue("ejercicios", e.target.value, {
+                        shouldValidate: true,
+                      })
+                    }
+                    disableRemoveButton={fields.length === 1}
                   />
-                )}
-              />
-              )}
+                ))}
               <FormHelperText sx={{ color: "#d32f2f" }}>
-                {errors.servicio ? errors.servicio.message : " "}
+                {errors.ejercicios ? errors.ejercicios.message : " "}
               </FormHelperText>
             </FormControl>
           </Grid>

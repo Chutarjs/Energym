@@ -16,14 +16,13 @@ export function SelectServicios({ field, data }) {
           {...field}
           labelId='serviciosId'
           label='servicios'
-          multiple
-          defaultValue={[]}
+          defaultValue={field.value}
           value={field.value}
         >
           {data &&
             data.map((servicio) => (
               <MenuItem key={servicio.idservicio} value={servicio.idservicio}>
-                {servicio.Nombre}
+                {servicio.idservicio} {" - "} {servicio.Nombre}
               </MenuItem>
             ))}
         </Select>

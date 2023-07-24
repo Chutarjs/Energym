@@ -162,7 +162,7 @@ class RutinaModel
             //--- Ejercicios ---
             //Crear elementos a insertar en rutinaejercicio
             foreach( $objeto->ejercicios as $ejercicio){
-                $dataEjercicios[]=array($idRutina,$ejercicio->idEjercicio, $ejercicio->reps, $ejercicio->series);
+                $dataEjercicios[]=array($idRutina,$ejercicio->idEjercicio, $ejercicio->Repeticiones, $ejercicio->Series);
             }
             foreach($dataEjercicios as $row){        
                 $valores=implode(',', $row);
@@ -177,17 +177,17 @@ class RutinaModel
     }
     public function update($objeto) {
         try {
-            $vSql = "DELETE from rutinaejercicio where IdRutina = $objeto->idRutina;";
+            $vSql = "DELETE from rutinaejercicio where IdRutina = $objeto->idrutina;";
             //Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML( $vSql);
             //Consulta sql
-			$vSql = "UPDATE rutina SET Nombre ='$objeto->Nombre', idServicio = '$objeto->idServicio', Descripcion = '$objeto->Descripcion' Where idrutina=$objeto->idRutina";
+			$vSql = "UPDATE rutina SET Nombre ='$objeto->Nombre', idServicio = '$objeto->idServicio', Descripcion = '$objeto->Descripcion' Where idrutina=$objeto->idrutina";
             //Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML( $vSql);
             //--- Ejercicios ---
             //Crear elementos a insertar en rutinaejercicio
             foreach( $objeto->ejercicios as $ejercicio){
-                $dataEjercicios[]=array($objeto->idRutina,$ejercicio->idEjercicio, $ejercicio->reps, $ejercicio->series);
+                $dataEjercicios[]=array($objeto->idrutina,$ejercicio->idEjercicio, $ejercicio->Repeticiones, $ejercicio->Series);
             }
             foreach($dataEjercicios as $row){        
                 $valores=implode(',', $row);

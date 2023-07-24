@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
@@ -44,10 +42,10 @@ export function EjerciciosForm({
                 </IconButton>
               </Tooltip>
             </ListItemIcon>
-            <ListItemText>
+            <ListItemText sx={{ m:1 }}>
               <Controller
                 key={index}
-                name={`ejercicios[${index}].IdEjercicio`} // Update the name attribute to match the column name of the rutinaejercicio table
+                name={`ejercicios[${index}].idEjercicio`}
                 control={control}
                 render={({ field }) => (
                   <SelectEjercicios field={field} data={data} />
@@ -57,21 +55,17 @@ export function EjerciciosForm({
             <ListItemText sx={{ m: 1 }}>
               <Controller
                 key={index}
-                name={`ejercicios[${index}].Repeticiones`} // Update the name attribute to match the column name of the rutinaejercicio table
+                name={`ejercicios[${index}].Repeticiones`}
                 control={control}
-                render={({ field }) => (
-                  <TextField {...field} label='Repeticiones' /> // Update the label to match the column being captured
-                )}
+                render={({ field }) => <TextField {...field} label='Repeticiones' />}
               />
             </ListItemText>
             <ListItemText sx={{ m: 1 }}>
               <Controller
                 key={index}
-                name={`ejercicios[${index}].Series`} // Update the name attribute to match the column name of the rutinaejercicio table
+                name={`ejercicios[${index}].Series`}
                 control={control}
-                render={({ field }) => (
-                  <TextField {...field} label='Series' /> // Update the label to match the column being captured
-                )}
+                render={({ field }) => <TextField {...field} label='Series' />}
               />
             </ListItemText>
             <ListItemIcon>
