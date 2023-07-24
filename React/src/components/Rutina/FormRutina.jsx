@@ -13,10 +13,14 @@ import Tooltip from "@mui/material/Tooltip";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 // eslint-disable-next-line no-unused-vars
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import EjercicioService from "../../services/EjercicioService";
+import { EjerciciosForm } from "./EjericiciosForm";
+import RutinaService from "../../services/RutinaService";
+import { toast } from "react-hot-toast";
 
 export function FormRutina() {
-  //const useNavigate = useNavigate()
+  const navigate = useNavigate();
   const routeParams = useParams();
   // Id de la pelicula a actualizar
   const id = routeParams.id || null;
@@ -63,19 +67,17 @@ export function FormRutina() {
       ],
     },
     // valores a precargar
-
+    values,
     // Asignación de validaciones
     resolver: yupResolver(movieSchema),
   });
   // useFieldArray:
   // relaciones de muchos a muchos, con más campos además
   // de las llaves primaras
-  const { fields, append, prepend, remove, swap, move, insert } = useFieldArray(
-    {
-      control, //controls proviene de useForm
-      name: "actors", //nombre único para el campo Array
-    }
-  );
+  const { fields, append, remove } = useFieldArray({
+    control, //controls proviene de useForm
+    name: "actors", //nombre único para el campo Array
+  });
   // Eliminar actor de listado
   const removeActor = (index) => {
     if (fields.length === 1) {
@@ -122,11 +124,59 @@ export function FormRutina() {
     }
   };
   //Llamar al API para ejecutar Crear o modificar
-
+  useEffect(() => {
+    if (start) {
+      if (esCrear) {
+        //Crear pelicula
+        MovieService.createMovie(formData)
+          .then((response) => {
+            console.log(response);
+            setResponseData(response.data.results);
+            setError(response.error);
+          })
+          .catch((error) => {
+            if (error instanceof SyntaxError) {
+              console.log(error);
+              throw new Error("Respuesta no válida del servidor");
+            }
+          });
+      } else {
+        //Modificar pelicula
+        MovieService.updateMovie(formData)
+          .then((response) => {
+            console.log(response);
+            setResponseData(response.data.results);
+            setError(response.error);
+          })
+          .catch((error) => {
+            if (error instanceof SyntaxError) {
+              console.log(error);
+              throw new Error("Respuesta no válida del servidor");
+            }
+          });
+      }
+    }
+  }, [start, esCrear, formData]);
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
   //Obtener Pelicula
-
+  //Obtener Pelicula
+  useEffect(() => {
+    if (id != undefined && !isNaN(Number(id))) {
+      MovieService.getMovieFormById(id)
+        .then((response) => {
+          console.log(response);
+          setData(response.data.results);
+          setError(response.error);
+        })
+        .catch((error) => {
+          if (error instanceof SyntaxError) {
+            console.log(error);
+            throw new Error("Respuesta no válida del servidor");
+          }
+        });
+    }
+  }, [id]);
   //Lista de Generos
   const [dataGenres, setDataGenres] = useState({});
   const [loadedGenres, setLoadedGenres] = useState(false);
@@ -162,9 +212,24 @@ export function FormRutina() {
       });
   }, [esCrear]);
   //Respuesta del API al crear o actualizar
-
+  useEffect(() => {
+    if (responseData != null) {
+      toast.success(responseData, {
+        duration: 4000,
+        position: "top-center",
+      });
+      // Si hay respuesta se creo o modifico lo redirecciona
+      return navigate("/movie-table");
+    }
+  }, [responseData]);
   // Si es modificar establece los valores a precargar en el formulario
-
+  useEffect(() => {
+    if (!esCrear && data) {
+      // Si es modificar establece los valores a precargar en el formulario
+      setValues(data);
+      console.log(data);
+    }
+  }, [data, esCrear, action]);
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit, onError)} noValidate>
@@ -255,6 +320,11 @@ export function FormRutina() {
                     <SelectGenres
                       field={field}
                       data={dataGenres}
+                      onChange={(e) =>
+                        setValue("genres", e.target.value, {
+                          shouldValidate: true,
+                        })
+                      }
                       error={Boolean(errors.genres)}
                     />
                   )}
@@ -288,6 +358,11 @@ export function FormRutina() {
                     index={index}
                     onRemove={removeActor}
                     control={control}
+                    onChange={(e) =>
+                      setValue("actors", e.target.value, {
+                        shouldValidate: true,
+                      })
+                    }
                     disableRemoveButton={fields.length === 1}
                   />
                 ))}
