@@ -22,6 +22,7 @@ export function FormEjercicio() {
   const esCrear = !id;
   // Valores a precarga al actualizar
   const [values, setValues] = useState(null);
+
   // Esquema de validación
   const ejercicioSchema = yup.object({
     Nombre: yup
@@ -36,6 +37,7 @@ export function FormEjercicio() {
       .array()
       .of(yup.string().required("Seleccione al menos una imagen")),
   });
+
   const {
     control,
     handleSubmit,
@@ -93,7 +95,6 @@ export function FormEjercicio() {
     if (start) {
       if (esCrear) {
         // Crear ejercicio
-        console.log(formData);
         EjercicioService.createEjercicio(formData)
           .then((response) => {
             setResponseData(response.data);
@@ -112,7 +113,6 @@ export function FormEjercicio() {
           });
       } else {
         // Modificar ejercicio
-        console.log(formData);
         EjercicioService.updateEjercicio(formData)
           .then((response) => {
             setResponseData(response.data.results);
@@ -135,7 +135,7 @@ export function FormEjercicio() {
   // Si ocurre error al realizar el submit
   const onError = (errors, e) => console.log(errors, e);
 
-  //Obtener ejercicio
+  //Obtener ejercicio form para precargar datos en el form
   useEffect(() => {
     if (id != undefined && !isNaN(Number(id))) {
       EjercicioService.getEjercicioFormById(id)
@@ -226,6 +226,8 @@ export function FormEjercicio() {
               />
             </FormControl>
           </Grid>
+
+          {/* Se añade el input para ingresar las imagenes en formato base64 y almacenadas en un file */}
           <Grid item xs={12} sm={12}>
             <label htmlFor="upload-button">
               <input
@@ -233,17 +235,24 @@ export function FormEjercicio() {
                 accept="image/*"
                 multiple
                 id="upload-button"
-                style={{ display: "none" }} // Hide the default input element
+                style={{ display: "none" }}
                 onChange={(e) => {
+                  //se almacenan las imagenes en la variable files
                   const files = e.target.files;
+                  //se verfica que existan imagenes
                   if (files && files.length > 0) {
                     const imageArray = [];
+                    //se recorren las imagenes
                     for (let i = 0; i < files.length; i++) {
+                      //variable para leer las imagenes
                       const reader = new FileReader();
+                      //se leen las imagenes
                       reader.onloadend = () => {
+                        //se añade al array
                         imageArray.push(reader.result);
+                        //se verifica que se hayan recorrido las imagenes
                         if (imageArray.length === files.length) {
-                          // Set the array of base64 images to the form
+                          // setea el array de imagenes en formato base64
                           setValue("imagenes", imageArray);
                         }
                       };
@@ -252,6 +261,7 @@ export function FormEjercicio() {
                   }
                 }}
               />
+              {/* El boton de seleccionar imagenes con diseño */}
               <Button
                 variant="outlined"
                 color="secondary"
@@ -273,6 +283,7 @@ export function FormEjercicio() {
               >
                 Seleccionar Imágenes
               </Button>
+
             </label>
             <FormHelperText>
               {errors.imagenes ? errors.imagenes.message : " "}

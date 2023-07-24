@@ -33,7 +33,7 @@ class ejercicio
 
         $response = $genero->get($param);
         if (isset($response) && !empty($response)) {
-            // Codificar las imágenes en Base64
+            // Codificar las imágenes en Base64 (vienen en formato binario desde la BD)
             foreach ($response->imagenes as $imagen) {
                 $imagen->Imagen = base64_encode($imagen->Imagen);
             }

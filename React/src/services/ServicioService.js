@@ -10,7 +10,7 @@ class ServicioService {
   getServicioById(Id) {
     return axios.get(BASE_URL + "/" + Id);
   }
-
+  //se obtiene el servicio de un plan
   getServicioPlan(Id) {
     return axios.get(BASE_URL + "/getRutinaDetalle/" + Id);
   }
@@ -22,7 +22,7 @@ class ServicioService {
   updateServicio(Servicio) {
     return axios.put(BASE_URL, Servicio);
   }
-
+  //se obtiene el servicio para el form
   getServicioFormById(ServicioId) {
     return axios.get(BASE_URL + "/getForm/" + ServicioId);
   }

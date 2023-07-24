@@ -13,13 +13,13 @@ export function DetailEjercicio() {
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState("");
   const [loaded, setLoaded] = useState(false);
-
   const routeParams = useParams();
 
+  //se obtiene el ejercicio (con todos sus atributos y sus imagenes en base 64, se convierten en el controller)
   useEffect(() => {
     EjercicioService.getEjercicioById(routeParams.id)
       .then((response) => {
-        console.log(response.data);
+        //se asignan los datos al form
         setData(response.data.results);
         setError(response.error);
         setLoaded(true);
@@ -32,6 +32,7 @@ export function DetailEjercicio() {
       });
   }, [routeParams.id]);
 
+  //se renderizan las imagenes para mostrarlas en el html
   const renderExerciseImages = (imagenes) => {
     return (
       <img
@@ -47,6 +48,7 @@ export function DetailEjercicio() {
     );
   };
 
+  //el html a mostrar
   return (
     <>
       {!loaded && <div>Cargando...</div>}
@@ -56,15 +58,19 @@ export function DetailEjercicio() {
           sx={{ mt: 8, mb: 2, display: "block", textAlign: "center" }}
           maxWidth="lg"
         >
+          
           <Typography variant="h4" component="h1" gutterBottom>
             {"Ejercicio: " + data.Nombre}
           </Typography>
+
           <Typography variant="subtitle1" component="h1" gutterBottom>
             {"Descripcion: " + data.Descripcion}
           </Typography>
+
           <Typography variant="subtitle1" component="h1" gutterBottom>
             {"Equipamiento: " + data.Equipamiento}
           </Typography>
+
           <Typography variant="body1">
             <Box fontWeight="bold">Imagenes: </Box>
             <List
@@ -81,6 +87,7 @@ export function DetailEjercicio() {
               ))}
             </List>
           </Typography>
+
         </Container>
       )}
     </>

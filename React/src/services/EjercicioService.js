@@ -6,17 +6,19 @@ class EjercicioService{
     getEjercicios(){
         return axios.get(BASE_URL);
     }
+    //se obtiene un ejercicio por su id
     getEjercicioById(EjercicioId){
         return axios.get(BASE_URL + '/' + EjercicioId);
     }
+    //se crea un ejercicio
     createEjercicio(Ejercicio){
         return axios.post(BASE_URL, Ejercicio);
     }
-
+    //se obtiene el ejercicio para su form
     getEjercicioFormById(EjercicioId){
         return axios.get(BASE_URL + '/getForm/' + EjercicioId);
     }
-
+    //se actualiza el ejercicio
     updateEjercicio(Ejercicio){
         return axios.put(BASE_URL, Ejercicio);
     }
