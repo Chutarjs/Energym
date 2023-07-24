@@ -119,7 +119,7 @@ class RutinaModel
     {
         try {
             
-            $servicioM=new ServicioModel();
+            $ejercicioM=new EjercicioModel();
             //Consulta sql
 			$vSql = "SELECT * FROM Rutina where idRutina=$idRutina";
 			
@@ -128,15 +128,15 @@ class RutinaModel
             $vResultado = $vResultado[0];
 
             //Lista de servicios del rutina
-            $servicios=$servicioM->getServicioPlan($idPlan);
-            //Array con el id de los generos
-            if(!empty($servicios)){
-                $servicios = array_column($servicios, 'idPlan');
+            $ejercicios=$ejercicioM->getEjerciciosRutina($idRutina);
+            //Array con el id de los ejercicios
+            if(!empty($ejercicios)){
+                $ejercicios = array_column($ejercicios, 'idRutina');
             }else{
-               $servicios=[]; 
+               $ejercicios=[]; 
             }
             //Propiedad que se va a agregar al objeto
-            $vResultado->servicios=$servicios;
+            $vResultado->ejercicios=$ejercicios;
 			// Retornar el objeto
 			return $vResultado;
 		} catch ( Exception $e ) {
@@ -153,24 +153,23 @@ class RutinaModel
         try {
             //Consulta sql
             //Identificador autoincrementable
-			$sql = "Insert into Rutina (Nombre, Descripcion)". 
-                     "Values ('$objeto->Nombre','$objeto->Descripcion')";
+			$sql = "Insert into Rutina (Nombre, idServicio, Descripcion)". 
+                     "Values ('$objeto->Nombre', '$objeto->idServicio', '$objeto->Descripcion')";
 			
             //Ejecutar la consulta
             //Obtener ultimo insert
 			$idRutina = $this->enlace->executeSQL_DML_last($sql);
-            //--- Servicios ---
-            //Crear elementos a insertar en servicios
-            foreach( $objeto->servicios as $servicio){
-                $dataServicios[]=array($idPlan,$servicio);
+            //--- Ejercicios ---
+            //Crear elementos a insertar en rutinaejercicio
+            foreach( $objeto->ejercicios as $ejercicio){
+                $dataEjercicios[]=array($idRutina,$ejercicio->idEjercicio, $ejercicio->reps, $ejercicio->series);
             }
-                foreach($dataServicios as $row){
-                    
-                    $valores=implode(',', $row);
-                    $sql = "INSERT INTO planservicio VALUES(".$valores.");";
-                    $vResultado = $this->enlace->executeSQL_DML($sql);
-                }
-            //Retornar pelicula
+            foreach($dataEjercicios as $row){        
+                $valores=implode(',', $row);
+                $sql = "INSERT INTO rutinaejercicio VALUES(".$valores.");";
+                $vResultado = $this->enlace->executeSQL_DML($sql);
+            }
+            //Retornar rutina
             return $this->get($idRutina);
 		} catch ( Exception $e ) {
 			die ( $e->getMessage () );
@@ -178,23 +177,23 @@ class RutinaModel
     }
     public function update($objeto) {
         try {
-            var_dump($objeto);
-            $vSql = "DELETE from planservicio where idplan = $objeto->idPlan;";
+            $vSql = "DELETE from rutinaejercicio where IdRutina = $objeto->idRutina;";
             //Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML( $vSql);
             //Consulta sql
-			$vSql = "UPDATE plan SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion', Precio = 0 Where idPlan=$objeto->idPlan";
+			$vSql = "UPDATE rutina SET Nombre ='$objeto->Nombre', idServicio = '$objeto->idServicio', Descripcion = '$objeto->Descripcion' Where idrutina=$objeto->idRutina";
             //Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML( $vSql);
-            
-            foreach( $objeto->servicios as $servicio){
-                $dataServicios[]=array($objeto->idPlan,$servicio);
+            //--- Ejercicios ---
+            //Crear elementos a insertar en rutinaejercicio
+            foreach( $objeto->ejercicios as $ejercicio){
+                $dataEjercicios[]=array($objeto->idRutina,$ejercicio->idEjercicio, $ejercicio->reps, $ejercicio->series);
             }
-                foreach($dataServicios as $row){
-                    $valores=implode(',', $row);
-                    $sql = "INSERT INTO planservicio VALUES(".$valores.");";
-                    $vResultado = $this->enlace->executeSQL_DML($sql);
-                }
+            foreach($dataEjercicios as $row){        
+                $valores=implode(',', $row);
+                $sql = "INSERT INTO rutinaejercicio VALUES(".$valores.");";
+                $vResultado = $this->enlace->executeSQL_DML($sql);
+            }
 
             // Retornar el objeto actualizado
             return $this->get($objeto->idRutina);
