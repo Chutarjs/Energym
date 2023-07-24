@@ -7,16 +7,15 @@ import { FormHelperText } from "@mui/material";
 import { useForm, Controller, useFieldArray } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import AddIcon from "@mui/icons-material/Add";
-import Tooltip from "@mui/material/Tooltip";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 // eslint-disable-next-line no-unused-vars
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import EjercicioService from "../../services/EjercicioService";
-import { EjerciciosForm } from "./EjericiciosForm";
+import { EjerciciosForm } from "./EjerciciosForm";
 import RutinaService from "../../services/RutinaService";
+import { SelectServicios } from "./SelectServicios";
+import ServicioService from "../../services/ServicioService";
 import { toast } from "react-hot-toast";
 
 export function FormRutina() {
@@ -29,28 +28,25 @@ export function FormRutina() {
   const [values, setValues] = useState(null);
   // Esquema de validación
   const rutinaSchema = yup.object({
-    nombre: yup
+    Nombre: yup
       .string()
       .required("El nombre es requerido")
       .min(3, "El nombre debe tener al menos 3 caracteres"),
     servicio: yup.string().required("El servicio es requerido"),
-    descripcion: yup
-      .string()
-      .required("La descripcion es requerida"),
+    Descripcion: yup.string().required("La descripcion es requerida"),
     ejercicios: yup.array().typeError("Seleccione al menos un ejercicio"),
   });
 
   const {
     control,
     handleSubmit,
-    setValue,
     formState: { errors },
   } = useForm({
     // Valores iniciales
     defaultValues: {
-      nombre: "",
+      Nombre: "",
       servicio: "",
-      descripcion: "",
+      Descripcion: "",
       ejercicios: [
         {
           idEjercicio: 0,
@@ -64,6 +60,7 @@ export function FormRutina() {
     // Asignación de validaciones
     resolver: yupResolver(rutinaSchema),
   });
+
   // useFieldArray:
   // relaciones de muchos a muchos, con más campos además
   // de las llaves primaras
@@ -172,6 +169,24 @@ export function FormRutina() {
     }
   }, [id]);
 
+  //Lista de servicios
+  const [dataServicios, setDataServicios] = useState({});
+  const [loadedServicios, setLoadedServicios] = useState(false);
+  useEffect(() => {
+    ServicioService.getServicios()
+      .then((response) => {
+        console.log(response);
+        setDataServicios(response.data.results);
+        setLoadedServicios(true);
+      })
+      .catch((error) => {
+        if (error instanceof SyntaxError) {
+          console.log(error);
+          throw new Error("Respuesta no válida del servidor");
+        }
+      });
+  }, [esCrear]);
+
   //Lista de ejercicios
   const [dataEjercicios, setDataEjercicios] = useState({});
   const [loadedEjercicios, setLoadedEjercicios] = useState(false);
@@ -189,6 +204,7 @@ export function FormRutina() {
         }
       });
   }, [esCrear]);
+
   //Respuesta del API al crear o actualizar
   useEffect(() => {
     if (responseData != null) {
@@ -222,30 +238,42 @@ export function FormRutina() {
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               <Controller
-                name="nombre" // Updated name attribute
+                name="Nombre" // Updated name attribute
                 control={control}
-                defaultValue={values.nombre} // Set the default value
+                defaultValue={values.Nombre} // Set the default value
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    id="nombre"
+                    id="Nombre"
                     label="Nombre"
-                    error={Boolean(errors.nombre)}
-                    helperText={errors.nombre ? errors.nombre.message : " "}
+                    error={Boolean(errors.Nombre)}
+                    helperText={errors.Nombre ? errors.Nombre.message : " "}
                   />
                 )}
               />
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={4}>
-            {/* Other form controls... */}
+            <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
+              <Controller
+                name="Descripcion" // Updated name attribute
+                control={control}
+                defaultValue={values.Descripcion} // Set the default value
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    id="Descripcion"
+                    label="Descripcion"
+                    error={Boolean(errors.Descripcion)}
+                    helperText={
+                      errors.Descripcion ? errors.Descripcion.message : " "
+                    }
+                  />
+                )}
+              />
+            </FormControl>
           </Grid>
-          <Grid item xs={12} sm={4}>
-            {/* Other form controls... */}
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            {/* Other form controls... */}
-          </Grid>
+
           <Grid item xs={12} sm={4}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
               {loadedEjercicios && ( // Correct the variable name here
@@ -271,7 +299,22 @@ export function FormRutina() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              {/* Other form controls... */}
+              {loadedServicios && (
+              <Controller
+                name="servicio" // Updated name attribute
+                control={control}
+                defaultValue={values.servicio} // Set the default value
+                render={({ field }) => (
+                  <SelectServicios // Pass the appropriate data prop
+                    field={field}
+                    data={dataServicios} // Use the correct data for services
+                  />
+                )}
+              />
+              )}
+              <FormHelperText sx={{ color: "#d32f2f" }}>
+                {errors.servicio ? errors.servicio.message : " "}
+              </FormHelperText>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={12}>
