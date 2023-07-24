@@ -14,6 +14,18 @@ class RutinaService {
     getRutinaDetalle(Id){
         return axios.get(BASE_URL + '/getRutinaDetalle/' + Id);
     }
+
+    createRutina(Rutina){
+        return axios.post(BASE_URL, Rutina);
+    }
+
+    getRutinaFormById(RutinaId){
+        return axios.get(BASE_URL + '/getForm/' + RutinaId);
+    }
+
+    updateRutina(Rutina){
+        return axios.put(BASE_URL, Rutina);
+    }
 }
 
 export default new RutinaService()

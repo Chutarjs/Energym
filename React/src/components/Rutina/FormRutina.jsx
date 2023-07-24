@@ -28,24 +28,18 @@ export function FormRutina() {
   // Valores a precarga al actualizar
   const [values, setValues] = useState(null);
   // Esquema de validación
-  const movieSchema = yup.object({
-    title: yup
+  const rutinaSchema = yup.object({
+    nombre: yup
       .string()
-      .required("El título es requerido")
-      .min(3, "El título debe tener 3 caracteres"),
-    time: yup.string().required("Los minutos son requerido"),
-    year: yup
-      .number()
-      .typeError("Solo acepta números")
-      .required("El año es requerido")
-      .positive("Solo acepta números positivos"),
-    lang: yup
+      .required("El nombre es requerido")
+      .min(3, "El nombre debe tener al menos 3 caracteres"),
+    servicio: yup.string().required("El servicio es requerido"),
+    descripcion: yup
       .string()
-      .required("El idioma es requerido")
-      .min(3, "El idioma debe tener 3 caracteres"),
-    genres: yup.array().typeError("Seleccione un genero"),
-    actors: yup.array().typeError("Seleccione un actor"),
+      .required("La descripcion es requerida"),
+    ejercicios: yup.array().typeError("Seleccione al menos un ejercicio"),
   });
+
   const {
     control,
     handleSubmit,
@@ -54,42 +48,42 @@ export function FormRutina() {
   } = useForm({
     // Valores iniciales
     defaultValues: {
-      title: "",
-      year: "",
-      lang: "",
-      time: "",
-      genres: [], //''
-      actors: [
+      nombre: "",
+      servicio: "",
+      descripcion: "",
+      ejercicios: [
         {
-          actor_id: "",
-          role: "",
+          idEjercicio: 0,
+          reps: 0,
+          series: 0,
         },
       ],
     },
     // valores a precargar
     values,
     // Asignación de validaciones
-    resolver: yupResolver(movieSchema),
+    resolver: yupResolver(rutinaSchema),
   });
   // useFieldArray:
   // relaciones de muchos a muchos, con más campos además
   // de las llaves primaras
   const { fields, append, remove } = useFieldArray({
     control, //controls proviene de useForm
-    name: "actors", //nombre único para el campo Array
+    name: "ejercicios", //nombre único para el campo Array
   });
-  // Eliminar actor de listado
-  const removeActor = (index) => {
+  // Eliminar ejercicio de listado
+  const removeEjercicio = (index) => {
     if (fields.length === 1) {
       return;
     }
     remove(index);
   };
   // Agregar un nuevo actor
-  const addNewActor = () => {
+  const addNewEjercicio = () => {
     append({
-      actor_id: "",
-      role: "",
+      idEjercicio: 0,
+      reps: 0,
+      series: 0,
     });
   };
   // Valores de formulario que llena el usuario
@@ -128,7 +122,7 @@ export function FormRutina() {
     if (start) {
       if (esCrear) {
         //Crear pelicula
-        MovieService.createMovie(formData)
+        RutinaService.createMovie(formData)
           .then((response) => {
             console.log(response);
             setResponseData(response.data.results);
