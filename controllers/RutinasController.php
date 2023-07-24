@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-//class Plan
+//class Rutina
 class Rutinas
 {
     //Listar en el API
@@ -98,5 +98,78 @@ class Rutinas
             $json['results'],
             http_response_code($json["status"])
         );
+    }
+    //GET Obtener con formato para formulario
+    public function getForm($idRutina){   
+        //Instancia del modelo     
+        $rutina=new RutinaModel();
+        $json=array(
+            'status'=>400,
+            'results'=>"Solicitud sin identificador"
+        );
+        //Verificar párametro
+        if(isset($idRutina) && !empty($idRutina) && $idRutina!=='undefined' && $idRutina!=='null'){
+            //Acción del modelo a ejecutar
+            $response=$rutina->getForm($idRutina);
+            //Verificar respuesta
+            if(isset($response) && !empty($response)){
+                //Armar el json
+                $json=array(
+                    'status'=>200,
+                    'results'=>$response
+                );
+            }else{
+                $json=array(
+                    'status'=>400,
+                    'results'=>"No existe el recurso solicitado"
+                );
+            }
+           
+        }
+        //Escribir respuesta JSON con código de estado HTTP
+        echo json_encode($json,
+            http_response_code($json["status"])
+        ); 
+    }
+     
+    public function create( ){
+        $inputJSON=file_get_contents('php://input');
+        $object = json_decode($inputJSON); 
+        $genero=new RutinaModel();
+        $response=$genero->create($object);
+        if(isset($response) && !empty($response)){
+            $json=array(
+                'status'=>200,
+                'results'=>"Rutina Creado Correctamente!"
+            );
+        }else{
+            $json=array(
+                'status'=>400,
+                'results'=>"No hay registros"
+            );
+        }
+        echo json_encode($json,
+        http_response_code($json["status"]));
+        
+    }
+    public function update(){
+        $inputJSON=file_get_contents('php://input');
+        $object = json_decode($inputJSON); 
+        $genero=new RutinaModel();
+        $response=$genero->update($object);
+        if(isset($response) && !empty($response)){
+            $json=array(
+                'status'=>200,
+                'results'=>"Rutina Actualizado Correctamente!"
+            );
+        }else{
+            $json=array(
+                'status'=>400,
+                'results'=>"No hay registros"
+            );
+        }
+        echo json_encode($json,
+        http_response_code($json["status"]));
+        
     }
 }
