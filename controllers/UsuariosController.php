@@ -4,11 +4,11 @@ require_once "vendor/autoload.php";
 use Firebase\JWT\JWT;
 //class User
 class user{
-    private $secret_key = 'e0d17975bc9bd57eee132eecb6da6f11048e8a88506cc3bffc7249078cf2a77a';
+    private $secret_key = 'eaa0346b3b8db8d7ecd1b1e0b6a9264acb054290a8b0777bdb1d0ffba36856e4';
     //Listar en el API
     public function index(){
         //Obtener el listado del Modelo
-        $usuario=new UserModel();
+        $usuario=new UsuariosModel();
         $response=$usuario->all();
         //Si hay respuesta
         if(isset($response) && !empty($response)){
@@ -29,7 +29,7 @@ class user{
     }
     public function get($param){
         
-        $usuario=new UserModel();
+        $usuario=new UsuariosModel();
         $response=$usuario->get($param);
         $json=array(
             'status'=>200,
@@ -44,7 +44,7 @@ class user{
         
         $inputJSON=file_get_contents('php://input');
         $object = json_decode($inputJSON); 
-        $usuario=new UserModel();
+        $usuario=new UsuariosModel();
         $response=$usuario->login($object);
         if(isset($response) && !empty($response) && $response!=false){
             // Datos que desea incluir en el token JWT
@@ -72,7 +72,7 @@ class user{
     public function create( ){
         $inputJSON=file_get_contents('php://input');
         $object = json_decode($inputJSON); 
-        $usuario=new UserModel();
+        $usuario=new UsuariosModel();
         $response=$usuario->create($object);
         if(isset($response) && !empty($response)){
             $json=array(

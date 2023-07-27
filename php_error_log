@@ -3418,3 +3418,507 @@
 [24-Jul-2023 07:12:38 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
 [24-Jul-2023 07:12:38 Europe/Berlin] PHP   4. Rutinas->update() C:\xampp\htdocs\Energym\routes\routes.php:62
 [24-Jul-2023 07:12:38 Europe/Berlin] PHP   5. RutinaModel->update($objeto = class stdClass { public $ejercicios = [0 => class stdClass { ... }]; public $idServicio = 4; public $Descripcion = 'Prueba Creacion'; public $Nombre = 'Prueba'; public $idrutina = '7' }) C:\xampp\htdocs\Energym\controllers\RutinasController.php:159
+[27-Jul-2023 23:33:33 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:33 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:33:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:33:33 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:33:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:33 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:33 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:33:33 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:33:33 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:33:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:37 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:37 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:33:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:33:37 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:33:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:37 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:37 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:33:37 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:33:37 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:33:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:54 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:54 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:33:54 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:33:54 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:33:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:55 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:33:55 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:33:55 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:33:55 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:33:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:04 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:04 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:04 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:04 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:04 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:04 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:04 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:04 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:11 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:11 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:11 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:11 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:11 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:11 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:11 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:11 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:20 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:20 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:20 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:20 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:20 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:20 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:20 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:20 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:21 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:21 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:21 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:21 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:22 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:22 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:22 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:22 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:23 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:23 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:23 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:23 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:23 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:23 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:24 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:24 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:24 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:25 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:25 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:25 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:25 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:26 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:26 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:26 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:26 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:26 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:34:26 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:34:26 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:34:26 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:34:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:06 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:06 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:06 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:06 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:06 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:06 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:06 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:06 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:09 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:09 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:09 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:09 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:09 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:09 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:09 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:09 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:11 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:11 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:11 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:11 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:12 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:12 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:12 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:12 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:21 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:21 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:21 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:21 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:22 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:22 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:22 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:22 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:22 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:22 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:22 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:22 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:23 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:23 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:23 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:23 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:23 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:23 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:24 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:24 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:24 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:50 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:50 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:50 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:50 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:35:50 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:35:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:35:50 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:35:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:10 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:10 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:10 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:10 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:11 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:11 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:11 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:11 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:12 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:12 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:12 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:12 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:12 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:12 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:12 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:12 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:14 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:14 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:14 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:14 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:15 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:15 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:15 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:15 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:16 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:16 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:16 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:17 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:17 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:17 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:17 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:19 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:19 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:19 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:19 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:19 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:19 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:19 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:19 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:22 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:22 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:22 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:22 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:22 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:22 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:22 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:22 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:23 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:23 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:23 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:23 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:23 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:23 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:24 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:36:24 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:36:24 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:36:24 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:36:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:37:40 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:37:40 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:37:40 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:37:40 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:37:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:37:41 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:37:41 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:37:41 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:37:41 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:37:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:37:43 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:37:43 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:37:43 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:37:43 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:37:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:37:43 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
+[27-Jul-2023 23:37:43 Europe/Berlin] PHP Stack trace:
+[27-Jul-2023 23:37:43 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[27-Jul-2023 23:37:43 Europe/Berlin] PHP   2. require_once() C:\xampp\htdocs\Energym\index.php:28
+[27-Jul-2023 23:37:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Energym\controllers\UsuariosController.php:3
+Stack trace:
+#0 C:\xampp\htdocs\Energym\index.php(28): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\Energym\controllers\UsuariosController.php on line 3
