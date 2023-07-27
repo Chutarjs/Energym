@@ -32,6 +32,7 @@ class UsuariosModel
 			$vSql = "SELECT * FROM usuario where id=$id";
 			//Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL($vSql);
+
 			if ($vResultado) {
 				$vResultado = $vResultado[0];
 				$rol = $rolM->getRolUser($id);
@@ -45,6 +46,7 @@ class UsuariosModel
 			die($e->getMessage());
 		}
 	}
+	
 	public function login($objeto)
 	{
 		try {

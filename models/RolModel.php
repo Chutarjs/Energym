@@ -2,10 +2,9 @@
 class RolModel{
     public $enlace;
     public function __construct() {
-        
-        $this->enlace=new MySqlConnect();
-       
+        $this->enlace=new MySqlConnect();       
     }
+
     public function all(){
         try {
             //Consulta sql
@@ -37,9 +36,9 @@ class RolModel{
     public function getRolUser($idUser){
         try {
             //Consulta sql
-			$vSql = "SELECT r.idTipoUsuario, r.Nombre
+			$vSql = "SELECT r.IdTipoUsuario, r.Nombre
             FROM tipousuario r, usuario u 
-            where r.id=u.rol_id and u.id=$idUser";
+            where r.IdTipoUsuario=u.IdTipoUsuario and u.id=$idUser";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ( $vSql);

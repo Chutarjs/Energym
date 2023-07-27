@@ -33,12 +33,10 @@ class Usuario
     }
     public function get($param)
     {
-
         $usuario = new UsuariosModel();
         $response = $usuario->get($param);
         $json = array(
             'status' => 200,
-            'total' => count($response),
             'results' => $response
         );
         echo json_encode(

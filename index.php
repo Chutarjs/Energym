@@ -21,6 +21,8 @@ require_once "models/UsuariosModel.php";
 require_once "models/EjercicioModel.php";
 require_once "models/PagoModel.php";
 require_once "models/ServicioModel.php";
+require_once "models/RolModel.php";
+require_once "models/UsuariosModel.php";
 
 /***--- Agregar todos los controladores*/
 require_once "controllers/PlanController.php";
@@ -30,6 +32,7 @@ require_once "controllers/ActividadesGrupalesController.php";
 require_once "controllers/EjercicioController.php";
 require_once "controllers/PagoController.php";
 require_once "controllers/ServicioController.php";
+require_once "controllers/UsuariosController.php";
 
 //Enrutador
 //RoutesController.php
