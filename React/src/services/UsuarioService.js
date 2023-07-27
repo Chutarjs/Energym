@@ -1,16 +1,20 @@
 import axios from 'axios';
-const BASE_URL = import.meta.env.VITE_BASE_URL+"genre"
+const BASE_URL = "localhost:81/Energym/Usuarios"
 
-class GenreService {
+class UserService {
 
-    getGenres(){
+    getUsers(){
         return axios.get(BASE_URL);
     }
-
-    getGenreById(GenreId){
-        return axios.get(BASE_URL + '/' + GenreId);
+    getUserById(UserId){
+        return axios.get(BASE_URL + '/' + UserId);
+    }
+    createUser(User){
+        return axios.post(BASE_URL, User);
+    }
+    loginUser(User){
+        return axios.post(BASE_URL+ '/login/', User);
     }
 }
 
-export default new GenreService()
-
+export default new UserService()
