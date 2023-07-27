@@ -21,6 +21,7 @@ import {DetailServicio} from './components/Servicios/DetailServicio'
 import { TableEjercicio } from './components/Ejercicio/TableEjercicio'
 import { FormEjercicio } from './components/Ejercicio/FormEjercicio'
 import { DetailEjercicio } from './components/Ejercicio/DetailEjercicio'
+import { Unauthorized } from './components/Usuarios/Unauthorized'
 import { Login } from './components/Usuarios/Login'
 import { Signup } from './components/Usuarios/Signup'
 import UserProvider from './components/Usuarios/UserProvider'
@@ -135,6 +136,10 @@ const router=createBrowserRouter([
   {
     path:'/user/signup',
     element: <Signup/>
+  },
+  {
+    path:'/unauthorized',
+    element: <Unauthorized />
   },
 ])
 
