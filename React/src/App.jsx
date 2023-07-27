@@ -4,7 +4,7 @@ import './App.css'
 import { Layout } from './components/Layout/Layout'
 import { Home } from './components/Home/Home'
 import { ListPlanes } from './components/Plan/ListPlanes'
-import { DetailMovie } from './components/Plan/DetailPlan'
+import { DetailPlan } from './components/Plan/DetailPlan'
 import TablePlan from './components/Plan/TablePlan'
 import { FormPlan } from './components/Plan/FormPlan'
 import { ListRutinas } from './components/Rutina/ListRutinas'
@@ -21,113 +21,131 @@ import {DetailServicio} from './components/Servicios/DetailServicio'
 import { TableEjercicio } from './components/Ejercicio/TableEjercicio'
 import { FormEjercicio } from './components/Ejercicio/FormEjercicio'
 import { DetailEjercicio } from './components/Ejercicio/DetailEjercicio'
+import { Login } from './components/Usuarios/Login'
+import { Signup } from './components/Usuarios/Signup'
+import UserProvider from './components/Usuarios/UserProvider'
+import { Auth } from './components/Usuarios/Auth'
 
 const router=createBrowserRouter([
   {
     path:'/',
     element: <Home />
   },
+  {path: '/',
+  element: <Auth allowedRoles={['Administrador', 'Empleado']} />,
+  children:[
+    {
+      path:'/plan-table',
+      element: <TablePlan />
+    },
+    {
+      path: 'planes/create/',
+      element: <FormPlan/>
+    },
+    {
+      path: 'planes/update/:id',
+      element: <FormPlan/>
+    },
+    {
+      path:'/rutina-table',
+      element: <TableRutina />
+    },
+    {
+      path: 'rutina/create/',
+      element: <FormRutina/>
+    },
+    {
+      path: 'rutina/update/:id',
+      element: <FormRutina/>
+    },
+    {
+      path:'/actividad-table',
+      element: <TableActividad />
+    },
+    {
+      path: 'actividad/create/',
+      element: <FormActividad/>
+    },
+    {
+      path: 'actividad/update/:id',
+      element: <FormActividad/>
+    },
+    {
+      path:'/servicio-table',
+      element: <TableServicio/>
+    },
+    {
+      path: 'servicio/create/',
+      element: <FormServicio/>
+    },
+    {
+      path: 'servicio/update/:id',
+      element: <FormServicio/>
+    },
+    {
+      path:'/ejercicio-table',
+      element: <TableEjercicio/>
+    },
+    {
+      path: 'ejercicio/create/',
+      element: <FormEjercicio/>
+    },
+    {
+      path: 'ejercicio/update/:id',
+      element: <FormEjercicio/>
+    },
+    {
+      path:'/servicio/:id',
+      element: <DetailServicio />
+    },
+  ]},
+
   {
     path:'/planes/',
     element: <ListPlanes/>
   },
   {
-    path:'/plan-table',
-    element: <TablePlan />
-  },
-  {
-    path: 'planes/create/',
-    element: <FormPlan/>
-  },
-  {
     path:'/planes/:id',
-    element: <DetailMovie />
-  },
-  {
-    path: 'planes/update/:id',
-    element: <FormPlan/>
+    element: <DetailPlan />
   },
   {
     path:'/rutinas/',
     element: <ListRutinas/>
   },
   {
-    path:'/rutina-table',
-    element: <TableRutina />
-  },
-  {
-    path: 'rutina/create/',
-    element: <FormRutina/>
-  },
-  {
     path:'/rutina/:id',
     element: <DetailRutina />
   },
   {
-    path: 'rutina/update/:id',
-    element: <FormRutina/>
-  },{
     path:'/actividades/',
     element: <ListActividades/>
-  },
-  {
-    path:'/actividad-table',
-    element: <TableActividad />
-  },
-  {
-    path: 'actividad/create/',
-    element: <FormActividad/>
   },
   {
     path:'/actividades/:id',
     element: <DetailActividad />
   },
   {
-    path: 'actividad/update/:id',
-    element: <FormActividad/>
-  },
-  {
-    path:'/servicio-table',
-    element: <TableServicio/>
-  },
-  {
-    path: 'servicio/create/',
-    element: <FormServicio/>
-  },
-  {
-    path: 'servicio/update/:id',
-    element: <FormServicio/>
-  },
-  {
-    path:'/servicio/:id',
-    element: <DetailServicio />
-  },
-  {
-    path:'/ejercicio-table',
-    element: <TableEjercicio/>
-  },
-  {
-    path: 'ejercicio/create/',
-    element: <FormEjercicio/>
-  },
-  {
-    path: 'ejercicio/update/:id',
-    element: <FormEjercicio/>
-  },
-  {
     path:'/ejercicio/:id',
     element: <DetailEjercicio/>
+  },
+  {
+    path:'/user/login',
+    element: <Login/>
+  },
+  {
+    path:'/user/signup',
+    element: <Signup/>
   },
 ])
 
 function App() {
  
   return (
-    <>
+    <UserProvider>
       <Layout>
         <RouterProvider router={router} />
       </Layout>
-    </>
+    </UserProvider>
   )
 }
 

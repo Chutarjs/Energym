@@ -10,7 +10,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemButton from '@mui/material/ListItemButton';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
-export function DetailMovie () {
+export function DetailPlan () {
   const [data, setData]=useState(null);
   // eslint-disable-next-line no-unused-vars
   const [error, setError] =useState('');

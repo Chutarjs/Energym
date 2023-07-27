@@ -1,7 +1,7 @@
 import axios from 'axios';
 const BASE_URL = "localhost:81/Energym/Usuarios"
 
-class UserService {
+class UsuarioService {
 
     getUsers(){
         return axios.get(BASE_URL);
@@ -13,8 +13,8 @@ class UserService {
         return axios.post(BASE_URL, User);
     }
     loginUser(User){
-        return axios.post(BASE_URL+ '/login/', User);
+        return axios.post(BASE_URL+ '/Login/', User);
     }
 }
 
-export default new UserService()
+export default new UsuarioService()
