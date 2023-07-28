@@ -1,19 +1,20 @@
 import axios from 'axios';
-const BASE_URL = "localhost:81/Energym/Usuarios"
+const BASE_URL = "http://localhost:81/Energym/Usuario"
 
 class UsuarioService {
 
     getUsers(){
         return axios.get(BASE_URL);
     }
-    getUserById(UserId){
-        return axios.get(BASE_URL + '/' + UserId);
+    getUserById(UsuarioId){
+        return axios.get(BASE_URL + '/' + UsuarioId);
     }
-    createUser(User){
-        return axios.post(BASE_URL, User);
+    create(Usuario){
+        return axios.post(BASE_URL, Usuario);
     }
-    loginUser(User){
-        return axios.post(BASE_URL+ '/Login/', User);
+    login(Usuario){
+        console.log(Usuario);
+        return axios.post(BASE_URL+ '/login/', Usuario);
     }
 }
 

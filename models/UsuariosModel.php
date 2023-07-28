@@ -50,13 +50,13 @@ class UsuariosModel
 	public function login($objeto)
 	{
 		try {
-			$vSql = "SELECT * from usuario where Email='$objeto->email'";
+			$vSql = "SELECT * from usuario where Email='$objeto->Email'";
 
 			//Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL($vSql);
 			if (is_object($vResultado[0])) {
 				$user = $vResultado[0];
-				if (password_verify($objeto->Contrasenna, $user->Contrasenna)) {
+				if (password_verify($objeto->Password, $user->Contrasenna)) {
 					return $this->get($user->id);
 				}
 			} else {
@@ -70,15 +70,15 @@ class UsuariosModel
 	public function create($objeto)
 	{
 		try {
-			if (isset($objeto->Contrasenna) && $objeto->Contrasenna != null) {
-				$crypt = password_hash($objeto->Contrasenna, PASSWORD_BCRYPT);
-				$objeto->Contrasenna = $crypt;
+			if (isset($objeto->Password) && $objeto->Password != null) {
+				$crypt = password_hash($objeto->Password, PASSWORD_DEFAULT);
+				$objeto->Password = $crypt;
 			}
 			$currentDate = date('Y-m-d');
 			//Consulta sql            
 			$vSql = "Insert into usuario (id, Nombre, Apellidos, Email, Contrasenna, Genero, Nacimiento, Telefono, Moroso, Activo, IdTipoUsuario, FechaInscripcion)" .
-				" Values ('$objeto->id','$objeto->Nombre','$objeto->Apellidos', '$objeto->Email', '$objeto->Contrasenna', '$objeto->Genero', '$objeto->Nacimiento', '$objeto->Telefono', 
-			'0', '1', '$objeto->idTipoUsuario', '$currentDate')";
+				" Values ('$objeto->id','$objeto->Nombre','$objeto->Apellidos', '$objeto->Email', '$objeto->Password', '$objeto->Genero', '$objeto->Nacimiento', '$objeto->Telefono', 
+			'0', '1', '1', '$currentDate')";
 
 			//Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML_last($vSql);

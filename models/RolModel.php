@@ -33,6 +33,7 @@ class RolModel{
 			die ( $e->getMessage () );
 		}
     }
+    
     public function getRolUser($idUser){
         try {
             //Consulta sql

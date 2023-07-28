@@ -88,6 +88,7 @@ export function FormPlan() {
     if (start) {
       if (esCrear) {
         // Crear plan
+        console.log(formData);
         PlanService.createPlan(formData)
           .then((response) => {
             setResponseData(response.data.results);

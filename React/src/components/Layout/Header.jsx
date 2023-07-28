@@ -13,10 +13,21 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import { Button, MenuList } from "@mui/material";
 import SportsGymnasticsIcon from "@mui/icons-material/SportsGymnastics";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { UserContext } from "../../context/UserContext";
+import { useState, useContext, useEffect } from 'react';
 
 function Header() {
+  //Gestión de Usuario
+  const {user,decodeToken, autorize} =useContext(UserContext)
+  const [userData,setUserData]=useState(decodeToken())
+
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorElMant, setAnchorElMant] = React.useState(null);
+
+  //Actualizar valor de usuario actual
+  useEffect(()=>{
+    setUserData(decodeToken())
+  },[decodeToken,user])
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
@@ -29,6 +40,13 @@ function Header() {
   };
   const handleCloseMantMenu = () => {
     setAnchorElMant(null);
+  };
+  const isAuthorizedUser = () => {
+    // Check if the user has the required roles (Administrador or Empleado)
+    return (
+      user &&
+      autorize({ allowedRoles: ["Administrador", "Empleado"] }) // Adjust roles as needed
+    );
   };
 
   return (
@@ -138,48 +156,54 @@ function Header() {
           </Typography>
           
           {/* Menu Mantenimientos */}
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Informacion">
-              <IconButton onClick={handleOpenMantMenu} sx={{ p: 1 }}>
-                <FitnessCenterIcon style={{ fill: "white" }} />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElMant}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElMant)}
-              onClose={handleCloseMantMenu}
-            >
-              <MenuList>
-                <MenuItem component="a" href="/plan-table/">
-                  <Typography textAlign="center">Planes</Typography>
-                </MenuItem>
-                <MenuItem component="a" href="/rutina-table/">
-                  <Typography textAlign="center">Rutinas</Typography>
-                </MenuItem>
-                <MenuItem component="a" href="/actividad-table/">
-                  <Typography textAlign="center">Actividades Grupales</Typography>
-                </MenuItem>
-                <MenuItem component="a" href="/ejercicio-table/">
-                  <Typography textAlign="center">Ejercicios</Typography>
-                </MenuItem>
-                <MenuItem component="a" href="/servicio-table/">
-                  <Typography textAlign="center">Servicios</Typography>
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Box>
-          {/* Menu Mantenimientos */}
+    <Box sx={{ flexGrow: 0 }}>
+      {isAuthorizedUser() && (
+        <Tooltip title="Informacion">
+          <IconButton onClick={handleOpenMantMenu} sx={{ p: 1 }}>
+            <FitnessCenterIcon style={{ fill: "white" }} />
+          </IconButton>
+        </Tooltip>
+      )}
+      {isAuthorizedUser() && (
+        <Menu
+          sx={{ mt: "45px" }}
+          id="menu-appbar"
+          anchorEl={anchorElMant}
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "right",
+          }}
+          keepMounted
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "right",
+          }}
+          open={Boolean(anchorElMant)}
+          onClose={handleCloseMantMenu}
+        >
+          {isAuthorizedUser() && (
+            <MenuList>
+              <MenuItem component="a" href="/plan-table/">
+                <Typography textAlign="center">Planes</Typography>
+              </MenuItem>
+              <MenuItem component="a" href="/rutina-table/">
+                <Typography textAlign="center">Rutinas</Typography>
+              </MenuItem>
+              <MenuItem component="a" href="/actividad-table/">
+                <Typography textAlign="center">Actividades Grupales</Typography>
+              </MenuItem>
+              <MenuItem component="a" href="/ejercicio-table/">
+                <Typography textAlign="center">Ejercicios</Typography>
+              </MenuItem>
+              <MenuItem component="a" href="/servicio-table/">
+                <Typography textAlign="center">Servicios</Typography>
+              </MenuItem>
+            </MenuList>
+          )}
+        </Menu>
+      )}
+    </Box>
+    {/* Menu Mantenimientos */}
           
           {/* Menu Usuarios */}
           <Box sx={{ flexGrow: 0, marginLeft: "auto" }}>
@@ -204,14 +228,29 @@ function Header() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
+
+              {!userData &&( 
               <MenuList>
-                <MenuItem component="a" href="/user/login">
-                  <Typography textAlign="center">Iniciar Sesion</Typography>
+                <MenuItem component='a' href='/user/login'>
+                  <Typography textAlign="center">Login</Typography>
                 </MenuItem>
-                <MenuItem component="a" href="/user/create">
+                <MenuItem component='a' href='/user/create'>
                   <Typography textAlign="center">Registrarse</Typography>
                 </MenuItem>
               </MenuList>
+              )}
+               {userData &&( 
+                <MenuList>
+                <MenuItem>
+                  <Typography variant='subtitle1' gutterBottom>
+                    {userData?.email}
+                  </Typography>
+                </MenuItem>
+                <MenuItem color='secondary' component='a' href='/user/logout'>
+                  <Typography textAlign='center'>Logout</Typography>
+                </MenuItem>
+              </MenuList>
+          )}
             </Menu>
           </Box>
 

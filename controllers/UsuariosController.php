@@ -1,15 +1,12 @@
 <?php
 //Cargar todos los paquetes
-require_once "vendor/autoload.php";
-
+require_once "./vendor/autoload.php";
 use Firebase\JWT\JWT;
 //class User
-class Usuario
-{
+class Usuario{
     private $secret_key = 'eaa0346b3b8db8d7ecd1b1e0b6a9264acb054290a8b0777bdb1d0ffba36856e4';
     //Listar en el API
-    public function index()
-    {
+    public function index(){
         //Obtener el listado del Modelo
         $usuario = new UsuariosModel();
         $response = $usuario->all();
@@ -46,7 +43,6 @@ class Usuario
     }
     public function login()
     {
-
         $inputJSON = file_get_contents('php://input');
         $object = json_decode($inputJSON);
         $usuario = new UsuariosModel();
@@ -55,7 +51,7 @@ class Usuario
             // Datos que desea incluir en el token JWT
             $data = [
                 'id' => $response->id,
-                'email' => $response->email,
+                'email' => $response->Email,
                 'rol' => $response->rol,
             ];
             // Generar el token JWT 
