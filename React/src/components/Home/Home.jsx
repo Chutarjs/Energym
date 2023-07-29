@@ -120,12 +120,7 @@ export function Home() {
               entrenamiento funcional hasta yoga y pilates. Nuestras
               instalaciones están diseñadas pensando en tu comodidad y
               seguridad, proporcionando un entorno limpio y ordenado para que
-              puedas concentrarte en tu entrenamiento. Además, ofrecemos
-              programas de nutrición personalizados para ayudarte a complementar
-              tus esfuerzos en el gimnasio y alcanzar una alimentación
-              equilibrada. Creemos en el enfoque integral hacia la salud y el
-              fitness, y estamos comprometidos a brindarte el apoyo necesario
-              para que logres un estilo de vida activo y saludable a largo
+              puedas concentrarte en tu entrenamiento.
               plazo. 
             </Typography>
           </CardContent>

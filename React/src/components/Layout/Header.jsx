@@ -26,7 +26,7 @@ function Header() {
 
   //Actualizar valor de usuario actual
   useEffect(()=>{
-    setUserData(decodeToken())
+    setUserData(decodeToken(user))
   },[decodeToken,user])
 
   const handleOpenUserMenu = (event) => {
@@ -44,7 +44,7 @@ function Header() {
   const isAuthorizedUser = () => {
     // Check if the user has the required roles (Administrador or Empleado)
     return (
-      user &&
+      decodeToken(user) &&
       autorize({ allowedRoles: ["Administrador", "Empleado"] }) // Adjust roles as needed
     );
   };

@@ -9,6 +9,7 @@ export default function UserProvider (props) {
   )
 
   const saveUser = (user) => {
+    console.log(user)
     setUser(user)
     localStorage.setItem('user', JSON.stringify(user))
   }
@@ -19,7 +20,6 @@ export default function UserProvider (props) {
   }
   const decodeToken = () => {
     if (user) {
-      // const decodedToken = jwtDecode(user)
       const decodedToken =jwtDecode(user)
       return decodedToken
     } else {
@@ -28,9 +28,11 @@ export default function UserProvider (props) {
   }
   const autorize = ({ allowedRoles }) => {
     const userData = decodeToken()
+    console.log(userData)
+    console.log(allowedRoles)
     if (userData && allowedRoles) {
-      console.log(userData && userData.rol && allowedRoles.includes(userData.rol.name))
-      return userData && userData.rol && allowedRoles.includes(userData.rol.name)
+      console.log(userData && userData.rol && allowedRoles.includes(userData.rol.Nombre))
+      return userData && userData.rol && allowedRoles.includes(userData.rol.Nombre)
     }
     return false
   }
