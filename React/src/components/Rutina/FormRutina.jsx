@@ -225,7 +225,7 @@ export function FormRutina() {
       setValue("Descripcion", data.Descripcion || "");
       setValue("idServicio", data.idServicio || "");
       // Set the ejercicios array values
-      setValue("ejercicios", data.ejercicios || []);
+      setValue("ejercicios", data.ejercicios.map((ejercicio) => ejercicio.idEjercicio) || []);
       setValue("idrutina", data.idrutina || "");
     }
   }, [data, esCrear, setValue]);

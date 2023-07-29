@@ -14,7 +14,6 @@ export function SelectServicios({ field, data }) {
         <InputLabel id='servicios'>Servicios</InputLabel>
         <Select
           {...field}
-          labelId='serviciosId'
           label='servicios'
           multiple
           defaultValue={[]}
@@ -23,7 +22,7 @@ export function SelectServicios({ field, data }) {
           {data &&
             data.map((servicio) => (
               <MenuItem key={servicio.idservicio} value={servicio.idservicio}>
-                {servicio.Nombre}
+                {servicio.idservicio} - {servicio.Nombre}
               </MenuItem>
             ))}
         </Select>

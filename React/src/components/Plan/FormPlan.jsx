@@ -23,6 +23,7 @@ export function FormPlan() {
   const id = routeParams.id || null;
   const esCrear = !id;
   // Valores a precarga al actualizar
+  // eslint-disable-next-line no-unused-vars
   const [values, setValues] = useState(null);
   // Esquema de validación
   const planSchema = yup.object({
@@ -30,8 +31,15 @@ export function FormPlan() {
       .string()
       .required("El Nombre es requerido")
       .min(3, "El Nombre debe tener 3 caracteres"),
-    Descripcion: yup.string().required("La descripcion es requerida"),
-    servicios: yup.array().typeError("Seleccione al menos un servicio"),
+    Descripcion: yup
+      .string()
+      .required("La descripcion es requerida")
+      .min(5, "La descripcion debe tener al menos 5 caracteres"),
+    servicios: yup
+      .array()
+      .required("Seleccione al menos un servicio")
+      .min(1, "Debe seleccionar al menos 1 servicio")
+      .typeError("Seleccione al menos un servicio"),
   });
   const {
     control,
@@ -57,6 +65,7 @@ export function FormPlan() {
   // eslint-disable-next-line no-unused-vars
   const [responseData, setResponseData] = useState(null);
   // Accion: post, put
+  // eslint-disable-next-line no-unused-vars
   const [action, setAction] = useState("POST");
   // Booleano para establecer si se envió la informacion al API
   const [start, setStart] = useState(false);
@@ -135,7 +144,6 @@ export function FormPlan() {
     if (id != undefined && !isNaN(Number(id))) {
       PlanService.getPlanFormById(id)
         .then((response) => {
-          console.log(response);
           setData(response.data.results);
           setError(response.error);
         })
@@ -146,12 +154,7 @@ export function FormPlan() {
           }
         });
     }
-  }, [id]);
-
-  //Lista de servicios
-  const [dataServicios, setDataServicios] = useState({});
-  const [loadedServicios, setLoadedServicios] = useState(false);
-  useEffect(() => {
+    // Cargar los datos de los servicios siempre, no importa si esCrear es true o false.
     ServicioService.getServicios()
       .then((response) => {
         setDataServicios(response.data.results);
@@ -163,15 +166,22 @@ export function FormPlan() {
           throw new Error("Respuesta no válida del servidor");
         }
       });
-  }, [esCrear]);
+  }, [id]);
+
+  //Lista de servicios
+  const [dataServicios, setDataServicios] = useState({});
+  const [loadedServicios, setLoadedServicios] = useState(false);
 
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
-      setValues(data);
-      console.log(data);
+      // Set the main form values
+      setValue("Nombre", data.Nombre || "");
+      setValue("Descripcion", data.Descripcion || "");
+      // Set the ejercicios array values
+      setValue("servicios", data.servicios.map((servicio) => servicio.idServicio) || []);
     }
-  }, [data, esCrear, action]);
+  }, [data, esCrear, setValue]);
 
   return (
     <>
@@ -193,8 +203,8 @@ export function FormPlan() {
                     {...field}
                     id="Nombre"
                     label="Nombre"
-                    error={Boolean(errors.Nombre)} 
-                    helperText={errors.Nombre ? errors.Nombre.message : " "} 
+                    error={Boolean(errors.Nombre)}
+                    helperText={errors.Nombre ? errors.Nombre.message : " "}
                   />
                 )}
               />
@@ -210,8 +220,10 @@ export function FormPlan() {
                     {...field}
                     id="Descripcion"
                     label="Descripcion"
-                    error={Boolean(errors.year)}
-                    helperText={errors.year ? errors.year.message : " "}
+                    error={Boolean(errors.Descripcion)}
+                    helperText={
+                      errors.Descripcion ? errors.Descripcion.message : " "
+                    }
                   />
                 )}
               />

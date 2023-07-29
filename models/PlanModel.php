@@ -59,24 +59,21 @@ class PlanModel
     {
         try {
             
-            $servicioM=new ServicioModel();
+            $servicioModel = new ServicioModel();
             //Consulta sql
-			$vSql = "SELECT * FROM Plan where idPlan=$idPlan";
+			$vSql = "SELECT * FROM plan where idPlan=$idPlan";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
-            $vResultado = $vResultado[0];
+            if(!empty($vResultado)){
+                //Obtener objeto
+                $vResultado = $vResultado[0];
 
-            //Lista de servicios del plan
-            $servicios=$servicioM->getServicioPlan($idPlan);
-            //Array con el id de los generos
-            if(!empty($servicios)){
-                $servicios = array_column($servicios, 'idPlan');
-            }else{
-               $servicios=[]; 
+                //---Servicios 
+                $listadoServicios = $servicioModel->getServicioPlan($idPlan);
+                //Asignar servicios al objeto
+                $vResultado->servicios = $listadoServicios;
             }
-            //Propiedad que se va a agregar al objeto
-            $vResultado->servicios=$servicios;
 			// Retornar el objeto
 			return $vResultado;
 		} catch ( Exception $e ) {

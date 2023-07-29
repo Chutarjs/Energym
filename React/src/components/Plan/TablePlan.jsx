@@ -230,7 +230,6 @@ export default function TablePlan () {
   useEffect(()=>{
     PlanService.getPlanes()
     .then( response=>{
-        console.log(response)
         setData(response.data.results)
         setError(response.error)
         setLoaded(true)
@@ -262,7 +261,6 @@ export default function TablePlan () {
     const selectedIndex = selected.indexOf(idPlan)
     let newSelected = []
 
-    console.log(idPlan);
 
     if (selectedIndex === -1) {
       newSelected = newSelected.concat(selected, idPlan)

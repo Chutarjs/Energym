@@ -22,7 +22,7 @@ export function SelectServicios({ field, data }) {
           {data &&
             data.map((servicio) => (
               <MenuItem key={servicio.idservicio} value={servicio.idservicio}>
-                {servicio.idservicio} {" - "} {servicio.Nombre}
+                {servicio.idservicio} - {servicio.Nombre}
               </MenuItem>
             ))}
         </Select>

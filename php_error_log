@@ -4595,3 +4595,10 @@ Stack trace:
 [28-Jul-2023 09:41:21 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
 [28-Jul-2023 09:41:21 Europe/Berlin] PHP   4. Usuario->login('%7BEmail:joecamp@gmail.com\',Password:\'123456\'%7D') C:\xampp\htdocs\Energym\routes\routes.php:69
 [28-Jul-2023 09:41:21 Europe/Berlin] PHP   5. UsuariosModel->login($objeto = NULL) C:\xampp\htdocs\Energym\controllers\UsuariosController.php:49
+[30-Jul-2023 01:21:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\PlanModel.php on line 143
+[30-Jul-2023 01:21:13 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 01:21:13 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[30-Jul-2023 01:21:13 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[30-Jul-2023 01:21:13 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[30-Jul-2023 01:21:13 Europe/Berlin] PHP   4. plan->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[30-Jul-2023 01:21:13 Europe/Berlin] PHP   5. PlanModel->update($objeto = class stdClass { public $Nombre = 'Jesus Rojas Alfaro'; public $Descripcion = 'Prueba Creacion'; public $servicios = [0 => class stdClass { ... }] }) C:\xampp\htdocs\Energym\controllers\PlanController.php:105
