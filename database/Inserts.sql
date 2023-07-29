@@ -8,26 +8,26 @@ values(3, "Trabajador de Energym, puede crear rutinas y ver datos administrativo
 /*Select * from TipoUsuario;*/
 
 /*Insert Cliente*/
-insert into Usuario values (202220221, "Joel", "Campbell", "joecamp@gmail.com", "123456", 1, '1995-01-01', 30303030, 0, 1, 1, '2023-06-01');
-insert into Usuario values (202220222, "Michael", "Barrantes", "michbarra@gmail.com", "123456", 1, '1985-01-01', 30303031, 0, 1, 1, '2023-06-01');
-insert into Usuario values (202220223, "Celso", "Borges", "celsinho@gmail.com", "123456", 1, '1989-01-01', 30303032, 0, 1, 1, '2022-01-01');
-insert into Usuario values (202220224, "Bryan", "Ruiz", "capitan@gmail.com", "123456", 1, '1987-01-01', 30303033, 0, 0, 1, '2020-06-01');
-insert into Usuario values (202220225, "Carlos", "Mora", "moradona@gmail.com", "123456", 1, '2000-01-01', 30303034, 0, 1, 1, '2016-01-01');
-insert into Usuario values (202220226, "Aaron", "Suarez", "aaronsua@gmail.com", "123456", 1, '2003-01-01', 30303035, 0, 1, 1, '2018-01-01');
-insert into Usuario values (202220227, "Leonel", "Moreira", "osito@gmail.com", "123456", 1, '1995-01-01', 30303036, 0, 1, 1, '2020-01-01');
-insert into Usuario values (202220228, "Pablo", "Gabas", "argentina@gmail.com", "123456", 1, '1983-01-01', 30303037, 0, 0, 1, '2005-01-01');
-insert into Usuario values (202220229, "Shirley", "Cruz", "capitana@gmail.com", "123456", 2, '1990-01-01', 30303038, 0, 0, 1, '2019-01-01');
-insert into Usuario values (202220230, "Kenia", "Rangel", "kenia@gmail.com", "123456", 2, '2003-01-01', 30303039, 0, 1, 1, '2020-01-01');
-insert into Usuario values (202220231, "Marcel", "Hernandez", "malo@gmail.com", "123456", 1, '1990-01-01', 30301240, 1, 0, 1, '2020-01-01');
+insert into Usuario values (202220221, "Joel", "Campbell", "joecamp@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1995-01-01', 30303030, 0, 1, 1, '2023-06-01');
+insert into Usuario values (202220222, "Michael", "Barrantes", "michbarra@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1985-01-01', 30303031, 0, 1, 1, '2023-06-01');
+insert into Usuario values (202220223, "Celso", "Borges", "celsinho@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1989-01-01', 30303032, 0, 1, 1, '2022-01-01');
+insert into Usuario values (202220224, "Bryan", "Ruiz", "capitan@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1987-01-01', 30303033, 0, 0, 1, '2020-06-01');
+insert into Usuario values (202220225, "Carlos", "Mora", "moradona@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '2000-01-01', 30303034, 0, 1, 1, '2016-01-01');
+insert into Usuario values (202220226, "Aaron", "Suarez", "aaronsua@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '2003-01-01', 30303035, 0, 1, 1, '2018-01-01');
+insert into Usuario values (202220227, "Leonel", "Moreira", "osito@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1995-01-01', 30303036, 0, 1, 1, '2020-01-01');
+insert into Usuario values (202220228, "Pablo", "Gabas", "argentina@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1983-01-01', 30303037, 0, 0, 1, '2005-01-01');
+insert into Usuario values (202220229, "Shirley", "Cruz", "capitana@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 2, '1990-01-01', 30303038, 0, 0, 1, '2019-01-01');
+insert into Usuario values (202220230, "Kenia", "Rangel", "kenia@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 2, '2003-01-01', 30303039, 0, 1, 1, '2020-01-01');
+insert into Usuario values (202220231, "Marcel", "Hernandez", "malo@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1990-01-01', 30301240, 1, 0, 1, '2020-01-01');
 
 /*Insert Empleado*/
-insert into Usuario values (302220221, "Andres", "Carevic", "profe@gmail.com", "123456", 1, '1980-01-01', 31113131, 0, 1, 3, '2023-01-01');
-insert into Usuario values (302820222, "Juan Carlos", "Herrera", "juank@gmail.com", "123456", 1, '1985-01-01', 30008031, 0, 1, 3, '2018-01-01');
-insert into Usuario values (302420221, "Wardy", "Alfaro", "wardy@gmail.com", "123456", 1, '1980-01-01', 30303410, 0, 1, 3, '2020-06-01');
-insert into Usuario values (301220222, "Mario", "Acosta", "marito@gmail.com", "123456", 1, '1985-01-01', 38703031, 0, 1, 3, '2023-01-01');
+insert into Usuario values (302220221, "Andres", "Carevic", "profe@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1980-01-01', 31113131, 0, 1, 3, '2023-01-01');
+insert into Usuario values (302820222, "Juan Carlos", "Herrera", "juank@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1985-01-01', 30008031, 0, 1, 3, '2018-01-01');
+insert into Usuario values (302420221, "Wardy", "Alfaro", "wardy@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1980-01-01', 30303410, 0, 1, 3, '2020-06-01');
+insert into Usuario values (301220222, "Mario", "Acosta", "marito@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1985-01-01', 38703031, 0, 1, 3, '2023-01-01');
 
 /*Insert Administrador*/
-insert into Usuario values (301110111, "Joseph", "Joseph", "presi@gmail.com", "123456", 1, '1970-01-01', 38634031, 0, 1, 2, '2020-01-01');
+insert into Usuario values (301110111, "Joseph", "Joseph", "presi@gmail.com", "$2y$10$sDIN0YxJERI9T6Lh0SoaduUPEkl8TizLfJ9k3EYvDTgIiba7xmEMS", 1, '1970-01-01', 38634031, 0, 1, 2, '2020-01-01');
 /*Select * from Usuario where id > 0 order by IdTipoUsuario asc;*/
 /*Delete from Usuario where id > 0;*/
 

@@ -21,7 +21,6 @@ export function Home() {
   useEffect(() => {
     PlanService.getPlanes()
       .then((response) => {
-        console.log(response);
         setData(response.data.results);
         setError(response.error);
         setLoaded(true);

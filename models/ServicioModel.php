@@ -31,7 +31,7 @@ class ServicioModel
         try {
             //Consulta sql
             $vSql = "SELECT * FROM servicio where idservicio=$id";
-
+            var_dump(password_hash("123456", PASSWORD_DEFAULT));
             //Ejecutar la consulta
             $vResultado = $this->enlace->ExecuteSQL($vSql);
             // Retornar el objeto
