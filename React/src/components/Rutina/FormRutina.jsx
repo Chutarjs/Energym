@@ -29,16 +29,26 @@ export function FormRutina() {
   const esCrear = !id;
   // Valores a precarga al actualizar
   const [values] = useState(null);
+  const ejercicioSchema = yup.object({
+    idEjercicio: yup.number().required("Seleccione un ejercicio").min(0, "Debe seleccionar al menos 1 ejercicio"),
+    Repeticiones: yup.number().required("Las repeticiones son requeridas").min(1, "Digite las repeticiones"),
+    Series: yup.number().required("Las series son requeridas"). min(1, "Debe digitar las series"),
+  });
+  
   // Esquema de validación
   const rutinaSchema = yup.object({
     Nombre: yup
       .string()
       .required("El nombre es requerido")
       .min(3, "El nombre debe tener 3 caracteres"),
-    Descripcion: yup.string().required("Los minutos son requerido"),
-    idServicio: yup.number().required("Seleccione un servicio"),
-    ejercicios: yup.array().required("Los ejercicios son necesarios").typeError("Seleccione al menos un ejercicio"),
-  });
+    Descripcion: yup.string().required("La descripcion es requerida"),
+    idServicio: yup.number().required("Seleccione un servicio").min(1, "Seleccione un servicio"),
+    ejercicios: yup.array()
+    .of(ejercicioSchema) // Use the ejercicioSchema to validate each exercise object
+    .required("Los ejercicios son necesarios")
+    .min(1, "Seleccione al menos un ejercicio")
+    .typeError("Seleccione al menos un ejercicio"),
+});
 
   const {
     control,
@@ -50,10 +60,12 @@ export function FormRutina() {
     defaultValues: {
       Nombre: "",
       Descripcion: "",
-      idServicio: "",
+      idServicio: 0,
       ejercicios: [
         {
-          idEjercicio: "",
+          idEjercicio: 0,
+          Repeticiones: 0,
+          Series: 0,
         },
       ],
     },
@@ -80,7 +92,7 @@ export function FormRutina() {
   // Agregar un nuevo actor
   const addNewEjercicio = () => {
     append({
-      Nombre: "",
+      idEjercicio: "",
       Repeticiones: "",
       Series: "",
     });
@@ -103,6 +115,11 @@ export function FormRutina() {
   // Accion submit
   const onSubmit = (DataForm) => {
     try {
+      const isValidExercises = ejercicioSchema.isValid(DataForm.ejercicios);
+      if (!isValidExercises) {
+        toast.error("Por favor, complete los campos requeridos para los ejercicios.");
+        return;
+      }
       // Establecer valores del formulario
       console.log(DataForm);
       setFormData(DataForm);
@@ -318,6 +335,7 @@ useEffect(() => {
                 </Tooltip>
               </Typography>
               {/* Array de controles de ejercicios */}
+              {console.log(data)}
               {loadedEjercicios &&
                 dataEjercicios &&
                 fields.map((field, index) => (
@@ -328,11 +346,6 @@ useEffect(() => {
                     index={index}
                     onRemove={removeEjercicio}
                     control={control}
-                    onChange={(e) =>
-                      setValue("ejercicios", e.target.value, {
-                        shouldValidate: true,
-                      })
-                    }
                     disableRemoveButton={fields.length === 1}
                   />
                 ))}

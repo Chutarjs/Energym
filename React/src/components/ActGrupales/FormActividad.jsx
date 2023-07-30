@@ -10,6 +10,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import { isAfter } from "date-fns";
 import ActGrupalesService from "../../services/ActGrupalesService";
 
 export function FormActividad() {
@@ -27,10 +28,34 @@ export function FormActividad() {
       .required("El nombre es requerido")
       .min(3, "El nombre debe tener al menos 3 caracteres"),
     Descripcion: yup.string().required("La descripcion es requerida"),
-    Fecha: yup.date().required("La fecha es requerida"),
-    HoraInicio: yup.string().required("La hora de inicio es requerida"),
-    HoraFinal: yup.string().required("La hora final es requerida"),
-    Cupo: yup
+    Fecha: yup
+    .date()
+    .required("La fecha es requerida")
+    .test("is-future-date", "La fecha debe ser mayor a hoy", function (value) {
+      return isAfter(value, new Date());
+    }),
+    HoraInicio: yup
+    .string()
+    .required("La hora de inicio es requerida")
+    .test('hora-inicio-menor', 'La hora de inicio debe ser menor que la hora final', function(value) {
+      const { HoraFinal } = this.parent; // Obtenemos el valor de HoraFinal del objeto actual
+
+      if (!value || !HoraFinal) {
+        // Si uno de los campos está vacío, no hay suficiente información para comparar, así que consideramos la validación como correcta
+        return true;
+      }
+
+      // Convertimos las horas en objetos Date para poder compararlas
+      const horaInicioDate = new Date(`1970-01-01T${value}`);
+      const horaFinalDate = new Date(`1970-01-01T${HoraFinal}`);
+
+      return horaInicioDate < horaFinalDate;
+    }),
+
+  HoraFinal: yup
+    .string()
+    .required("La hora final es requerida"),
+  Cupo: yup
       .number()
       .integer()
       .min(1, "El cupo debe ser al menos 1")

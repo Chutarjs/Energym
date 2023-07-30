@@ -7,18 +7,20 @@ import PropTypes from 'prop-types';
 SelectEjercicios.propTypes = {
   data: PropTypes.array,
   field: PropTypes.object,
+  defaultValue: PropTypes.number, // Add the defaultValue prop here
 };
-export function SelectEjercicios({ field, data }) {
+
+export function SelectEjercicios({ field, data, defaultValue }) {
+  {console.log(field)}
   return (
     <>
       <FormControl variant='standard' fullWidth sx={{ m: 1 }}>
-        <InputLabel id='ejercicio'>Ejercicio</InputLabel>
+        <InputLabel id='IdEjercicio'>Ejercicio</InputLabel>
         <Select
           {...field}
-          labelId='ejercicio'
+          labelId='IdEjercicio'
           label='Ejercicio'
-          defaultValue=''
-          value={field.value}
+          value={field.value || defaultValue}
         >
           {data &&
             data.map((ejercicio) => (

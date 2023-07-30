@@ -1,16 +1,14 @@
-import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/Grid';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import IconButton from '@mui/material/IconButton';
-import DeleteIcon from '@mui/icons-material/Delete';
+import TextField from "@mui/material/TextField";
+import Grid from "@mui/material/Grid";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import IconButton from "@mui/material/IconButton";
+import DeleteIcon from "@mui/icons-material/Delete";
+import Tooltip from "@mui/material/Tooltip";
+import { SelectEjercicios } from "./SelectEjercicios";
+import { Controller } from "react-hook-form";
+import PropTypes from "prop-types";
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
-import Tooltip from '@mui/material/Tooltip';
-import { SelectEjercicios } from './SelectEjercicios';
-import { Controller } from 'react-hook-form';
-import PropTypes from 'prop-types';
 
 EjerciciosForm.propTypes = {
   data: PropTypes.array,
@@ -28,51 +26,70 @@ export function EjerciciosForm({
   index,
   onRemove,
   disableRemoveButton,
-  defaultValue, // Receive defaultValue as a prop
 }) {
-  console.log(data);
+
   return (
     <section>
-      <Grid item xs={12} md={12}>
-        <List>
+      <Grid container spacing={2}>
+      <ListItemIcon>
+              <Tooltip title={`Ejercicio ${index + 1}`}>
+                <IconButton>
+                  <DirectionsRunIcon />
+                </IconButton>
+              </Tooltip>
+            </ListItemIcon>
+        <Grid item xs={4} md={4}>
+          <Controller
+            key={index}
+            name={`ejercicios[${index}].IdEjercicio`}
+            control={control}
+            render={({ field }) => (
+              <SelectEjercicios field={field} data={data} />
+            )}
+          />
+        </Grid>
+        <Grid item xs={3} md={3}>
+          <Controller
+            key={index}
+            name={`ejercicios[${index}].Repeticiones`}
+            control={control}
+            render={({ field }) => (
+              <TextField
+                {...field}
+                label="Repeticiones"
+                id={`Repeticiones-${index}`}
+                type="number"
+              />
+            )}
+          />
+        </Grid>
+        <Grid item xs={3} md={3}>
+          <Controller
+            key={index}
+            name={`ejercicios[${index}].Series`}
+            control={control}
+            render={({ field }) => (
+              <TextField
+                {...field}
+                label="Series"
+                id={`Series-${index}`}
+                type="number"
+              />
+            )}
+          />
+        </Grid>
+
+        <Grid item xs={1} md={1}>
           <ListItem>
-            {/* ... (other ListItem components) */}
-            <ListItemText sx={{ m: 1 }}>
-              <Controller
-                key={index}
-                name={`ejercicios[${index}].idEjercicio`}
-                control={control}
-                defaultValue={defaultValue} // Pass the defaultValue to the Controller
-                render={({ field }) => (
-                  <SelectEjercicios field={field} data={data} />
-                )}
-              />
-            </ListItemText>
-            <ListItemText sx={{ m: 1 }}>
-              <Controller
-                key={index}
-                name={`ejercicios[${index}].Repeticiones`}
-                control={control}
-                render={({ field }) => <TextField {...field} label='Repeticiones' />}
-              />
-            </ListItemText>
-            <ListItemText sx={{ m: 1 }}>
-              <Controller
-                key={index}
-                name={`ejercicios[${index}].Series`}
-                control={control}
-                render={({ field }) => <TextField {...field} label='Series' />}
-              />
-            </ListItemText>
             <ListItemIcon>
-              <Tooltip title={`Eliminar Ejercicio ${index}`}>
+              <Tooltip title={`Eliminar Ejercicio ${index+1}`}>
                 <span>
                   <IconButton
                     key={index}
-                    edge='end'
+                    edge="end"
                     disabled={disableRemoveButton}
                     onClick={() => onRemove(index)}
-                    aria-label='Eliminar'
+                    aria-label="Eliminar"
                   >
                     <DeleteIcon />
                   </IconButton>
@@ -80,7 +97,7 @@ export function EjerciciosForm({
               </Tooltip>
             </ListItemIcon>
           </ListItem>
-        </List>
+        </Grid>
       </Grid>
     </section>
   );

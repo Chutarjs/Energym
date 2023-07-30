@@ -32,9 +32,9 @@ export function FormServicio() {
     Tipo: yup
       .string()
       .required("El equipamiento es necesario, si no se usa equipo poner nada")
-      .oneOf(["individual", "grupal"], "Tipo debe ser 'individual' o 'grupal'"),
-    Precio: yup.number().min(3, "El numero debe ser de al menos 3 digitos"),
-    imagen: yup.array().of(yup.string().required("Seleccione una imagen")),
+      .oneOf(["Individual", "Grupal"], "Tipo debe ser 'individual' o 'grupal'"),
+    Precio: yup.number().required("Se requiere el precio").min(500, "El numero debe ser mayor a 500"),
+    imagen: yup.array().required("Debe seleccionar una imagen").min(1, "Seleccione al menos una imagen"),
   });
   const {
     control,
@@ -138,10 +138,10 @@ export function FormServicio() {
   //Obtener servicio form
   useEffect(() => {
     if (id != undefined && !isNaN(Number(id))) {
-      ServicioService.getServicioById(id)
+      ServicioService.getServicioFormById(id)
         .then((response) => {
           console.log(response);
-          setData(response.data.results[0]);
+          setData(response.data.results);
           setError(response.error);
         })
         .catch((error) => {
@@ -222,8 +222,8 @@ export function FormServicio() {
                     error={Boolean(errors.Tipo)}
                     helperText={errors.Tipo ? errors.Tipo.message : " "}
                   >
-                    <MenuItem value="individual">Individual</MenuItem>
-                    <MenuItem value="grupal">Grupal</MenuItem>
+                    <MenuItem value="Individual">Individual</MenuItem>
+                    <MenuItem value="Grupal">Grupal</MenuItem>
                   </TextField>
                 )}
               />
