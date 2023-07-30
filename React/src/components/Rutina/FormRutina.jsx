@@ -200,7 +200,7 @@ useEffect(() => {
         }
       });
   }
-}, [id]);
+}, [id, setValue]);
 
   //Lista de servicios
   const [dataServicios, setDataServicios] = useState({});
