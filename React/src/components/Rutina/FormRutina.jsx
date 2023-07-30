@@ -30,7 +30,7 @@ export function FormRutina() {
   // Valores a precarga al actualizar
   const [values] = useState(null);
   const ejercicioSchema = yup.object({
-    idEjercicio: yup.number().required("Seleccione un ejercicio").min(0, "Debe seleccionar al menos 1 ejercicio"),
+    IdEjercicio: yup.number().required("Seleccione un ejercicio"),
     Repeticiones: yup.number().required("Las repeticiones son requeridas").min(1, "Digite las repeticiones"),
     Series: yup.number().required("Las series son requeridas"). min(1, "Debe digitar las series"),
   });
@@ -63,11 +63,12 @@ export function FormRutina() {
       idServicio: 0,
       ejercicios: [
         {
-          idEjercicio: 0,
+          IdEjercicio: 0,
           Repeticiones: 0,
           Series: 0,
         },
       ],
+      idrutina: 0,
     },
     // valores a precargar
     values,
@@ -89,12 +90,12 @@ export function FormRutina() {
     }
     remove(index);
   };
-  // Agregar un nuevo actor
+  // Agregar un nuevo ejercicio
   const addNewEjercicio = () => {
     append({
-      idEjercicio: "",
-      Repeticiones: "",
-      Series: "",
+      IdEjercicio: 0,
+      Repeticiones: 0,
+      Series: 0,
     });
   };
   // Valores de formulario que llena el usuario
@@ -160,6 +161,7 @@ export function FormRutina() {
         //Modificar rutina
         RutinaService.updateRutina(formData)
           .then((response) => {
+            console.log(response);
             setResponseData(response.data.results);
             setError(response.error);
 
@@ -180,21 +182,25 @@ export function FormRutina() {
   const onError = (errors, e) => console.log(errors, e);
 
   //Obtener Rutina
-  useEffect(() => {
-    if (id != undefined && !isNaN(Number(id))) {
-      RutinaService.getRutinaFormById(id)
-        .then((response) => {
-          setData(response.data.results);
-          setError(response.error);
-        })
-        .catch((error) => {
-          if (error instanceof SyntaxError) {
-            console.log(error);
-            throw new Error("Respuesta no válida del servidor");
-          }
-        });
-    }
-  }, [id]);
+  //Obtener Rutina
+useEffect(() => {
+  if (id != undefined && !isNaN(Number(id))) {
+    RutinaService.getRutinaFormById(id)
+      .then((response) => {
+        console.log(response.data);
+        setData(response.data.results);
+        setError(response.error);
+        // Set the value of idrutina when modifying a routine
+        setValue("idrutina", Number(response.data.results.idrutina));
+      })
+      .catch((error) => {
+        if (error instanceof SyntaxError) {
+          console.log(error);
+          throw new Error("Respuesta no válida del servidor");
+        }
+      });
+  }
+}, [id]);
 
   //Lista de servicios
   const [dataServicios, setDataServicios] = useState({});
@@ -234,17 +240,15 @@ useEffect(() => {
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
-      // Set the main form values
       setValue("Nombre", data.Nombre || "");
       setValue("Descripcion", data.Descripcion || "");
       setValue("idServicio", data.idServicio || "");
-      // Set the ejercicios array values
+      setValue("idrutina", Number(data.idrutina));
       if (data.ejercicios && data.ejercicios.length > 0) {
         setValue("ejercicios", data.ejercicios);
       }
-      setValue("idrutina", data.idrutina || "");
     }
-  }, [data, esCrear, setValue]);
+  }, [data, esCrear, setValue, values]);
 
   return (
     <>
@@ -335,7 +339,6 @@ useEffect(() => {
                 </Tooltip>
               </Typography>
               {/* Array de controles de ejercicios */}
-              {console.log(data)}
               {loadedEjercicios &&
                 dataEjercicios &&
                 fields.map((field, index) => (

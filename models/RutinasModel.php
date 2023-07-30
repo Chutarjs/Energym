@@ -159,7 +159,7 @@ class RutinaModel
             //--- Ejercicios ---
             //Crear elementos a insertar en rutinaejercicio
             foreach ($objeto->ejercicios as $ejercicio) {
-                $dataEjercicios[] = array($idRutina, $ejercicio->idEjercicio, $ejercicio->Repeticiones, $ejercicio->Series);
+                $dataEjercicios[] = array($idRutina, $ejercicio->IdEjercicio, $ejercicio->Repeticiones, $ejercicio->Series);
             }
             foreach ($dataEjercicios as $row) {
                 $valores = implode(',', $row);
@@ -175,6 +175,7 @@ class RutinaModel
     public function update($objeto)
     {
         try {
+
             $vSql = "DELETE from rutinaejercicio where IdRutina = $objeto->idrutina;";
             //Ejecutar la consulta
             $vResultado = $this->enlace->executeSQL_DML($vSql);
@@ -185,7 +186,7 @@ class RutinaModel
             //--- Ejercicios ---
             //Crear elementos a insertar en rutinaejercicio
             foreach ($objeto->ejercicios as $ejercicio) {
-                $dataEjercicios[] = array($objeto->idrutina, $ejercicio->idEjercicio, $ejercicio->Repeticiones, $ejercicio->Series);
+                $dataEjercicios[] = array($objeto->idrutina, $ejercicio->IdEjercicio, $ejercicio->Repeticiones, $ejercicio->Series);
             }
             foreach ($dataEjercicios as $row) {
                 $valores = implode(',', $row);
@@ -194,7 +195,7 @@ class RutinaModel
             }
 
             // Retornar el objeto actualizado
-            return $this->get($objeto->idRutina);
+            return $this->get($objeto->idrutina);
         } catch (Exception $e) {
             die($e->getMessage());
         }

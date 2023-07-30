@@ -224,7 +224,6 @@ export function TableRutina () {
   useEffect(()=>{
     RutinaService.getRutinas()
     .then( response=>{
-        console.log(response)
         setData(response.data.results)
         setError(response.error)
         setLoaded(true)
