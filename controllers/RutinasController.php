@@ -118,7 +118,7 @@ class Rutinas
             // Codificar las imágenes en Base64
             foreach ($response->ejercicios as $ejercicio) {
                 foreach ($ejercicio->imagenes as $imagen) {
-                    $imagen->Imagen = base64_encode($imagen->Imagen);
+                    $imagen->Imagen = null;
                 }
             }
             //Verificar respuesta

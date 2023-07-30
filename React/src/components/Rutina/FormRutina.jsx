@@ -37,7 +37,7 @@ export function FormRutina() {
       .min(3, "El nombre debe tener 3 caracteres"),
     Descripcion: yup.string().required("Los minutos son requerido"),
     idServicio: yup.number().required("Seleccione un servicio"),
-    ejercicios: yup.array().typeError("Seleccione al menos un ejercicio"),
+    ejercicios: yup.array().required("Los ejercicios son necesarios").typeError("Seleccione al menos un ejercicio"),
   });
 
   const {
@@ -53,9 +53,7 @@ export function FormRutina() {
       idServicio: "",
       ejercicios: [
         {
-          Nombre: "",
-          Repeticiones: "",
-          Series: "",
+          idEjercicio: "",
         },
       ],
     },
@@ -169,7 +167,6 @@ export function FormRutina() {
     if (id != undefined && !isNaN(Number(id))) {
       RutinaService.getRutinaFormById(id)
         .then((response) => {
-          console.log(response);
           setData(response.data.results);
           setError(response.error);
         })
@@ -200,22 +197,22 @@ export function FormRutina() {
   }, [esCrear]);
 
   //Lista de ejercicios
-  const [dataEjercicios, setDataEjercicios] = useState({});
-  const [loadedEjercicios, setLoadedEjercicios] = useState(false);
-  useEffect(() => {
-    EjercicioService.getEjercicios()
-      .then((response) => {
-        console.log(response);
-        setDataEjercicios(response.data.results);
-        setLoadedEjercicios(true);
-      })
-      .catch((error) => {
-        if (error instanceof SyntaxError) {
-          console.log(error);
-          throw new Error("Respuesta no válida del servidor");
-        }
-      });
-  }, [esCrear]);
+const [dataEjercicios, setDataEjercicios] = useState([]);
+const [loadedEjercicios, setLoadedEjercicios] = useState(false);
+
+useEffect(() => {
+  EjercicioService.getEjercicios()
+    .then((response) => {
+      setDataEjercicios(response.data.results);
+      setLoadedEjercicios(true);
+    })
+    .catch((error) => {
+      if (error instanceof SyntaxError) {
+        console.log(error);
+        throw new Error("Respuesta no válida del servidor");
+      }
+    });
+}, []);
 
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
@@ -225,7 +222,9 @@ export function FormRutina() {
       setValue("Descripcion", data.Descripcion || "");
       setValue("idServicio", data.idServicio || "");
       // Set the ejercicios array values
-      setValue("ejercicios", data.ejercicios.map((ejercicio) => ejercicio.idEjercicio) || []);
+      if (data.ejercicios && data.ejercicios.length > 0) {
+        setValue("ejercicios", data.ejercicios);
+      }
       setValue("idrutina", data.idrutina || "");
     }
   }, [data, esCrear, setValue]);
@@ -318,7 +317,7 @@ export function FormRutina() {
                   </span>
                 </Tooltip>
               </Typography>
-              {/* Array de controles de actor */}
+              {/* Array de controles de ejercicios */}
               {loadedEjercicios &&
                 dataEjercicios &&
                 fields.map((field, index) => (

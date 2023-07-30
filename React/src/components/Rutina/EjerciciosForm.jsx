@@ -19,6 +19,7 @@ EjerciciosForm.propTypes = {
   onRemove: PropTypes.func,
   disableRemoveButton: PropTypes.bool,
   field: PropTypes.object,
+  defaultValue: PropTypes.string,
 };
 
 export function EjerciciosForm({
@@ -27,26 +28,21 @@ export function EjerciciosForm({
   index,
   onRemove,
   disableRemoveButton,
-  // eslint-disable-next-line no-unused-vars
-  field,
+  defaultValue, // Receive defaultValue as a prop
 }) {
+  console.log(data);
   return (
     <section>
       <Grid item xs={12} md={12}>
         <List>
           <ListItem>
-            <ListItemIcon>
-              <Tooltip title={`Ejercicio ${index + 1}`}>
-                <IconButton>
-                  <DirectionsRunIcon />
-                </IconButton>
-              </Tooltip>
-            </ListItemIcon>
-            <ListItemText sx={{ m:1 }}>
+            {/* ... (other ListItem components) */}
+            <ListItemText sx={{ m: 1 }}>
               <Controller
                 key={index}
                 name={`ejercicios[${index}].idEjercicio`}
                 control={control}
+                defaultValue={defaultValue} // Pass the defaultValue to the Controller
                 render={({ field }) => (
                   <SelectEjercicios field={field} data={data} />
                 )}
@@ -69,7 +65,7 @@ export function EjerciciosForm({
               />
             </ListItemText>
             <ListItemIcon>
-              <Tooltip title={`Eliminar Ejercicio ${index + 1}`}>
+              <Tooltip title={`Eliminar Ejercicio ${index}`}>
                 <span>
                   <IconButton
                     key={index}
