@@ -6573,3 +6573,62 @@ Stack trace:
 [30-Jul-2023 07:07:06 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
 [30-Jul-2023 07:07:06 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
 [30-Jul-2023 07:07:06 Europe/Berlin] PHP   4. Rutinas->getForm($idRutina = '17') C:\xampp\htdocs\Energym\routes\routes.php:69
+[01-Aug-2023 00:09:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 188
+[01-Aug-2023 00:09:23 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 00:09:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 00:09:23 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 00:09:23 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 00:09:23 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 00:09:23 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '20'; public $Nombre = 'Uppercut'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIUExYQExQWFBQYGRIQFxYYGBMXFhYSGRYXGRcWGBcaIikhGxsoHxkWIjIiJissLy8wGCI1RjUtOSkuLywBCgoKDg0OHBAQHC4mISYvLjEuMC43Li4uMC4uLi4wMDAuLi4uLjAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAMEBBgMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABAEAACAQIDAwkECAQGAwAAAAAAAQIDEQQSIQUxQQYTFiJRVGFxkwcUgZEjMkJSobHB0XKS4fAkM2JzgqIVQ1P/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAwQFBgEC/8QALhEAAgECAwcDBAIDAAAAAAAAAAECAxEEITESE0FRYaHwBXGRIoGx0cHhFCTx/9oADAMBAAIRAxEAPwC8QAAAAAAAA'..., 1 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUEhgVFRYZGBgaGB4cHRgcGRwYGhgcHBwaHBgZGhocIS4lHR4tIRgZJjgmKy8xNzU1HiQ9QDszPy40NTEBDAwMEA8QHxISHz0rJSsxNTE2NzQ0PT00NDE0NTQ0MTY3Njc0NTQ0PzE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ2NDQxNP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUDAgj/xAA7EAACAQIEBAQEBAUEAQUAAAABAgADEQQSITEFBkFRImFxgRORobEHMkJSYsHR4fAjgpLxFCQzQ3Ky/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACgRAAICAgICAQQCAwEAAAAAAAABAhEDIRIxQVEEIjJhoRPxI3GBFP/aAAwDAQACEQMRAD8AuSIiAIiIAiIgCIgwBERAEREAR'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:139
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP Warning:  Attempt to read property "imagenes" on array in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   4. ejercicio->getForm($idEjercicio = '18') C:\xampp\htdocs\Energym\routes\routes.php:69
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   4. ejercicio->getForm($idEjercicio = '18') C:\xampp\htdocs\Energym\routes\routes.php:69
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP Warning:  Attempt to read property "imagenes" on array in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   4. ejercicio->getForm($idEjercicio = '18') C:\xampp\htdocs\Energym\routes\routes.php:69
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 00:52:10 Europe/Berlin] PHP   4. ejercicio->getForm($idEjercicio = '18') C:\xampp\htdocs\Energym\routes\routes.php:69
+[01-Aug-2023 01:18:05 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 188
+[01-Aug-2023 01:18:05 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 01:18:05 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 01:18:05 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 01:18:05 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 01:18:05 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 01:18:05 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '20'; public $Nombre = 'Uppercut'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIUExYQExQWFBQYGRIQFxYYGBMXFhYSGRYXGRcWGBcaIikhGxsoHxkWIjIiJissLy8wGCI1RjUtOSkuLywBCgoKDg0OHBAQHC4mISYvLjEuMC43Li4uMC4uLi4wMDAuLi4uLjAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAMEBBgMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABAEAACAQIDAwkECAQGAwAAAAAAAQIDEQQSIQUxQQYTFiJRVGFxkwcUgZEjMkJSobHB0XKS4fAkM2JzgqIVQ1P/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAwQFBgEC/8QALhEAAgECAwcDBAIDAAAAAAAAAAECAxEEITESE0FRYaHwBXGRIoGx0cHhFCTx/9oADAMBAAIRAxEAPwC8QAAAAAAAA'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:139
+[01-Aug-2023 01:18:39 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 188
+[01-Aug-2023 01:18:39 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 01:18:39 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 01:18:39 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 01:18:39 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 01:18:39 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 01:18:39 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '20'; public $Nombre = 'Uppercut'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIUExYQExQWFBQYGRIQFxYYGBMXFhYSGRYXGRcWGBcaIikhGxsoHxkWIjIiJissLy8wGCI1RjUtOSkuLywBCgoKDg0OHBAQHC4mISYvLjEuMC43Li4uMC4uLi4wMDAuLi4uLjAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAMEBBgMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABAEAACAQIDAwkECAQGAwAAAAAAAQIDEQQSIQUxQQYTFiJRVGFxkwcUgZEjMkJSobHB0XKS4fAkM2JzgqIVQ1P/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAwQFBgEC/8QALhEAAgECAwcDBAIDAAAAAAAAAAECAxEEITESE0FRYaHwBXGRIoGx0cHhFCTx/9oADAMBAAIRAxEAPwC8QAAAAAAAA'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:139
+[01-Aug-2023 01:19:16 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 188
+[01-Aug-2023 01:19:16 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 01:19:16 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 01:19:16 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 01:19:16 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 01:19:16 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 01:19:16 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '20'; public $Nombre = 'Uppercut'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIUExYQExQWFBQYGRIQFxYYGBMXFhYSGRYXGRcWGBcaIikhGxsoHxkWIjIiJissLy8wGCI1RjUtOSkuLywBCgoKDg0OHBAQHC4mISYvLjEuMC43Li4uMC4uLi4wMDAuLi4uLjAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAMEBBgMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABAEAACAQIDAwkECAQGAwAAAAAAAQIDEQQSIQUxQQYTFiJRVGFxkwcUgZEjMkJSobHB0XKS4fAkM2JzgqIVQ1P/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAwQFBgEC/8QALhEAAgECAwcDBAIDAAAAAAAAAAECAxEEITESE0FRYaHwBXGRIoGx0cHhFCTx/9oADAMBAAIRAxEAPwC8QAAAAAAAA'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:139
+[01-Aug-2023 02:09:01 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 188
+[01-Aug-2023 02:09:01 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 02:09:01 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 02:09:01 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 02:09:01 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 02:09:01 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 02:09:01 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '20'; public $Nombre = 'Uppercut'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUEhgVFRYZGBgaGB4cHRgcGRwYGhgcHBwaHBgZGhocIS4lHR4tIRgZJjgmKy8xNzU1HiQ9QDszPy40NTEBDAwMEA8QHxISHz0rJSsxNTE2NzQ0PT00NDE0NTQ0MTY3Njc0NTQ0PzE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ2NDQxNP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUDAgj/xAA7EAACAQIEBAQEBAUEAQUAAAABAgADEQQSITEFBkFRImFxgRORobEHMkJSYsHR4fAjgpLxFCQzQ3Ky/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACgRAAICAgICAQQCAwEAAAAAAAABAhEDIRIxQVEEIjJhoRPxI3GBFP/aAAwDAQACEQMRAD8AuSIiAIiIAiIgCIgwBERAEREAR'..., 1 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIUExYQExQWFBQYGRIQFxYYGBMXFhYSGRYXGRcWGBcaIikhGxsoHxkWIjIiJissLy8wGCI1RjUtOSkuLywBCgoKDg0OHBAQHC4mISYvLjEuMC43Li4uMC4uLi4wMDAuLi4uLjAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAMEBBgMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABAEAACAQIDAwkECAQGAwAAAAAAAQIDEQQSIQUxQQYTFiJRVGFxkwcUgZEjMkJSobHB0XKS4fAkM2JzgqIVQ1P/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAwQFBgEC/8QALhEAAgECAwcDBAIDAAAAAAAAAAECAxEEITESE0FRYaHwBXGRIoGx0cHhFCTx/9oADAMBAAIRAxEAPwC8QAAAAAAAA'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:139

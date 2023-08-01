@@ -76,7 +76,7 @@ export function FormEjercicio() {
     try {
       // Establecer valores del formulario
       setFormData(DataForm);
-      console.log(DataForm);
+      console.log("On submit: " + DataForm);
       // Indicar que se puede realizar la solicitud al API
       setStart(true);
       // Establecer el tipo de métod HTTP
@@ -87,6 +87,7 @@ export function FormEjercicio() {
       }
     } catch (e) {
       //Capturar error
+      toast.error(e);
     }
   };
 
@@ -113,6 +114,7 @@ export function FormEjercicio() {
           });
       } else {
         // Modificar ejercicio
+        console.log(formData);
         EjercicioService.updateEjercicio(formData)
           .then((response) => {
             setResponseData(response.data.results);
@@ -133,7 +135,7 @@ export function FormEjercicio() {
     }
   }, [start, esCrear, formData, navigate]);
   // Si ocurre error al realizar el submit
-  const onError = (errors, e) => console.log(errors, e);
+  const onError = (errors) => console.log(errors);
 
   //Obtener ejercicio form para precargar datos en el form
   useEffect(() => {
@@ -152,13 +154,16 @@ export function FormEjercicio() {
     }
   }, [id]);
 
+
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
       // Si es modificar establece los valores a precargar en el formulario
-      setValues(data[0]);
+      setValues(data);
+      setValue("imagenes", data.imagenes);
+      console.log(values);
     }
-  }, [data, esCrear, action]);
+  }, [data, esCrear, action, values, setValue]);
 
   return (
     <>
@@ -261,6 +266,7 @@ export function FormEjercicio() {
                   }
                 }}
               />
+
               {/* El boton de seleccionar imagenes con diseño */}
               <Button
                 variant="outlined"
@@ -283,13 +289,11 @@ export function FormEjercicio() {
               >
                 Seleccionar Imágenes
               </Button>
-
             </label>
             <FormHelperText>
               {errors.imagenes ? errors.imagenes.message : " "}
             </FormHelperText>
           </Grid>
-
           <Grid item xs={12} sm={12}>
             <Button
               type="submit"

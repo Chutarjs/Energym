@@ -74,7 +74,7 @@ class EjercicioModel
         }
     }
 
-    /*Obtener las imagenes de los ejercicios de una rutina */
+    /*Obtener las imagenes de un ejercicio */
     /*http://localhost:81/Energym/Ejercicio/getImagenesEjercicio/# */
     public function getImagenesEjercicio($idEjercicio)
     {
@@ -108,6 +108,16 @@ class EjercicioModel
             //Ejecutar la consulta
             $vResultado = $this->enlace->ExecuteSQL($vSql);
 
+            // Recorrer el resultado y agregar las imágenes al ejercicio
+            if (!empty($vResultado)) {
+                //Obtener objeto
+                $vResultado = $vResultado[0];
+                //---imagenes
+                $imagenes = $this->getImagenesEjercicio($idEjercicio);
+                //Asignar servicios al objeto
+                $vResultado->imagenes = $imagenes;
+            }
+
             // Retornar el objeto
             return $vResultado;
         } catch (Exception $e) {
@@ -116,7 +126,7 @@ class EjercicioModel
     }
     /**
      * Crear ejercicio
-     * @param $objeto plan a insertar
+     * @param $objeto ejercicio a insertar
      * @returns $this->get($idEjercicio) - Objeto ejercicio
      */
     //

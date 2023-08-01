@@ -32,9 +32,9 @@ export function FormRutina() {
   const ejercicioSchema = yup.object({
     IdEjercicio: yup.number().required("Seleccione un ejercicio"),
     Repeticiones: yup.number().required("Las repeticiones son requeridas").min(1, "Digite las repeticiones"),
-    Series: yup.number().required("Las series son requeridas"). min(1, "Debe digitar las series"),
+    Series: yup.number().required("Las series son requeridas").min(1, "Debe digitar las series"),
   });
-  
+
   // Esquema de validación
   const rutinaSchema = yup.object({
     Nombre: yup
@@ -44,11 +44,11 @@ export function FormRutina() {
     Descripcion: yup.string().required("La descripcion es requerida"),
     idServicio: yup.number().required("Seleccione un servicio").min(1, "Seleccione un servicio"),
     ejercicios: yup.array()
-    .of(ejercicioSchema) // Use the ejercicioSchema to validate each exercise object
-    .required("Los ejercicios son necesarios")
-    .min(1, "Seleccione al menos un ejercicio")
-    .typeError("Seleccione al menos un ejercicio"),
-});
+      .of(ejercicioSchema) // Use the ejercicioSchema to validate each exercise object
+      .required("Los ejercicios son necesarios")
+      .min(1, "Seleccione al menos un ejercicio")
+      .typeError("Seleccione al menos un ejercicio"),
+  });
 
   const {
     control,
@@ -182,25 +182,24 @@ export function FormRutina() {
   const onError = (errors, e) => console.log(errors, e);
 
   //Obtener Rutina
-  //Obtener Rutina
-useEffect(() => {
-  if (id != undefined && !isNaN(Number(id))) {
-    RutinaService.getRutinaFormById(id)
-      .then((response) => {
-        console.log(response.data);
-        setData(response.data.results);
-        setError(response.error);
-        // Set the value of idrutina when modifying a routine
-        setValue("idrutina", Number(response.data.results.idrutina));
-      })
-      .catch((error) => {
-        if (error instanceof SyntaxError) {
-          console.log(error);
-          throw new Error("Respuesta no válida del servidor");
-        }
-      });
-  }
-}, [id, setValue]);
+  useEffect(() => {
+    if (id != undefined && !isNaN(Number(id))) {
+      RutinaService.getRutinaFormById(id)
+        .then((response) => {
+          console.log(response.data);
+          setData(response.data.results);
+          setError(response.error);
+          // Set the value of idrutina when modifying a routine
+          setValue("idrutina", Number(response.data.results.idrutina));
+        })
+        .catch((error) => {
+          if (error instanceof SyntaxError) {
+            console.log(error);
+            throw new Error("Respuesta no válida del servidor");
+          }
+        });
+    }
+  }, [id, setValue]);
 
   //Lista de servicios
   const [dataServicios, setDataServicios] = useState({});
@@ -220,22 +219,22 @@ useEffect(() => {
   }, [esCrear]);
 
   //Lista de ejercicios
-const [dataEjercicios, setDataEjercicios] = useState([]);
-const [loadedEjercicios, setLoadedEjercicios] = useState(false);
+  const [dataEjercicios, setDataEjercicios] = useState([]);
+  const [loadedEjercicios, setLoadedEjercicios] = useState(false);
 
-useEffect(() => {
-  EjercicioService.getEjercicios()
-    .then((response) => {
-      setDataEjercicios(response.data.results);
-      setLoadedEjercicios(true);
-    })
-    .catch((error) => {
-      if (error instanceof SyntaxError) {
-        console.log(error);
-        throw new Error("Respuesta no válida del servidor");
-      }
-    });
-}, []);
+  useEffect(() => {
+    EjercicioService.getEjercicios()
+      .then((response) => {
+        setDataEjercicios(response.data.results);
+        setLoadedEjercicios(true);
+      })
+      .catch((error) => {
+        if (error instanceof SyntaxError) {
+          console.log(error);
+          throw new Error("Respuesta no válida del servidor");
+        }
+      });
+  }, []);
 
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {

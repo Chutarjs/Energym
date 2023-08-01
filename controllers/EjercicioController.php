@@ -88,6 +88,9 @@ class ejercicio
         if(isset($idEjercicio) && !empty($idEjercicio) && $idEjercicio!=='undefined' && $idEjercicio!=='null'){
             //Acción del modelo a ejecutar
             $response=$ejercicio->getForm($idEjercicio);
+            foreach ($response->imagenes as $imagen) {
+                $imagen->Imagen = base64_encode($imagen->Imagen);
+            }
             //Verificar respuesta
             if(isset($response) && !empty($response)){
                 //Armar el json
