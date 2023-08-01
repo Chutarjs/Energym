@@ -6632,3 +6632,255 @@ Stack trace:
 [01-Aug-2023 02:09:01 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
 [01-Aug-2023 02:09:01 Europe/Berlin] PHP   4. ejercicio->update() C:\xampp\htdocs\Energym\routes\routes.php:62
 [01-Aug-2023 02:09:01 Europe/Berlin] PHP   5. EjercicioModel->update($objeto = class stdClass { public $idEjercicio = '20'; public $Nombre = 'Uppercut'; public $Descripcion = 'Golpe muy espectacular que va desde abajo a la mandíbula del contrario.'; public $Equipamiento = 'Guantes y saco(opcional)'; public $imagenes = [0 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUEhgVFRYZGBgaGB4cHRgcGRwYGhgcHBwaHBgZGhocIS4lHR4tIRgZJjgmKy8xNzU1HiQ9QDszPy40NTEBDAwMEA8QHxISHz0rJSsxNTE2NzQ0PT00NDE0NTQ0MTY3Njc0NTQ0PzE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ2NDQxNP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUDAgj/xAA7EAACAQIEBAQEBAUEAQUAAAABAgADEQQSITEFBkFRImFxgRORobEHMkJSYsHR4fAjgpLxFCQzQ3Ky/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACgRAAICAgICAQQCAwEAAAAAAAABAhEDIRIxQVEEIjJhoRPxI3GBFP/aAAwDAQACEQMRAD8AuSIiAIiIAiIgCIgwBERAEREAR'..., 1 => 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIUExYQExQWFBQYGRIQFxYYGBMXFhYSGRYXGRcWGBcaIikhGxsoHxkWIjIiJissLy8wGCI1RjUtOSkuLywBCgoKDg0OHBAQHC4mISYvLjEuMC43Li4uMC4uLi4wMDAuLi4uLjAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAMEBBgMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABAEAACAQIDAwkECAQGAwAAAAAAAQIDEQQSIQUxQQYTFiJRVGFxkwcUgZEjMkJSobHB0XKS4fAkM2JzgqIVQ1P/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAwQFBgEC/8QALhEAAgECAwcDBAIDAAAAAAAAAAECAxEEITESE0FRYaHwBXGRIoGx0cHhFCTx/9oADAMBAAIRAxEAPwC8QAAAAAAAA'...] }) C:\xampp\htdocs\Energym\controllers\EjercicioController.php:139
+[01-Aug-2023 06:44:48 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=12156 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:44:48 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:44:48 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:44:48 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:44:48 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:44:48 Europe/Berlin] PHP   4. servicio->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:44:48 Europe/Berlin] PHP   5. ServicioModel->all() C:\xampp\htdocs\Energym\controllers\ServicioController.php:10
+[01-Aug-2023 06:44:48 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * from Servicio where idservicio > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\ServicioModel.php:19
+[01-Aug-2023 06:44:48 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:44:48 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=10760 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=10760 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=10760 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:46:02 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:54:34 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:54:34 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:54:34 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:54:34 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:54:34 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:54:34 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:54:34 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:54:34 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:54:34 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:54:34 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:54:41 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:54:41 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:54:41 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:54:41 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:54:41 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:54:41 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:54:41 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:54:41 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:54:41 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:54:41 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   4. Rutinas->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   5. RutinaModel->all() C:\xampp\htdocs\Energym\controllers\RutinasController.php:12
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM rutina where idRutina > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\RutinasModel.php:17
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:55:42 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   4. ActividadesGrupales->getDetalle('1') C:\xampp\htdocs\Energym\routes\routes.php:69
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   5. ActividadesGrupalesModel->getDetalle() C:\xampp\htdocs\Energym\controllers\ActividadesGrupalesController.php:61
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   4. Rutinas->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT subquery.idActividadGrupal, subquery.Nombre, subquery.Fecha, subquery.HoraInicio, subquery.HoraFinal, subquery.Cupo, subquery.cantidad_matriculados\r\n            FROM (\r\n                SELECT ag.idActividadGrupal, ag.Nombre, ag.Fecha, ag.HoraInicio, ag.HoraFinal, ag.Cupo, COUNT(agu.idUsuario) AS cantidad_matriculados\r\n                FROM energym.actividadgrupal ag\r\n                LEFT JOIN energym.actgrupalusuario agu ON ag.idActividadGrupal = agu.idActGrupal\r\n                GROUP BY ag.idActivida'..., $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php:56
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   5. RutinaModel->all() C:\xampp\htdocs\Energym\controllers\RutinasController.php:12
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM rutina where idRutina > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\RutinasModel.php:17
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:55:50 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:55:58 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:57:29 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 06:59:29 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP Warning:  mysqli::__construct(): Error while reading greeting packet. PID=16140 in C:\xampp\htdocs\Energym\models\MySqlConnect.php on line 25
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP Stack trace:
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\Energym\index.php:0
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   2. RoutesController->index() C:\xampp\htdocs\Energym\index.php:42
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   3. include() C:\xampp\htdocs\Energym\controllers\RoutesController.php:4
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   4. plan->index() C:\xampp\htdocs\Energym\routes\routes.php:62
+[01-Aug-2023 07:01:04 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 07:01:05 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 07:01:05 Europe/Berlin] PHP   5. PlanModel->all() C:\xampp\htdocs\Energym\controllers\PlanController.php:8
+[01-Aug-2023 07:01:05 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 07:01:05 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 07:01:05 Europe/Berlin] PHP   6. MySqlConnect->executeSQL($sql = 'SELECT * FROM plan where idPlan > 0;', $resultType = *uninitialized*) C:\xampp\htdocs\Energym\models\PlanModel.php:17
+[01-Aug-2023 07:01:05 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 07:01:05 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 07:01:05 Europe/Berlin] PHP   7. MySqlConnect->connect() C:\xampp\htdocs\Energym\models\MySqlConnect.php:40
+[01-Aug-2023 07:01:05 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 07:01:05 Europe/Berlin] PHP   8. mysqli->__construct($hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = 'energym') C:\xampp\htdocs\Energym\models\MySqlConnect.php:25
+[01-Aug-2023 08:07:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\PlanModel.php on line 143
+[01-Aug-2023 08:07:47 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\PlanModel.php on line 143
+[01-Aug-2023 08:08:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\PlanModel.php on line 143
+[01-Aug-2023 08:09:47 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\PlanModel.php on line 143
+[01-Aug-2023 08:09:57 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\PlanModel.php on line 143
+[01-Aug-2023 08:10:09 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\PlanModel.php on line 143
+[01-Aug-2023 08:11:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\PlanModel.php on line 144
+[01-Aug-2023 08:13:50 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[01-Aug-2023 08:13:50 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 37
+[01-Aug-2023 08:17:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:18:28 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:18:28 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 188
+[01-Aug-2023 08:18:55 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 188
+[01-Aug-2023 08:19:53 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:19:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:19:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:19:59 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:03 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:05 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:10 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:10 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:20 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:23 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:23 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:38 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:38 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:52 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:20:52 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:21:00 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idEjercicio in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 167
+[01-Aug-2023 08:21:02 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:21:02 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:21:14 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:21:18 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:21:21 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:21:21 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:21:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:21:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:21:41 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idEjercicio in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 167
+[01-Aug-2023 08:21:43 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:21:43 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:22:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:22:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 188
+[01-Aug-2023 08:24:11 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:24:11 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
+[01-Aug-2023 08:25:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 188

@@ -34,8 +34,7 @@ export function FormEjercicio() {
       .string()
       .required("El equipamiento es necesario, si no se usa equipo poner nada"),
     imagenes: yup
-      .array()
-      .of(yup.string().required("Seleccione al menos una imagen")),
+      .array().required("Seleccione al menos una imagen").min(1, "Seleccione al menos una imagen"),
   });
 
   const {
@@ -76,7 +75,6 @@ export function FormEjercicio() {
     try {
       // Establecer valores del formulario
       setFormData(DataForm);
-      console.log("On submit: " + DataForm);
       // Indicar que se puede realizar la solicitud al API
       setStart(true);
       // Establecer el tipo de métod HTTP

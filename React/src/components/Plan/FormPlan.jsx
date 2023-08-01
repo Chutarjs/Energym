@@ -175,11 +175,11 @@ export function FormPlan() {
   // Si es modificar establece los valores a precargar en el formulario
   useEffect(() => {
     if (!esCrear && data) {
-      // Set the main form values
       setValue("Nombre", data.Nombre || "");
       setValue("Descripcion", data.Descripcion || "");
       // Set the ejercicios array values
       setValue("servicios", data.servicios.map((servicio) => servicio.idServicio) || []);
+      setValue("idPlan", data.idPlan);
     }
   }, [data, esCrear, setValue]);
 
