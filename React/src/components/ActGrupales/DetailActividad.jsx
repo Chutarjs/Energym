@@ -20,7 +20,6 @@ export function DetailActividad() {
   useEffect(() => {
     ActGrupalesService.getDetalleByID(routeParams.id)
       .then((response) => {
-        console.log(response);
         setData(response.data.results);
         setLoaded(true);
       })

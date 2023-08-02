@@ -22,7 +22,6 @@ export function DetailRutina() {
   useEffect(() => {
     RutinaService.getRutinaDetalle(routeParams.id)
       .then((response) => {
-        console.log(response);
         setData(response.data.results);
         setError(response.error);
         setLoaded(true);

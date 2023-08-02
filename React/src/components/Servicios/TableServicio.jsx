@@ -236,7 +236,6 @@ export function TableServicio() {
   useEffect(()=>{
     ServicioService.getServicios()
     .then( response=>{
-        console.log(response)
         setData(response.data.results)
         setError(response.error)
         setLoaded(true)

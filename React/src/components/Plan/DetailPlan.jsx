@@ -21,7 +21,6 @@ export function DetailPlan () {
   useEffect(()=>{
     PlanService.getPlanById(routeParams.id)
     .then( response=>{
-      console.log(response)
       setData(response.data.results)
       setError(response.error)
       setLoaded(true)

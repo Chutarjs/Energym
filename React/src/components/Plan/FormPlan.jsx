@@ -78,7 +78,6 @@ export function FormPlan() {
   const onSubmit = (DataForm) => {
     try {
       // Establecer valores del formulario
-      console.log(DataForm);
       setFormData(DataForm);
       // Indicar que se puede realizar la solicitud al API
       setStart(true);
@@ -97,7 +96,6 @@ export function FormPlan() {
     if (start) {
       if (esCrear) {
         // Crear plan
-        console.log(formData);
         PlanService.createPlan(formData)
           .then((response) => {
             setResponseData(response.data.results);

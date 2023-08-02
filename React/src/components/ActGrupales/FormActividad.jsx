@@ -117,7 +117,6 @@ export function FormActividad() {
     if (start) {
       if (esCrear) {
         // Crear ejercicio
-        console.log(formData);
         ActGrupalesService.createActividad(formData)
           .then((response) => {
             setResponseData(response.data);
@@ -136,7 +135,6 @@ export function FormActividad() {
           });
       } else {
         // Modificar ejercicio
-        console.log(formData);
         ActGrupalesService.updateActividad(formData)
           .then((response) => {
             setResponseData(response.data.results);
@@ -164,7 +162,6 @@ export function FormActividad() {
     if (id != undefined && !isNaN(Number(id))) {
       ActGrupalesService.getActividadFormById(id)
         .then((response) => {
-          console.log(response);
           setData(response.data.results[0]);
           setError(response.error);
         })

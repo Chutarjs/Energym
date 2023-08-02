@@ -93,7 +93,6 @@ export function FormServicio() {
     if (start) {
       if (esCrear) {
         // Crear ejercicio
-        console.log(formData);
         ServicioService.createServicio(formData)
           .then((response) => {
             setResponseData(response.data);
@@ -112,7 +111,6 @@ export function FormServicio() {
           });
       } else {
         // Modificar ejercicio
-        console.log(formData);
         ServicioService.updateServicio(formData)
           .then((response) => {
             setResponseData(response.data.results);
@@ -140,7 +138,6 @@ export function FormServicio() {
     if (id != undefined && !isNaN(Number(id))) {
       ServicioService.getServicioFormById(id)
         .then((response) => {
-          console.log(response);
           setData(response.data.results);
           setError(response.error);
         })

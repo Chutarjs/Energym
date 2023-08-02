@@ -122,7 +122,6 @@ export function FormRutina() {
         return;
       }
       // Establecer valores del formulario
-      console.log(DataForm);
       setFormData(DataForm);
       // Indicar que se puede realizar la solicitud al API
       setStart(true);
@@ -161,7 +160,6 @@ export function FormRutina() {
         //Modificar rutina
         RutinaService.updateRutina(formData)
           .then((response) => {
-            console.log(response);
             setResponseData(response.data.results);
             setError(response.error);
 
@@ -186,7 +184,6 @@ export function FormRutina() {
     if (id != undefined && !isNaN(Number(id))) {
       RutinaService.getRutinaFormById(id)
         .then((response) => {
-          console.log(response.data);
           setData(response.data.results);
           setError(response.error);
           // Set the value of idrutina when modifying a routine

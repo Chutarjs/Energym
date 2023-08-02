@@ -61,7 +61,6 @@ export function Login () {
   }
   //Registrar usuario
   React.useEffect(()=>{
-    console.log(responseData);
     if(responseData!=null && responseData!='undefined' && responseData!='Usuario no valido'){
       //Guardar Token
       saveUser(responseData)

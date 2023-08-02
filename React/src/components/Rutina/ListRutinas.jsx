@@ -13,13 +13,13 @@ import RutinaService from '../../services/RutinaService'
 
 export function ListRutinas () {
   const [data, setData]=useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);
 
   useEffect(()=>{
     RutinaService.getRutinas()
     .then( response=>{
-        console.log(response)
         setData(response.data.results)
         setError(response.error)
         setLoaded(true)

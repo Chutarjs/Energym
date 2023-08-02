@@ -247,7 +247,6 @@ export function TableActividad () {
   useEffect(()=>{
     ActGrupalesService.getDetalle()
     .then( response=>{
-        console.log(response)
         setData(response.data.results)
         setError(response.error)
         setLoaded(true)

@@ -112,7 +112,6 @@ export function FormEjercicio() {
           });
       } else {
         // Modificar ejercicio
-        console.log(formData);
         EjercicioService.updateEjercicio(formData)
           .then((response) => {
             setResponseData(response.data.results);
@@ -159,7 +158,6 @@ export function FormEjercicio() {
       // Si es modificar establece los valores a precargar en el formulario
       setValues(data);
       setValue("imagenes", data.imagenes);
-      console.log(values);
     }
   }, [data, esCrear, action, values, setValue]);
 

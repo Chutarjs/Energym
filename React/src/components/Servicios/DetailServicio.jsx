@@ -16,7 +16,6 @@ export function DetailServicio() {
   useEffect(() => {
     ServicioService.getServicioById(routeParams.id)
       .then((response) => {
-        console.log(response.data.results);
         setData(response.data.results);
         setError(response.error);
         setLoaded(true);
