@@ -115,13 +115,7 @@ export function Home() {
               sea que estés comenzando tu camino hacia un estilo de vida más
               saludable o que seas un atleta experimentado en busca de nuevos
               desafíos, aquí encontrarás las herramientas y el conocimiento para
-              lograr tus metas. Contamos con una amplia variedad de equipos de
-              última generación y una gama completa de clases grupales, desde
-              entrenamiento funcional hasta yoga y pilates. Nuestras
-              instalaciones están diseñadas pensando en tu comodidad y
-              seguridad, proporcionando un entorno limpio y ordenado para que
-              puedas concentrarte en tu entrenamiento.
-              plazo. 
+              lograr tus metas. 
             </Typography>
           </CardContent>
         </Card>
