@@ -352,7 +352,7 @@ export default function TablePlan () {
                           </TableCell>
                           <TableCell align='left'>{row.Nombre}</TableCell>
                           <TableCell align='left'>{row.Descripcion}</TableCell>
-                          <TableCell align='left'>{row.Precio}</TableCell>
+                          <TableCell align='left'>₡{row.Precio}</TableCell>
                         </TableRow>
                       )
                     })}
