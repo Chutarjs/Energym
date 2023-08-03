@@ -31,8 +31,8 @@ export function Signup() {
     Genero: yup
       .string()
       .oneOf(
-        ["0", "1"],
-        'El género debe ser "0" para masculino o "1" para femenino'
+        ["1", "2"],
+        'El género debe ser "1" para masculino o "2" para femenino'
       )
       .required("El género es requerido"),
     Nacimiento: yup
@@ -194,8 +194,8 @@ export function Signup() {
                     error={Boolean(errors.Genero)}
                     helperText={errors.Genero ? errors.Genero.message : " "}
                   >
-                    <MenuItem value="0">Masculino</MenuItem>
-                    <MenuItem value="1">Femenino</MenuItem>
+                    <MenuItem value="1">Masculino</MenuItem>
+                    <MenuItem value="2">Femenino</MenuItem>
                   </TextField>
                 )}
               />
