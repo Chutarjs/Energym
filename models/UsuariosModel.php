@@ -27,7 +27,7 @@ class UsuariosModel
 	{
 		try {
 			$rolM = new RolModel();
-
+			$planM = new PlanModel();
 			//Consulta sql
 			$vSql = "SELECT * FROM usuario where id=$id";
 			//Ejecutar la consulta
@@ -35,8 +35,12 @@ class UsuariosModel
 
 			if ($vResultado) {
 				$vResultado = $vResultado[0];
+				
 				$rol = $rolM->getRolUser($id);
 				$vResultado->rol = $rol;
+
+				$plan = $planM->getByCliente($id);
+				$vResultado->plan = $plan;
 				// Retornar el objeto
 				return $vResultado;
 			} else {

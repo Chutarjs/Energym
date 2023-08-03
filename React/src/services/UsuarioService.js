@@ -13,7 +13,6 @@ class UsuarioService {
         return axios.post(BASE_URL, Usuario);
     }
     login(Usuario){
-        console.log(Usuario);
         return axios.post(BASE_URL+ '/login/', Usuario);
     }
 }

@@ -241,7 +241,7 @@ function Header() {
               )}
                {userData &&( 
                 <MenuList>
-                <MenuItem>
+                <MenuItem component='a' href={`/user/detail/${userData?.id}`}>
                   <Typography variant='subtitle1' gutterBottom>
                     {userData?.email}
                   </Typography>

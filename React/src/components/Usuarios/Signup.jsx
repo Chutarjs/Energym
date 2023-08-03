@@ -53,14 +53,14 @@ export function Signup() {
   } = useForm({
     // Valores iniciales
     defaultValues: {
-      id: "", // You can set the desired initial value for the id field
-      Nombre: "", // You can set the desired initial value for the Nombre field
-      Apellidos: "", // You can set the desired initial value for the Apellidos field
-      Email: "", // You can set the desired initial value for the Email field
-      Password: "", // You can set the desired initial value for the Password field
-      Genero: "0", // You can set the desired initial value for the Genero field (0 or 1 as a string)
-      Nacimiento: null, // You can set the desired initial value for the Nacimiento field (a Date object or null)
-      Telefono: "", // You can set the desired initial value for the Telefono field
+      id: "",
+      Nombre: "",
+      Apellidos: "",
+      Email: "",
+      Password: "",
+      Genero: "1",
+      Nacimiento: null,
+      Telefono: "",
     },
     // Asignación de validaciones
     resolver: yupResolver(loginSchema),

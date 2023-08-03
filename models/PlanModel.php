@@ -48,7 +48,32 @@ class PlanModel
 			die ( $e->getMessage () );
 		}
     }
-
+    /*Obtener por cliente*/
+    /*http://localhost:81/Energym/Plan/getByCliente/#*/
+    public function getByCliente($idCliente)
+    {
+        try {
+            $servicioModel = new ServicioModel();
+            //Consulta sql
+			$vSql = "select p.idPlan, p.Nombre, p.Descripcion, p.Precio from plan p, historialplan hp 
+                    where hp.idCliente = $idCliente and hp.idPlan=p.idPlan and hp.FechaVigencia>=now();";
+			
+            //Ejecutar la consulta
+			$vResultado = $this->enlace->executeSQL($vSql);
+            if(!empty($vResultado)){
+                //Obtener objeto
+                $vResultado = $vResultado[0];
+                //---Servicios 
+                $listadoServicios = $servicioModel->getServicioPlan($vResultado->idPlan);
+                //Asignar servicios al objeto
+                $vResultado->servicios = $listadoServicios;
+            }
+			// Retornar el objeto
+			return $vResultado;
+		} catch ( Exception $e ) {
+			die ( $e->getMessage () );
+		}
+    }
     /**
 	 * Obtener plan para mostrar información en Formulario
 	 * @param $idPlan del plan

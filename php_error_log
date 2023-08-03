@@ -6884,3 +6884,5 @@ Stack trace:
 [01-Aug-2023 08:24:11 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
 [01-Aug-2023 08:24:11 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\controllers\EjercicioController.php on line 91
 [01-Aug-2023 08:25:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\EjercicioModel.php on line 188
+[03-Aug-2023 03:14:59 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "return" in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 44
+[03-Aug-2023 03:14:59 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "return" in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 44
