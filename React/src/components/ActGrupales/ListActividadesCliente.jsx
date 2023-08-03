@@ -121,7 +121,7 @@ export function ListActividadesCliente() {
                 >
                   <IconButton
                     component={Link}
-                    to={`/actividades/${item.idActividadGrupal}`}
+                    to={`/actividades/matricular/${item.idActividadGrupal}`}
                     aria-label="Matricular"
                   >
                     <CheckIcon />
@@ -137,7 +137,7 @@ export function ListActividadesCliente() {
                   <IconButton
                     component={Link}
                     to={`/actividades/${item.idActividadGrupal}`}
-                    aria-label="Matricular"
+                    aria-label="Informacion"
                   >
                     <Info />
                     <Typography

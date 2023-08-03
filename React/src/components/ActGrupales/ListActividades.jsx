@@ -122,7 +122,7 @@ export function ListActividades() {
                   <IconButton
                     component={Link}
                     to={`/actividades/${item.idPlan}`}
-                    aria-label="Matricular"
+                    aria-label="Informacion"
                   >
                     <Info />
                     <Typography
