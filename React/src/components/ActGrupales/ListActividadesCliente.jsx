@@ -16,6 +16,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import Button from "@mui/material/Button";
 import CheckIcon from "@mui/icons-material/Check";
+import { Info } from "@mui/icons-material";
 
 export function ListActividadesCliente() {
   const [data, setData] = useState(null);
@@ -118,7 +119,6 @@ export function ListActividadesCliente() {
                     color: (theme) => theme.palette.common.white,
                   }}
                 >
-
                   <IconButton
                     component={Link}
                     to={`/actividades/${item.idActividadGrupal}`}
@@ -132,6 +132,21 @@ export function ListActividadesCliente() {
                       ml={1}
                     >
                       Matricular
+                    </Typography>
+                  </IconButton>
+                  <IconButton
+                    component={Link}
+                    to={`/actividades/${item.idActividadGrupal}`}
+                    aria-label="Matricular"
+                  >
+                    <Info />
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      textAlign="center"
+                      ml={1}
+                    >
+                      Informacion
                     </Typography>
                   </IconButton>
                 </CardActions>

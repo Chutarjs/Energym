@@ -16,6 +16,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import Button from "@mui/material/Button";
 import CheckIcon from "@mui/icons-material/Check";
+import { Info } from "@mui/icons-material";
 
 export function ListActividades() {
   const [data, setData] = useState(null);
@@ -123,14 +124,14 @@ export function ListActividades() {
                     to={`/actividades/${item.idPlan}`}
                     aria-label="Matricular"
                   >
-                    <CheckIcon />
+                    <Info />
                     <Typography
                       variant="body2"
                       color="text.secondary"
                       textAlign="center"
                       ml={1}
                     >
-                      Matricular
+                      Informacion
                     </Typography>
                   </IconButton>
                 </CardActions>
