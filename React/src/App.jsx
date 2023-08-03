@@ -11,6 +11,7 @@ import { DetailRutina } from "./components/Rutina/DetailRutina";
 import { TableRutina } from "./components/Rutina/TableRutina";
 import { FormRutina } from "./components/Rutina/FormRutina";
 import { ListActividades } from "./components/ActGrupales/ListActividades";
+import { ListActividadesCliente } from "./components/ActGrupales/ListActividadesCliente";
 import { DetailActividad } from "./components/ActGrupales/DetailActividad";
 import { TableActividad } from "./components/ActGrupales/TableActividad";
 import { FormActividad } from "./components/ActGrupales/FormActividad";
@@ -101,6 +102,10 @@ const router = createBrowserRouter([
         path: "/servicio/:id",
         element: <DetailServicio />,
       },
+      {
+        path: "/actividades/",
+        element: <ListActividades />,
+      },
     ],
   },
 
@@ -119,10 +124,6 @@ const router = createBrowserRouter([
   {
     path: "/rutina/:id",
     element: <DetailRutina />,
-  },
-  {
-    path: "/actividades/",
-    element: <ListActividades />,
   },
   {
     path: "/actividades/:id",
@@ -155,6 +156,10 @@ const router = createBrowserRouter([
       {
         path: "/user/detail/:id",
         element: <DetailUser />,
+      },
+      {
+        path: "/actividadesGrupales/",
+        element: <ListActividadesCliente />,
       },
     ],
   },
