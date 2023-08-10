@@ -14,9 +14,9 @@ import HourglassTopIcon from "@mui/icons-material/HourglassTop";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
 import PeopleIcon from "@mui/icons-material/People";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
-import Button from "@mui/material/Button";
 import CheckIcon from "@mui/icons-material/Check";
 import { Info } from "@mui/icons-material";
+import UsuarioService from "../../services/UsuarioService";
 
 export function ListActividadesCliente() {
   const [data, setData] = useState(null);
@@ -24,9 +24,27 @@ export function ListActividadesCliente() {
   const [error, setError] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [showAvailable, setShowAvailable] = useState(false); // Estado para mostrar solo actividades con cupo disponible
-
+  const [dataCliente, setDataCliente] = useState(false);
+  
+  //actividades grupales
   useEffect(() => {
     ActGrupalesService.getDetalle()
+      .then((response) => {
+        setData(response.data.results);
+        setError(response.error);
+        setLoaded(true);
+      })
+      .catch((error) => {
+        if (error instanceof SyntaxError) {
+          console.log(error);
+          throw new Error("Respuesta no válida del servidor");
+        }
+      });
+  }, []);
+  
+  //datos del cliente
+  useEffect(() => {
+    UsuarioService.getUserById()
       .then((response) => {
         setData(response.data.results);
         setError(response.error);
@@ -132,21 +150,6 @@ export function ListActividadesCliente() {
                       ml={1}
                     >
                       Matricular
-                    </Typography>
-                  </IconButton>
-                  <IconButton
-                    component={Link}
-                    to={`/actividades/${item.idActividadGrupal}`}
-                    aria-label="Informacion"
-                  >
-                    <Info />
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      textAlign="center"
-                      ml={1}
-                    >
-                      Informacion
                     </Typography>
                   </IconButton>
                 </CardActions>

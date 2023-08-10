@@ -42,14 +42,14 @@ function Header() {
     setAnchorElMant(null);
   };
   const isAuthorizedUser = () => {
-    // Check if the user has the required roles (Administrador or Empleado)
+    // Administrador o Empleado
     return (
       decodeToken(user) &&
       autorize({ allowedRoles: ["Administrador", "Empleado"] }) // Adjust roles as needed
     );
   };
   const isCliente = () => {
-    // Check if the user has the required roles (Administrador or Empleado)
+    // Si el usuario es cliente devuelve un true
     return (
       decodeToken(user) &&
       autorize({ allowedRoles: ["Cliente"] }) // Adjust roles as needed
