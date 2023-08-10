@@ -198,4 +198,19 @@ class ActividadesGrupalesModel
             die($e->getMessage());
         }
     }
+    public function matricular($objeto)
+    {
+        try {
+            //Consulta sql
+            $vSql = "INSERT into actgrupalusuario values ($objeto->idActividadGrupal, $objeto->idUsuario, 1, 'Matriculado Exitosamente')";
+            
+            //Ejecutar la consulta
+            $vResultado = $this->enlace->executeSQL_DML($vSql);
+
+            // Retornar el objeto actualizado
+            return $this->get($objeto->idActividadGrupal);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
