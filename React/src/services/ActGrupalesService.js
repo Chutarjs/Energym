@@ -31,6 +31,10 @@ class ActGrupalesService{
     updateActividad(Actividad){
         return axios.put(BASE_URL, Actividad);
     }
+
+    matricular(Objeto){
+        return axios.post(BASE_URL + '/matricular/' + Objeto);
+    }
 }
 
 export default new ActGrupalesService()

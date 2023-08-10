@@ -205,7 +205,7 @@ class ActividadesGrupalesModel
             $vSql = "INSERT into actgrupalusuario values ($objeto->idActividadGrupal, $objeto->idUsuario, 1, 'Matriculado Exitosamente')";
             
             //Ejecutar la consulta
-            $vResultado = $this->enlace->executeSQL_DML($vSql);
+            $vResultado = $this->enlace->executeSQL_DML_last($vSql);
 
             // Retornar el objeto actualizado
             return $this->get($objeto->idActividadGrupal);
