@@ -21,7 +21,6 @@ class ActGrupalesService{
     }
     
     createActividad(Actividad){
-        console.log(Actividad);
         return axios.post(BASE_URL, Actividad);
     }
 
@@ -30,13 +29,19 @@ class ActGrupalesService{
     }
 
     updateActividad(Actividad){
-        console.log(Actividad);
         return axios.put(BASE_URL, Actividad);
     }
 
     matricular(Objeto){
-        console.log(Objeto);
         return axios.post(BASE_URL + '/matricular', Objeto);
+    }
+
+    getMatriculadas(idUsuario){
+        return axios.get(BASE_URL + '/getMatriculadas/' + idUsuario);
+    }
+    
+    getHistorial(idUsuario){
+        return axios.get(BASE_URL + '/getHistorial/' + idUsuario);
     }
 }
 

@@ -56,7 +56,7 @@ export function ListActividades() {
           .filter(
             (item) =>
               !showAvailable ||
-              (item.Cupo > item.cantidad_matriculados &&
+              (Number(item.Cupo) > Number(item.cantidad_matriculados) &&
                 item.Fecha >= currentDate)
           ) // Filtrar los datos según el estado showAvailable y la fecha de inicio
           .map((item) => (
@@ -155,7 +155,7 @@ export function ListActividades() {
         >
           {showAvailable
             ? "Mostrar todas las actividades"
-            : "Mostrar solo actividades con cupo disponible"}
+            : "Mostrar solo actividades disponibles"}
         </Button>
       </div>
     </Grid>

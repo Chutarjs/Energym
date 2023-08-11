@@ -230,7 +230,6 @@ class ActividadesGrupales
     /*Matricular una actividad*/
     public function matricular()
     {
-        var_dump(file_get_contents('php://input'));
         $inputJSON = file_get_contents('php://input');
         $object = json_decode($inputJSON);
         $genero = new ActividadesGrupalesModel();
@@ -238,7 +237,7 @@ class ActividadesGrupales
         if (isset($response) && !empty($response)) {
             $json = array(
                 'status' => 200,
-                'results' => "Actividad Matriculada Correctamente!"
+                'results' => $response
             );
         } else {
             $json = array(
@@ -251,4 +250,50 @@ class ActividadesGrupales
             http_response_code($json["status"])
         );
     }
+    /*Obtiene las matriculadas por un usuario*/
+    public function getMatriculadas($idUsuario)
+    {
+        $genero = new ActividadesGrupalesModel();
+        $response = $genero->getMatriculadas($idUsuario);
+        //Si hay respuesta
+        if (isset($response) && !empty($response)) {
+            //Armar el json
+            $json = array(
+                'status' => 200,
+                'results' => $response
+            );
+        } else {
+            $json = array(
+                'status' => 400,
+                'results' => "No hay registros"
+            );
+        }
+        echo json_encode(
+            $json,
+            http_response_code($json["status"])
+        );
+    }
+        /*Obtiene el historial*/
+        public function getHistorial($idUsuario)
+        {
+            $genero = new ActividadesGrupalesModel();
+            $response = $genero->getHistorial($idUsuario);
+            //Si hay respuesta
+            if (isset($response) && !empty($response)) {
+                //Armar el json
+                $json = array(
+                    'status' => 200,
+                    'results' => $response
+                );
+            } else {
+                $json = array(
+                    'status' => 400,
+                    'results' => "No hay registros"
+                );
+            }
+            echo json_encode(
+                $json,
+                http_response_code($json["status"])
+            );
+        }
 }

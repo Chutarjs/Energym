@@ -7035,3 +7035,10 @@ Stack trace:
 [11-Aug-2023 06:18:28 Europe/Berlin] PHP Warning:  Attempt to read property "idUsuario" on null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 205
 [11-Aug-2023 06:20:21 Europe/Berlin] PHP Warning:  Attempt to read property "idActividadGrupal" on null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 205
 [11-Aug-2023 06:20:21 Europe/Berlin] PHP Warning:  Attempt to read property "idUsuario" on null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 205
+[11-Aug-2023 06:38:27 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 61
+[11-Aug-2023 06:38:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 61
+[11-Aug-2023 06:38:30 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 61
+[11-Aug-2023 06:38:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 61
+[11-Aug-2023 06:38:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 61
+[11-Aug-2023 06:38:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 61
+[11-Aug-2023 06:38:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 61

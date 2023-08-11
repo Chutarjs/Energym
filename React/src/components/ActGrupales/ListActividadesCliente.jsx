@@ -8,21 +8,24 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import EventIcon from "@mui/icons-material/Event";
-import { Link } from "react-router-dom";
 import ActGrupalesService from "../../services/ActGrupalesService";
 import HourglassTopIcon from "@mui/icons-material/HourglassTop";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
 import PeopleIcon from "@mui/icons-material/People";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import CheckIcon from "@mui/icons-material/Check";
-import { Info } from "@mui/icons-material";
+import { useNavigate, useParams } from "react-router-dom";
 import UsuarioService from "../../services/UsuarioService";
 import { UserContext } from "../../context/UserContext";
 import { Button } from "@mui/material";
+import { toast } from "react-hot-toast";
 
 export function ListActividadesCliente() {
+  const navigate = useNavigate();
   const [data, setData] = useState(null);
-  const [statusMessage, setStatusMessage] = useState("");
+  const [dataMatriculadas, setDataMatriculadas] = useState(null);
+  const [dataHistorial, setDataHistorial] = useState(null);
+  const [responseData, setResponseData] = useState(null);
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState("");
   const [loaded, setLoaded] = useState(false);
@@ -51,6 +54,38 @@ export function ListActividadesCliente() {
       });
   }, []);
 
+  //actividades grupales matriculadas
+  useEffect(() => {
+    ActGrupalesService.getMatriculadas(userData.id)
+      .then((response) => {
+        setDataMatriculadas(response.data.results);
+        setError(response.error);
+        setLoaded(true);
+      })
+      .catch((error) => {
+        if (error instanceof SyntaxError) {
+          console.log(error);
+          throw new Error("Respuesta no válida del servidor");
+        }
+      });
+  }, [userData.id]);
+
+  //actividades grupales
+  useEffect(() => {
+    ActGrupalesService.getHistorial(userData.id)
+      .then((response) => {
+        setDataHistorial(response.data.results);
+        setError(response.error);
+        setLoaded(true);
+      })
+      .catch((error) => {
+        if (error instanceof SyntaxError) {
+          console.log(error);
+          throw new Error("Respuesta no válida del servidor");
+        }
+      });
+  }, [userData.id]);
+
   //datos del cliente
   useEffect(() => {
     UsuarioService.getUserById(userData.id)
@@ -71,29 +106,64 @@ export function ListActividadesCliente() {
   const currentDate = new Date().toISOString().split("T")[0];
 
   const handleMatricular = (objeto) => {
-    console.log("Matricular data:", objeto);
-    objeto.idUsuario = userData.id; 
+    objeto.idUsuario = userData.id;
     ActGrupalesService.matricular(objeto)
       .then((response) => {
-        console.log(response.data);
-        // Assuming the response contains a success message
-        setStatusMessage(response.data.message);
-        // You might also want to update your data or reload the activities list here
+        console.log(response);
+        setResponseData(response.data);
+        setError(response.error);
+
+        if (
+          response.data.results == "No se pudo matricular" ||
+          response.data.results ==
+            "No se pudo matricular, el plan pagado por el cliente no incluye actividades grupales"
+        ) {
+          toast.error(response.data.results);
+        } else {
+          toast.success(response.data.results);
+        }
       })
       .catch((error) => {
+        toast.error(error);
+        console.log(error);
+      });
+  };
+
+  const handleDesmatricular = (objeto) => {
+    objeto.idUsuario = userData.id;
+    ActGrupalesService.desmatricular(objeto)
+      .then((response) => {
+        console.log(response);
+        setResponseData(response.data);
+        setError(response.error);
+
+        if (
+          response.data.results == "No se pudo desmatricular" ||
+          response.data.results ==
+            "No se pudo desmatricular, el plan pagado por el cliente no incluye actividades grupales"
+        ) {
+          toast.error(response.data.results);
+        } else {
+          toast.success(response.data.results);
+        }
+      })
+      .catch((error) => {
+        toast.error(error);
+        console.log(error);
       });
   };
 
   return (
+    <div>
     <Grid container sx={{ p: 2 }} spacing={3}>
       {!loaded && <div>Cargando...</div>}
-      {statusMessage && <div>{statusMessage}</div>}
+      <Typography variant="h6" width={1} >Actividades Disponibles</Typography>
       {data &&
         data
           .filter(
             (item) =>
               showAvailable ||
-              (item.Cupo > item.cantidad_matriculados &&
+              (Number(item.Cupo) > Number(item.cantidad_matriculados) &&
                 item.Fecha >= currentDate)
           ) // Filtrar los datos según el estado showAvailable y la fecha de inicio
           .map((item) => (
@@ -175,7 +245,162 @@ export function ListActividadesCliente() {
                 </CardActions>
               </Card>
             </Grid>
+
           ))}
     </Grid>
+
+    <Grid container sx={{ p: 2 }} spacing={3}>
+      {!loaded && <div>Cargando...</div>}
+      <Typography variant="h6" width={1} >Actividades Matriculadas</Typography>
+      {dataMatriculadas &&
+        dataMatriculadas.map((item) => (
+            <Grid item xs={4} key={item.idActividadGrupal}>
+              <Card>
+                <CardHeader
+                  sx={{
+                    p: 0,
+                    backgroundColor: (theme) => theme.palette.secondary.main,
+                    color: (theme) => theme.palette.common.white,
+                  }}
+                  style={{ textAlign: "center" }}
+                  title={item.Nombre}
+                />
+                <CardContent>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    {item.Descripcion}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    <EventIcon />
+                    {item.Fecha}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    <HourglassTopIcon /> {item.HoraInicio}
+                    <HourglassBottomIcon /> {item.HoraFinal}
+                  </Typography>
+                </CardContent>
+
+                <CardActions
+                  disableSpacing
+                  sx={{
+                    backgroundColor: (theme) => theme.palette.action.focus,
+                    color: (theme) => theme.palette.common.white,
+                  }}
+                >
+                  <IconButton
+                    component={Button}
+                    aria-label="Desmatricular"
+                    onClick={() => handleDesmatricular(item)}
+                  >
+                    <CheckIcon />
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      textAlign="center"
+                      ml={1}
+                    >
+                      Matricular
+                    </Typography>
+                  </IconButton>
+                </CardActions>
+              </Card>
+            </Grid>
+
+          ))}
+    </Grid>
+
+    <Grid container sx={{ p: 2 }} spacing={3}>
+      {!loaded && <div>Cargando...</div>}
+      <Typography variant="h6" width={1}>Historial de Actividades Matriculadas</Typography>
+      {console.log(dataHistorial)}
+      {dataHistorial &&
+        dataHistorial
+          .map((item) => (
+            <Grid item xs={4} key={item.idActividadGrupal}>
+              <Card>
+                <CardHeader
+                  sx={{
+                    p: 0,
+                    backgroundColor: (theme) => theme.palette.secondary.main,
+                    color: (theme) => theme.palette.common.white,
+                  }}
+                  style={{ textAlign: "center" }}
+                  title={item.Nombre}
+                />
+                <CardContent>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    {item.Descripcion}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    <EventIcon />
+                    {item.Fecha}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    <HourglassTopIcon /> {item.HoraInicio}
+                    <HourglassBottomIcon /> {item.HoraFinal}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    <PeopleIcon />
+                    {item.Estado == "1"? "Matriculada": "Desmatriculada"}
+                  </Typography>
+                </CardContent>
+
+                <CardActions
+                  disableSpacing
+                  sx={{
+                    backgroundColor: (theme) => theme.palette.action.focus,
+                    color: (theme) => theme.palette.common.white,
+                  }}
+                >
+                  <IconButton
+                    component={Button}
+                    aria-label="Matricular"
+                    onClick={() => handleMatricular(item)}
+                  >
+                    <CheckIcon />
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      textAlign="center"
+                      ml={1}
+                    >
+                      Matricular
+                    </Typography>
+                  </IconButton>
+                </CardActions>
+              </Card>
+            </Grid>
+
+          ))}
+    </Grid>
+
+    </div>
   );
 }
