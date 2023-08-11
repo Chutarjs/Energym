@@ -226,9 +226,11 @@ class ActividadesGrupales
             http_response_code($json["status"])
         );
     }
-    /*Actualiza una actividada*/
+
+    /*Matricular una actividad*/
     public function matricular()
     {
+        var_dump(file_get_contents('php://input'));
         $inputJSON = file_get_contents('php://input');
         $object = json_decode($inputJSON);
         $genero = new ActividadesGrupalesModel();
@@ -236,7 +238,7 @@ class ActividadesGrupales
         if (isset($response) && !empty($response)) {
             $json = array(
                 'status' => 200,
-                'results' => "Actividad Actualizado Correctamente!"
+                'results' => "Actividad Matriculada Correctamente!"
             );
         } else {
             $json = array(

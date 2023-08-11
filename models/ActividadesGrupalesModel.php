@@ -202,7 +202,7 @@ class ActividadesGrupalesModel
     {
         try {
             //Consulta sql
-            $vSql = "INSERT into actgrupalusuario values ($objeto->idActividadGrupal, $objeto->idUsuario, 1, 'Matriculado Exitosamente')";
+            $vSql = "INSERT into actgrupalusuario values ('$objeto->idActividadGrupal', '$objeto->idUsuario', 1, 'Matriculado Exitosamente')";
             
             //Ejecutar la consulta
             $vResultado = $this->enlace->executeSQL_DML_last($vSql);

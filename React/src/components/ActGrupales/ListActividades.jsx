@@ -50,6 +50,7 @@ export function ListActividades() {
   return (
     <Grid container sx={{ p: 2 }} spacing={3}>
       {!loaded && <div>Cargando...</div>}
+      {console.log(data)}
       {data &&
         data
           .filter(
@@ -121,7 +122,7 @@ export function ListActividades() {
 
                   <IconButton
                     component={Link}
-                    to={`/actividades/${item.idPlan}`}
+                    to={`/actividades/${item.idActividadGrupal}`}
                     aria-label="Informacion"
                   >
                     <Info />

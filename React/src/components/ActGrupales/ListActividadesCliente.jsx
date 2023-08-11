@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
@@ -17,15 +17,24 @@ import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import CheckIcon from "@mui/icons-material/Check";
 import { Info } from "@mui/icons-material";
 import UsuarioService from "../../services/UsuarioService";
+import { UserContext } from "../../context/UserContext";
+import { Button } from "@mui/material";
 
 export function ListActividadesCliente() {
   const [data, setData] = useState(null);
+  const [statusMessage, setStatusMessage] = useState("");
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [showAvailable, setShowAvailable] = useState(false); // Estado para mostrar solo actividades con cupo disponible
-  const [dataCliente, setDataCliente] = useState(false);
-  
+  const { user, decodeToken, autorize } = useContext(UserContext);
+  const [userData, setUserData] = useState(decodeToken());
+
+  //Actualizar valor de usuario actual
+  useEffect(() => {
+    setUserData(decodeToken(user));
+  }, [decodeToken, user]);
+
   //actividades grupales
   useEffect(() => {
     ActGrupalesService.getDetalle()
@@ -41,12 +50,12 @@ export function ListActividadesCliente() {
         }
       });
   }, []);
-  
+
   //datos del cliente
   useEffect(() => {
-    UsuarioService.getUserById()
+    UsuarioService.getUserById(userData.id)
       .then((response) => {
-        setData(response.data.results);
+        setUserData(response.data.results);
         setError(response.error);
         setLoaded(true);
       })
@@ -56,19 +65,29 @@ export function ListActividadesCliente() {
           throw new Error("Respuesta no válida del servidor");
         }
       });
-  }, []);
-
-  const handleToggleAvailable = () => {
-    setShowAvailable(!showAvailable);
-  };
+  }, [userData.id]);
 
   // Obtener la fecha actual en formato yyyy-mm-dd
   const currentDate = new Date().toISOString().split("T")[0];
 
+  const handleMatricular = (objeto) => {
+    console.log("Matricular data:", objeto);
+    objeto.idUsuario = userData.id; 
+    ActGrupalesService.matricular(objeto)
+      .then((response) => {
+        console.log(response.data);
+        // Assuming the response contains a success message
+        setStatusMessage(response.data.message);
+        // You might also want to update your data or reload the activities list here
+      })
+      .catch((error) => {
+      });
+  };
+
   return (
     <Grid container sx={{ p: 2 }} spacing={3}>
       {!loaded && <div>Cargando...</div>}
-      {console.log(data)}
+      {statusMessage && <div>{statusMessage}</div>}
       {data &&
         data
           .filter(
@@ -130,6 +149,7 @@ export function ListActividadesCliente() {
                     {" Matriculados : " + item.cantidad_matriculados}
                   </Typography>
                 </CardContent>
+
                 <CardActions
                   disableSpacing
                   sx={{
@@ -138,9 +158,9 @@ export function ListActividadesCliente() {
                   }}
                 >
                   <IconButton
-                    component={Link}
-                    to={`/actividades/matricular/${item.idActividadGrupal}`}
+                    component={Button}
                     aria-label="Matricular"
+                    onClick={() => handleMatricular(item)}
                   >
                     <CheckIcon />
                     <Typography

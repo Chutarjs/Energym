@@ -21,6 +21,7 @@ class ActGrupalesService{
     }
     
     createActividad(Actividad){
+        console.log(Actividad);
         return axios.post(BASE_URL, Actividad);
     }
 
@@ -29,11 +30,13 @@ class ActGrupalesService{
     }
 
     updateActividad(Actividad){
+        console.log(Actividad);
         return axios.put(BASE_URL, Actividad);
     }
 
     matricular(Objeto){
-        return axios.post(BASE_URL + '/matricular/' + Objeto);
+        console.log(Objeto);
+        return axios.post(BASE_URL + '/matricular', Objeto);
     }
 }
 

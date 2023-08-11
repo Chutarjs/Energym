@@ -333,26 +333,6 @@ END$$
 USE `energym`$$
 CREATE
 DEFINER=`root`@`localhost`
-TRIGGER `energym`.`actgrupalusuario_BEFORE_INSERT`
-BEFORE INSERT ON `energym`.`actgrupalusuario`
-FOR EACH ROW
-BEGIN
-if(!((SELECT a.cupo - count(au.idUsuario) FROM actgrupalusuario au, actividadgrupal a WHERE au.idActGrupal = new.idActGrupal and a.idActividadGrupal=au.idActGrupal GROUP BY a.cupo)>=0))
-then
-    SIGNAL sqlstate '45001' set message_text = "No queda cupo disponible para la actividad!";
-end if;
-
-    
-if((Select count(ps.idServicio) from PlanServicio ps, HistorialPlan hp, actividadgrupal ag
-    where hp.fechavigencia>now() and new.idActGrupal=ag.idActividadGrupal and new.idUsuario = hp.idCliente and ps.idPlan=hp.idPlan and ag.idServicio = ps.idServicio GROUP BY new.idUsuario)<=0)
-then
-    SIGNAL sqlstate '45002' set message_text = "El plan pagado por el cliente no incluye el servicio de esta actividad grupal!";
-end if;
-END$$
-
-USE `energym`$$
-CREATE
-DEFINER=`root`@`localhost`
 TRIGGER `energym`.`historialrutina_BEFORE_INSERT`
 BEFORE INSERT ON `energym`.`historialrutina`
 FOR EACH ROW
