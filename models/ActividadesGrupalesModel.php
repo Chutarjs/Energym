@@ -206,21 +206,37 @@ class ActividadesGrupalesModel
         try {
             $UsuariosModel = new UsuariosModel();
             $user = $UsuariosModel->get($objeto->idUsuario);
-
+    
             foreach ($user->plan->servicios as $servicio) {
                 if ($servicio->idServicio == 5) {
-                    //Consulta sql
-                    $vSql = "INSERT into actgrupalusuario values ('$objeto->idActividadGrupal', '$objeto->idUsuario', 1, 'Matriculado Exitosamente')";
-
-                    //Ejecutar la consulta
-                    $vResultado = $this->enlace->executeSQL_DML_last($vSql);
                     
-                    return "Matriculado Correctamente";
-                }else{
+                    //si ya esta matriculado devuelve un mensaje
+                    $existingSql = "SELECT COUNT(*) as count FROM actgrupalusuario WHERE idActGrupal = '$objeto->idActividadGrupal' AND idUsuario = '$objeto->idUsuario' AND Estado=1";
+                    $existingResult = $this->enlace->executeSQL_DML_last($existingSql);
+                    if ($existingResult == 0) {
+                        return "El usuario ya está matriculado";
+                    }
+
+                    // Verificar si ya existe una entrada en la tabla
+                    $existingSql = "SELECT COUNT(*) as count FROM actgrupalusuario WHERE idActGrupal = '$objeto->idActividadGrupal' AND idUsuario = '$objeto->idUsuario' AND Estado=0";
+                    $existingResult = $this->enlace->executeSQL_DML_last($existingSql);
+    
+                    if ($existingResult[0]['count'] == 0) {
+                        // Si no existe, realizar la inserción
+                        $insertSql = "INSERT INTO actgrupalusuario VALUES ('$objeto->idActividadGrupal', '$objeto->idUsuario', 1, 'Matriculado Exitosamente')";
+                        $insertResult = $this->enlace->executeSQL_DML_last($insertSql);
+    
+                        return "Matriculado Correctamente";
+                    } else {
+                        $vSql = "UPDATE actgrupalusuario set Estado=1 where idActGrupal=='$objeto->idActGrupal' and idUsuario=='$objeto->idUsuario'";
+                        $insertResult = $this->enlace->executeSQL_DML($vSql);
+                        return "Matriculado de nuevo en esta actividad grupal";
+                    }
+                } else {
                     return "No se pudo matricular, el plan pagado por el cliente no incluye actividades grupales";
                 }
             }
-
+    
             return "No se pudo matricular";
         } catch (Exception $e) {
             die($e->getMessage());
@@ -232,21 +248,33 @@ class ActividadesGrupalesModel
         try {
             $UsuariosModel = new UsuariosModel();
             $user = $UsuariosModel->get($objeto->idUsuario);
-
+    
             foreach ($user->plan->servicios as $servicio) {
                 if ($servicio->idServicio == 5) {
-                    //Consulta sql
-                    $vSql = "UPDATE ";
-
-                    //Ejecutar la consulta
-                    $vResultado = $this->enlace->executeSQL_DML($vSql);
-                    
-                    return "Desmatriculado Correctamente";
-                }else{
+                    // Verificar si la actividad aún no se ha efectuado y si la cancelación está dentro del límite de tiempo
+                    $activityCheckSql = "SELECT horaInicio FROM actividadgrupal WHERE idActividadGrupal = '$objeto->idActividadGrupal'";
+                    $activityCheckResult = $this->enlace->executeSQL_DML_last($activityCheckSql);
+                    if ($activityCheckResult && count($activityCheckResult) > 0) {
+                        $fechaHoraActividad = strtotime($activityCheckResult[0]['horaInicio']);
+                        $limiteCancelacion = time() + 12 * 3600; // 12 horas en segundos
+                        
+                        if ($fechaHoraActividad > $limiteCancelacion) {
+                            // Realizar el UPDATE para desmatricular
+                            $updateSql = "UPDATE actgrupalusuario SET Estado = 0 WHERE idActGrupal = '$objeto->idActGrupal' AND idUsuario = '$objeto->idUsuario'";
+                            $updateResult = $this->enlace->executeSQL_DML($updateSql);
+                            
+                            return "Desmatriculado Correctamente";
+                        } else {
+                            return "No se puede cancelar la reserva, la actividad ya ha comenzado o el límite de cancelación ha sido superado.";
+                        }
+                    } else {
+                        return "No se pudo encontrar la actividad grupal especificada.";
+                    }
+                } else {
                     return "No se pudo desmatricular, el plan pagado por el cliente no incluye actividades grupales";
                 }
             }
-
+    
             return "No se pudo desmatricular";
         } catch (Exception $e) {
             die($e->getMessage());

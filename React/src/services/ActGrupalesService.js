@@ -36,6 +36,10 @@ class ActGrupalesService{
         return axios.post(BASE_URL + '/matricular', Objeto);
     }
 
+    desmatricular(Objeto){
+        return axios.put(BASE_URL + '/desmatricular/', Objeto);
+    }
+
     getMatriculadas(idUsuario){
         return axios.get(BASE_URL + '/getMatriculadas/' + idUsuario);
     }

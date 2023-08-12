@@ -250,6 +250,29 @@ class ActividadesGrupales
             http_response_code($json["status"])
         );
     }
+    /*Desmatricular una actividad*/
+    public function desmatricular()
+    {
+        $inputJSON = file_get_contents('php://input');
+        $object = json_decode($inputJSON);
+        $genero = new ActividadesGrupalesModel();
+        $response = $genero->desmatricular($object);
+        if (isset($response) && !empty($response)) {
+            $json = array(
+                'status' => 200,
+                'results' => $response
+            );
+        } else {
+            $json = array(
+                'status' => 400,
+                'results' => "No hay registros"
+            );
+        }
+        echo json_encode(
+            $json,
+            http_response_code($json["status"])
+        );
+    }
     /*Obtiene las matriculadas por un usuario*/
     public function getMatriculadas($idUsuario)
     {
@@ -273,27 +296,27 @@ class ActividadesGrupales
             http_response_code($json["status"])
         );
     }
-        /*Obtiene el historial*/
-        public function getHistorial($idUsuario)
-        {
-            $genero = new ActividadesGrupalesModel();
-            $response = $genero->getHistorial($idUsuario);
-            //Si hay respuesta
-            if (isset($response) && !empty($response)) {
-                //Armar el json
-                $json = array(
-                    'status' => 200,
-                    'results' => $response
-                );
-            } else {
-                $json = array(
-                    'status' => 400,
-                    'results' => "No hay registros"
-                );
-            }
-            echo json_encode(
-                $json,
-                http_response_code($json["status"])
+    /*Obtiene el historial*/
+    public function getHistorial($idUsuario)
+    {
+        $genero = new ActividadesGrupalesModel();
+        $response = $genero->getHistorial($idUsuario);
+        //Si hay respuesta
+        if (isset($response) && !empty($response)) {
+            //Armar el json
+            $json = array(
+                'status' => 200,
+                'results' => $response
+            );
+        } else {
+            $json = array(
+                'status' => 400,
+                'results' => "No hay registros"
             );
         }
+        echo json_encode(
+            $json,
+            http_response_code($json["status"])
+        );
+    }
 }

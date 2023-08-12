@@ -19,6 +19,8 @@ import UsuarioService from "../../services/UsuarioService";
 import { UserContext } from "../../context/UserContext";
 import { Button } from "@mui/material";
 import { toast } from "react-hot-toast";
+import CancelIcon from "@mui/icons-material/Cancel";
+import EditNoteIcon from "@mui/icons-material/EditNote";
 
 export function ListActividadesCliente() {
   const navigate = useNavigate();
@@ -131,9 +133,10 @@ export function ListActividadesCliente() {
 
   const handleDesmatricular = (objeto) => {
     objeto.idUsuario = userData.id;
+    console.log(objeto);
     ActGrupalesService.desmatricular(objeto)
       .then((response) => {
-        console.log(response);
+        console.log(response.data);
         setResponseData(response.data);
         setError(response.error);
 
@@ -155,105 +158,118 @@ export function ListActividadesCliente() {
 
   return (
     <div>
-    <Grid container sx={{ p: 2 }} spacing={3}>
-      {!loaded && <div>Cargando...</div>}
-      <Typography variant="h6" width={1} >Actividades Disponibles</Typography>
-      {data &&
-        data
-          .filter(
-            (item) =>
-              showAvailable ||
-              (Number(item.Cupo) > Number(item.cantidad_matriculados) &&
-                item.Fecha >= currentDate)
-          ) // Filtrar los datos según el estado showAvailable y la fecha de inicio
-          .map((item) => (
-            <Grid item xs={4} key={item.idActividadGrupal}>
-              <Card>
-                <CardHeader
-                  sx={{
-                    p: 0,
-                    backgroundColor: (theme) => theme.palette.secondary.main,
-                    color: (theme) => theme.palette.common.white,
-                  }}
-                  style={{ textAlign: "center" }}
-                  title={item.Nombre}
-                />
-                <CardContent>
-                  <Typography
-                    variant="body1"
-                    color="text.secondary"
-                    textAlign="center"
-                  >
-                    {item.Descripcion}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    color="text.secondary"
-                    textAlign="center"
-                  >
-                    <EventIcon />
-                    {item.Fecha}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    textAlign="center"
-                  >
-                    <HourglassTopIcon /> {item.HoraInicio}
-                    <HourglassBottomIcon /> {item.HoraFinal}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    color="text.secondary"
-                    textAlign="center"
-                  >
-                    <PeopleIcon />
-                    {" Cupo : " + item.Cupo}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    color="text.secondary"
-                    textAlign="center"
-                  >
-                    <EmojiPeopleIcon />
-                    {" Matriculados : " + item.cantidad_matriculados}
-                  </Typography>
-                </CardContent>
-
-                <CardActions
-                  disableSpacing
-                  sx={{
-                    backgroundColor: (theme) => theme.palette.action.focus,
-                    color: (theme) => theme.palette.common.white,
-                  }}
-                >
-                  <IconButton
-                    component={Button}
-                    aria-label="Matricular"
-                    onClick={() => handleMatricular(item)}
-                  >
-                    <CheckIcon />
+      <Grid container sx={{ p: 2 }} spacing={3}>
+        {!loaded && <div>Cargando...</div>}
+        <Typography variant="h6" width={1}>
+          Actividades Disponibles
+        </Typography>
+        {data == null && (
+          <Typography variant="body1" color="text.secondary" textAlign="center">
+            No hay actividades disponibles en este momento.
+          </Typography>
+        )}
+        {data &&
+          data
+            .filter(
+              (item) =>
+                showAvailable ||
+                (Number(item.Cupo) > Number(item.cantidad_matriculados) &&
+                  item.Fecha >= currentDate)
+            ) // Filtrar los datos según el estado showAvailable y la fecha de inicio
+            .map((item) => (
+              <Grid item xs={4} key={item.idActividadGrupal}>
+                <Card>
+                  <CardHeader
+                    sx={{
+                      p: 0,
+                      backgroundColor: (theme) => theme.palette.secondary.main,
+                      color: (theme) => theme.palette.common.white,
+                    }}
+                    style={{ textAlign: "center" }}
+                    title={item.Nombre}
+                  />
+                  <CardContent>
+                    <Typography
+                      variant="body1"
+                      color="text.secondary"
+                      textAlign="center"
+                    >
+                      {item.Descripcion}
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      color="text.secondary"
+                      textAlign="center"
+                    >
+                      <EventIcon />
+                      {item.Fecha}
+                    </Typography>
                     <Typography
                       variant="body2"
                       color="text.secondary"
                       textAlign="center"
-                      ml={1}
                     >
-                      Matricular
+                      <HourglassTopIcon /> {item.HoraInicio}
+                      <HourglassBottomIcon /> {item.HoraFinal}
                     </Typography>
-                  </IconButton>
-                </CardActions>
-              </Card>
-            </Grid>
+                    <Typography
+                      variant="body1"
+                      color="text.secondary"
+                      textAlign="center"
+                    >
+                      <PeopleIcon />
+                      {" Cupo : " + item.Cupo}
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      color="text.secondary"
+                      textAlign="center"
+                    >
+                      <EmojiPeopleIcon />
+                      {" Matriculados : " + item.cantidad_matriculados}
+                    </Typography>
+                  </CardContent>
 
-          ))}
-    </Grid>
+                  <CardActions
+                    disableSpacing
+                    sx={{
+                      backgroundColor: (theme) => theme.palette.action.focus,
+                      color: (theme) => theme.palette.common.white,
+                    }}
+                  >
+                    <IconButton
+                      component={Button}
+                      aria-label="Matricular"
+                      onClick={() => handleMatricular(item)}
+                    >
+                      <CheckIcon />
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        textAlign="center"
+                        ml={1}
+                      >
+                        Matricular
+                      </Typography>
+                    </IconButton>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+      </Grid>
 
-    <Grid container sx={{ p: 2 }} spacing={3}>
-      {!loaded && <div>Cargando...</div>}
-      <Typography variant="h6" width={1} >Actividades Matriculadas</Typography>
-      {dataMatriculadas &&
-        dataMatriculadas.map((item) => (
+      <Grid container sx={{ p: 2 }} spacing={3}>
+        {!loaded && <div>Cargando...</div>}
+        <Typography variant="h6" width={1}>
+          Actividades Matriculadas
+        </Typography>
+        {dataMatriculadas == null && (
+          <Typography variant="body1" color="text.secondary" textAlign="center">
+            No tienes actividades matriculadas actualmente.
+          </Typography>
+        )}
+        {dataMatriculadas &&
+          dataMatriculadas.map((item) => (
             <Grid item xs={4} key={item.idActividadGrupal}>
               <Card>
                 <CardHeader
@@ -303,30 +319,34 @@ export function ListActividadesCliente() {
                     aria-label="Desmatricular"
                     onClick={() => handleDesmatricular(item)}
                   >
-                    <CheckIcon />
+                    <CancelIcon></CancelIcon>
                     <Typography
                       variant="body2"
                       color="text.secondary"
                       textAlign="center"
                       ml={1}
                     >
-                      Matricular
+                      Desmatricular
                     </Typography>
                   </IconButton>
                 </CardActions>
               </Card>
             </Grid>
-
           ))}
-    </Grid>
+      </Grid>
 
-    <Grid container sx={{ p: 2 }} spacing={3}>
-      {!loaded && <div>Cargando...</div>}
-      <Typography variant="h6" width={1}>Historial de Actividades Matriculadas</Typography>
-      {console.log(dataHistorial)}
-      {dataHistorial &&
-        dataHistorial
-          .map((item) => (
+      <Grid container sx={{ p: 2 }} spacing={3}>
+        {!loaded && <div>Cargando...</div>}
+        <Typography variant="h6" width={1}>
+          Historial de Actividades Matriculadas
+        </Typography>
+        {dataHistorial==null && (
+          <Typography variant="body1" color="text.secondary" textAlign="center">
+            No tienes actividades en tu historial.
+          </Typography>
+        )}
+        {dataHistorial &&
+          dataHistorial.map((item) => (
             <Grid item xs={4} key={item.idActividadGrupal}>
               <Card>
                 <CardHeader
@@ -368,7 +388,7 @@ export function ListActividadesCliente() {
                     textAlign="center"
                   >
                     <PeopleIcon />
-                    {item.Estado == "1"? "Matriculada": "Desmatriculada"}
+                    {item.Estado == "1" ? "Matriculada" : "Desmatriculada"}
                   </Typography>
                 </CardContent>
 
@@ -384,23 +404,21 @@ export function ListActividadesCliente() {
                     aria-label="Matricular"
                     onClick={() => handleMatricular(item)}
                   >
-                    <CheckIcon />
+                    <EditNoteIcon />
                     <Typography
                       variant="body2"
                       color="text.secondary"
                       textAlign="center"
                       ml={1}
                     >
-                      Matricular
+                      Calificar
                     </Typography>
                   </IconButton>
                 </CardActions>
               </Card>
             </Grid>
-
           ))}
-    </Grid>
-
+      </Grid>
     </div>
   );
 }

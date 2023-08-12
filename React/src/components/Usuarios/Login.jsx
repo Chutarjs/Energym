@@ -50,13 +50,13 @@ export function Login () {
         })
         .catch(error => {
           if (error instanceof SyntaxError) {
-            console.log(error);
             throw new Error('Respuesta no válida del servidor');
           }
         });
         //Respuesta del API
     } catch (e) {
       // handle your error
+      console.log(e);
     }
   }
   //Registrar usuario
