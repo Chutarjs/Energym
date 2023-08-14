@@ -254,7 +254,7 @@ class ActividadesGrupales
     public function desmatricular()
     {
         $inputJSON = file_get_contents('php://input');
-        $object = json_decode($inputJSON);
+        $object = json_decode($inputJSON); 
         $genero = new ActividadesGrupalesModel();
         $response = $genero->desmatricular($object);
         if (isset($response) && !empty($response)) {

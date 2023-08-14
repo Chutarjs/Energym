@@ -21,6 +21,7 @@ import { Button } from "@mui/material";
 import { toast } from "react-hot-toast";
 import CancelIcon from "@mui/icons-material/Cancel";
 import EditNoteIcon from "@mui/icons-material/EditNote";
+import { Refresh } from "@mui/icons-material";
 
 export function ListActividadesCliente() {
   const navigate = useNavigate();
@@ -109,9 +110,9 @@ export function ListActividadesCliente() {
 
   const handleMatricular = (objeto) => {
     objeto.idUsuario = userData.id;
+    console.log(objeto);
     ActGrupalesService.matricular(objeto)
       .then((response) => {
-        console.log(response);
         setResponseData(response.data);
         setError(response.error);
 
@@ -124,6 +125,10 @@ export function ListActividadesCliente() {
         } else {
           toast.success(response.data.results);
         }
+        // Recargar la página después de 2 segundos (2000 milisegundos)
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
       })
       .catch((error) => {
         toast.error(error);
@@ -136,16 +141,17 @@ export function ListActividadesCliente() {
     console.log(objeto);
     ActGrupalesService.desmatricular(objeto)
       .then((response) => {
-        console.log(response);
         setResponseData(response.data);
-        console.log(response.data);
         setError(response.error);
-
         if (response.data.results == "No se pudo desmatricular") {
           toast.error(response.data.results);
         } else {
           toast.success(response.data.results);
         }
+        // Recargar la página después de 2 segundos (2000 milisegundos)
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
       })
       .catch((error) => {
         toast.error(error);
@@ -337,7 +343,7 @@ export function ListActividadesCliente() {
         <Typography variant="h6" width={1}>
           Historial de Actividades Matriculadas
         </Typography>
-        {dataHistorial==null && (
+        {dataHistorial == null && (
           <Typography variant="body1" color="text.secondary" textAlign="center">
             No tienes actividades en tu historial.
           </Typography>

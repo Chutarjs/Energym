@@ -49,9 +49,10 @@ class ActividadesGrupalesModel
             FROM (
                 SELECT ag.idActividadGrupal, ag.Nombre, ag.Fecha, ag.HoraInicio, ag.HoraFinal, ag.Cupo, COUNT(agu.idUsuario) AS cantidad_matriculados
                 FROM energym.actividadgrupal ag
-                LEFT JOIN energym.actgrupalusuario agu ON ag.idActividadGrupal = agu.idActGrupal
+                LEFT JOIN energym.actgrupalusuario agu ON ag.idActividadGrupal = agu.idActGrupal AND agu.estado = 1
                 GROUP BY ag.idActividadGrupal, ag.Nombre
-            ) AS subquery";
+            ) AS subquery;
+            ";
 
             //Ejecutar la consulta
             $vResultado = $this->enlace->ExecuteSQL($vSql);
@@ -103,7 +104,8 @@ class ActividadesGrupalesModel
             FROM energym.actgrupalusuario agu
             JOIN energym.actividadgrupal ag ON ag.idActividadGrupal = agu.idActGrupal
             JOIN energym.usuario u ON u.id = agu.idUsuario
-            WHERE ag.idActividadGrupal = $id;";
+            WHERE ag.idActividadGrupal = $id
+            AND agu.Estado = 1;";
 
             //Ejecutar la consulta
             $vResultado = $this->enlace->ExecuteSQL($vSql);
@@ -212,23 +214,22 @@ class ActividadesGrupalesModel
 
                     //si ya esta matriculado devuelve un mensaje
                     $existingSql = "SELECT COUNT(*) as count FROM actgrupalusuario WHERE idActGrupal = '$objeto->idActividadGrupal' AND idUsuario = '$objeto->idUsuario' AND Estado=1";
-                    $existingResult = $this->enlace->executeSQL_DML_last($existingSql);
-                    if ($existingResult == 0) {
+                    $existingResult = $this->enlace->executeSQL($existingSql);
+                    if ($existingResult[0]->count != 0) {
                         return "El usuario ya está matriculado";
                     }
 
                     // Verificar si ya existe una entrada en la tabla
-                    $existingSql = "SELECT COUNT(*) as count FROM actgrupalusuario WHERE idActGrupal = '$objeto->idActividadGrupal' AND idUsuario = '$objeto->idUsuario' AND Estado=0";
-                    $existingResult = $this->enlace->executeSQL_DML_last($existingSql);
-
-                    if ($existingResult[0]['count'] == 0) {
+                    $existingSql = "SELECT COUNT(*) as count FROM actgrupalusuario WHERE idActGrupal = '$objeto->idActividadGrupal' AND idUsuario = '$objeto->idUsuario'";
+                    $existingResult = $this->enlace->executeSQL($existingSql);
+                    if ($existingResult == 0) {
                         // Si no existe, realizar la inserción
                         $insertSql = "INSERT INTO actgrupalusuario VALUES ('$objeto->idActividadGrupal', '$objeto->idUsuario', 1, 'Matriculado Exitosamente')";
                         $insertResult = $this->enlace->executeSQL_DML_last($insertSql);
 
                         return "Matriculado Correctamente";
                     } else {
-                        $vSql = "UPDATE actgrupalusuario set Estado=1 where idActGrupal=='$objeto->idActGrupal' and idUsuario=='$objeto->idUsuario'";
+                        $vSql = "UPDATE actgrupalusuario set Estado=1 where idActGrupal='$objeto->idActividadGrupal' and idUsuario='$objeto->idUsuario'";
                         $insertResult = $this->enlace->executeSQL_DML($vSql);
                         return "Matriculado de nuevo en esta actividad grupal";
                     }
@@ -246,21 +247,19 @@ class ActividadesGrupalesModel
     public function desmatricular($objeto)
     {
         try {
-            $UsuariosModel = new UsuariosModel();
-            $user = $UsuariosModel->get($objeto->idUsuario);
-
-            foreach ($user->plan->servicios as $servicio) {
-                if ($servicio->idServicio == 5) {
-                    // Verificar si la actividad aún no se ha efectuado y si la cancelación está dentro del límite de tiempo
-                    // Realizar el UPDATE para desmatricular
-                    $updateSql = "UPDATE actgrupalusuario SET Estado = 0 WHERE idActGrupal = '$objeto->idActGrupal' AND idUsuario = '$objeto->idUsuario'";
-                    $updateResult = $this->enlace->executeSQL_DML($updateSql);
-
-                    return "Desmatriculado Correctamente";
-                }
+            // Verificar la fecha y hora de inicio
+            $fechaHoraInicio = strtotime($objeto->Fecha . ' ' . $objeto->HoraInicio);
+            $limiteCancelacion = time() + 12 * 3600; // 12 horas en segundos
+    
+            if ($fechaHoraInicio >= time() && $fechaHoraInicio > $limiteCancelacion) {
+                // Realizar el UPDATE para desmatricular
+                $updateSql = "UPDATE actgrupalusuario SET Estado = 0 WHERE idActGrupal = '$objeto->idActividadGrupal' AND idUsuario = '$objeto->idUsuario'";
+                $updateResult = $this->enlace->executeSQL_DML($updateSql, [$objeto->idActividadGrupal, $objeto->idUsuario]);
+    
+                return "Desmatriculado Correctamente";
+            } else {
+                return "No se puede cancelar la reserva, la actividad ya ha comenzado o el límite de cancelación ha sido superado.";
             }
-
-            return "No se pudo desmatricular";
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -272,7 +271,7 @@ class ActividadesGrupalesModel
 
             //Consulta sql
             $vSql = "SELECT
-            ag.idActividadGrupal, ag.Nombre, ag.Fecha, ag.HoraInicio, ag.HoraFinal, ag.Cupo
+            ag.idActividadGrupal, ag.Nombre, ag.Fecha, ag.HoraInicio, ag.HoraFinal
             FROM
             actividadgrupal ag
             INNER JOIN
@@ -281,7 +280,7 @@ class ActividadesGrupalesModel
             agU.idUsuario = '$idUsuario' -- el ID del usuario deseado
             AND agU.Estado = 1 -- Consideramos que 1 es el estado de matriculado
             GROUP BY
-            ag.idActividadGrupal, ag.Nombre, ag.Fecha, ag.HoraInicio, ag.HoraFinal, ag.Cupo;";
+            ag.idActividadGrupal, ag.Nombre, ag.Fecha, ag.HoraInicio, ag.HoraFinal;";
 
             //Ejecutar la consulta
             $vResultado = $this->enlace->ExecuteSQL($vSql);

@@ -7062,3 +7062,18 @@ Stack trace:
 [13-Aug-2023 01:51:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 216
 [13-Aug-2023 01:51:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 217
 [13-Aug-2023 01:51:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 217
+[14-Aug-2023 03:38:47 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idActGrupal in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 262
+[14-Aug-2023 03:40:05 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 260
+[14-Aug-2023 03:40:29 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 260
+[14-Aug-2023 03:42:22 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 260
+[14-Aug-2023 03:53:05 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 261
+[14-Aug-2023 04:14:44 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 224
+[14-Aug-2023 04:14:44 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 224
+[14-Aug-2023 04:15:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 224
+[14-Aug-2023 04:15:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 224
+[14-Aug-2023 04:20:34 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idActGrupal in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 231
+[14-Aug-2023 04:20:45 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idActGrupal in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 230
+[14-Aug-2023 09:56:11 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 219
+[14-Aug-2023 09:56:23 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 218
+[14-Aug-2023 09:56:27 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 218
+[14-Aug-2023 09:56:31 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 218
