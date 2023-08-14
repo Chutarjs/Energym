@@ -136,15 +136,12 @@ export function ListActividadesCliente() {
     console.log(objeto);
     ActGrupalesService.desmatricular(objeto)
       .then((response) => {
-        console.log(response.data);
+        console.log(response);
         setResponseData(response.data);
+        console.log(response.data);
         setError(response.error);
 
-        if (
-          response.data.results == "No se pudo desmatricular" ||
-          response.data.results ==
-            "No se pudo desmatricular, el plan pagado por el cliente no incluye actividades grupales"
-        ) {
+        if (response.data.results == "No se pudo desmatricular") {
           toast.error(response.data.results);
         } else {
           toast.success(response.data.results);
