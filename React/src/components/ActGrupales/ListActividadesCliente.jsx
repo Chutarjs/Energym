@@ -404,8 +404,8 @@ export function ListActividadesCliente() {
                 >
                   <IconButton
                     component={Button}
-                    aria-label="Matricular"
-                    onClick={() => handleMatricular(item)}
+                    aria-label="Calificar"
+                    
                   >
                     <EditNoteIcon />
                     <Typography
