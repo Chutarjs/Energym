@@ -10,7 +10,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../../context/UserContext'
-import toast from 'react-hot-toast'
+import { toast } from 'react-hot-toast'
 import UsuarioService from '../../services/UsuarioService'
 
 export function Login () {
@@ -50,12 +50,14 @@ export function Login () {
         })
         .catch(error => {
           if (error instanceof SyntaxError) {
+            toast.error("Error, verifique que la contraseña y correo sean correctos");
             throw new Error('Respuesta no válida del servidor');
           }
         });
         //Respuesta del API
     } catch (e) {
       // handle your error
+      toast.error("Error, verifique que la contraseña y correo sean correctos");
       console.log(e);
     }
   }
@@ -64,17 +66,11 @@ export function Login () {
     if(responseData!=null && responseData!='undefined' && responseData!='Usuario no valido'){
       //Guardar Token
       saveUser(responseData)
-      toast.success("Bienvenido",{
-        duration:4000,
-        position:'top-center'
-      })
+      toast.success("Bienvenido")
       return navigate('/')
     }else{
       if(responseData=='undefined' || responseData=='Usuario no valido'){
-        toast.error("Usuario NO válido"),{
-          duration: 4000,
-          position: 'top-center'
-        }
+        toast.error("Usuario NO válido");
       }
     }
   },[navigate, responseData, saveUser])

@@ -28,6 +28,8 @@ import { Logout } from "./components/Usuarios/Logout";
 import UserProvider from "./components/Usuarios/UserProvider";
 import { Auth } from "./components/Usuarios/Auth";
 import { DetailUser } from "./components/Usuarios/DetailUser";
+import  TableUsuario  from "./components/Usuarios/TableUsuario";
+import { FormUsuario } from "./components/Usuarios/FormUsuarios";
 
 const router = createBrowserRouter([
   {
@@ -105,6 +107,22 @@ const router = createBrowserRouter([
       {
         path: "/actividades/",
         element: <ListActividades />,
+      },
+      {
+        path: "/user/detail/:id",
+        element: <DetailUser />,
+      },
+      {
+        path: "/usuario-table",
+        element: <TableUsuario />,
+      },
+      {
+        path: "/usuario/create",
+        element: <FormUsuario/>,
+      },
+      {
+        path: "/usuario/update/:id",
+        element: <FormUsuario/>,
       },
     ],
   },
