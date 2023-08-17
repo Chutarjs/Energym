@@ -222,7 +222,7 @@ class ActividadesGrupalesModel
                     // Verificar si ya existe una entrada en la tabla
                     $existingSql = "SELECT COUNT(*) as count FROM actgrupalusuario WHERE idActGrupal = '$objeto->idActividadGrupal' AND idUsuario = '$objeto->idUsuario'";
                     $existingResult = $this->enlace->executeSQL($existingSql);
-                    if ($existingResult == 0) {
+                    if ($existingResult[0]->count == 0) {
                         // Si no existe, realizar la inserción
                         $insertSql = "INSERT INTO actgrupalusuario VALUES ('$objeto->idActividadGrupal', '$objeto->idUsuario', 1, 'Matriculado Exitosamente')";
                         $insertResult = $this->enlace->executeSQL_DML_last($insertSql);

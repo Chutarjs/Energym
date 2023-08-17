@@ -172,16 +172,23 @@ const router = createBrowserRouter([
     element: <Auth allowedRoles={["Cliente"]} />,
     children: [
       {
-        path: "/user/detail/:id",
-        element: <DetailUser />,
-      },
-      {
         path: "/actividadesGrupales/",
         element: <ListActividadesCliente />,
       },
     ],
   },
+  {
+    path: "/",
+    element: <Auth allowedRoles={["Cliente", "Administrador", "Empleado"]} />,
+    children: [
+      {
+        path: "/user/detail/:id",
+        element: <DetailUser />,
+      },
+    ]
+  }
 ]);
+
 function App() {
   return (
     <UserProvider>
