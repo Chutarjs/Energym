@@ -31,6 +31,7 @@ import { DetailUser } from "./components/Usuarios/DetailUser";
 import  TableUsuario  from "./components/Usuarios/TableUsuario";
 import { FormUsuario } from "./components/Usuarios/FormUsuarios";
 import TableHistorialPlan from "./components/Plan/TableHistorialPlan";
+import TablePago from "./components/Pago/TablePago";
 
 const router = createBrowserRouter([
   {
@@ -189,6 +190,10 @@ const router = createBrowserRouter([
         path: "/user/detail/:id",
         element: <DetailUser />,
       },
+      {
+        path: "/table-pago/",
+        element: <TablePago />
+      }
     ]
   }
 ]);

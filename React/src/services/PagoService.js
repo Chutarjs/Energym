@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL = "http://localhost:81/Energym/Plan"
+const BASE_URL = "http://localhost:81/Energym/Pago"
 
 class PagoService {
     //obtiene todos los pagos

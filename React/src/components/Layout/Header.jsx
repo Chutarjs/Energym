@@ -232,6 +232,9 @@ function Header() {
                     <MenuItem component="a" href="/usuario-table/">
                       <Typography textAlign="center">Usuarios</Typography>
                     </MenuItem>
+                    <MenuItem component="a" href="/table-pago/">
+                      <Typography textAlign="center">Pagos</Typography>
+                    </MenuItem>
                   </MenuList>
                 )}
               </Menu>

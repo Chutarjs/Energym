@@ -20,10 +20,9 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import Switch from '@mui/material/Switch'
 import AddIcon from '@mui/icons-material/Add'
 import { visuallyHidden } from '@mui/utils'
-import EditIcon from '@mui/icons-material/Edit'
 import { useNavigate, Link } from 'react-router-dom'
-import PlanService from '../../services/PlanService'
-import { Info } from "@mui/icons-material";
+import PagoService from '../../services/PagoService'
+import { Info, Payment } from "@mui/icons-material";
 
 function descendingComparator (a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -59,29 +58,53 @@ function stableSort (array, comparator) {
 //--- Encabezados de la tabla ---
 const headCells = [
   {
-    id: 'idPlan',
+    id: 'id',
     numeric: false,
     disablePadding: false,
-    label: 'Id'
+    label: 'Id Pago'
   },
   {
-    id: 'nombre',
+    id: 'idCliente',
     numeric: false,
     disablePadding: true,
-    label: 'Nombre'
+    label: 'Cliente'
   },
   {
-    id: 'descripcion',
+    id: 'plan',
     numeric: false,
     disablePadding: true,
-    label: 'Descripcion'
+    label: 'Plan'
   },
   {
-    id: 'precio',
+    id: 'subtotal',
+    numeric: false,
+    disablePadding: true,
+    label: 'Subtotal'
+  },
+  {
+    id: 'impuesto',
     numeric: false,
     disablePadding: false,
-    label: 'Precio'
-  }
+    label: 'Impuesto'
+  },
+  {
+    id: 'extras',
+    numeric: false,
+    disablePadding: false,
+    label: 'Extras'
+  },
+  {
+    id: 'total',
+    numeric: false,
+    disablePadding: false,
+    label: 'Total'
+  },
+  {
+    id: 'estado',
+    numeric: false,
+    disablePadding: false,
+    label: 'Estado'
+  },
 ]
 //Construcción del Header de la tabla con sus propiedades
 function TablePagoHead (props) {
@@ -150,8 +173,8 @@ function TablePagoToolbar (props) {
   const { numSelected } = props
   const { idSelected } = props
 
-  const update = () => {
-    return navigate(`/Pago/update/${idSelected}`)
+  const pagar = () => {
+    //update actualizando el estado
   }
   const detail = () => {
     return navigate(`/Pago/${idSelected}`)
@@ -199,9 +222,9 @@ function TablePagoToolbar (props) {
               <Info />
             </IconButton>
           </Tooltip>
-          <Tooltip title='Actualizar'>
-            <IconButton onClick={update}>
-              <EditIcon key={idSelected} />
+          <Tooltip title='Pagar'>
+            <IconButton onClick={pagar}>
+              <Payment key={idSelected} />
             </IconButton>
           </Tooltip>
            </>)
@@ -221,15 +244,16 @@ TablePagoToolbar.propTypes = {
   idSelected: PropTypes.number.isRequired
 }
 
-export default function TablePlan () {
+export default function TablePago () {
   //Datos a cargar en la tabla
   const [data, setData]=useState(null);
   // eslint-disable-next-line no-unused-vars
   const [error, setError] =useState('');
   const [loaded, setLoaded] =useState(false);
   useEffect(()=>{
-    PlanService.getPago()
+    PagoService.getPagos()
     .then( response=>{
+        console.log(response.data.results)
         setData(response.data.results)
         setError(response.error)
         setLoaded(true)
@@ -320,17 +344,17 @@ export default function TablePlan () {
                   {stableSort(data, getComparator(order, orderBy))
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row, index) => {
-                      const isItemSelected = isSelected(row.idPlan)
+                      const isItemSelected = isSelected(row.idPago)
                       const labelId = `enhanced-table-checkbox-${index}`
 
                       return (
                         <TableRow
                           hover
-                          onClick={(event) => handleClick(event, row.idPlan)}
+                          onClick={(event) => handleClick(event, row.idPago)}
                           role='checkbox'
                           aria-checked={isItemSelected}
                           tabIndex={-1}
-                          key={row.idPlan}
+                          key={row.idPago}
                           selected={isItemSelected}
                         >
                           <TableCell padding='checkbox'>
@@ -348,11 +372,15 @@ export default function TablePlan () {
                             scope='row'
                             padding='none'
                           >
-                            {row.idPlan}
+                            {row.idPago}
                           </TableCell>
-                          <TableCell align='left'>{row.Nombre}</TableCell>
-                          <TableCell align='left'>{row.Descripcion}</TableCell>
-                          <TableCell align='left'>₡{row.Precio}</TableCell>
+                          <TableCell align='left'>{row.idCliente}</TableCell>
+                          <TableCell align='left'>{row.idPlan}</TableCell>
+                          <TableCell align='left'>₡{row.Subtotal}</TableCell>
+                          <TableCell align='left'>₡{row.Impuesto}</TableCell>
+                          <TableCell align='left'>₡{row.Extras}</TableCell>
+                          <TableCell align='left'>₡{row.Total}</TableCell>
+                          <TableCell align='left'>{row.Estado == "0"? "Pendiente": "Pagado"}</TableCell>
                         </TableRow>
                       )
                     })}
