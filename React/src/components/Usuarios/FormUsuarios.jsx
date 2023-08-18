@@ -133,6 +133,7 @@ export function FormUsuario() {
             setResponseData(response.data.results);
             setError(response.error);
             toast.success("Creado con exito");
+            navigate("/usuario-table/");
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
@@ -146,7 +147,8 @@ export function FormUsuario() {
           .then((response) => {
             setResponseData(response.data.results);
             setError(response.error);
-            toast.success("Actualizado con exito")
+            toast.success("Actualizado con exito");
+            navigate("/usuario-table/");
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {

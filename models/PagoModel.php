@@ -27,21 +27,12 @@ class PagoModel
     public function get($id)
     {
         try {
-            $usuarioModel = new UsuariosModel();
             //Consulta sql
 			$vSql = "SELECT * FROM pago where idPago=$id";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
-            if(!empty($vResultado)){
-                //Obtener objeto
-                $vResultado = $vResultado[0];
 
-                //---Servicios 
-                $usuario = $usuarioModel->get($id);
-                //Asignar servicios al objeto
-                $vResultado->usuarios = $usuario;
-            }
 			// Retornar el objeto
 			return $vResultado;
 		} catch ( Exception $e ) {
@@ -54,7 +45,7 @@ class PagoModel
     {
         try {
             //Consulta sql
-			$vSql = "SELECT p.idPago, u.id, pl.Nombre, p.Subtotal, p.Impuesto, p.Extras, p.Total from pago p, usuario u, plan pl
+			$vSql = "SELECT p.idPago, u.id, pl.Nombre, p.Subtotal, p.Impuesto, p.Extras, p.Total, p.Estado from pago p, usuario u, plan pl
             where p.idCliente= $idCliente and u.id = $idCliente and p.idPlan = pl.idPlan";
 			
             //Ejecutar la consulta
@@ -67,31 +58,6 @@ class PagoModel
 		}
     }
 
-    /**
-	 * Obtener los planes que pertenecen a un servicio
-	 * @param $idServicio del Servicio
-	 * @returns $vresultado - Objeto plan
-	 */
-	//
-    public function getbyServicio($idServicio)
-    {
-       try {
-            //Consulta sql
-			$vSql = "SELECT p.idPlan, p.Nombre, p.Descripcion, p.Precio".
-            " FROM Plan p, planservicio ps, Servicio s".
-            " where p.idPlan = ps.idPlan".
-            " and ps.idServicio=$idServicio".
-            " and s.idServicio=$idServicio";
-			
-            //Ejecutar la consulta
-			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
-            
-			// Retornar el objeto
-			return $vResultado;
-		} catch ( Exception $e ) {
-			die ( $e->getMessage () );
-		}
-    }
     /**
 	 * Crear plan
 	 * @param $objeto plan a insertar

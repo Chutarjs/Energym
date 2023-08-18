@@ -38,6 +38,46 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
+    path: "/planes/",
+    element: <ListPlanes />,
+  },
+  {
+    path: "/planes/:id",
+    element: <DetailPlan />,
+  },
+  {
+    path: "/rutinas/",
+    element: <ListRutinas />,
+  },
+  {
+    path: "/rutina/:id",
+    element: <DetailRutina />,
+  },
+  {
+    path: "/actividades/:id",
+    element: <DetailActividad />,
+  },
+  {
+    path: "/ejercicio/:id",
+    element: <DetailEjercicio />,
+  },
+  {
+    path: "/user/login",
+    element: <Login />,
+  },
+  {
+    path: "/user/create",
+    element: <Signup />,
+  },
+  {
+    path: "/unauthorized",
+    element: <Unauthorized />,
+  },
+  {
+    path: "/user/logout",
+    element: <Logout />,
+  },
+  {
     path: "/",
     element: <Auth allowedRoles={["Administrador", "Empleado"]} />,
     children: [
@@ -130,47 +170,6 @@ const router = createBrowserRouter([
         element: <TableHistorialPlan/>
       },
     ],
-  },
-
-  {
-    path: "/planes/",
-    element: <ListPlanes />,
-  },
-  {
-    path: "/planes/:id",
-    element: <DetailPlan />,
-  },
-  {
-    path: "/rutinas/",
-    element: <ListRutinas />,
-  },
-  {
-    path: "/rutina/:id",
-    element: <DetailRutina />,
-  },
-  {
-    path: "/actividades/:id",
-    element: <DetailActividad />,
-  },
-  {
-    path: "/ejercicio/:id",
-    element: <DetailEjercicio />,
-  },
-  {
-    path: "/user/login",
-    element: <Login />,
-  },
-  {
-    path: "/user/create",
-    element: <Signup />,
-  },
-  {
-    path: "/unauthorized",
-    element: <Unauthorized />,
-  },
-  {
-    path: "/user/logout",
-    element: <Logout />,
   },
   {
     path: "/",
