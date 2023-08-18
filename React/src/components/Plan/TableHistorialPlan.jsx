@@ -10,7 +10,6 @@ import TablePagination from '@mui/material/TablePagination'
 import TableRow from '@mui/material/TableRow'
 import TableSortLabel from '@mui/material/TableSortLabel'
 import Paper from '@mui/material/Paper'
-import Checkbox from '@mui/material/Checkbox'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Switch from '@mui/material/Switch'
 import { visuallyHidden } from '@mui/utils'
@@ -137,7 +136,6 @@ export default function TableHistorialPlan () {
   useEffect(()=>{
     PlanService.getHistorialPlanes()
     .then( response=>{
-        console.log(response.data.results)
         setData(response.data.results)
         setError(response.error)
         setLoaded(true)
@@ -207,9 +205,8 @@ export default function TableHistorialPlan () {
                 <TableBody>
                   {stableSort(data, getComparator(order, orderBy))
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    .map((row, index) => {
+                    .map((row) => {
                       const isItemSelected = isSelected(row.idPlan)
-                      const labelId = `enhanced-table-checkbox-${index}`
 
                       return (
                         <TableRow
@@ -217,23 +214,14 @@ export default function TableHistorialPlan () {
                           role='checkbox'
                           aria-checked={isItemSelected}
                           tabIndex={-1}
-                          key={row.idPlan}
+                          key={row.idHistorial}
                           selected={isItemSelected}
                         >
-                          <TableCell padding='checkbox'>
-                            <Checkbox
-                              color='primary'
-                              checked={isItemSelected}
-                              inputProps={{
-                                'aria-labelledby': labelId
-                              }}
-                            />
-                          </TableCell>
-                          <TableCell component='th' id={labelId} scope='row' padding='none'>{row.idPlan}</TableCell>
-                          <TableCell component='th' id={labelId} scope='row' padding='none'>{row.idPlan}</TableCell>
-                          <TableCell align='left'>{row.Nombre}</TableCell>
+                          <TableCell align='left'>{row.idHistorial}</TableCell>
+                          <TableCell align='left'>{row.idPlan}</TableCell>
+                          <TableCell align='left'>{row.idCliente}</TableCell>
+                          <TableCell align='left'>{row.Nombre + " " + row.Apellidos}</TableCell>
                           <TableCell align='left'>{row.Descripcion}</TableCell>
-                          <TableCell align='left'>₡{row.Precio}</TableCell>
                         </TableRow>
                       )
                     })}
