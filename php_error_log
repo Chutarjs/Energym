@@ -7077,3 +7077,4 @@ Stack trace:
 [14-Aug-2023 09:56:23 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 218
 [14-Aug-2023 09:56:27 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 218
 [14-Aug-2023 09:56:31 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 218
+[18-Aug-2023 02:04:28 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\xampp\htdocs\Energym\models\PlanModel.php on line 67

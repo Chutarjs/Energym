@@ -6,6 +6,9 @@ class PlanService {
     getPlanes(){
         return axios.get(BASE_URL);
     }
+    getHistorialPlanes(){
+        return axios.get(BASE_URL + '/getHistorial/1');
+    }
     //obtiene los detalles de un plan
     getPlanById(Id){
         return axios.get(BASE_URL + '/' + Id);

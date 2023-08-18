@@ -48,6 +48,22 @@ class PlanModel
 			die ( $e->getMessage () );
 		}
     }
+    /*Obtener */
+    /*http://localhost:81/Energym/Plan/getHistorial/#*/
+    public function getHistorial()
+    {
+        try {
+            //Consulta sql
+			$vSql = "SELECT hp.idHistorial, hp.idPlan, hp.idCliente, hp.FechaVigencia, hp.Descripcion, u.Nombre, u.Apellidos FROM historialplan hp, Usuario u where hp.idPlan>0 and hp.idCliente = u.id;";
+			
+            //Ejecutar la consulta
+			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
+			// Retornar el objeto
+			return $vResultado;
+		} catch ( Exception $e ) {
+			die ( $e->getMessage () );
+		}
+    }
     /*Obtener por cliente*/
     /*http://localhost:81/Energym/Plan/getByCliente/#*/
     public function getByCliente($idCliente)

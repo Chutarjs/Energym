@@ -214,13 +214,14 @@ function Header() {
                     <MenuItem component="a" href="/plan-table/">
                       <Typography textAlign="center">Planes</Typography>
                     </MenuItem>
+                    <MenuItem component="a" href="/planes/historial">
+                      <Typography textAlign="center">Historial Planes</Typography>
+                    </MenuItem>
                     <MenuItem component="a" href="/rutina-table/">
                       <Typography textAlign="center">Rutinas</Typography>
                     </MenuItem>
                     <MenuItem component="a" href="/actividad-table/">
-                      <Typography textAlign="center">
-                        Actividades Grupales
-                      </Typography>
+                      <Typography textAlign="center">Actividades Grupales</Typography>
                     </MenuItem>
                     <MenuItem component="a" href="/ejercicio-table/">
                       <Typography textAlign="center">Ejercicios</Typography>

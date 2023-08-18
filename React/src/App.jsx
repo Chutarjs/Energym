@@ -30,6 +30,7 @@ import { Auth } from "./components/Usuarios/Auth";
 import { DetailUser } from "./components/Usuarios/DetailUser";
 import  TableUsuario  from "./components/Usuarios/TableUsuario";
 import { FormUsuario } from "./components/Usuarios/FormUsuarios";
+import TableHistorialPlan from "./components/Plan/TableHistorialPlan";
 
 const router = createBrowserRouter([
   {
@@ -123,6 +124,10 @@ const router = createBrowserRouter([
       {
         path: "/usuario/update/:id",
         element: <FormUsuario/>,
+      },
+      {
+        path: "/planes/historial",
+        element: <TableHistorialPlan/>
       },
     ],
   },

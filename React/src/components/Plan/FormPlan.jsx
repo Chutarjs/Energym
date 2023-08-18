@@ -244,7 +244,7 @@ export function FormPlan() {
                           shouldValidate: true,
                         })
                       }
-                      error={Boolean(errors.genres)}
+                      error={Boolean(errors.servicios)}
                     />
                   )}
                 />

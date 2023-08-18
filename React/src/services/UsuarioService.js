@@ -12,6 +12,9 @@ class UsuarioService {
     create(Usuario){
         return axios.post(BASE_URL, Usuario);
     }
+    update(Usuario){
+        return axios.put(BASE_URL, Usuario);
+    }
     login(Usuario){
         return axios.post(BASE_URL+ '/login/', Usuario);
     }
