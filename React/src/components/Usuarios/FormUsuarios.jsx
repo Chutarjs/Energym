@@ -206,7 +206,9 @@ export function FormUsuario() {
       setValue("Nacimiento", data.Nacimiento || "");
       setValue("Email", data.Email || "");
       setValue("Telefono", data.Telefono || "");
-      setValue("Planes", data.plan.idPlan);
+      if(data.plan != null){
+        setValue("Planes", data.plan.idPlan || "");
+      }
       setValue("Estado", data.Activo || "");
     }
   }, [data, esCrear, setValue]);
