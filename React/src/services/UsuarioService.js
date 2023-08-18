@@ -15,6 +15,10 @@ class UsuarioService {
     update(Usuario){
         return axios.put(BASE_URL, Usuario);
     }
+    updateAdmin(Usuario){
+        console.log(Usuario);
+        return axios.post(BASE_URL + "/updateAdmin/", Usuario);
+    }
     login(Usuario){
         return axios.post(BASE_URL+ '/login/', Usuario);
     }

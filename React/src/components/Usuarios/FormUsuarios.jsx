@@ -34,7 +34,9 @@ export function FormUsuario() {
       .string()
       .required("El email es requerido")
       .email("Formato de email inválido"),
-    Password: yup.string().required("El password es requerido"),
+    Password: yup
+            .string()
+            .required("El password es requerido"),
     Genero: yup
       .string()
       .oneOf(
@@ -55,7 +57,7 @@ export function FormUsuario() {
       .required("El teléfono es requerido")
       .matches(/^[0-9]+$/, "El teléfono solo debe contener números"),
     Planes: yup
-      .array()
+      .string()
       .required("Seleccione un plan")
       .min(1, "Debe seleccionar un plan")
       .typeError("Seleccione un plan"),
@@ -77,12 +79,13 @@ export function FormUsuario() {
       Nombre: "",
       Apellidos: "",
       Email: "",
-      Password: "",
+      Password: " ",
       Genero: "1",
       Tipo: "1",
       Nacimiento: null,
       Telefono: "",
       Estado: "",
+      Planes: ""
     },
     // Asignación de validaciones
     resolver: yupResolver(loginSchema),
@@ -132,6 +135,7 @@ export function FormUsuario() {
           .then((response) => {
             setResponseData(response.data.results);
             setError(response.error);
+            toast.success("Creado con exito");
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
@@ -139,14 +143,13 @@ export function FormUsuario() {
               throw new Error("Respuesta no válida del servidor");
             }
           });
-        if (responseData !== null) {
-          notify();
-        }
       } else {
-        UsuarioService.update(formData)
+        console.log(formData);
+        UsuarioService.updateAdmin(formData)
           .then((response) => {
             setResponseData(response.data.results);
             setError(response.error);
+            toast.success("Actualizado con exito")
           })
           .catch((error) => {
             if (error instanceof SyntaxError) {
@@ -154,9 +157,6 @@ export function FormUsuario() {
               throw new Error("Respuesta no válida del servidor");
             }
           });
-        if (responseData !== null) {
-          notify();
-        }
       }
     }
   }, [esCrear, formData, navigate, responseData, start]);
@@ -205,6 +205,7 @@ export function FormUsuario() {
       setValue("Tipo", data.IdTipoUsuario || "");
       setValue("Nacimiento", data.Nacimiento || "");
       setValue("Email", data.Email || "");
+      setValue("Contrasenna", " ");
       setValue("Telefono", data.Telefono || "");
       if(data.plan != null){
         setValue("Planes", data.plan.idPlan || "");
@@ -222,7 +223,7 @@ export function FormUsuario() {
         <Grid container spacing={1}>
           <Grid item xs={12} sm={12}>
             <Typography variant="h5" gutterBottom>
-              Registrar Usuario o Empleado
+              {esCrear? "Registrar Usuario o Empleado": "Modificar Usuario o Empleado"}
             </Typography>
           </Grid>
 
@@ -467,7 +468,7 @@ export function FormUsuario() {
               color="secondary"
               sx={{ m: 1 }}
             >
-              Crear
+              {esCrear? "Crear": "Modificar"}
             </Button>
           </Grid>
         </Grid>

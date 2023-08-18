@@ -7078,3 +7078,155 @@ Stack trace:
 [14-Aug-2023 09:56:27 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 218
 [14-Aug-2023 09:56:31 Europe/Berlin] PHP Notice:  Object of class stdClass could not be converted to int in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 218
 [18-Aug-2023 02:04:28 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\xampp\htdocs\Energym\models\PlanModel.php on line 67
+[18-Aug-2023 07:54:17 Europe/Berlin] PHP Warning:  Attempt to read property "Estado" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 125
+[18-Aug-2023 07:54:17 Europe/Berlin] PHP Warning:  Attempt to read property "idPlan" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:54:17 Europe/Berlin] PHP Warning:  Attempt to read property "idCliente" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:54:47 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:54:47 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:54:47 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:54:47 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:54:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:54:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:54:59 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:54:59 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:55:05 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 07:55:05 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:08:46 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:08:46 Europe/Berlin] PHP Warning:  Attempt to read property "count" on int in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:08:46 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:08:46 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:09:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:09:23 Europe/Berlin] PHP Warning:  Attempt to read property "count" on int in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:09:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:09:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:09:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:09:32 Europe/Berlin] PHP Warning:  Attempt to read property "count" on int in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:09:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:09:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:10:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:10:15 Europe/Berlin] PHP Warning:  Attempt to read property "count" on int in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:10:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:10:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:10:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:10:52 Europe/Berlin] PHP Warning:  Attempt to read property "count" on int in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:10:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:10:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:10:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:10:52 Europe/Berlin] PHP Warning:  Attempt to read property "count" on int in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:10:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:10:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:11:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:11:56 Europe/Berlin] PHP Warning:  Attempt to read property "count" on int in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:11:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:11:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:11:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:11:56 Europe/Berlin] PHP Warning:  Attempt to read property "count" on int in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:11:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:11:56 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:12:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:12:07 Europe/Berlin] PHP Warning:  Attempt to read property "count" on int in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:12:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:12:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:12:49 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:12:49 Europe/Berlin] PHP Warning:  Attempt to read property "count" on int in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:12:49 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:12:49 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:14:39 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:14:39 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:14:39 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:14:39 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:09 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:15:09 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:15:09 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:09 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:15:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:15:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:15:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:15:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:35 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:15:35 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:15:35 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:35 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:41 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 130
+[18-Aug-2023 08:15:41 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:15:41 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:15:41 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 140
+[18-Aug-2023 08:18:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$Estado in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 126
+[18-Aug-2023 08:18:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 131
+[18-Aug-2023 08:18:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:18:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:18:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:19:23 Europe/Berlin] PHP Warning:  Attempt to read property "Estado" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 126
+[18-Aug-2023 08:19:23 Europe/Berlin] PHP Warning:  Attempt to read property "idCliente" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 131
+[18-Aug-2023 08:19:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:19:23 Europe/Berlin] PHP Warning:  Attempt to read property "idPlan" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:19:23 Europe/Berlin] PHP Warning:  Attempt to read property "idCliente" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:19:33 Europe/Berlin] PHP Warning:  Attempt to read property "Estado" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 126
+[18-Aug-2023 08:19:33 Europe/Berlin] PHP Warning:  Attempt to read property "idCliente" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 131
+[18-Aug-2023 08:19:33 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:19:33 Europe/Berlin] PHP Warning:  Attempt to read property "idPlan" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:19:33 Europe/Berlin] PHP Warning:  Attempt to read property "idCliente" on null in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:19:36 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 131
+[18-Aug-2023 08:19:36 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:19:36 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:19:36 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:19:54 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:19:54 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:20:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:20:15 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:20:37 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:20:37 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:20:48 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:20:48 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:20:48 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:21:05 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "*" in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:21:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 134
+[18-Aug-2023 08:21:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:21:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:21:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:21:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:23:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:23:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:23:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:23:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:24:46 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$count in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 135
+[18-Aug-2023 08:24:46 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:25:31 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:27:24 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 146
+[18-Aug-2023 08:29:33 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 126
+[18-Aug-2023 08:29:33 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 131
+[18-Aug-2023 08:29:33 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idPlan in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:29:33 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:30:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 126
+[18-Aug-2023 08:30:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 131
+[18-Aug-2023 08:30:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:30:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 126
+[18-Aug-2023 08:30:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 131
+[18-Aug-2023 08:30:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 141
+[18-Aug-2023 08:31:20 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 146
+[18-Aug-2023 08:32:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 146
+[18-Aug-2023 08:32:08 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 146

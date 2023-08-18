@@ -115,6 +115,28 @@ class Usuario{
             http_response_code($json["status"])
         );
     }
+    public function updateAdmin()
+    {
+        $inputJSON = file_get_contents('php://input');
+        $object = json_decode($inputJSON);
+        $usuario = new UsuariosModel();
+        $response = $usuario->updateAdmin($object);
+        if (isset($response) && !empty($response)) {
+            $json = array(
+                'status' => 200,
+                'results' => $response
+            );
+        } else {
+            $json = array(
+                'status' => 400,
+                'results' => "Usuario No creado"
+            );
+        }
+        echo json_encode(
+            $json,
+            http_response_code($json["status"])
+        );
+    }
     public function autorize()
     {
 
