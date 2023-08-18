@@ -49,9 +49,10 @@ export function Login () {
           setError(response.error);
         })
         .catch(error => {
-          if (error instanceof SyntaxError) {
-            toast.error("Error, verifique que la contraseña y correo sean correctos");
-            throw new Error('Respuesta no válida del servidor');
+          if (error.response && error.response.status === 400) {
+            toast.error("Credenciales incorrectas");
+          } else {
+            toast.error("Error en la solicitud. Por favor, intenta nuevamente.");
           }
         });
         //Respuesta del API

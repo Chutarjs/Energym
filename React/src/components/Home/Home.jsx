@@ -17,7 +17,8 @@ export function Home() {
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState("");
   const [loaded, setLoaded] = useState(false);
-
+  
+  //obtener planes
   useEffect(() => {
     PlanService.getPlanes()
       .then((response) => {
@@ -32,6 +33,7 @@ export function Home() {
         }
       });
   }, []);
+
 
   return (
     <Grid container p={1}>
@@ -60,6 +62,13 @@ export function Home() {
                     textAlign="center"
                   >
                     {item.Descripcion}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    textAlign="center"
+                  >
+                    {console.log(item)}
                   </Typography>
                   <Typography
                     variant="body2"

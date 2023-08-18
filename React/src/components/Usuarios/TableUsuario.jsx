@@ -81,6 +81,12 @@ const headCells = [
     numeric: false,
     disablePadding: false,
     label: 'Tipo'
+  },
+  {
+    id: 'FechaInscripcion',
+    numeric: false,
+    disablePadding: false,
+    label: 'Fecha de Inscripcion'
   }
 ]
 //Construcción del Header de la tabla con sus propiedades
@@ -242,6 +248,7 @@ export default function TableUsuario () {
       }
     });
   },[]);
+
   //Ordenamiento
   const [order, setOrder] = React.useState('asc')
   //Criterio de ordenamiento
@@ -351,9 +358,10 @@ export default function TableUsuario () {
                           >
                             {row.id}
                           </TableCell>
-                          <TableCell align='left'>{row.Nombre}</TableCell>
+                          <TableCell align='left' >{row.Nombre}</TableCell>
                           <TableCell align='left'>{row.Apellidos}</TableCell>
                           <TableCell align='left'>{row.IdTipoUsuario==1? "Cliente": row.IdTipoUsuario==2? "Administrador": "Empleado"}</TableCell>
+                          <TableCell align='left'>{row.FechaInscripcion}</TableCell>
                         </TableRow>
                       )
                     })}

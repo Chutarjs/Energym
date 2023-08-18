@@ -12,10 +12,8 @@ class PlanModel
         try {
             //Consulta sql
 			$vSql = "SELECT * FROM plan where idPlan > 0;";
-			
             //Ejecutar la consulta
-			$vResultado = $this->enlace->ExecuteSQL ($vSql);
-				
+			$vResultado = $this->enlace->ExecuteSQL($vSql);
 			// Retornar el objeto
 			return $vResultado;
 		} catch ( Exception $e ) {
