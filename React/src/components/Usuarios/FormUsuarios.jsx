@@ -57,10 +57,7 @@ export function FormUsuario() {
       .required("El teléfono es requerido")
       .matches(/^[0-9]+$/, "El teléfono solo debe contener números"),
     Planes: yup
-      .string()
-      .required("Seleccione un plan")
-      .min(1, "Debe seleccionar un plan")
-      .typeError("Seleccione un plan"),
+      .string(),
     Estado: yup
       .string()
       .oneOf(["0", "1"], "El estado es necesario")
@@ -84,7 +81,7 @@ export function FormUsuario() {
       Tipo: "1",
       Nacimiento: null,
       Telefono: "",
-      Estado: "",
+      Estado: "1",
       Planes: ""
     },
     // Asignación de validaciones
@@ -210,7 +207,7 @@ export function FormUsuario() {
       if(data.plan != null){
         setValue("Planes", data.plan.idPlan || "");
       }
-      setValue("Estado", data.Activo || "");
+      setValue("Estado", data.Activo || "1");
     }
   }, [data, esCrear, setValue]);
 
@@ -418,7 +415,8 @@ export function FormUsuario() {
 
           <Grid item xs={12} sm={6}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              <Controller
+              {!esCrear && (
+                <Controller
                 name="Estado"
                 control={control}
                 render={({ field }) => (
@@ -435,12 +433,13 @@ export function FormUsuario() {
                   </TextField>
                 )}
               />
+              )}
             </FormControl>
           </Grid>
 
           <Grid item xs={12} sm={6}>
             <FormControl variant="standard" fullWidth sx={{ m: 1 }}>
-              {loadedPlanes && (
+              {loadedPlanes && !esCrear &&(
                 <Controller
                   name="Planes"
                   control={control}
