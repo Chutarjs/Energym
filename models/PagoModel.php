@@ -28,7 +28,7 @@ class PagoModel
     {
         try {
             //Consulta sql
-			$vSql = "SELECT * FROM pago where idPago=$id";
+			$vSql = "SELECT * FROM pago where idPago='$id'";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ( $vSql);
@@ -45,7 +45,7 @@ class PagoModel
     {
         try {
             //Consulta sql
-			$vSql = "SELECT p.idPago, u.id, pl.Nombre, p.Subtotal, p.Impuesto, p.Extras, p.Total, p.Estado from pago p, usuario u, plan pl
+			$vSql = "SELECT p.idPago, u.id as idCliente, pl.Nombre as idPlan, p.Subtotal, p.Impuesto, p.Extras, p.Total, p.Estado from pago p, usuario u, plan pl
             where p.idCliente= $idCliente and u.id = $idCliente and p.idPlan = pl.idPlan";
 			
             //Ejecutar la consulta
@@ -59,62 +59,39 @@ class PagoModel
     }
 
     /**
-	 * Crear plan
-	 * @param $objeto plan a insertar
-	 * @returns $this->get($idPlan) - Objeto plan
+	 * Crear pago, crea tambien el historialplan con un trigger
+	 * @param $objeto pago
+	 * @returns $this->get($idPago) - Objeto pago
 	 */
 	//
     public function create($objeto) {
         try {
             //Consulta sql
             //Identificador autoincrementable
-			$sql = "Insert into Plan (Nombre, Descripcion)". 
-                     "Values ('$objeto->Nombre','$objeto->Descripcion')";
+			$sql = "Insert into Pago (idCliente, idPlan, Estado)". 
+                     "Values ('$objeto->idCliente','$objeto->idPlan', 0)";
 			
             //Ejecutar la consulta
             //Obtener ultimo insert
-			$idPlan = $this->enlace->executeSQL_DML_last($sql);
-            //--- Servicios ---
-            //Crear elementos a insertar en servicios
-            foreach( $objeto->servicios as $servicio){
-                $dataServicios[]=array($idPlan,$servicio);
-            }
-                foreach($dataServicios as $row){
-                    
-                    $valores=implode(',', $row);
-                    $sql = "INSERT INTO planservicio VALUES(".$valores.");";
-                    $vResultado = $this->enlace->executeSQL_DML($sql);
-                }
+			$idPago = $this->enlace->executeSQL_DML_last($sql);
             //Retornar pelicula
-            return $this->get($idPlan);
+            return $this->get($idPago);
 		} catch ( Exception $e ) {
 			die ( $e->getMessage () );
 		}
     }
     public function update($objeto) {
         try {
-            var_dump($objeto);
-            $vSql = "DELETE from planservicio where idplan = $objeto->idPlan;";
-            //Ejecutar la consulta
-			$vResultado = $this->enlace->executeSQL_DML( $vSql);
             //Consulta sql
-			$vSql = "UPDATE plan SET Nombre ='$objeto->Nombre', Descripcion = '$objeto->Descripcion', Precio = 0 Where idPlan=$objeto->idPlan";
+			$vSql = "UPDATE pago SET Estado = 1 Where idPago='$objeto->idPago'";
+            
             //Ejecutar la consulta
 			$vResultado = $this->enlace->executeSQL_DML( $vSql);
-            
-            foreach( $objeto->servicios as $servicio){
-                $dataServicios[]=array($objeto->idPlan,$servicio);
-            }
-                foreach($dataServicios as $row){
-                    $valores=implode(',', $row);
-                    $sql = "INSERT INTO planservicio VALUES(".$valores.");";
-                    $vResultado = $this->enlace->executeSQL_DML($sql);
-                }
 
             // Retornar el objeto actualizado
-            return $this->get($objeto->idPlan);
+            return $this->get($objeto->idPago);
 		} catch ( Exception $e ) {
-			die ( $e->getMessage () );
+            return "No se pudo pagar";
 		}
     }
 }

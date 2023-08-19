@@ -10,13 +10,18 @@ class PagoService {
     getPagosCliente(Id){
         return axios.get(BASE_URL + "/getByCliente/" + Id);
     }
-    //obtiene los detalles de un plan
+    //obtiene un pago
     getPagoById(Id){
         return axios.get(BASE_URL + '/' + Id);
     }
-    //pagar
+    //crear pago
     createPago(Plan){
         return axios.post(BASE_URL, Plan);
+    }
+    //pagar
+    update(Pago){
+        console.log(Pago);
+        return axios.post(BASE_URL + "/update/",  Pago);
     }
 }
 

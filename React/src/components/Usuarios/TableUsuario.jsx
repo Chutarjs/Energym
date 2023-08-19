@@ -239,7 +239,6 @@ export default function TableUsuario () {
         setData(response.data.results)
         setError(response.error)
         setLoaded(true)
-        console.log(response.data.results)
     })
     .catch(error=>{
       if(error instanceof SyntaxError){

@@ -51,8 +51,7 @@ function Header() {
   const isCliente = () => {
     // Si el usuario es cliente devuelve un true
     return (
-      decodeToken(user) &&
-      autorize({ allowedRoles: ["Cliente"] }) // Adjust roles as needed
+      decodeToken(user) && autorize({ allowedRoles: ["Cliente"] }) // Adjust roles as needed
     );
   };
 
@@ -144,44 +143,44 @@ function Header() {
             Rutinas
           </Typography>
           {isAuthorizedUser() && (
-          <Typography
-            variant="p"
-            noWrap
-            component="a"
-            href="/actividades/"
-            sx={{
-              mr: 0,
-              display: { xs: "flex" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 500,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Act. Grupales
-          </Typography>
+            <Typography
+              variant="p"
+              noWrap
+              component="a"
+              href="/actividades/"
+              sx={{
+                mr: 0,
+                display: { xs: "flex" },
+                flexGrow: 1,
+                fontFamily: "monospace",
+                fontWeight: 500,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              Act. Grupales
+            </Typography>
           )}
           {isCliente() && (
-          <Typography
-            variant="p"
-            noWrap
-            component="a"
-            href="/actividadesGrupales/"
-            sx={{
-              mr: 0,
-              display: { xs: "flex" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 500,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Act. Grupales
-          </Typography>
+            <Typography
+              variant="p"
+              noWrap
+              component="a"
+              href="/actividadesGrupales/"
+              sx={{
+                mr: 0,
+                display: { xs: "flex" },
+                flexGrow: 1,
+                fontFamily: "monospace",
+                fontWeight: 500,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              Act. Grupales
+            </Typography>
           )}
           {/* Menu Mantenimientos */}
           <Box sx={{ flexGrow: 0 }}>
@@ -215,13 +214,17 @@ function Header() {
                       <Typography textAlign="center">Planes</Typography>
                     </MenuItem>
                     <MenuItem component="a" href="/planes/historial">
-                      <Typography textAlign="center">Historial Planes</Typography>
+                      <Typography textAlign="center">
+                        Historial Planes
+                      </Typography>
                     </MenuItem>
                     <MenuItem component="a" href="/rutina-table/">
                       <Typography textAlign="center">Rutinas</Typography>
                     </MenuItem>
                     <MenuItem component="a" href="/actividad-table/">
-                      <Typography textAlign="center">Actividades Grupales</Typography>
+                      <Typography textAlign="center">
+                        Actividades Grupales
+                      </Typography>
                     </MenuItem>
                     <MenuItem component="a" href="/ejercicio-table/">
                       <Typography textAlign="center">Ejercicios</Typography>
@@ -285,6 +288,11 @@ function Header() {
                   <MenuItem color="secondary" component="a" href="/user/logout">
                     <Typography textAlign="center">Logout</Typography>
                   </MenuItem>
+                  {isCliente() && (
+                    <MenuItem component="a" href="/table-pago">
+                      <Typography textAlign="center">Pagos</Typography>
+                    </MenuItem>
+                  )}
                 </MenuList>
               )}
             </Menu>

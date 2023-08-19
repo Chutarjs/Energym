@@ -68,7 +68,6 @@ export function Home() {
                     color="text.secondary"
                     textAlign="center"
                   >
-                    {console.log(item)}
                   </Typography>
                   <Typography
                     variant="body2"

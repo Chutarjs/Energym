@@ -8,6 +8,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import CheckIcon from "@mui/icons-material/Check";
 import { Link } from "react-router-dom";
 import { Info } from "@mui/icons-material";
 import { UserContext } from "../../context/UserContext";
@@ -16,17 +17,11 @@ import PlanService from "../../services/PlanService";
 export function ListPlanes() {
   const [data, setData] = useState(null);
   //Gestión de Usuario
-  const { user, decodeToken } = useContext(UserContext);
-  const [setUserData] = useState(decodeToken());
+  const { user, decodeToken }=useContext(UserContext)
 
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState("");
   const [loaded, setLoaded] = useState(false);
-
-  //Actualizar valor de usuario actual
-  useEffect(() => {
-    setUserData(decodeToken(user));
-  }, [decodeToken, setUserData, user]);
 
   useEffect(() => {
     PlanService.getPlanes()
@@ -97,7 +92,7 @@ export function ListPlanes() {
                     Detalles
                   </Typography>
                 </IconButton>
-                {/* {userData.rol.IdTipoUsuario == "1" && (
+                { decodeToken(user).rol.IdTipoUsuario == "1" && (
                   <IconButton
                     component={Link}
                     to={`/planes/matricular/${item.idPlan}`}
@@ -113,7 +108,7 @@ export function ListPlanes() {
                       Matricular
                     </Typography>
                   </IconButton>
-                )} */}
+                )}
               </CardActions>
             </Card>
           </Grid>

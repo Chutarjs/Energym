@@ -32,6 +32,8 @@ import  TableUsuario  from "./components/Usuarios/TableUsuario";
 import { FormUsuario } from "./components/Usuarios/FormUsuarios";
 import TableHistorialPlan from "./components/Plan/TableHistorialPlan";
 import TablePago from "./components/Pago/TablePago";
+import { DetailPago } from "./components/Pago/DetailPago";
+import { Pagar } from "./components/Pago/Pagar";
 
 const router = createBrowserRouter([
   {
@@ -151,10 +153,6 @@ const router = createBrowserRouter([
         element: <ListActividades />,
       },
       {
-        path: "/user/detail/:id",
-        element: <DetailUser />,
-      },
-      {
         path: "/usuario-table",
         element: <TableUsuario />,
       },
@@ -193,7 +191,15 @@ const router = createBrowserRouter([
       {
         path: "/table-pago/",
         element: <TablePago />
-      }
+      },
+      {
+        path: "/pago/:id",
+        element: <DetailPago />
+      },
+      {
+        path: "/Pagar/:id",
+        element: <Pagar/>
+      },
     ]
   }
 ]);

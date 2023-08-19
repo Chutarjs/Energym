@@ -103,7 +103,7 @@ class pago
         if (isset($response) && !empty($response)) {
             $json = array(
                 'status' => 200,
-                'results' => "Pago Actualizado Correctamente!"
+                'results' => $response
             );
         } else {
             $json = array(
