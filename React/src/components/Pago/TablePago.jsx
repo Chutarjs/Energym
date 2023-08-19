@@ -68,6 +68,12 @@ const headCells = [
     label: "Cliente",
   },
   {
+    id: "email",
+    numeric: false,
+    disablePadding: true,
+    label: "Correo",
+  },
+  {
     id: "plan",
     numeric: false,
     disablePadding: true,
@@ -392,6 +398,7 @@ export default function TablePago() {
                             {row.idPago}
                           </TableCell>
                           <TableCell align="left">{row.idCliente}</TableCell>
+                          <TableCell align="left">{row.Email}</TableCell>
                           <TableCell align="left">{row.idPlan}</TableCell>
                           <TableCell align="left">₡{row.Subtotal}</TableCell>
                           <TableCell align="left">₡{row.Impuesto}</TableCell>

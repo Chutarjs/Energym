@@ -11,7 +11,8 @@ class PagoModel
     public function all(){
         try {
             //Consulta sql
-			$vSql = "SELECT * FROM pago where idPago > 0;";
+			$vSql = "SELECT p.idPago, u.id as idCliente, u.Email, pl.Nombre as idPlan, p.Subtotal, p.Impuesto, p.Extras, p.Total, p.Estado from pago p, usuario u, plan pl
+            where p.idPago>0 and p.idPlan = pl.idPlan and p.idCliente = u.id;";
 			
             //Ejecutar la consulta
 			$vResultado = $this->enlace->ExecuteSQL ($vSql);
@@ -45,7 +46,7 @@ class PagoModel
     {
         try {
             //Consulta sql
-			$vSql = "SELECT p.idPago, u.id as idCliente, pl.Nombre as idPlan, p.Subtotal, p.Impuesto, p.Extras, p.Total, p.Estado from pago p, usuario u, plan pl
+			$vSql = "SELECT p.idPago, u.id as idCliente, u.Email, pl.Nombre as idPlan, p.Subtotal, p.Impuesto, p.Extras, p.Total, p.Estado from pago p, usuario u, plan pl
             where p.idCliente= $idCliente and u.id = $idCliente and p.idPlan = pl.idPlan";
 			
             //Ejecutar la consulta

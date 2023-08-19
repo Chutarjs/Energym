@@ -137,8 +137,7 @@ class UsuariosModel
 				//Ejecutar la consulta
 				$vResultado = $this->enlace->executeSQL_DML($vSql);
 			}else{
-				$vSql = "INSERT into historialplan (idPlan,idCliente,FechaVigencia,Descripcion) 
-				values ('$objeto->Planes', '$objeto->id', DATE_ADD(NOW(), INTERVAL 1 MONTH), 'Registrado el: ' + NOW() + ' por un administrador');";
+				$vSql = "INSERT into pago (idCliente, idPlan, Estado) values '$objeto->id', '$objeto->Planes', 0";
 				//Ejecutar la consulta
 				$vResultado = $this->enlace->executeSQL_DML($vSql);
 			}
