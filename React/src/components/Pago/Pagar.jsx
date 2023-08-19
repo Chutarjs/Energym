@@ -43,6 +43,7 @@ export function Pagar() {
           setData(response.data.results);
           setLoaded(true);
           toast.success("Pago realizado con exito");
+          setEsPagar(false);
         })
         .catch((error) => {
           if (error instanceof SyntaxError) {

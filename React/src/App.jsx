@@ -34,6 +34,7 @@ import TableHistorialPlan from "./components/Plan/TableHistorialPlan";
 import TablePago from "./components/Pago/TablePago";
 import { DetailPago } from "./components/Pago/DetailPago";
 import { Pagar } from "./components/Pago/Pagar";
+import { Matricular } from "./components/Plan/Matricular";
 
 const router = createBrowserRouter([
   {
@@ -177,6 +178,10 @@ const router = createBrowserRouter([
       {
         path: "/actividadesGrupales/",
         element: <ListActividadesCliente />,
+      },
+      {
+        path: "/planes/matricular/:id",
+        element: <Matricular />,
       },
     ],
   },
