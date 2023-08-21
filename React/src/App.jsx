@@ -36,6 +36,7 @@ import { DetailPago } from "./components/Pago/DetailPago";
 import { Pagar } from "./components/Pago/Pagar";
 import { Matricular } from "./components/Plan/Matricular";
 import { Desmatricular } from "./components/Plan/Desmatricular";
+import { GraphActGrupales } from "./components/ActGrupales/GraphActGrupales";
 
 const router = createBrowserRouter([
   {
@@ -121,6 +122,10 @@ const router = createBrowserRouter([
       {
         path: "actividad/update/:id",
         element: <FormActividad />,
+      },
+      {
+        path: "/grafico-actividades",
+        element: <GraphActGrupales />,
       },
       {
         path: "/servicio-table",

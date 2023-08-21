@@ -47,6 +47,9 @@ class ActGrupalesService{
     getHistorial(idUsuario){
         return axios.get(BASE_URL + '/getHistorial/' + idUsuario);
     }
+    getGrafico(){
+        return axios.get(BASE_URL + '/grafico/1');
+    }
 }
 
 export default new ActGrupalesService()

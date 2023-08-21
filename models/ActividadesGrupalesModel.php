@@ -317,4 +317,27 @@ class ActividadesGrupalesModel
             die($e->getMessage());
         }
     }
+
+    public function grafico()
+    {
+        try {
+
+            //Consulta sql
+            $vSql = "SELECT subquery.idActividadGrupal, subquery.Nombre, subquery.Fecha, subquery.cantidad_matriculados
+            FROM (
+                SELECT ag.idActividadGrupal, ag.Nombre, ag.Fecha, COUNT(agu.idUsuario) AS cantidad_matriculados
+                FROM energym.actividadgrupal ag
+                LEFT JOIN energym.actgrupalusuario agu ON ag.idActividadGrupal = agu.idActGrupal
+                GROUP BY ag.idActividadGrupal, ag.Nombre
+            ) AS subquery;";
+
+            //Ejecutar la consulta
+            $vResultado = $this->enlace->ExecuteSQL($vSql);
+
+            // Retornar el objeto
+            return $vResultado;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

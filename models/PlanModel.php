@@ -247,19 +247,19 @@ class PlanModel
     {
         try {
             //Consulta sql
-            $vSql = "SELECT count(*) from historialplan Where Estado = 0 and idCliente = '$objeto->id';";
+            $vSql = "SELECT count(*) from pago Where Estado = 0 and idCliente = '$objeto->id';";
             //Ejecutar la consulta
             $vResultado = $this->enlace->executeSQL($vSql);
 
             if ($vResultado[0]->{"count(*)"} != 0) {
                 return "El cliente posee un pago pendiente";
             } else {
-                $vSql = "UPDATE historialplan set FechaVigencia = Now() where idCliente = '$objeto->idCliente' and idPlan = '$objeto->idPlan' and FechaVigencia>now()";
+                $vSql = "UPDATE historialplan set FechaVigencia = Now() where idCliente = '$objeto->id' and idPlan = '$objeto->idPlan' and FechaVigencia>now()";
                 //Ejecutar la consulta
                 $vResultado = $this->enlace->executeSQL_DML($vSql);
             }
             // Retornar el objeto actualizado
-            return $this->get($objeto->idPlan);
+            return "Desmatriculado Correctamente";
         } catch (Exception $e) {
             die($e->getMessage());
         }

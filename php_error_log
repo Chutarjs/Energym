@@ -232,3 +232,18 @@
 [21-Aug-2023 22:31:11 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$Planes in C:\xampp\htdocs\Energym\models\PlanModel.php on line 234
 [21-Aug-2023 22:31:11 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$Planes in C:\xampp\htdocs\Energym\models\PlanModel.php on line 234
 [21-Aug-2023 22:31:18 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$Planes in C:\xampp\htdocs\Energym\models\PlanModel.php on line 234
+[21-Aug-2023 22:36:41 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\PlanModel.php on line 257
+[22-Aug-2023 00:15:52 Europe/Berlin] PHP Warning:  Attempt to read property "servicios" on null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:15:52 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:15:59 Europe/Berlin] PHP Warning:  Attempt to read property "servicios" on null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:15:59 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:16:09 Europe/Berlin] PHP Warning:  Attempt to read property "servicios" on null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:16:09 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:16:47 Europe/Berlin] PHP Warning:  Attempt to read property "servicios" on null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:16:47 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:17:14 Europe/Berlin] PHP Warning:  Attempt to read property "servicios" on null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:17:14 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:17:18 Europe/Berlin] PHP Warning:  Attempt to read property "servicios" on null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:17:18 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:17:46 Europe/Berlin] PHP Warning:  Attempt to read property "servicios" on null in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212
+[22-Aug-2023 00:17:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Energym\models\ActividadesGrupalesModel.php on line 212

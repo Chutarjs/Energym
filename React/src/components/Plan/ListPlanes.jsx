@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import CheckIcon from "@mui/icons-material/Check";
+import { Cancel } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { Info } from "@mui/icons-material";
 import { UserContext } from "../../context/UserContext";
@@ -181,6 +182,21 @@ export function ListPlanes() {
                     ml={1}
                   >
                     Detalles
+                  </Typography>
+                </IconButton>
+                <IconButton
+                  component={Link}
+                  to={`/planes/desmatricular/${matriculado.plan.idPlan}`}
+                  aria-label="Detalle"
+                >
+                  <Cancel />
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    textAlign="center"
+                    ml={1}
+                  >
+                    Desmatricular
                   </Typography>
                 </IconButton>
               </CardActions>
