@@ -25,6 +25,16 @@ class PlanService {
     getPlanFormById(PlanId){
         return axios.get(BASE_URL + '/getForm/' + PlanId);
     }
+
+    //matricular
+    matricular(objeto){
+        return axios.post(BASE_URL + "/matricular/", objeto)
+    }
+    
+    //desmatricular
+    desmatricular(objeto){
+        return axios.post(BASE_URL + "/desmatricular/", objeto)
+    }
 }
 
 export default new PlanService()

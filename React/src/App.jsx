@@ -35,6 +35,7 @@ import TablePago from "./components/Pago/TablePago";
 import { DetailPago } from "./components/Pago/DetailPago";
 import { Pagar } from "./components/Pago/Pagar";
 import { Matricular } from "./components/Plan/Matricular";
+import { Desmatricular } from "./components/Plan/Desmatricular";
 
 const router = createBrowserRouter([
   {
@@ -182,6 +183,10 @@ const router = createBrowserRouter([
       {
         path: "/planes/matricular/:id",
         element: <Matricular />,
+      },
+      {
+        path: "/planes/desmatricular/:id",
+        element: <Desmatricular />,
       },
     ],
   },
