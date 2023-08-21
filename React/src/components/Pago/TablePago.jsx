@@ -18,9 +18,8 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import AddIcon from "@mui/icons-material/Add";
 import { visuallyHidden } from "@mui/utils";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import PagoService from "../../services/PagoService";
 import { Info, Payment } from "@mui/icons-material";
@@ -128,9 +127,8 @@ function TablePagoHead(props) {
     <TableHead>
       <TableRow>
         <TableCell padding="checkbox">
-          <Tooltip title="Nuevo">
-            <IconButton component={Link} to="/Pago/create">
-              <AddIcon />
+          <Tooltip>
+            <IconButton>
             </IconButton>
           </Tooltip>
         </TableCell>

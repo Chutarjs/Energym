@@ -83,12 +83,12 @@ class UsuariosModel
 				//Consulta sql            
 				$vSql = "Insert into usuario (id, Nombre, Apellidos, Email, Contrasenna, Genero, Nacimiento, Telefono, Moroso, Activo, IdTipoUsuario, FechaInscripcion)" .
 					" Values ('$objeto->id','$objeto->Nombre','$objeto->Apellidos', '$objeto->Email', '$objeto->Password', '$objeto->Genero', '$objeto->Nacimiento', '$objeto->Telefono', 
-		'0', '1', '$objeto->Tipo', '$currentDate')";
+					'0', '1', '$objeto->Tipo', '$currentDate')";
 			} else {
 				//Consulta sql            
 				$vSql = "Insert into usuario (id, Nombre, Apellidos, Email, Contrasenna, Genero, Nacimiento, Telefono, Moroso, Activo, IdTipoUsuario, FechaInscripcion)" .
 					" Values ('$objeto->id','$objeto->Nombre','$objeto->Apellidos', '$objeto->Email', '$objeto->Password', '$objeto->Genero', '$objeto->Nacimiento', '$objeto->Telefono', 
-		'0', '1', '1', '$currentDate')";
+					'0', '1', '1', '$currentDate')";
 			}
 
 			//Ejecutar la consulta
@@ -133,16 +133,16 @@ class UsuariosModel
 			$vResultado = $this->enlace->executeSQL($vSql);
 			
 			if($vResultado[0]->{"count(*)"} != 0){
-				$vSql = "UPDATE historialplan set idPlan=$objeto->Planes where idCliente = $objeto->id and FechaVigencia > NOW();";
+				$vSql = "UPDATE historialplan set idPlan= '$objeto->Planes' where idCliente = '$objeto->id' and FechaVigencia > NOW();";
 				//Ejecutar la consulta
 				$vResultado = $this->enlace->executeSQL_DML($vSql);
 			}else{
-				$vSql = "INSERT into pago (idCliente, idPlan, Estado) values '$objeto->id', '$objeto->Planes', 0";
+				$vSql = "INSERT into pago (idCliente, idPlan, Fecha, Estado) values ('$objeto->id', '$objeto->Planes', NOW(), 0);";
 				//Ejecutar la consulta
 				$vResultado = $this->enlace->executeSQL_DML($vSql);
 			}
 			// Retornar el objeto actualizado
-			return $this->get($objeto->idCliente);
+			return $this->get($objeto->id);
 		} catch (Exception $e) {
 			die($e->getMessage());
 		}

@@ -142,10 +142,10 @@ export function FormUsuario() {
             }
           });
       } else {
-        console.log(formData);
         UsuarioService.updateAdmin(formData)
           .then((response) => {
             setResponseData(response.data.results);
+            console.log(response.data);
             setError(response.error);
             toast.success("Actualizado con exito");
             navigate("/usuario-table/");

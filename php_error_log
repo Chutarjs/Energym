@@ -64,3 +64,6 @@
 [19-Aug-2023 08:45:48 Europe/Berlin] PHP Warning:  Attempt to read property "idPago" on int in C:\xampp\htdocs\Energym\models\PagoModel.php on line 86
 [19-Aug-2023 08:46:19 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in C:\xampp\htdocs\Energym\models\PagoModel.php on line 86
 [19-Aug-2023 08:47:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Energym\models\PagoModel.php on line 86
+[21-Aug-2023 03:02:08 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 145
+[21-Aug-2023 03:02:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 145
+[21-Aug-2023 03:09:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$idCliente in C:\xampp\htdocs\Energym\models\UsuariosModel.php on line 145
